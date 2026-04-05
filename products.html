@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ECO-VASS 제품 소개 | 아쿠아포닉스 모듈러 라인업</title>
+<meta name="description" content="ECO-VASS 아쿠아포닉스 모듈러 완제품(SS-110~LS-500)과 DIY 제품(S-11~M-22) 전 라인업. 가정·학교·공동체를 위한 생태형 도시농업 시스템.">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --deep:#0a1628;--ocean:#0e2a4a;--teal:#0b7a6e;--aqua:#1ab5a3;
+  --foam:#6ee8d8;--gold:#d4a853;--leaf:#4a8c3f;--sage:#7ab87a;
+  --text:#e4f0ee;--muted:#7ba8a0;--white:#ffffff;
+  --border:rgba(26,181,163,0.2);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--deep);color:var(--text);overflow-x:hidden;}
+.page-wrap{max-width:1200px;margin:0 auto;padding:0 32px;}
+
+/* ── 히어로 ── */
+.prod-hero{background:linear-gradient(135deg,rgba(11,122,110,0.15),rgba(26,181,163,0.05));border-bottom:1px solid var(--border);padding:80px 32px 64px;text-align:center;}
+.prod-hero-tag{display:inline-block;font-size:0.72rem;font-weight:700;letter-spacing:4px;color:var(--aqua);text-transform:uppercase;padding:6px 20px;border:1px solid rgba(26,181,163,0.4);border-radius:20px;margin-bottom:20px;}
+.prod-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.5rem);color:var(--white);margin-bottom:12px;}
+.prod-hero p{color:var(--muted);font-size:1rem;line-height:1.8;max-width:600px;margin:0 auto 32px;}
+.tab-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:0;}
+.tab-btn{padding:10px 24px;border-radius:28px;font-size:0.85rem;font-weight:600;cursor:pointer;border:1.5px solid rgba(26,181,163,0.3);color:var(--muted);background:transparent;transition:all 0.25s;font-family:'Noto Sans KR',sans-serif;}
+.tab-btn.active,.tab-btn:hover{background:rgba(26,181,163,0.15);border-color:var(--aqua);color:var(--aqua);}
+
+/* ── 섹션 ── */
+.section{padding:72px 32px;}
+.section-inner{max-width:1200px;margin:0 auto;}
+.section-tag{font-size:0.70rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--aqua);margin-bottom:12px;display:block;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.6rem);color:var(--white);margin-bottom:12px;}
+.section-desc{color:var(--muted);font-size:0.95rem;line-height:1.8;max-width:640px;margin-bottom:48px;}
+
+/* ── 제품 카드 그리드 ── */
+.products-wrap{display:none;}
+.products-wrap.active{display:block;}
+.product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:24px;margin-top:40px;}
+
+.prod-card{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:all 0.35s;cursor:pointer;}
+.prod-card:hover{transform:translateY(-6px);border-color:rgba(26,181,163,0.5);box-shadow:0 20px 48px rgba(11,122,110,0.25);}
+.prod-card.featured{border-color:var(--aqua);background:rgba(26,181,163,0.06);}
+.prod-card.school{border-color:var(--gold);background:rgba(212,168,83,0.06);}
+
+.prod-card-img{height:180px;background:linear-gradient(135deg,rgba(11,122,110,0.3),rgba(26,181,163,0.1));display:flex;align-items:center;justify-content:center;font-size:3.5rem;position:relative;overflow:hidden;}
+.prod-card-img svg{width:120px;height:160px;}
+.prod-badge{position:absolute;top:10px;right:10px;font-size:0.65rem;font-weight:700;padding:3px 10px;border-radius:8px;}
+.badge-rec{background:var(--aqua);color:var(--deep);}
+.badge-school{background:var(--gold);color:var(--deep);}
+.badge-diy{background:var(--leaf);color:var(--white);}
+.badge-pro{background:rgba(255,255,255,0.15);color:var(--white);}
+
+.prod-card-body{padding:20px;}
+.prod-model{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--aqua);font-weight:700;margin-bottom:4px;}
+.prod-capacity{font-size:0.85rem;color:var(--foam);font-weight:600;margin-bottom:12px;}
+.prod-specs{list-style:none;}
+.prod-specs li{font-size:0.78rem;color:var(--muted);padding:4px 0;border-bottom:1px solid rgba(26,181,163,0.08);display:flex;gap:8px;}
+.prod-specs li::before{content:'·';color:var(--aqua);}
+.prod-cta{margin-top:16px;width:100%;background:linear-gradient(135deg,var(--teal),var(--aqua));color:var(--white);border:none;border-radius:12px;padding:10px;font-size:0.85rem;font-weight:700;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all 0.3s;}
+.prod-cta:hover{opacity:0.85;}
+
+/* ── 상세 스펙 테이블 ── */
+.spec-table-wrap{overflow-x:auto;margin-top:48px;}
+.spec-table{width:100%;border-collapse:collapse;min-width:600px;}
+.spec-table th{background:rgba(11,122,110,0.5);color:var(--foam);font-size:0.82rem;font-weight:700;padding:12px 16px;text-align:center;border:1px solid rgba(26,181,163,0.2);}
+.spec-table td{padding:11px 16px;font-size:0.82rem;color:var(--muted);border:1px solid rgba(26,181,163,0.1);text-align:center;}
+.spec-table tr:nth-child(even) td{background:rgba(255,255,255,0.02);}
+.spec-table tr:hover td{background:rgba(26,181,163,0.06);color:var(--text);}
+.spec-table .model-cell{color:var(--aqua);font-weight:700;font-size:0.95rem;}
+.spec-table .highlight{background:rgba(26,181,163,0.08)!important;}
+.spec-table .highlight-gold{background:rgba(212,168,83,0.08)!important;}
+
+/* ── 구성품 섹션 ── */
+.components-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px;margin-top:32px;}
+.comp-card{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:14px;padding:20px 16px;text-align:center;transition:all 0.3s;}
+.comp-card:hover{background:rgba(26,181,163,0.08);border-color:rgba(26,181,163,0.4);}
+.comp-icon{font-size:2rem;margin-bottom:10px;}
+.comp-name{font-size:0.85rem;font-weight:700;color:var(--foam);margin-bottom:4px;}
+.comp-desc{font-size:0.75rem;color:var(--muted);line-height:1.5;}
+
+/* ── 학교 도입 배너 ── */
+.school-banner{background:linear-gradient(135deg,rgba(212,168,83,0.12),rgba(11,122,110,0.10));border:1px solid rgba(212,168,83,0.3);border-radius:24px;padding:48px;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;margin:48px 0;}
+.school-banner h3{font-family:'Noto Serif KR',serif;font-size:1.4rem;color:var(--white);font-weight:700;margin-bottom:10px;}
+.school-banner p{color:var(--muted);font-size:0.9rem;line-height:1.7;}
+.btn-primary{background:linear-gradient(135deg,var(--teal),var(--aqua));color:var(--white);border:none;padding:14px 32px;border-radius:50px;font-weight:700;font-size:0.95rem;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all 0.3s;white-space:nowrap;}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,181,163,0.4);}
+
+/* ── DIY 구성품 가격표 설명 ── */
+.diy-note{background:rgba(74,140,63,0.08);border:1px solid rgba(122,184,122,0.2);border-radius:16px;padding:24px;margin-top:32px;}
+.diy-note p{font-size:0.88rem;color:var(--muted);line-height:1.8;}
+
+/* 토스트 */
+#toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--ocean);border:1px solid rgba(26,181,163,0.3);color:var(--foam);padding:12px 24px;border-radius:12px;font-size:0.88rem;z-index:300;opacity:0;transition:all 0.3s;pointer-events:none;white-space:nowrap;}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+/* 반응형 */
+@media(max-width:768px){
+  .section{padding:48px 20px;}
+  .school-banner{grid-template-columns:1fr;}
+  .product-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:480px){
+  .product-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- 히어로 -->
+<!-- 홈 네비 -->
+<nav style="position:fixed;top:0;width:100%;z-index:100;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;background:rgba(10,22,40,0.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(26,181,163,0.2);">
+  <a href="index.html" style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;color:#1ab5a3;letter-spacing:2px;text-decoration:none;">ECO-<span style="color:#6ee8d8;">VASS</span></a>
+  <div style="display:flex;gap:20px;align-items:center;">
+    <a href="index.html" style="color:#7ba8a0;text-decoration:none;font-size:0.82rem;">홈으로</a>
+    <a href="modular.html" style="color:var(--aqua);font-weight:700;">모듈러</a>
+    <a href="index.html#education" style="color:#7ba8a0;text-decoration:none;font-size:0.82rem;">교육</a>
+    <a href="index.html#partners" style="color:#7ba8a0;text-decoration:none;font-size:0.82rem;">파트너</a>
+    <a href="index.html#contact" style="background:linear-gradient(135deg,#0b7a6e,#1ab5a3);color:#fff;padding:7px 18px;border-radius:20px;font-size:0.82rem;font-weight:700;text-decoration:none;">참여하기</a>
+  </div>
+</nav>
+<div style="height:56px;"></div>
+
+<div class="prod-hero">
+  <div class="prod-hero-tag">ECO-VASS™ Product Lineup</div>
+  <h1>아쿠아포닉스 모듈러<br>전 제품 라인업</h1>
+  <p>가정용 소형부터 학교·공동체용 대형까지.<br>완제품(Plug &amp; Play)과 DIY 조립형으로 누구나 시작할 수 있습니다.</p>
+  <div class="tab-row">
+    <button class="tab-btn active" onclick="showTab('complete')">완제품 (5종)</button>
+    <button class="tab-btn" onclick="showTab('diy')">DIY 제품 (4종)</button>
+    <button class="tab-btn" onclick="showTab('components')">구성품 목록</button>
+  </div>
+</div>
+
+<!-- 완제품 -->
+<div id="tab-complete" class="products-wrap active">
+<div class="section">
+<div class="section-inner">
+  <span class="section-tag">독립형 완제품</span>
+  <h2 class="section-title">바로 시작하는 완성형 시스템</h2>
+  <p class="section-desc">프레임·수조·재배조·LED·펌프·여과 시스템이 모두 포함된 완제품입니다. 설치 후 즉시 운영 가능합니다.</p>
+
+  <div class="product-grid">
+
+    <!-- SS-110 -->
+    <div class="prod-card">
+      <div class="prod-card-img">
+        <svg viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg">
+          <!-- 프레임 -->
+          <rect x="10" y="20" width="100" height="120" rx="3" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+          <!-- LED -->
+          <rect x="9" y="16" width="102" height="5" rx="2" fill="#fffde0" opacity="0.8"/>
+          <!-- DWC 재배조 1단 -->
+          <rect x="18" y="22" width="84" height="30" rx="3" fill="rgba(26,181,163,0.15)" stroke="#1ab5a3" stroke-width="1"/>
+          <!-- 식물들 -->
+          <ellipse cx="35" cy="22" rx="7" ry="5" fill="#4a8c3f" opacity="0.9"/>
+          <ellipse cx="60" cy="22" rx="8" ry="5" fill="#5a9c4f" opacity="0.9"/>
+          <ellipse cx="85" cy="22" rx="7" ry="5" fill="#4a8c3f" opacity="0.9"/>
+          <!-- 어류 수조 -->
+          <rect x="18" y="98" width="84" height="34" rx="3" fill="rgba(11,122,110,0.25)" stroke="#0b7a6e" stroke-width="1"/>
+          <!-- 물고기 -->
+          <ellipse cx="38" cy="115" rx="10" ry="4" fill="#ff5722" opacity="0.8"/>
+          <ellipse cx="65" cy="110" rx="9" ry="4" fill="#ff7043" opacity="0.8"/>
+          <ellipse cx="88" cy="118" rx="8" ry="3.5" fill="#ff4500" opacity="0.8"/>
+          <!-- 바퀴 -->
+          <circle cx="22" cy="143" r="5" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <circle cx="98" cy="143" r="5" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <circle cx="22" cy="143" r="2" fill="rgba(255,68,68,0.8)"/>
+          <circle cx="98" cy="143" r="2" fill="rgba(255,68,68,0.8)"/>
+        </svg>
+        <div class="prod-badge badge-pro">입문</div>
+      </div>
+      <div class="prod-card-body">
+        <div class="prod-model">SS-110</div>
+        <div class="prod-capacity">24구 · 1단 재배</div>
+        <ul class="prod-specs">
+          <li>프레임: 900×600×1,200mm</li>
+          <li>수조: 600×400×300mm (유리)</li>
+          <li>LED: 1,200mm × 1개</li>
+          <li>DWC 심해형 재배기 1단</li>
+        </ul>
+        <button class="prod-cta" onclick="inquire('SS-110')">상담 문의하기</button>
+      </div>
+    </div>
+
+    <!-- SS-120 -->
+    <div class="prod-card">
+      <div class="prod-card-img">
+        <svg viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="10" width="100" height="140" rx="3" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+          <rect x="9" y="6" width="102" height="5" rx="2" fill="#fffde0" opacity="0.8"/>
+          <!-- 1단 재배조 -->
+          <rect x="18" y="12" width="84" height="26" rx="3" fill="rgba(26,181,163,0.15)" stroke="#1ab5a3" stroke-width="1"/>
+          <ellipse cx="35" cy="12" rx="7" ry="5" fill="#4a8c3f" opacity="0.9"/>
+          <ellipse cx="60" cy="12" rx="8" ry="5" fill="#5a9c4f" opacity="0.9"/>
+          <ellipse cx="85" cy="12" rx="7" ry="5" fill="#4a8c3f" opacity="0.9"/>
+          <!-- LED 중간 -->
+          <rect x="9" y="40" width="102" height="4" rx="1" fill="#fffde0" opacity="0.7"/>
+          <!-- 2단 재배조 -->
+          <rect x="18" y="45" width="84" height="26" rx="3" fill="rgba(26,181,163,0.15)" stroke="#1ab5a3" stroke-width="1"/>
+          <ellipse cx="35" cy="45" rx="6" ry="4" fill="#3a7c2f" opacity="0.9"/>
+          <ellipse cx="60" cy="45" rx="7" ry="4" fill="#4a8c3f" opacity="0.9"/>
+          <ellipse cx="85" cy="45" rx="6" ry="4" fill="#3a7c2f" opacity="0.9"/>
+          <!-- 어류 수조 -->
+          <rect x="18" y="106" width="84" height="34" rx="3" fill="rgba(11,122,110,0.25)" stroke="#0b7a6e" stroke-width="1"/>
+          <ellipse cx="38" cy="123" rx="10" ry="4" fill="#ff5722" opacity="0.8"/>
+          <ellipse cx="65" cy="118" rx="9" ry="4" fill="#ff7043" opacity="0.8"/>
+          <ellipse cx="88" cy="125" rx="8" ry="3.5" fill="#ff4500" opacity="0.8"/>
+          <circle cx="22" cy="148" r="5" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <circle cx="98" cy="148" r="5" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <circle cx="22" cy="148" r="2" fill="rgba(255,68,68,0.8)"/>
+          <circle cx="98" cy="148" r="2" fill="rgba(255,68,68,0.8)"/>
+        </svg>
+        <div class="prod-badge badge-pro">소형</div>
+      </div>
+      <div class="prod-card-body">
+        <div class="prod-model">SS-120</div>
+        <div class="prod-capacity">48구 · 2단 재배</div>
+        <ul class="prod-specs">
+          <li>프레임: 900×600×1,500mm</li>
+          <li>수조: 600×400×300mm (유리)</li>
+          <li>LED: 1,200mm + 600mm</li>
+          <li>DWC 심해형 재배기 2단</li>
+        </ul>
+        <button class="prod-cta" onclick="inquire('SS-120')">상담 문의하기</button>
+      </div>
+    </div>
+
+    <!-- MS-200 -->
+    <div class="prod-card featured">
+      <div class="prod-card-img">
+        <svg viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="8" width="104" height="144" rx="3" fill="none" stroke="#1ab5a3" stroke-width="2"/>
+          <rect x="7" y="4" width="106" height="5" rx="2" fill="#fffde0" opacity="0.9"/>
+          <rect x="16" y="10" width="88" height="28" rx="3" fill="rgba(26,181,163,0.2)" stroke="#1ab5a3" stroke-width="1.2"/>
+          <ellipse cx="32" cy="10" rx="8" ry="5" fill="#4a8c3f" opacity="0.9"/>
+          <ellipse cx="60" cy="10" rx="9" ry="6" fill="#5a9c4f" opacity="0.9"/>
+          <ellipse cx="88" cy="10" rx="8" ry="5" fill="#4a8c3f" opacity="0.9"/>
+          <rect x="7" y="40" width="106" height="4" rx="1" fill="#fffde0" opacity="0.8"/>
+          <rect x="16" y="45" width="88" height="28" rx="3" fill="rgba(26,181,163,0.2)" stroke="#1ab5a3" stroke-width="1.2"/>
+          <ellipse cx="32" cy="45" rx="7" ry="5" fill="#3a7c2f" opacity="0.9"/>
+          <ellipse cx="60" cy="45" rx="8" ry="5" fill="#4a8c3f" opacity="0.9"/>
+          <ellipse cx="88" cy="45" rx="7" ry="5" fill="#3a7c2f" opacity="0.9"/>
+          <rect x="16" y="106" width="88" height="38" rx="3" fill="rgba(11,122,110,0.3)" stroke="#0b7a6e" stroke-width="1.2"/>
+          <ellipse cx="36" cy="125" rx="11" ry="5" fill="#ff5722" opacity="0.9"/>
+          <ellipse cx="60" cy="118" rx="10" ry="4.5" fill="#ff7043" opacity="0.9"/>
+          <ellipse cx="84" cy="127" rx="11" ry="5" fill="#ff4500" opacity="0.9"/>
+          <circle cx="20" cy="153" r="5" fill="none" stroke="#ff4444" stroke-width="2"/>
+          <circle cx="100" cy="153" r="5" fill="none" stroke="#ff4444" stroke-width="2"/>
+          <circle cx="20" cy="153" r="2" fill="#ff4444"/>
+          <circle cx="100" cy="153" r="2" fill="#ff4444"/>
+        </svg>
+        <div class="prod-badge badge-rec">추천</div>
+      </div>
+      <div class="prod-card-body">
+        <div class="prod-model">MS-200</div>
+        <div class="prod-capacity">60구 · 2단 재배</div>
+        <ul class="prod-specs">
+          <li>프레임: 1,000×600×1,500mm</li>
+          <li>수조: 800×450×350mm (유리)</li>
+          <li>LED: 1,200mm + 600mm</li>
+          <li>DWC 심해형 재배기 2단</li>
+          <li>가정·교실 최적 사이즈</li>
+        </ul>
+        <button class="prod-cta" onclick="inquire('MS-200')">상담 문의하기</button>
+      </div>
+    </div>
+
+    <!-- LS-300 -->
+    <div class="prod-card school">
+      <div class="prod-card-img">
+        <svg viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="4" width="108" height="148" rx="3" fill="none" stroke="#d4a853" stroke-width="2"/>
+          <rect x="5" y="0" width="110" height="5" rx="2" fill="#fffde0" opacity="0.9"/>
+          <!-- NFT관 1단 -->
+          <rect x="14" y="5" width="92" height="16" rx="8" fill="rgba(26,181,163,0.2)" stroke="#1ab5a3" stroke-width="1"/>
+          <ellipse cx="30" cy="5" rx="6" ry="4" fill="#4a8c3f" opacity="0.9"/>
+          <ellipse cx="55" cy="5" rx="6" ry="4" fill="#5a9c4f" opacity="0.9"/>
+          <ellipse cx="80" cy="5" rx="6" ry="4" fill="#4a8c3f" opacity="0.9"/>
+          <ellipse cx="100" cy="5" rx="5" ry="4" fill="#3a7c2f" opacity="0.9"/>
+          <!-- LED -->
+          <rect x="5" y="23" width="110" height="4" rx="1" fill="#fffde0" opacity="0.8"/>
+          <!-- DWC 1단 -->
+          <rect x="14" y="28" width="92" height="28" rx="3" fill="rgba(26,181,163,0.2)" stroke="#1ab5a3" stroke-width="1.2"/>
+          <ellipse cx="30" cy="28" rx="7" ry="5" fill="#4a8c3f" opacity="0.9"/>
+          <ellipse cx="55" cy="28" rx="8" ry="5" fill="#5a9c4f" opacity="0.9"/>
+          <ellipse cx="80" cy="28" rx="7" ry="5" fill="#4a8c3f" opacity="0.9"/>
+          <ellipse cx="100" cy="28" rx="6" ry="4" fill="#3a7c2f" opacity="0.9"/>
+          <!-- LED 2 -->
+          <rect x="5" y="58" width="110" height="4" rx="1" fill="#fffde0" opacity="0.8"/>
+          <!-- DWC 2단 -->
+          <rect x="14" y="63" width="92" height="28" rx="3" fill="rgba(26,181,163,0.2)" stroke="#1ab5a3" stroke-width="1.2"/>
+          <ellipse cx="30" cy="63" rx="7" ry="5" fill="#3a7c2f" opacity="0.9"/>
+          <ellipse cx="55" cy="63" rx="8" ry="5" fill="#4a8c3f" opacity="0.9"/>
+          <ellipse cx="80" cy="63" rx="7" ry="5" fill="#3a7c2f" opacity="0.9"/>
+          <ellipse cx="100" cy="63" rx="6" ry="4" fill="#4a8c3f" opacity="0.9"/>
+          <!-- 어류 수조 -->
+          <rect x="14" y="104" width="92" height="40" rx="3" fill="rgba(11,122,110,0.3)" stroke="#0b7a6e" stroke-width="1.2"/>
+          <ellipse cx="32" cy="124" rx="11" ry="5" fill="#ff5722" opacity="0.9"/>
+          <ellipse cx="55" cy="116" rx="10" ry="4.5" fill="#ff7043" opacity="0.9"/>
+          <ellipse cx="78" cy="126" rx="11" ry="5" fill="#ff4500" opacity="0.9"/>
+          <ellipse cx="98" cy="118" rx="9" ry="4" fill="#e64a19" opacity="0.8"/>
+          <circle cx="18" cy="148" r="5" fill="none" stroke="#ff4444" stroke-width="2"/>
+          <circle cx="102" cy="148" r="5" fill="none" stroke="#ff4444" stroke-width="2"/>
+          <circle cx="18" cy="148" r="2" fill="#ff4444"/>
+          <circle cx="102" cy="148" r="2" fill="#ff4444"/>
+        </svg>
+        <div class="prod-badge badge-school">학교 도입</div>
+      </div>
+      <div class="prod-card-body">
+        <div class="prod-model" style="color:var(--gold)">LS-300</div>
+        <div class="prod-capacity" style="color:var(--sand)">80구 · 2단 재배</div>
+        <ul class="prod-specs">
+          <li>프레임: 1,200×600×1,800mm</li>
+          <li>수조: 1,000×450×400mm (유리)</li>
+          <li>LED: 1,200mm + 600mm</li>
+          <li>DWC 2단 + 습지형 여과</li>
+          <li>인천 K고등학교 도입 모델</li>
+        </ul>
+        <button class="prod-cta" style="background:linear-gradient(135deg,#8a6000,var(--gold))" onclick="inquire('LS-300')">학교 도입 문의</button>
+      </div>
+    </div>
+
+    <!-- LS-500 -->
+    <div class="prod-card">
+      <div class="prod-card-img">
+        <svg viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg">
+          <rect x="5" y="2" width="110" height="152" rx="3" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+          <rect x="4" y="0" width="112" height="4" rx="1" fill="#fffde0" opacity="0.9"/>
+          <rect x="13" y="5" width="94" height="22" rx="3" fill="rgba(26,181,163,0.15)" stroke="#1ab5a3" stroke-width="1"/>
+          <ellipse cx="28" cy="5" rx="6" ry="4" fill="#4a8c3f" opacity="0.9"/>
+          <ellipse cx="50" cy="5" rx="7" ry="4" fill="#5a9c4f" opacity="0.9"/>
+          <ellipse cx="75" cy="5" rx="6" ry="4" fill="#4a8c3f" opacity="0.9"/>
+          <ellipse cx="98" cy="5" rx="6" ry="4" fill="#3a7c2f" opacity="0.9"/>
+          <rect x="4" y="29" width="112" height="4" rx="1" fill="#fffde0" opacity="0.8"/>
+          <rect x="13" y="34" width="94" height="22" rx="3" fill="rgba(26,181,163,0.15)" stroke="#1ab5a3" stroke-width="1"/>
+          <ellipse cx="28" cy="34" rx="6" ry="4" fill="#3a7c2f" opacity="0.9"/>
+          <ellipse cx="50" cy="34" rx="7" ry="4" fill="#4a8c3f" opacity="0.9"/>
+          <ellipse cx="75" cy="34" rx="6" ry="4" fill="#3a7c2f" opacity="0.9"/>
+          <ellipse cx="98" cy="34" rx="6" ry="4" fill="#4a8c3f" opacity="0.9"/>
+          <rect x="4" y="58" width="112" height="4" rx="1" fill="#fffde0" opacity="0.8"/>
+          <rect x="13" y="63" width="94" height="22" rx="3" fill="rgba(26,181,163,0.15)" stroke="#1ab5a3" stroke-width="1"/>
+          <ellipse cx="28" cy="63" rx="6" ry="4" fill="#4a8c3f" opacity="0.9"/>
+          <ellipse cx="50" cy="63" rx="7" ry="4" fill="#5a9c4f" opacity="0.9"/>
+          <ellipse cx="75" cy="63" rx="6" ry="4" fill="#4a8c3f" opacity="0.9"/>
+          <ellipse cx="98" cy="63" rx="6" ry="4" fill="#3a7c2f" opacity="0.9"/>
+          <rect x="13" y="104" width="94" height="44" rx="3" fill="rgba(11,122,110,0.3)" stroke="#0b7a6e" stroke-width="1.2"/>
+          <ellipse cx="30" cy="126" rx="11" ry="5" fill="#ff5722" opacity="0.9"/>
+          <ellipse cx="55" cy="118" rx="10" ry="4.5" fill="#ff7043" opacity="0.9"/>
+          <ellipse cx="80" cy="128" rx="11" ry="5" fill="#ff4500" opacity="0.9"/>
+          <ellipse cx="103" cy="120" rx="9" ry="4" fill="#e64a19" opacity="0.8"/>
+          <circle cx="17" cy="151" r="5" fill="none" stroke="#ff4444" stroke-width="2"/>
+          <circle cx="103" cy="151" r="5" fill="none" stroke="#ff4444" stroke-width="2"/>
+          <circle cx="17" cy="151" r="2" fill="#ff4444"/>
+          <circle cx="103" cy="151" r="2" fill="#ff4444"/>
+        </svg>
+        <div class="prod-badge badge-pro">대형</div>
+      </div>
+      <div class="prod-card-body">
+        <div class="prod-model">LS-500</div>
+        <div class="prod-capacity">120구 · 3단 재배</div>
+        <ul class="prod-specs">
+          <li>프레임: 1,200×600×2,100mm</li>
+          <li>수조: 1,000×500×450mm (유리)</li>
+          <li>LED: 1,200mm + 600mm</li>
+          <li>DWC 3단 최대 생산 모델</li>
+          <li>공동체·상업용 권장</li>
+        </ul>
+        <button class="prod-cta" onclick="inquire('LS-500')">상담 문의하기</button>
+      </div>
+    </div>
+
+  </div><!-- /product-grid -->
+
+  <!-- 스펙 비교표 -->
+  <h3 style="font-family:'Noto Serif KR',serif;font-size:1.2rem;color:var(--foam);margin-top:56px;margin-bottom:20px;">완제품 사양 비교표</h3>
+  <div class="spec-table-wrap">
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th>모델</th><th>재배 능력</th><th>Steel 프레임</th><th>어류 수조</th><th>LED</th><th>특징</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="model-cell">SS-110</td><td>24구 / 1단</td><td>900×600×1,200</td><td>600×400×300 (유리)</td><td>1,200mm</td><td>입문용, 컴팩트</td></tr>
+        <tr><td class="model-cell">SS-120</td><td>48구 / 2단</td><td>900×600×1,500</td><td>600×400×300 (유리)</td><td>1,200+600mm</td><td>소형 가정용</td></tr>
+        <tr class="highlight"><td class="model-cell" style="color:var(--aqua)">MS-200 ★</td><td>60구 / 2단</td><td>1,000×600×1,500</td><td>800×450×350 (유리)</td><td>1,200+600mm</td><td>가정·교실 추천</td></tr>
+        <tr class="highlight-gold"><td class="model-cell" style="color:var(--gold)">LS-300 ★</td><td>80구 / 2단</td><td>1,200×600×1,800</td><td>1,000×450×400 (유리)</td><td>1,200+600mm</td><td>학교·공동체 도입</td></tr>
+        <tr><td class="model-cell">LS-500</td><td>120구 / 3단</td><td>1,200×600×2,100</td><td>1,000×500×450 (유리)</td><td>1,200+600mm</td><td>대형 공동체·상업용</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 학교 도입 배너 -->
+  <div class="school-banner">
+    <div>
+      <h3>🏫 학교·교육기관 도입 문의</h3>
+      <p>인천 K고등학교에 LS-300이 도입되었습니다. 동아리 운영방안·교재·교사 지도안을 함께 제공합니다.<br>교육기관 특별 지원 프로그램을 운영 중입니다. 지금 문의해 주세요.</p>
+    </div>
+    <button class="btn-primary" onclick="window.location.href='https://pf.kakao.com/_rXDxdX'">카카오 채널 상담</button>
+  </div>
+
+</div>
+</div>
+</div><!-- /tab-complete -->
+
+<!-- DIY 제품 -->
+<div id="tab-diy" class="products-wrap">
+<div class="section">
+<div class="section-inner">
+  <span class="section-tag">DIY 조립형 제품</span>
+  <h2 class="section-title">직접 만드는 재미, DIY 라인업</h2>
+  <p class="section-desc">구성품을 선택해 직접 조립하는 방식입니다. 강의·교육과 연계하여 학습 효과를 극대화할 수 있습니다.</p>
+
+  <div class="product-grid" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr))">
+    <div class="prod-card">
+      <div class="prod-card-img" style="font-size:2.5rem;">🔧<div class="prod-badge badge-diy">DIY</div></div>
+      <div class="prod-card-body">
+        <div class="prod-model">S-11</div>
+        <div class="prod-capacity">24구 · 1단 재배</div>
+        <ul class="prod-specs">
+          <li>PVC 프레임: 650×550×1,050mm</li>
+          <li>수조: 600×400×300mm (유리)</li>
+          <li>DWC: 710×500×190mm (공산품)</li>
+          <li>LED: 600mm × 4개</li>
+        </ul>
+        <button class="prod-cta" onclick="inquire('S-11 DIY')">문의하기</button>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-card-img" style="font-size:2.5rem;">🔧<div class="prod-badge badge-diy">DIY</div></div>
+      <div class="prod-card-body">
+        <div class="prod-model">S-12</div>
+        <div class="prod-capacity">48구 · 2단 재배</div>
+        <ul class="prod-specs">
+          <li>PVC 프레임: 650×550×1,450mm</li>
+          <li>수조: 600×400×300mm (유리)</li>
+          <li>DWC: 710×500×190mm (공산품)</li>
+          <li>LED: 600mm × 8개</li>
+        </ul>
+        <button class="prod-cta" onclick="inquire('S-12 DIY')">문의하기</button>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-card-img" style="font-size:2.5rem;">⚙️<div class="prod-badge badge-diy">DIY</div></div>
+      <div class="prod-card-body">
+        <div class="prod-model">M-21</div>
+        <div class="prod-capacity">30구 · 1단 재배</div>
+        <ul class="prod-specs">
+          <li>PVC 프레임: 1,050×650×1,050mm</li>
+          <li>수조: 800×450×350mm (유리)</li>
+          <li>DWC: 930×600×100mm (제작품)</li>
+          <li>LED: 600mm × 4개</li>
+        </ul>
+        <button class="prod-cta" onclick="inquire('M-21 DIY')">문의하기</button>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-card-img" style="font-size:2.5rem;">⚙️<div class="prod-badge badge-diy">DIY</div></div>
+      <div class="prod-card-body">
+        <div class="prod-model">M-22</div>
+        <div class="prod-capacity">60구 · 2단 재배</div>
+        <ul class="prod-specs">
+          <li>PVC 프레임: 1,050×650×1,350mm</li>
+          <li>수조: 1,000×450×400mm (유리)</li>
+          <li>DWC: 930×600×100mm (제작품)</li>
+          <li>LED: 600mm × 8개</li>
+        </ul>
+        <button class="prod-cta" onclick="inquire('M-22 DIY')">문의하기</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="diy-note" style="margin-top:32px;">
+    <p>💡 <strong style="color:var(--sage)">DIY 키트 안내:</strong> DIY 제품은 구성품을 선택적으로 조합하여 주문합니다. 습지 모듈(A~D형), 바닥재(마사·화산석·맥반석), 모터(10W~30W), 산소발생기, 수생식물 세트, API 수질 테스트 키트를 별도 선택하실 수 있습니다. 자세한 구성품 목록은 <strong style="color:var(--aqua)">구성품 목록</strong> 탭을 확인하세요.</p>
+  </div>
+</div>
+</div>
+</div><!-- /tab-diy -->
+
+<!-- 구성품 목록 -->
+<div id="tab-components" class="products-wrap">
+<div class="section">
+<div class="section-inner">
+  <span class="section-tag">구성품 단위 목록</span>
+  <h2 class="section-title">선택 가능한 구성품 목록</h2>
+  <p class="section-desc">DIY 제품의 각 구성품은 모델별 소요량에 맞춰 선택·조합하실 수 있습니다.</p>
+  <div class="components-grid">
+    <div class="comp-card"><div class="comp-icon">🏗️</div><div class="comp-name">상판 고정틀</div><div class="comp-desc">A형 650×550mm<br>B형 1,050×650mm</div></div>
+    <div class="comp-card"><div class="comp-icon">📐</div><div class="comp-name">기둥 프레임</div><div class="comp-desc">1단 600mm<br>2·3단 400mm</div></div>
+    <div class="comp-card"><div class="comp-icon">🌿</div><div class="comp-name">DWC 재배구</div><div class="comp-desc">A형 930×600×145mm<br>B형 710×500×190mm</div></div>
+    <div class="comp-card"><div class="comp-icon">💡</div><div class="comp-name">LED 식물등</div><div class="comp-desc">600mm / 1,200mm<br>식물 최적 파장</div></div>
+    <div class="comp-card"><div class="comp-icon">🐟</div><div class="comp-name">유리 수족관</div><div class="comp-desc">A: 600×400×300<br>B: 800×450×350<br>C: 1000×450×400</div></div>
+    <div class="comp-card"><div class="comp-icon">💧</div><div class="comp-name">PVC 수족관</div><div class="comp-desc">500×400×300mm<br>경량 PVC 소재</div></div>
+    <div class="comp-card"><div class="comp-icon">🌊</div><div class="comp-name">습지 모듈</div><div class="comp-desc">A형 480mm<br>B형 580mm<br>C형 780mm<br>D형 980mm</div></div>
+    <div class="comp-card"><div class="comp-icon">🪨</div><div class="comp-name">바닥재</div><div class="comp-desc">마사토 10kg<br>화산석 10kg<br>맥반석 5kg</div></div>
+    <div class="comp-card"><div class="comp-icon">⚡</div><div class="comp-name">순환 모터</div><div class="comp-desc">A형 10W<br>B형 20W<br>C형 30W</div></div>
+    <div class="comp-card"><div class="comp-icon">🫧</div><div class="comp-name">산소발생기</div><div class="comp-desc">A형 / B형<br>용존산소 유지</div></div>
+    <div class="comp-card"><div class="comp-icon">🌱</div><div class="comp-name">수생식물 세트</div><div class="comp-desc">L형 3종 세트<br>S형 2종 세트</div></div>
+    <div class="comp-card"><div class="comp-icon">🧪</div><div class="comp-name">수질 테스트 키트</div><div class="comp-desc">API사 제품 (담수용)<br>pH·암모니아·아질산·질산</div></div>
+  </div>
+</div>
+</div>
+</div><!-- /tab-components -->
+
+<div id="toast"></div>
+
+<script>
+function showTab(tab) {
+  document.querySelectorAll('.products-wrap').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+  document.getElementById('tab-'+tab).classList.add('active');
+  event.target.classList.add('active');
+}
+function inquire(model) {
+  showToast('💬 카카오 채널로 연결합니다... ' + model);
+  setTimeout(() => { window.open('https://pf.kakao.com/_rXDxdX','_blank'); }, 800);
+}
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3000);
+}
+</script>
+</body>
+</html>
