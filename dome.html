@@ -229,61 +229,9 @@ footer{background:rgba(8,18,32,0.95);border-top:1px solid var(--border);padding:
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-bg"></div>
-  <!-- 배경 SVG 돔 비주얼 -->
-  <div class="hero-img-placeholder">
-    <svg viewBox="0 0 1400 700" width="100%" xmlns="http://www.w3.org/2000/svg" style="opacity:0.28;">
-      <defs>
-        <radialGradient id="g1" cx="50%" cy="80%" r="70%"><stop offset="0%" stop-color="#1565C0" stop-opacity="0.4"/><stop offset="100%" stop-color="#0a1628" stop-opacity="0"/></radialGradient>
-        <radialGradient id="g2" cx="50%" cy="80%" r="70%"><stop offset="0%" stop-color="#0b7a6e" stop-opacity="0.4"/><stop offset="100%" stop-color="#0a1628" stop-opacity="0"/></radialGradient>
-        <radialGradient id="g3" cx="50%" cy="80%" r="70%"><stop offset="0%" stop-color="#2e7d32" stop-opacity="0.4"/><stop offset="100%" stop-color="#0a1628" stop-opacity="0"/></radialGradient>
-      </defs>
-      <!-- 산 배경 -->
-      <ellipse cx="700" cy="680" rx="900" ry="250" fill="rgba(46,125,50,0.12)"/>
-      <ellipse cx="200" cy="620" rx="400" ry="200" fill="rgba(27,94,32,0.15)"/>
-      <ellipse cx="1200" cy="620" rx="400" ry="200" fill="rgba(27,94,32,0.15)"/>
-      <!-- 연못 -->
-      <ellipse cx="700" cy="570" rx="140" ry="60" fill="rgba(26,181,163,0.2)" stroke="rgba(26,181,163,0.35)" stroke-width="1.5"/>
-      <!-- 교육돔 기단 -->
-      <rect x="130" y="420" width="300" height="70" rx="4" fill="rgba(21,101,192,0.18)" stroke="rgba(21,101,192,0.3)" stroke-width="1"/>
-      <!-- 교육돔 반구 -->
-      <path d="M130 420 Q130 230 280 230 Q430 230 430 420" fill="rgba(21,101,192,0.12)" stroke="rgba(144,202,249,0.5)" stroke-width="1.5" fill-rule="evenodd"/>
-      <!-- 교육돔 격자 -->
-      <line x1="280" y1="230" x2="280" y2="420" stroke="rgba(144,202,249,0.25)" stroke-width="1"/>
-      <path d="M160 290 Q280 265 400 290" stroke="rgba(144,202,249,0.2)" stroke-width="1" fill="none"/>
-      <path d="M140 350 Q280 318 420 350" stroke="rgba(144,202,249,0.2)" stroke-width="1" fill="none"/>
-      <path d="M130 400 Q280 375 430 400" stroke="rgba(144,202,249,0.2)" stroke-width="1" fill="none"/>
-      <text x="280" y="215" text-anchor="middle" fill="rgba(144,202,249,0.7)" font-size="13" font-family="sans-serif">EDUCATION DOME</text>
-      <!-- 생산돔 기단 -->
-      <rect x="510" y="400" width="380" height="80" rx="4" fill="rgba(11,122,110,0.18)" stroke="rgba(26,181,163,0.3)" stroke-width="1.5"/>
-      <!-- 생산돔 반구 -->
-      <path d="M510 400 Q510 190 700 190 Q890 190 890 400" fill="rgba(11,122,110,0.12)" stroke="rgba(110,232,216,0.55)" stroke-width="2" fill-rule="evenodd"/>
-      <!-- 생산돔 격자 -->
-      <line x1="700" y1="190" x2="700" y2="400" stroke="rgba(110,232,216,0.25)" stroke-width="1"/>
-      <path d="M555 260 Q700 228 845 260" stroke="rgba(110,232,216,0.2)" stroke-width="1" fill="none"/>
-      <path d="M525 325 Q700 285 875 325" stroke="rgba(110,232,216,0.2)" stroke-width="1" fill="none"/>
-      <path d="M510 375 Q700 345 890 375" stroke="rgba(110,232,216,0.2)" stroke-width="1" fill="none"/>
-      <text x="700" y="170" text-anchor="middle" fill="rgba(110,232,216,0.8)" font-size="15" font-family="sans-serif" font-weight="bold">PRODUCTION DOME</text>
-      <!-- 연구돔 기단 -->
-      <rect x="970" y="420" width="300" height="70" rx="4" fill="rgba(46,125,50,0.18)" stroke="rgba(122,184,122,0.3)" stroke-width="1"/>
-      <!-- 연구돔 반구 -->
-      <path d="M970 420 Q970 230 1120 230 Q1270 230 1270 420" fill="rgba(46,125,50,0.12)" stroke="rgba(122,184,122,0.5)" stroke-width="1.5" fill-rule="evenodd"/>
-      <!-- 연구돔 격자 -->
-      <line x1="1120" y1="230" x2="1120" y2="420" stroke="rgba(122,184,122,0.25)" stroke-width="1"/>
-      <path d="M1000 290 Q1120 265 1240 290" stroke="rgba(122,184,122,0.2)" stroke-width="1" fill="none"/>
-      <path d="M980 350 Q1120 318 1260 350" stroke="rgba(122,184,122,0.2)" stroke-width="1" fill="none"/>
-      <text x="1120" y="215" text-anchor="middle" fill="rgba(122,184,122,0.7)" font-size="13" font-family="sans-serif">RESEARCH DOME</text>
-      <!-- 방문자센터 -->
-      <rect x="40" y="505" width="130" height="75" rx="4" fill="rgba(139,105,20,0.25)" stroke="rgba(212,168,83,0.35)" stroke-width="1"/>
-      <text x="105" y="548" text-anchor="middle" fill="rgba(212,168,83,0.6)" font-size="9" font-family="sans-serif">VISITOR CENTER</text>
-      <!-- 태양광 -->
-      <rect x="1280" y="440" width="90" height="55" rx="2" fill="rgba(26,181,163,0.15)" stroke="rgba(26,181,163,0.3)" stroke-width="1"/>
-      <text x="1325" y="472" text-anchor="middle" fill="rgba(26,181,163,0.5)" font-size="9" font-family="sans-serif">SOLAR</text>
-      <!-- 연결 통로 -->
-      <path d="M430 450 Q470 465 510 455" stroke="rgba(255,255,255,0.08)" stroke-width="28" fill="none"/>
-      <path d="M890 455 Q930 465 970 450" stroke="rgba(255,255,255,0.08)" stroke-width="28" fill="none"/>
-    </svg>
-  </div>
+  <div class="hero-bg" style="background:linear-gradient(135deg,#071020 0%,#0a1a35 40%,#061a14 100%);position:absolute;inset:0;z-index:0;"></div>
+  <img src="dome-aerial.jpg" alt="ECO-VASS DOME FARM" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;z-index:0;opacity:0.55;">
+  <!-- hero bg via CSS -->
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="htag">ECO-VASS Dome Farm · 최고 규모 · 생태 문명의 거점</div>
@@ -307,13 +255,7 @@ footer{background:rgba(8,18,32,0.95);border-top:1px solid var(--border);padding:
     <div class="aerial-img-box">
       <div style="font-size:0.72rem;font-weight:700;letter-spacing:3px;color:var(--bluel);margin-bottom:16px;">ECO-VASS DOME FARM · AERIAL VIEW</div>
       <div style="font-family:'Noto Serif KR',serif;font-size:1.1rem;color:var(--white);font-weight:700;margin-bottom:8px;">Education &amp; Experience Dome · Production Dome · Research Dome</div>
-      <!-- 실제 조감도 이미지 자리 — 사진 파일 준비 후 img 태그로 교체 -->
-      <div style="background:linear-gradient(135deg,rgba(13,71,161,0.25),rgba(11,122,110,0.15));border:1px dashed rgba(21,101,192,0.4);border-radius:12px;padding:60px 32px;margin-top:16px;">
-        <div style="font-size:2.5rem;margin-bottom:12px;">🌐</div>
-        <div style="font-size:0.9rem;color:var(--muted);">실제 ECO-VASS DOME FARM 조감도 이미지</div>
-        <div style="font-size:0.78rem;color:rgba(123,168,160,0.6);margin-top:6px;">전북 고창 아쿠아포닉스코리아 기반 · 수도권형 Dome Farm 조성 예정지</div>
-        <div style="font-size:0.75rem;color:rgba(21,101,192,0.7);margin-top:8px;">📸 고화질 조감도 사진 업로드 후 자동 표시</div>
-      </div>
+      <img src="dome-aerial.jpg" alt="ECO-VASS DOME FARM 조감도 — Education &amp; Experience Dome · Production Dome · Research Dome" style="width:100%;border-radius:12px;margin-top:16px;display:block;" loading="lazy">
     </div>
     <div class="aerial-caption">
       3개 돔 + 중앙 자연 연못 + Visitor &amp; Education Center + 태양광 설비가 하나의 생태 복합 단지를 구성합니다.
