@@ -1,0 +1,2061 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ═══════════════════════════════════════════════
+     SEO: 페이지 제목 & 기본 메타
+════════════════════════════════════════════════ -->
+<title>ECO-VASS | 생태형 아쿠아포닉스 도시농업 플랫폼 – 아쿠아포닉스코리아</title>
+<meta name="description" content="ECO-VASS는 습지생태이론 기반 생태형 아쿠아포닉스 모듈러 시스템입니다. 가정과 공동체를 위한 도시농업, 무농약 유기농 재배, 치유농업, 선순환 파트너 생태계 플랫폼. 아쿠아포닉스코리아(주) 운영.">
+<meta name="keywords" content="아쿠아포닉스, 도시농업, 유기농, 수경재배, ECO-VASS, 치유농업, 스마트팜, 아쿠아포닉스코리아, aquaponics, 가정용아쿠아포닉스, 공동체농업, 자비량">
+<meta name="author" content="아쿠아포닉스코리아 주식회사">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ecovass.com/">
+
+<!-- ═══════════════════════════════════════════════
+     SEO: Open Graph (카카오·페이스북·카카오톡 공유)
+════════════════════════════════════════════════ -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ECO-VASS | 아쿠아포닉스코리아">
+<meta property="og:title" content="ECO-VASS – 생태형 아쿠아포닉스 도시농업 플랫폼">
+<meta property="og:description" content="물고기와 식물이 함께 자라는 생태 순환 시스템. 가정·공동체·선교지를 위한 유기농 도시농업과 치유농업 플랫폼.">
+<meta property="og:url" content="https://ecovass.com/">
+<meta property="og:image" content="https://ecovass.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ko_KR">
+
+<!-- ═══════════════════════════════════════════════
+     SEO: Twitter Card (구글 검색 미리보기)
+════════════════════════════════════════════════ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ECO-VASS – 생태형 아쿠아포닉스 도시농업 플랫폼">
+<meta name="twitter:description" content="물고기와 식물이 함께 자라는 생태 순환 시스템. 가정·공동체를 위한 유기농 도시농업 플랫폼.">
+<meta name="twitter:image" content="https://ecovass.com/og-image.png">
+
+<!-- ═══════════════════════════════════════════════
+     SEO: 구조화 데이터 (JSON-LD) – 구글 리치 결과
+════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "아쿠아포닉스코리아 주식회사",
+  "alternateName": "ECO-VASS",
+  "url": "https://ecovass.com",
+  "logo": "https://ecovass.com/og-image.png",
+  "description": "습지생태이론 기반 생태형 아쿠아포닉스 모듈러 시스템 ECO-VASS를 연구·개발·보급하는 도시농업 플랫폼",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "availableLanguage": "Korean"
+  },
+  "sameAs": []
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "ECO-VASS",
+  "url": "https://ecovass.com",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://ecovass.com/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<!-- 파비콘 -->
+<text y='.9em' font-size='90'>🌊</text></svg>">
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --deep: #0a1628;
+  --ocean: #0e2a4a;
+  --teal: #0b7a6e;
+  --aqua: #1ab5a3;
+  --foam: #6ee8d8;
+  --pearl: #e8f5f3;
+  --sand: #c8b89a;
+  --gold: #d4a853;
+  --earth: #7a6e4a;
+  --leaf: #4a8c3f;
+  --sage: #7ab87a;
+  --harvest: #c8a44a;
+  --text: #e4f0ee;
+  --muted: #7ba8a0;
+  --white: #ffffff;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Noto Sans KR', sans-serif; background: var(--deep); color: var(--text); overflow-x: hidden; }
+
+/* WATER BG */
+.water-bg { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.water-bg::before {
+  content: '';
+  position: absolute;
+  width: 200%; height: 200%;
+  top: -50%; left: -50%;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 30%, rgba(11,122,110,0.15) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 70%, rgba(26,181,163,0.10) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 40% at 60% 20%, rgba(74,140,63,0.08) 0%, transparent 50%);
+  animation: waterDrift 20s ease-in-out infinite alternate;
+}
+@keyframes waterDrift {
+  0% { transform: translate(0,0) rotate(0deg); }
+  100% { transform: translate(3%,2%) rotate(1deg); }
+}
+.bubble { position: fixed; border-radius: 50%; background: radial-gradient(circle at 30% 30%, rgba(110,232,216,0.35), rgba(26,181,163,0.08)); border: 1px solid rgba(110,232,216,0.25); animation: rise linear infinite; z-index: 0; }
+@keyframes rise {
+  0% { transform: translateY(100vh) scale(0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 0.4; }
+  100% { transform: translateY(-100px) scale(1); opacity: 0; }
+}
+
+/* NAV */
+nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 16px 48px; display: flex; align-items: center; justify-content: space-between; background: rgba(10,22,40,0.9); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(26,181,163,0.2); }
+.nav-logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 900; color: var(--aqua); letter-spacing: 2px; }
+.nav-logo span { color: var(--foam); }
+.nav-links { display: flex; gap: 28px; list-style: none; }
+.nav-links a { color: var(--muted); text-decoration: none; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.5px; transition: color 0.2s; position: relative; }
+.nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background: var(--aqua); transition: width 0.3s; }
+.nav-links a:hover { color: var(--foam); }
+.nav-links a:hover::after { width: 100%; }
+.nav-cta { background: linear-gradient(135deg, var(--teal), var(--aqua)); color: var(--white) !important; padding: 8px 20px; border-radius: 24px; font-weight: 700 !important; }
+.nav-cta::after { display: none !important; }
+
+/* HERO */
+#hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 120px 40px 80px; z-index: 1; }
+.hero-eyebrow { display: inline-block; font-size: 0.76rem; font-weight: 700; letter-spacing: 4px; color: var(--aqua); text-transform: uppercase; margin-bottom: 24px; padding: 6px 20px; border: 1px solid rgba(26,181,163,0.4); border-radius: 20px; background: rgba(26,181,163,0.08); }
+.hero-title { font-family: 'Playfair Display', serif; font-size: clamp(2.8rem, 7vw, 5.5rem); font-weight: 900; line-height: 1.05; color: var(--white); margin-bottom: 12px; animation: fadeUp 1s ease both; }
+.hero-title .accent { color: var(--aqua); }
+.hero-title .accent2 { color: var(--sage); }
+.hero-subtitle { font-family: 'Noto Serif KR', serif; font-size: clamp(1rem, 2.5vw, 1.5rem); color: var(--foam); margin-bottom: 20px; font-weight: 600; animation: fadeUp 1s 0.15s ease both; }
+.hero-desc { max-width: 680px; margin: 0 auto 48px; font-size: 1rem; color: var(--muted); line-height: 1.9; animation: fadeUp 1s 0.3s ease both; }
+.hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; animation: fadeUp 1s 0.45s ease both; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+.btn-primary { background: linear-gradient(135deg, var(--teal), var(--aqua)); color: var(--white); padding: 15px 38px; border-radius: 50px; font-weight: 700; font-size: 1rem; text-decoration: none; display: inline-block; transition: all 0.3s; box-shadow: 0 8px 32px rgba(26,181,163,0.35); cursor: pointer; border: none; }
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(26,181,163,0.5); }
+.btn-outline { color: var(--foam); padding: 15px 38px; border-radius: 50px; font-weight: 500; font-size: 1rem; text-decoration: none; display: inline-block; border: 1.5px solid rgba(110,232,216,0.4); transition: all 0.3s; cursor: pointer; background: none; }
+.btn-outline:hover { background: rgba(110,232,216,0.08); border-color: var(--foam); }
+.hero-stats { display: flex; gap: 56px; justify-content: center; margin-top: 72px; flex-wrap: wrap; animation: fadeUp 1s 0.6s ease both; }
+.stat { text-align: center; }
+.stat-num { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; color: var(--aqua); }
+.stat-label { font-size: 0.76rem; color: var(--muted); letter-spacing: 1px; margin-top: 4px; }
+
+/* SECTION BASE */
+section { position: relative; z-index: 1; padding: 96px 60px; }
+.section-tag { font-size: 0.70rem; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--aqua); margin-bottom: 14px; display: block; }
+.section-tag-green { color: var(--sage); }
+.section-tag-gold { color: var(--gold); }
+.section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.9rem, 4vw, 2.9rem); color: var(--white); line-height: 1.2; margin-bottom: 20px; }
+.section-desc { color: var(--muted); font-size: 1rem; line-height: 1.85; max-width: 620px; }
+.max-w { max-width: 1200px; margin: 0 auto; }
+.reveal { opacity: 0; transform: translateY(24px); transition: all 0.7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+/* ── VISION BAND ── */
+#vision { background: linear-gradient(135deg, rgba(11,122,110,0.15) 0%, rgba(74,140,63,0.10) 100%); border-top: 1px solid rgba(26,181,163,0.15); border-bottom: 1px solid rgba(26,181,163,0.15); padding: 72px 60px; }
+.vision-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; margin-top: 56px; }
+.vision-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(26,181,163,0.18); border-radius: 20px; padding: 40px 32px; text-align: center; transition: all 0.3s; }
+.vision-card:hover { background: rgba(26,181,163,0.08); border-color: rgba(26,181,163,0.4); transform: translateY(-4px); }
+.vision-icon { font-size: 2.8rem; margin-bottom: 20px; display: block; }
+.vision-title { font-family: 'Noto Serif KR', serif; font-size: 1.2rem; color: var(--foam); font-weight: 700; margin-bottom: 12px; }
+.vision-text { font-size: 0.9rem; color: var(--muted); line-height: 1.8; }
+
+/* ── MODULAR SHOWCASE ── */
+#modular { background: var(--deep); }
+.modular-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-top: 56px; }
+.modular-visual { background: linear-gradient(135deg, rgba(11,122,110,0.2), rgba(26,181,163,0.1)); border: 1px solid rgba(26,181,163,0.25); border-radius: 24px; padding: 48px; position: relative; overflow: hidden; min-height: 420px; display: flex; flex-direction: column; justify-content: center; }
+.modular-visual::before { content: ''; position: absolute; top: -60px; right: -60px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(26,181,163,0.2), transparent 70%); border-radius: 50%; }
+.module-diagram { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.module-box { background: rgba(10,22,40,0.7); border: 1px solid rgba(26,181,163,0.3); border-radius: 14px; padding: 20px 16px; text-align: center; transition: all 0.3s; cursor: pointer; }
+.module-box:hover { border-color: var(--aqua); background: rgba(26,181,163,0.1); }
+.module-box-icon { font-size: 2rem; margin-bottom: 8px; }
+.module-box-name { font-size: 0.82rem; font-weight: 700; color: var(--foam); margin-bottom: 4px; }
+.module-box-desc { font-size: 0.72rem; color: var(--muted); }
+.flow-arrow { grid-column: 1/-1; text-align: center; color: var(--aqua); font-size: 1.4rem; margin: -4px 0; }
+.modular-info h3 { font-family: 'Noto Serif KR', serif; font-size: 1.05rem; color: var(--gold); font-weight: 700; margin-bottom: 20px; letter-spacing: 1px; }
+.module-feature { display: flex; gap: 16px; margin-bottom: 20px; align-items: flex-start; }
+.module-feature-icon { width: 44px; height: 44px; background: linear-gradient(135deg, rgba(11,122,110,0.4), rgba(26,181,163,0.2)); border: 1px solid rgba(26,181,163,0.3); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+.module-feature-text h4 { font-size: 0.95rem; color: var(--foam); font-weight: 700; margin-bottom: 4px; }
+.module-feature-text p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+
+/* ── HEALING SECTION ── */
+#healing { background: linear-gradient(180deg, rgba(74,140,63,0.06) 0%, transparent 100%); }
+.healing-header { text-align: center; max-width: 700px; margin: 0 auto 64px; }
+.healing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.healing-card { border-radius: 20px; overflow: hidden; background: rgba(255,255,255,0.04); border: 1px solid rgba(122,184,122,0.2); transition: all 0.35s; }
+.healing-card:hover { transform: translateY(-6px); border-color: rgba(122,184,122,0.5); box-shadow: 0 20px 48px rgba(74,140,63,0.2); }
+.healing-card-top { padding: 36px 28px 24px; background: linear-gradient(135deg, rgba(74,140,63,0.15), rgba(11,122,110,0.1)); text-align: center; }
+.healing-card-icon { font-size: 3rem; margin-bottom: 16px; display: block; }
+.healing-card-title { font-family: 'Noto Serif KR', serif; font-size: 1.15rem; color: var(--white); font-weight: 700; margin-bottom: 8px; }
+.healing-card-subtitle { font-size: 0.8rem; color: var(--sage); font-weight: 600; letter-spacing: 1px; }
+.healing-card-body { padding: 24px 28px; }
+.healing-card-body p { font-size: 0.88rem; color: var(--muted); line-height: 1.8; margin-bottom: 16px; }
+.healing-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.healing-tag { font-size: 0.72rem; padding: 4px 12px; background: rgba(74,140,63,0.15); border: 1px solid rgba(122,184,122,0.3); border-radius: 12px; color: var(--sage); }
+.healing-quote { margin-top: 64px; background: linear-gradient(135deg, rgba(11,122,110,0.15), rgba(74,140,63,0.1)); border: 1px solid rgba(26,181,163,0.2); border-radius: 24px; padding: 48px; text-align: center; }
+.healing-quote-text { font-family: 'Noto Serif KR', serif; font-size: clamp(1.1rem, 2vw, 1.4rem); color: var(--foam); font-style: italic; line-height: 1.9; margin-bottom: 20px; }
+.healing-quote-author { font-size: 0.82rem; color: var(--muted); }
+
+/* ── ORGANIC FARMING ── */
+#organic { background: var(--deep); }
+.organic-split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; margin-top: 56px; }
+.organic-curriculum { }
+.curriculum-title { font-family: 'Noto Serif KR', serif; font-size: 1.05rem; color: var(--gold); font-weight: 700; margin-bottom: 24px; letter-spacing: 0.5px; }
+.curriculum-item { display: flex; gap: 18px; margin-bottom: 20px; padding: 20px; background: rgba(255,255,255,0.03); border: 1px solid rgba(212,168,83,0.15); border-radius: 14px; transition: all 0.3s; cursor: pointer; align-items: flex-start; }
+.curriculum-item:hover { background: rgba(212,168,83,0.06); border-color: rgba(212,168,83,0.35); }
+.curriculum-num { width: 36px; height: 36px; background: linear-gradient(135deg, var(--earth), var(--harvest)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; color: var(--white); flex-shrink: 0; }
+.curriculum-content h4 { font-size: 0.95rem; color: var(--foam); font-weight: 700; margin-bottom: 4px; }
+.curriculum-content p { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+.curriculum-badge { font-size: 0.68rem; padding: 2px 8px; background: rgba(212,168,83,0.2); border-radius: 8px; color: var(--gold); font-weight: 700; margin-left: 8px; }
+.organic-impact { }
+.impact-title { font-family: 'Noto Serif KR', serif; font-size: 1.05rem; color: var(--sage); font-weight: 700; margin-bottom: 24px; letter-spacing: 0.5px; }
+.impact-stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px; }
+.impact-stat { background: rgba(74,140,63,0.1); border: 1px solid rgba(122,184,122,0.2); border-radius: 16px; padding: 24px 20px; text-align: center; }
+.impact-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--sage); }
+.impact-label { font-size: 0.78rem; color: var(--muted); margin-top: 6px; line-height: 1.4; }
+.organic-cycle { background: linear-gradient(135deg, rgba(74,140,63,0.12), rgba(11,122,110,0.12)); border: 1px solid rgba(122,184,122,0.2); border-radius: 20px; padding: 28px; }
+.cycle-title { font-size: 0.85rem; font-weight: 700; color: var(--sage); margin-bottom: 18px; }
+.cycle-flow { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.cycle-node { background: rgba(74,140,63,0.2); border: 1px solid rgba(122,184,122,0.3); border-radius: 10px; padding: 8px 14px; font-size: 0.78rem; color: var(--foam); font-weight: 600; white-space: nowrap; }
+.cycle-arrow { color: var(--sage); font-size: 1rem; }
+
+/* ── PARTNER ECOSYSTEM ── */
+#partners { background: linear-gradient(180deg, rgba(212,168,83,0.05) 0%, transparent 60%); }
+.partner-intro { display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: center; margin-bottom: 72px; }
+.partner-philosophy { }
+.partner-visual { }
+.circular-economy { background: rgba(255,255,255,0.03); border: 1px solid rgba(26,181,163,0.2); border-radius: 24px; padding: 40px; text-align: center; }
+.circular-center { width: 100px; height: 100px; background: linear-gradient(135deg, var(--teal), var(--aqua)); border-radius: 50%; margin: 0 auto 24px; display: flex; align-items: center; justify-content: center; font-size: 2.4rem; box-shadow: 0 0 40px rgba(26,181,163,0.3); }
+.circular-rings { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
+.circular-ring { padding: 8px 16px; border-radius: 20px; font-size: 0.78rem; font-weight: 600; }
+.ring-1 { background: rgba(26,181,163,0.15); border: 1px solid rgba(26,181,163,0.35); color: var(--aqua); }
+.ring-2 { background: rgba(74,140,63,0.15); border: 1px solid rgba(122,184,122,0.35); color: var(--sage); }
+.ring-3 { background: rgba(212,168,83,0.12); border: 1px solid rgba(212,168,83,0.3); color: var(--gold); }
+.partner-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 48px; }
+.partner-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(26,181,163,0.15); border-radius: 18px; padding: 28px 20px; text-align: center; transition: all 0.3s; }
+.partner-card:hover { border-color: rgba(26,181,163,0.45); background: rgba(26,181,163,0.07); transform: translateY(-4px); }
+.partner-card-icon { font-size: 2.4rem; margin-bottom: 14px; }
+.partner-card-name { font-size: 0.9rem; font-weight: 700; color: var(--foam); margin-bottom: 6px; }
+.partner-card-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+.partner-join { background: linear-gradient(135deg, rgba(26,181,163,0.1), rgba(74,140,63,0.1)); border: 1px solid rgba(26,181,163,0.25); border-radius: 24px; padding: 48px; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
+.partner-join h3 { font-family: 'Noto Serif KR', serif; font-size: 1.4rem; color: var(--white); font-weight: 700; margin-bottom: 12px; }
+.partner-join p { color: var(--muted); font-size: 0.92rem; line-height: 1.7; }
+.partner-join-steps { display: flex; gap: 32px; margin-top: 28px; }
+.join-step { text-align: center; }
+.join-step-num { width: 36px; height: 36px; background: linear-gradient(135deg, var(--teal), var(--aqua)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; color: var(--white); margin: 0 auto 8px; }
+.join-step-label { font-size: 0.76rem; color: var(--muted); }
+
+/* ── CIRCULATION MODEL ── */
+#circulation { background: var(--deep); }
+.circulation-center { text-align: center; max-width: 760px; margin: 0 auto 64px; }
+.flow-diagram { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; align-items: center; margin-bottom: 56px; }
+.flow-node { background: rgba(255,255,255,0.04); border: 1px solid rgba(26,181,163,0.2); border-radius: 16px; padding: 24px 16px; text-align: center; }
+.flow-node-icon { font-size: 2rem; margin-bottom: 10px; }
+.flow-node-title { font-size: 0.82rem; font-weight: 700; color: var(--foam); margin-bottom: 4px; }
+.flow-node-desc { font-size: 0.72rem; color: var(--muted); }
+.flow-connector { text-align: center; color: var(--aqua); font-size: 1.6rem; }
+.circulation-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.circulation-card { border-radius: 20px; padding: 32px 28px; border: 1px solid; transition: all 0.3s; }
+.circulation-card:hover { transform: translateY(-4px); }
+.cc-aqua { background: rgba(26,181,163,0.06); border-color: rgba(26,181,163,0.25); }
+.cc-green { background: rgba(74,140,63,0.06); border-color: rgba(122,184,122,0.25); }
+.cc-gold { background: rgba(212,168,83,0.06); border-color: rgba(212,168,83,0.25); }
+.circulation-card-icon { font-size: 2.2rem; margin-bottom: 16px; }
+.circulation-card-title { font-family: 'Noto Serif KR', serif; font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+.circulation-card-text { font-size: 0.85rem; color: var(--muted); line-height: 1.75; }
+
+/* ── COMMUNITY ── */
+#community { background: linear-gradient(180deg, transparent, rgba(11,122,110,0.08) 50%, transparent); }
+.community-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.community-posts { }
+.community-post { background: rgba(255,255,255,0.04); border: 1px solid rgba(26,181,163,0.15); border-radius: 16px; padding: 24px; margin-bottom: 16px; transition: all 0.3s; cursor: pointer; }
+.community-post:hover { border-color: rgba(26,181,163,0.4); background: rgba(26,181,163,0.06); }
+.post-header { display: flex; gap: 12px; align-items: center; margin-bottom: 12px; }
+.post-avatar { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, var(--teal), var(--aqua)); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+.post-meta-name { font-size: 0.88rem; font-weight: 700; color: var(--foam); }
+.post-meta-date { font-size: 0.75rem; color: var(--muted); }
+.post-tag { font-size: 0.68rem; padding: 2px 10px; background: rgba(26,181,163,0.15); border: 1px solid rgba(26,181,163,0.3); border-radius: 8px; color: var(--aqua); font-weight: 700; margin-left: auto; }
+.post-title { font-size: 0.92rem; color: var(--white); font-weight: 600; margin-bottom: 6px; }
+.post-preview { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+.post-actions { display: flex; gap: 16px; margin-top: 12px; }
+.post-action { font-size: 0.76rem; color: var(--muted); cursor: pointer; transition: color 0.2s; }
+.post-action:hover { color: var(--aqua); }
+.community-stats-panel { background: rgba(255,255,255,0.03); border: 1px solid rgba(26,181,163,0.18); border-radius: 20px; padding: 32px; margin-bottom: 24px; }
+.comm-stats-title { font-size: 0.82rem; font-weight: 700; color: var(--aqua); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; }
+.comm-stat-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(26,181,163,0.08); }
+.comm-stat-row:last-child { border-bottom: none; }
+.comm-stat-label { font-size: 0.85rem; color: var(--muted); }
+.comm-stat-value { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: var(--aqua); }
+.regional-map { background: rgba(255,255,255,0.03); border: 1px solid rgba(26,181,163,0.18); border-radius: 20px; padding: 28px; }
+.regional-title { font-size: 0.82rem; font-weight: 700; color: var(--sage); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 18px; }
+.regional-item { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.regional-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--aqua); flex-shrink: 0; }
+.regional-dot-green { background: var(--sage); }
+.regional-dot-gold { background: var(--gold); }
+.regional-info { flex: 1; }
+.regional-name { font-size: 0.85rem; color: var(--foam); font-weight: 600; }
+.regional-count { font-size: 0.75rem; color: var(--muted); }
+.regional-bar-wrap { width: 80px; background: rgba(255,255,255,0.06); border-radius: 4px; height: 6px; }
+.regional-bar { height: 6px; border-radius: 4px; background: linear-gradient(90deg, var(--teal), var(--aqua)); }
+
+/* ── JOURNAL ── */
+#journal { background: rgba(10,22,40,0.8); }
+.journal-form { background: rgba(255,255,255,0.04); border: 1px solid rgba(26,181,163,0.2); border-radius: 24px; padding: 40px; margin-top: 40px; }
+.form-title { font-family: 'Noto Serif KR', serif; font-size: 1.05rem; color: var(--foam); font-weight: 700; margin-bottom: 28px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+.form-group { display: flex; flex-direction: column; gap: 8px; }
+.form-group label { font-size: 0.8rem; color: var(--muted); font-weight: 500; }
+.form-group input, .form-group select, .form-group textarea { background: rgba(255,255,255,0.05); border: 1px solid rgba(26,181,163,0.2); border-radius: 10px; padding: 12px 16px; color: var(--text); font-size: 0.9rem; font-family: 'Noto Sans KR', sans-serif; outline: none; transition: border-color 0.2s; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--aqua); }
+.form-group textarea { min-height: 100px; resize: vertical; }
+.form-group select option { background: var(--ocean); }
+.water-params { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 20px; }
+.param-input label { font-size: 0.76rem; color: var(--muted); font-weight: 500; margin-bottom: 6px; display: block; }
+.param-input input { background: rgba(255,255,255,0.05); border: 1px solid rgba(26,181,163,0.2); border-radius: 10px; padding: 10px 14px; color: var(--text); font-size: 0.9rem; width: 100%; outline: none; font-family: 'Noto Sans KR', sans-serif; transition: border-color 0.2s; }
+.param-input input:focus { border-color: var(--aqua); }
+.submit-journal { background: linear-gradient(135deg, var(--teal), var(--aqua)); color: var(--white); border: none; padding: 14px 36px; border-radius: 50px; font-weight: 700; font-size: 0.95rem; cursor: pointer; transition: all 0.3s; font-family: 'Noto Sans KR', sans-serif; }
+.submit-journal:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,181,163,0.4); }
+
+/* ── EDUCATION ── */
+#education { background: linear-gradient(180deg, transparent, rgba(212,168,83,0.05) 50%, transparent); }
+.edu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+.edu-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(26,181,163,0.15); border-radius: 20px; overflow: hidden; transition: all 0.35s; }
+.edu-card:hover { transform: translateY(-5px); border-color: rgba(26,181,163,0.45); box-shadow: 0 16px 40px rgba(11,122,110,0.25); }
+.edu-card-thumb { height: 140px; background: linear-gradient(135deg, var(--ocean), var(--teal)); display: flex; align-items: center; justify-content: center; font-size: 3.5rem; position: relative; }
+.edu-card-level { position: absolute; top: 12px; right: 12px; font-size: 0.68rem; padding: 3px 10px; border-radius: 8px; font-weight: 700; }
+.level-beginner { background: rgba(122,184,122,0.25); color: var(--sage); border: 1px solid rgba(122,184,122,0.4); }
+.level-inter { background: rgba(212,168,83,0.2); color: var(--gold); border: 1px solid rgba(212,168,83,0.35); }
+.level-adv { background: rgba(26,181,163,0.2); color: var(--aqua); border: 1px solid rgba(26,181,163,0.35); }
+.edu-card-body { padding: 24px; }
+.edu-card-title { font-size: 0.98rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+.edu-card-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+.edu-card-meta { display: flex; justify-content: space-between; align-items: center; }
+.edu-card-lessons { font-size: 0.75rem; color: var(--muted); }
+.edu-card-price { font-weight: 700; color: var(--aqua); font-size: 0.92rem; }
+.edu-card-price.free { color: var(--sage); }
+
+/* ── SUBSCRIPTION ── */
+#subscription { background: var(--deep); }
+.plan-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+.plan-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(26,181,163,0.15); border-radius: 24px; padding: 40px 32px; transition: all 0.3s; position: relative; }
+.plan-card.featured { border-color: var(--aqua); background: rgba(26,181,163,0.08); }
+.plan-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--teal), var(--aqua)); color: var(--white); font-size: 0.72rem; font-weight: 700; padding: 4px 16px; border-radius: 12px; white-space: nowrap; }
+.plan-name { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--white); font-weight: 700; margin-bottom: 6px; }
+.plan-price { font-family: 'Playfair Display', serif; font-size: 2.4rem; color: var(--aqua); font-weight: 700; margin-bottom: 4px; }
+.plan-period { font-size: 0.8rem; color: var(--muted); margin-bottom: 28px; }
+.plan-features { list-style: none; margin-bottom: 32px; }
+.plan-features li { display: flex; gap: 10px; font-size: 0.88rem; color: var(--muted); margin-bottom: 12px; align-items: flex-start; }
+.plan-features li::before { content: '✓'; color: var(--aqua); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+.plan-features li.inactive { opacity: 0.4; }
+.plan-features li.inactive::before { content: '×'; color: var(--muted); }
+
+/* ── SHOP ── */
+#shop { background: linear-gradient(180deg, transparent, rgba(11,122,110,0.06) 40%, transparent); }
+.shop-tabs { display: flex; gap: 12px; margin: 40px 0 32px; flex-wrap: wrap; }
+.shop-tab { padding: 8px 20px; border-radius: 24px; font-size: 0.82rem; font-weight: 600; cursor: pointer; border: 1px solid rgba(26,181,163,0.25); color: var(--muted); background: transparent; transition: all 0.2s; }
+.shop-tab.active { background: rgba(26,181,163,0.15); border-color: var(--aqua); color: var(--aqua); }
+.shop-tab:hover { border-color: var(--aqua); color: var(--aqua); }
+.products-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.product-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(26,181,163,0.14); border-radius: 18px; overflow: hidden; transition: all 0.3s; }
+.product-card:hover { border-color: rgba(26,181,163,0.4); transform: translateY(-4px); }
+.product-img { height: 120px; background: linear-gradient(135deg, var(--ocean), rgba(11,122,110,0.4)); display: flex; align-items: center; justify-content: center; font-size: 3rem; position: relative; }
+.product-badge-new { position: absolute; top: 8px; right: 8px; background: var(--teal); color: var(--white); font-size: 0.65rem; font-weight: 700; padding: 2px 8px; border-radius: 6px; }
+.product-badge-sub { position: absolute; top: 8px; right: 8px; background: var(--gold); color: var(--deep); font-size: 0.65rem; font-weight: 700; padding: 2px 8px; border-radius: 6px; }
+.product-body { padding: 18px; }
+.product-name { font-size: 0.88rem; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+.product-desc { font-size: 0.76rem; color: var(--muted); line-height: 1.5; margin-bottom: 14px; }
+.product-footer { display: flex; justify-content: space-between; align-items: center; }
+.product-price { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--aqua); font-weight: 700; }
+.btn-cart { background: rgba(26,181,163,0.15); border: 1px solid rgba(26,181,163,0.3); color: var(--aqua); padding: 6px 14px; border-radius: 12px; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s; }
+.btn-cart:hover { background: var(--aqua); color: var(--deep); }
+
+/* CART */
+.cart-btn { background: rgba(26,181,163,0.15); border: 1px solid rgba(26,181,163,0.3); color: var(--aqua); padding: 8px 16px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; cursor: pointer; position: relative; }
+.cart-count { position: absolute; top: -6px; right: -6px; width: 18px; height: 18px; background: var(--aqua); color: var(--deep); border-radius: 50%; font-size: 0.65rem; font-weight: 700; display: none; align-items: center; justify-content: center; }
+.cart-count.show { display: flex; }
+.cart-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 200; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+.cart-overlay.open { opacity: 1; pointer-events: all; }
+.cart-panel { position: fixed; right: -400px; top: 0; height: 100vh; width: 380px; background: var(--ocean); z-index: 201; transition: right 0.35s; padding: 32px 28px; display: flex; flex-direction: column; border-left: 1px solid rgba(26,181,163,0.2); }
+.cart-panel.open { right: 0; }
+.cart-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.cart-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--white); font-weight: 700; }
+.cart-close { background: none; border: none; color: var(--muted); font-size: 1.4rem; cursor: pointer; }
+.cart-items { flex: 1; overflow-y: auto; }
+.cart-empty { color: var(--muted); font-size: 0.88rem; text-align: center; padding: 40px 0; }
+.cart-item { display: flex; gap: 12px; align-items: center; padding: 14px 0; border-bottom: 1px solid rgba(26,181,163,0.1); }
+.cart-item-icon { font-size: 1.6rem; width: 40px; text-align: center; }
+.cart-item-info { flex: 1; }
+.cart-item-name { font-size: 0.85rem; color: var(--white); font-weight: 600; }
+.cart-item-price { font-size: 0.8rem; color: var(--aqua); }
+.cart-item-remove { background: none; border: none; color: var(--muted); cursor: pointer; font-size: 0.9rem; }
+.cart-footer { border-top: 1px solid rgba(26,181,163,0.15); padding-top: 20px; margin-top: 16px; }
+.cart-total { display: flex; justify-content: space-between; margin-bottom: 16px; }
+.cart-total-label { color: var(--muted); font-size: 0.9rem; }
+.cart-total-val { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--aqua); font-weight: 700; }
+.btn-checkout { width: 100%; background: linear-gradient(135deg, var(--teal), var(--aqua)); color: var(--white); border: none; padding: 14px; border-radius: 14px; font-weight: 700; font-size: 0.95rem; cursor: pointer; font-family: 'Noto Sans KR', sans-serif; }
+
+/* CTA / CONTACT */
+#contact { background: linear-gradient(135deg, rgba(11,122,110,0.12), rgba(74,140,63,0.08)); border-top: 1px solid rgba(26,181,163,0.15); text-align: center; }
+.cta-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); color: var(--white); font-weight: 900; line-height: 1.2; margin-bottom: 16px; }
+.cta-desc { color: var(--muted); font-size: 1rem; line-height: 1.8; max-width: 540px; margin: 0 auto 36px; }
+.contact-row { display: flex; gap: 12px; justify-content: center; margin-bottom: 16px; flex-wrap: wrap; }
+.contact-input { background: rgba(255,255,255,0.07); border: 1px solid rgba(26,181,163,0.25); border-radius: 50px; padding: 14px 24px; color: var(--text); font-size: 0.95rem; width: 320px; outline: none; font-family: 'Noto Sans KR', sans-serif; }
+.contact-input:focus { border-color: var(--aqua); }
+
+/* FOOTER */
+footer { background: rgba(8,18,32,0.95); border-top: 1px solid rgba(26,181,163,0.12); padding: 64px 60px 32px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+.footer-brand-name { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 900; color: var(--aqua); letter-spacing: 2px; margin-bottom: 14px; }
+.footer-brand-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.7; }
+.footer-col-title { font-size: 0.75rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--aqua); margin-bottom: 20px; }
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a { font-size: 0.85rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--foam); }
+.footer-bottom { border-top: 1px solid rgba(26,181,163,0.1); padding-top: 24px; display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--muted); }
+
+/* TOAST */
+#toast { position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%) translateY(20px); background: var(--ocean); border: 1px solid rgba(26,181,163,0.3); color: var(--foam); padding: 12px 24px; border-radius: 12px; font-size: 0.88rem; z-index: 300; opacity: 0; transition: all 0.3s; pointer-events: none; white-space: nowrap; }
+#toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  section { padding: 64px 24px; }
+  nav { padding: 14px 24px; }
+  .nav-links { display: none; }
+  .vision-grid, .modular-grid, .organic-split, .partner-intro, .community-grid, .partner-grid { grid-template-columns: 1fr; }
+  .flow-diagram { grid-template-columns: 1fr; }
+  .flow-connector { transform: rotate(90deg); }
+  .edu-grid, .plan-grid, .products-grid, .healing-grid, .circulation-cards { grid-template-columns: 1fr 1fr; }
+  .hero-stats { gap: 32px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .water-params { grid-template-columns: 1fr 1fr; }
+  .partner-join { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .edu-grid, .plan-grid, .products-grid, .healing-grid, .circulation-cards { grid-template-columns: 1fr; }
+  .impact-stat-grid { grid-template-columns: 1fr 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+}
+
+/* ── 상단 알림바 ── */
+.notice-bar{position:fixed;top:0;left:0;right:0;z-index:200;background:linear-gradient(90deg,var(--teal),var(--aqua));color:var(--white);font-size:.78rem;font-weight:700;text-align:center;padding:9px 48px;display:flex;align-items:center;justify-content:center;gap:12px;}
+.notice-bar a{color:#FEE500;font-weight:700;text-decoration:none;border-bottom:1px dashed rgba(254,229,0,.6);}
+.notice-bar-close{position:absolute;right:16px;background:none;border:none;color:rgba(255,255,255,.8);cursor:pointer;font-size:1rem;}
+.notice-active nav{top:36px!important;}
+.notice-active #hero{padding-top:160px!important;}
+/* ── 카카오 플로팅 버튼 ── */
+.kakao-float{position:fixed;bottom:96px;right:24px;z-index:400;display:flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;}
+.kakao-float-btn{width:56px;height:56px;background:#FEE500;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 4px 20px rgba(0,0,0,.35);transition:all .3s;border:none;cursor:pointer;position:relative;}
+.kakao-float-btn:hover{transform:scale(1.1);box-shadow:0 8px 30px rgba(254,229,0,.55);}
+.kakao-float-label{font-size:.65rem;color:#FEE500;font-weight:700;text-shadow:0 1px 4px rgba(0,0,0,.6);white-space:nowrap;}
+.kakao-pulse{position:absolute;top:2px;right:2px;width:13px;height:13px;background:#ff3b3b;border-radius:50%;border:2px solid var(--deep);animation:kpulse 2s infinite;}
+@keyframes kpulse{0%,100%{transform:scale(1);opacity:1;}50%{transform:scale(1.4);opacity:.6;}}
+/* ── 맨위로 버튼 ── */
+.top-float{position:fixed;bottom:32px;right:24px;z-index:400;width:44px;height:44px;background:rgba(26,181,163,.18);border:1px solid rgba(26,181,163,.4);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--aqua);font-size:1.1rem;cursor:pointer;transition:all .3s;backdrop-filter:blur(8px);opacity:0;pointer-events:none;}
+.top-float.show{opacity:1;pointer-events:all;}
+.top-float:hover{background:rgba(26,181,163,.35);transform:translateY(-3px);}
+/* ── Mailchimp 팝업 ── */
+.mc-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:500;align-items:center;justify-content:center;padding:20px;}
+.mc-overlay.open{display:flex;}
+.mc-modal{background:var(--ocean);border:1px solid rgba(26,181,163,.3);border-radius:24px;padding:44px 36px;max-width:460px;width:100%;position:relative;animation:fadeUp .4s ease;}
+.mc-close{position:absolute;top:16px;right:18px;background:none;border:none;color:var(--muted);font-size:1.5rem;cursor:pointer;}
+.mc-modal-icon{font-size:2.8rem;text-align:center;margin-bottom:10px;}
+.mc-modal h3{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--white);margin-bottom:8px;text-align:center;}
+.mc-modal-sub{color:var(--muted);font-size:.88rem;line-height:1.7;margin-bottom:18px;text-align:center;}
+.mc-benefits{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px;}
+.mc-benefit{background:rgba(26,181,163,.08);border:1px solid rgba(26,181,163,.2);border-radius:10px;padding:10px 12px;font-size:.76rem;color:var(--foam);}
+.mc-benefit strong{display:block;font-size:.83rem;margin-bottom:2px;color:var(--white);}
+.mc-form{display:flex;flex-direction:column;gap:12px;}
+.mc-input{background:rgba(255,255,255,.06);border:1px solid rgba(26,181,163,.25);border-radius:12px;padding:13px 16px;color:var(--text);font-size:.93rem;font-family:'Noto Sans KR',sans-serif;outline:none;transition:border-color .2s;width:100%;}
+.mc-input:focus{border-color:var(--aqua);}
+.mc-submit{background:linear-gradient(135deg,var(--teal),var(--aqua));color:var(--white);border:none;border-radius:50px;padding:14px;font-weight:700;font-size:.95rem;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .3s;}
+.mc-submit:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,181,163,.4);}
+.mc-privacy{font-size:.70rem;color:var(--muted);text-align:center;margin-top:6px;}
+.mc-success{text-align:center;padding:20px 0;}
+.mc-success-icon{font-size:3rem;margin-bottom:12px;}
+
+
+/* ── ECO-VASS 풀네임 밴드 ── */
+.hero-fullname {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+  padding: 10px 28px;
+  background: rgba(10,22,40,0.6);
+  border: 1px solid rgba(26,181,163,0.35);
+  border-radius: 40px;
+  backdrop-filter: blur(8px);
+  animation: fadeUp 1s 0.05s ease both;
+}
+.hero-fullname-abbr {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: var(--aqua);
+  letter-spacing: 3px;
+}
+.hero-fullname-divider {
+  width: 1px;
+  height: 18px;
+  background: rgba(26,181,163,0.35);
+}
+.hero-fullname-text {
+  font-size: 0.78rem;
+  color: var(--foam);
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+.hero-fullname-text em {
+  font-style: normal;
+  color: var(--aqua);
+  font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+
+<!-- ── 상단 알림바 ── -->
+<div class="notice-bar" id="noticeBar">
+  🌱 물잡이 성공 보장! 무료 교육 먼저 받으세요 &nbsp;
+  <a href="#education">무료 교육 시작하기 →</a>
+  <button class="notice-bar-close" onclick="closeNotice()">✕</button>
+</div>
+
+<!-- ── 카카오 채널 플로팅 버튼 ── -->
+<!-- 카카오 채널 ID를 @ecovass 로 교체하세요 -->
+<a class="kakao-float" href="https://pf.kakao.com/_rXDxdX" target="_blank" title="카카오 채널 상담">
+  <div class="kakao-float-btn">
+    💬
+    <span class="kakao-pulse"></span>
+  </div>
+  <span class="kakao-float-label">카카오 상담</span>
+</a>
+
+<!-- ── 맨 위로 버튼 ── -->
+<button class="top-float" id="topFloat" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="맨 위로">▲</button>
+
+<!-- ── Mailchimp 이메일 수집 팝업 ── -->
+<div class="mc-overlay" id="mcOverlay">
+  <div class="mc-modal">
+    <button class="mc-close" onclick="closeMC()">✕</button>
+    <div class="mc-modal-icon">🌊</div>
+    <h3>ECO-VASS 시작하기</h3>
+    <p class="mc-modal-sub">이메일을 등록하시면 아래 혜택을 무료로 드립니다.</p>
+    <div class="mc-benefits">
+      <div class="mc-benefit"><strong>🎓 무료 강의</strong>아쿠아포닉스 입문 8강</div>
+      <div class="mc-benefit"><strong>📋 세팅 가이드</strong>가정용 모듈 설치 PDF</div>
+      <div class="mc-benefit"><strong>💰 20% 할인</strong>첫 달 구독 할인 쿠폰</div>
+      <div class="mc-benefit"><strong>📬 뉴스레터</strong>유기농·치유농업 소식</div>
+    </div>
+    <!-- Mailchimp 실제 폼: action URL을 Mailchimp에서 발급받아 교체하세요 -->
+    <form class="mc-form" id="mcForm"
+      action="https://ecovass.us21.list-manage.com/subscribe/post?u=XXXXXXXX&amp;id=XXXXXXXX"
+      method="post" target="_blank" novalidate>
+      <input class="mc-input" type="text" name="FNAME" placeholder="이름 (선택)">
+      <input class="mc-input" type="email" name="EMAIL" placeholder="이메일 주소 *" required id="mcEmail">
+      <!-- Mailchimp 봇 방지 (hidden) -->
+      <div style="position:absolute;left:-5000px" aria-hidden="true">
+        <input type="text" name="b_XXXXXXXX_XXXXXXXX" tabindex="-1" value="">
+      </div>
+      <button type="button" class="mc-submit" id="mcSubmitBtn" onclick="closeMC();window.open('https://pf.kakao.com/_rXDxdX','_blank');">카카오 채널로 시작하기 💬</button>
+      <p class="mc-privacy">스팸 없음 · 언제든 수신거부 가능 · 개인정보 안전 보호</p>
+    </form>
+  </div>
+</div>
+
+<div class="water-bg"></div>
+
+<!-- CART OVERLAY & PANEL -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-panel" id="cartPanel">
+  <div class="cart-header">
+    <div class="cart-title">🛒 장바구니</div>
+    <button class="cart-close" onclick="toggleCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"><p class="cart-empty">장바구니가 비어 있습니다</p></div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span class="cart-total-label">합계</span>
+      <span class="cart-total-val" id="cartTotal">₩0</span>
+    </div>
+    <button class="btn-checkout" onclick="checkout()">주문하기</button>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo" title="Ecological Vertical Aquaponics Smart Solution">ECO-<span>VASS</span></div>
+  <ul class="nav-links">
+    <li><a href="#education" style="color:var(--aqua);font-weight:700;">교육</a></li>
+    <li><a href="#healing">치유·회복</a></li>
+    <li><a href="#organic">유기농법</a></li>
+    <li><a href="modular.html">모듈러</a></li>
+    <li><a href="products.html">제품소개</a></li>
+    <li><a href="#partners">파트너</a></li>
+    <li><a href="#community">커뮤니티</a></li>
+    <li><a href="https://blog.naver.com/klys1121" target="_blank" style="color:var(--sage);">📝 블로그</a></li>
+    <li><a href="#shop">쇼핑</a></li>
+    <li>
+      <a class="nav-cta" href="#contact">참여하기</a>
+    </li>
+  </ul>
+  <button class="cart-btn" onclick="toggleCart()">
+    🛒 장바구니
+    <span class="cart-count" id="cartCount">0</span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div>
+    <div class="hero-eyebrow">아쿠아포닉스코리아 주식회사 · ECO-VASS Modular</div>
+
+    <!-- ── ECO-VASS 풀네임 ── -->
+    <div class="hero-fullname">
+      <span class="hero-fullname-abbr">ECO-VASS</span>
+      <span class="hero-fullname-divider"></span>
+      <span class="hero-fullname-text">
+        <em>E</em>cological &nbsp;<em>V</em>ertical &nbsp;<em>A</em>quaponics &nbsp;<em>S</em>mart &nbsp;<em>S</em>olution
+      </span>
+    </div>
+
+    <h1 class="hero-title">
+      자연의 순환,<br>
+      <span class="accent">가정</span>에서 <span class="accent2">공동체</span>로
+    </h1>
+    <p class="hero-subtitle">생태형 아쿠아포닉스 · 치유 · 유기농 · 선순환 생태계</p>
+    <p class="hero-desc">
+      ECO-VASS 모듈러는 습지생태이론에 기반한 생태형 아쿠아포닉스 시스템입니다.<br>
+      가정과 소규모 공동체로부터 시작하는 지속가능한 도시농업 — 물고기와 식물이 함께 살아가는 자연의 순환 속에서 치유와 회복, 그리고 진정한 먹거리 주권을 되찾습니다.
+    </p>
+    <div class="hero-btns">
+      <a href="modular.html" class="btn-primary">모듈러 시스템 보기</a>
+      <a href="#partners" class="btn-outline">협력업체 참여하기</a>
+      <a href="https://aquaponicskorea.co.kr" target="_blank" class="btn-outline" style="border-color:rgba(122,184,122,0.5);color:var(--sage);">🌾 아쿠아포닉스코리아</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">무토양</div>
+        <div class="stat-label">수경·아쿠아포닉스</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">90%↓</div>
+        <div class="stat-label">기존 농업 대비 절수</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">365일</div>
+        <div class="stat-label">연중 생산 가능</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">무농약</div>
+        <div class="stat-label">완전 유기농 시스템</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISION -->
+<section id="vision">
+  <div class="max-w">
+    <span class="section-tag">핵심 비전</span>
+    <h2 class="section-title">세 가지 흐름이 하나로</h2>
+    <p class="section-desc">ECO-VASS는 생태적 지속가능성, 공동체의 치유와 회복, 그리고 선순환 경제를 하나의 플랫폼 안에서 구현합니다.</p>
+    <div class="vision-grid">
+      <div class="vision-card reveal">
+        <span class="vision-icon">🌊</span>
+        <div class="vision-title">생태 순환</div>
+        <div class="vision-text">물고기의 배설물이 식물의 영양분이 되고, 식물이 정화한 물이 다시 물고기에게 돌아옵니다. 자연의 습지이론을 모듈화한 완결된 생태 순환계입니다.</div>
+      </div>
+      <div class="vision-card reveal">
+        <span class="vision-icon">🌱</span>
+        <div class="vision-title">치유와 회복</div>
+        <div class="vision-text">살아있는 생명을 돌보는 행위 자체가 치유입니다. 가정과 공동체 안에서 매일의 돌봄이 심리적 회복과 공동체 유대를 만들어냅니다.</div>
+      </div>
+      <div class="vision-card reveal">
+        <span class="vision-icon">🔄</span>
+        <div class="vision-title">선순환 경제</div>
+        <div class="vision-text">재화는 한 사람을 통해서가 아닌, 대중의 관심과 참여의지로 흐릅니다. 협력업체들의 자유로운 생태계 참여가 지속가능한 사업 기반을 만듭니다.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODULAR SYSTEM -->
+<section id="modular">
+  <div class="max-w">
+    <span class="section-tag">ECO-VASS 모듈러 시스템</span>
+    <h2 class="section-title">가정에서 시작하는<br>생태형 도시농업</h2>
+    <div class="modular-grid">
+      <div class="modular-visual reveal">
+        <h3 style="font-family:'Noto Serif KR',serif;font-size:0.9rem;color:var(--gold);margin-bottom:24px;letter-spacing:1px;">⚙️ 시스템 구성 모듈</h3>
+        <div class="module-diagram">
+          <div class="module-box">
+            <div class="module-box-icon">🐟</div>
+            <div class="module-box-name">어류 수조</div>
+            <div class="module-box-desc">틸라피아·잉어·열대어</div>
+          </div>
+          <div class="module-box">
+            <div class="module-box-icon">🦠</div>
+            <div class="module-box-name">생물여과조</div>
+            <div class="module-box-desc">질산화 박테리아 배양</div>
+          </div>
+          <div class="flow-arrow">↕ 질소 순환 ↕</div>
+          <div class="module-box">
+            <div class="module-box-icon">🌿</div>
+            <div class="module-box-name">식물 재배조</div>
+            <div class="module-box-desc">채소·허브·새싹</div>
+          </div>
+          <div class="module-box">
+            <div class="module-box-icon">💧</div>
+            <div class="module-box-name">정수 환류</div>
+            <div class="module-box-desc">습지형 자연 정화</div>
+          </div>
+        </div>
+        <div style="margin-top:20px;padding:16px;background:rgba(26,181,163,0.08);border-radius:12px;border:1px solid rgba(26,181,163,0.2);">
+          <div style="font-size:0.78rem;color:var(--aqua);font-weight:700;margin-bottom:8px;">💡 핵심 원리</div>
+          <div style="font-size:0.8rem;color:var(--muted);line-height:1.7;">NH₃(암모니아) → NO₂(아질산) → NO₃(질산) → 식물 흡수 → 정화된 물 → 어류 복귀</div>
+        </div>
+      </div>
+      <div class="modular-info reveal">
+        <h3>모듈러 시스템 특징</h3>
+        <div class="module-feature">
+          <div class="module-feature-icon">🏠</div>
+          <div class="module-feature-text">
+            <h4>가정용 소형 (Family Module)</h4>
+            <p>베란다·거실·옥상 등 1~3평 공간에 설치 가능. 4인 가족 채소 수요의 30~50% 자급.</p>
+          </div>
+        </div>
+        <div class="module-feature">
+          <div class="module-feature-icon">👥</div>
+          <div class="module-feature-text">
+            <h4>공동체용 중형 (Community Module)</h4>
+            <p>교회·소공동체·마을 단위. 10~30평 설비로 공동 먹거리 생산 및 판매 수익화 가능.</p>
+          </div>
+        </div>
+        <div class="module-feature">
+          <div class="module-feature-icon">🏢</div>
+          <div class="module-feature-text">
+            <h4>상업용 대형 (Commercial Module)</h4>
+            <p>도시농업 창업·사회적기업·복지시설 연계. 맞춤 설계 및 협력업체 연결 지원.</p>
+          </div>
+        </div>
+        <div class="module-feature">
+          <div class="module-feature-icon">📱</div>
+          <div class="module-feature-text">
+            <h4>IoT 모니터링 연동</h4>
+            <p>pH·수온·암모니아 실시간 측정. 스마트폰 앱으로 수질 알림 및 원격 관리.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 상세페이지 연결 버튼 -->
+    <div style="text-align:center;margin-top:56px;" class="reveal">
+      <p style="color:var(--muted);font-size:0.92rem;margin-bottom:20px;">가정용부터 Dome Farm까지 — 모든 규모의 모듈러 시스템을 확인하세요</p>
+      <a href="modular.html" class="btn-primary" style="font-size:1rem;padding:16px 44px;">
+        🌐 모듈러 상세페이지 보기
+      </a>
+      &nbsp;&nbsp;
+      <a href="dome.html" class="btn-outline" style="font-size:0.95rem;padding:16px 32px;">
+        Dome Farm 보기
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- HEALING -->
+<section id="healing">
+  <div class="max-w">
+    <div class="healing-header reveal">
+      <span class="section-tag section-tag-green">치유와 회복</span>
+      <h2 class="section-title">살아있는 것을 돌보는<br>행위가 치유입니다</h2>
+      <p class="section-desc">현대 도시 생활이 주는 고독과 단절, 각박한 경쟁이 청년·장년·노년 세대 모두의 삶을 무너뜨리고 있습니다. ECO-VASS는 자연생태계의 공생 원리를 통해 개인과 가정, 그리고 공동체의 치유와 회복을 돕습니다.</p>
+    </div>
+
+    <!-- 치유농업 역사 -->
+    <div class="reveal" style="background:linear-gradient(135deg,rgba(46,125,50,0.1),rgba(74,140,63,0.06));border:1px solid rgba(122,184,122,0.2);border-radius:20px;padding:36px 40px;margin-bottom:48px;">
+      <h3 style="font-family:'Noto Serif KR',serif;font-size:1.05rem;color:var(--sage);font-weight:700;margin-bottom:20px;">🌿 치유농업의 역사 — 세계에서 한국으로</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
+        <div style="background:rgba(255,255,255,0.04);border-radius:12px;padding:20px;border:1px solid rgba(122,184,122,0.15);">
+          <div style="font-size:0.75rem;font-weight:700;color:var(--sage);letter-spacing:2px;margin-bottom:8px;">1990년대 이탈리아</div>
+          <div style="font-size:0.85rem;color:var(--muted);line-height:1.7;">정신병동 폐기와 함께 수목원·농장 기반 치유 프로그램 시작. 농축산부와 복지부 협력, 지자체와 함께 환우들의 7일 무료 체류 농장 프로그램 운영. 크게 성공.</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.04);border-radius:12px;padding:20px;border:1px solid rgba(122,184,122,0.15);">
+          <div style="font-size:0.75rem;font-weight:700;color:var(--sage);letter-spacing:2px;margin-bottom:8px;">2000년대 일본</div>
+          <div style="font-size:0.85rem;color:var(--muted);line-height:1.7;">이탈리아 치유농업 모델 도입. 은퇴자·장애인·정신건강 취약계층 대상 농업 치유 프로그램 전국 확산. 지역사회 공동체 회복의 핵심 수단으로 자리잡음.</div>
+        </div>
+        <div style="background:rgba(74,140,63,0.1);border-radius:12px;padding:20px;border:1px solid rgba(122,184,122,0.3);">
+          <div style="font-size:0.75rem;font-weight:700;color:var(--aqua);letter-spacing:2px;margin-bottom:8px;">2022년 대한민국 법제화</div>
+          <div style="font-size:0.85rem;color:var(--muted);line-height:1.7;">치유농업 연구개발 및 육성에 관한 법률 시행. ECO-VASS는 실내형 아쿠아포닉스를 활용한 <strong style="color:var(--aqua)">도시 치유농업</strong>의 새로운 모델을 제시합니다.</div>
+        </div>
+      </div>
+    </div>
+
+        </div>
+
+    <!-- 치유 영역 3가지 -->
+    <div class="healing-grid">
+      <div class="healing-card reveal">
+        <div class="healing-card-top">
+          <span class="healing-card-icon">🧠</span>
+          <div class="healing-card-title">심리적 회복</div>
+          <div class="healing-card-subtitle">Mental Wellness</div>
+        </div>
+        <div class="healing-card-body">
+          <p>각박한 경쟁사회, 도시생활의 고독과 외로움이 심화되면서 청년뿐 아니라 장년·노년 세대도 관계 단절과 공동체 파괴로 스스로 낙오된 느낌을 받고 있습니다. 매일 수조를 돌보는 루틴, 식물이 자라는 것을 관찰하는 시간이 마음의 안정과 자존감을 회복시킵니다.</p>
+          <div class="healing-tags">
+            <span class="healing-tag">루틴 형성</span>
+            <span class="healing-tag">주의 집중</span>
+            <span class="healing-tag">자존감 회복</span>
+            <span class="healing-tag">고독 극복</span>
+          </div>
+        </div>
+      </div>
+      <div class="healing-card reveal">
+        <div class="healing-card-top">
+          <span class="healing-card-icon">🤝</span>
+          <div class="healing-card-title">공동체 회복</div>
+          <div class="healing-card-subtitle">Community Healing</div>
+        </div>
+        <div class="healing-card-body">
+          <p>씨앗이 모종으로 성장하고, 식물이 자라고, 물고기가 건강하게 헤엄치는 것을 함께 보고 느끼며, 수확의 기쁨을 나누는 과정 가운데 자연스럽게 관계가 회복됩니다. 교회 소그룹, 마을 공동체, 실버센터, 복지관에서 이미 변화가 일어나고 있습니다.</p>
+          <div class="healing-tags">
+            <span class="healing-tag">소그룹 활동</span>
+            <span class="healing-tag">세대 통합</span>
+            <span class="healing-tag">미자립교회</span>
+            <span class="healing-tag">노인 돌봄</span>
+          </div>
+        </div>
+      </div>
+      <div class="healing-card reveal">
+        <div class="healing-card-top">
+          <span class="healing-card-icon">🌻</span>
+          <div class="healing-card-title">교육·성장 치유</div>
+          <div class="healing-card-subtitle">Educational Healing</div>
+        </div>
+        <div class="healing-card-body">
+          <p>아이들이 생명의 탄생과 순환을 직접 경험합니다. 하나님이 창조하신 자연생태계의 충직한 역할분담과 공생의 원리를 눈으로 보고 손으로 만지며 배웁니다. 학교·홈스쿨·특수교육 현장에서 자연 기반 정서 치유 프로그램으로 활용됩니다.</p>
+          <div class="healing-tags">
+            <span class="healing-tag">자연 체험</span>
+            <span class="healing-tag">생명 교육</span>
+            <span class="healing-tag">정서 발달</span>
+            <span class="healing-tag">창조 교육</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 치유 대상 -->
+    <div class="reveal" style="margin-top:40px;margin-bottom:48px;">
+      <h3 style="font-family:'Noto Serif KR',serif;font-size:1.05rem;color:var(--sage);font-weight:700;margin-bottom:20px;text-align:center;">ECO-VASS 치유농업 대상</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;">
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(122,184,122,0.2);border-radius:12px;padding:16px;text-align:center;font-size:0.82rem;color:var(--muted);">👶 아이·청소년<br><span style="font-size:0.75rem;color:var(--muted);">생명 교육</span></div>
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(122,184,122,0.2);border-radius:12px;padding:16px;text-align:center;font-size:0.82rem;color:var(--muted);">🧑 청년·직장인<br><span style="font-size:0.75rem;color:var(--muted);">번아웃 회복</span></div>
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(122,184,122,0.2);border-radius:12px;padding:16px;text-align:center;font-size:0.82rem;color:var(--muted);">👨‍👩‍👧 가족<br><span style="font-size:0.75rem;color:var(--muted);">관계 회복</span></div>
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(122,184,122,0.2);border-radius:12px;padding:16px;text-align:center;font-size:0.82rem;color:var(--muted);">👴 노년·은퇴자<br><span style="font-size:0.75rem;color:var(--muted);">고독 극복</span></div>
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(122,184,122,0.2);border-radius:12px;padding:16px;text-align:center;font-size:0.82rem;color:var(--muted);">🏥 정신건강<br><span style="font-size:0.75rem;color:var(--muted);">치유 프로그램</span></div>
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(122,184,122,0.2);border-radius:12px;padding:16px;text-align:center;font-size:0.82rem;color:var(--muted);">⛪ 교회 공동체<br><span style="font-size:0.75rem;color:var(--muted);">미자립 자립</span></div>
+      </div>
+    </div>
+
+    <div class="healing-quote reveal">
+      <div class="healing-quote-text">
+        "씨앗이 모종으로 자라고, 물고기가 건강하게 헤엄치는 것을 보며,<br>
+        수확의 기쁨을 함께 나누는 그 과정 안에서 —<br>
+        하나님이 창조하신 생명의 공생 원리가 우리를 치유합니다.<br>
+        ECO-VASS는 그 조용한 기적이 가정마다, 공동체마다 흐르기를 바랍니다."
+      </div>
+      <div class="healing-quote-author">— ECO-VASS 설립 철학</div>
+    </div>
+  </div>
+</section>
+
+<!-- ORGANIC FARMING -->
+<section id="organic">
+  <div class="max-w">
+    <span class="section-tag section-tag-gold">유기농법 & 생태농업</span>
+    <h2 class="section-title">화학 없이,<br>자연이 기르는 먹거리</h2>
+    <p class="section-desc">ECO-VASS의 유기농법은 화학비료를 유기비료로 바꾸는 것이 아닙니다. 자연의 생태 순환 그 자체가 농업이 되는 방식입니다. 실내형 아쿠아포닉스와 실외형 생태농업 두 가지 방향으로 완전한 유기 먹거리 생산이 가능합니다.</p>
+
+    <!-- 실내형 vs 실외형 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:56px;" class="reveal">
+      <div style="background:rgba(26,181,163,0.06);border:1px solid rgba(26,181,163,0.25);border-radius:20px;padding:36px;">
+        <div style="font-size:2.2rem;margin-bottom:14px;">🏠</div>
+        <h3 style="font-family:'Noto Serif KR',serif;font-size:1.15rem;color:var(--foam);font-weight:700;margin-bottom:10px;">실내형 — 아쿠아포닉스</h3>
+        <div style="font-size:0.80rem;color:var(--aqua);font-weight:700;margin-bottom:14px;letter-spacing:1px;">ECO-VASS MODULAR · 연중 실내 생산</div>
+        <p style="font-size:0.88rem;color:var(--muted);line-height:1.85;margin-bottom:16px;">물고기의 배설물이 미생물에 의해 분해되어 식물의 천연 영양분이 됩니다. 농약을 쓰면 물고기가 죽기 때문에 구조적으로 완전 무농약입니다. 화학비료 없이도 식물이 빠르게 자라는 완벽한 유기 순환계입니다.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <span style="font-size:0.72rem;padding:3px 10px;background:rgba(26,181,163,0.1);border:1px solid rgba(26,181,163,0.2);border-radius:8px;color:var(--aqua);">완전 무농약</span>
+          <span style="font-size:0.72rem;padding:3px 10px;background:rgba(26,181,163,0.1);border:1px solid rgba(26,181,163,0.2);border-radius:8px;color:var(--aqua);">무화학비료</span>
+          <span style="font-size:0.72rem;padding:3px 10px;background:rgba(26,181,163,0.1);border:1px solid rgba(26,181,163,0.2);border-radius:8px;color:var(--aqua);">연중 생산</span>
+          <span style="font-size:0.72rem;padding:3px 10px;background:rgba(26,181,163,0.1);border:1px solid rgba(26,181,163,0.2);border-radius:8px;color:var(--aqua);">절수 90%</span>
+        </div>
+      </div>
+      <div style="background:rgba(74,140,63,0.06);border:1px solid rgba(122,184,122,0.25);border-radius:20px;padding:36px;">
+        <div style="font-size:2.2rem;margin-bottom:14px;">🌾</div>
+        <h3 style="font-family:'Noto Serif KR',serif;font-size:1.15rem;color:var(--sage);font-weight:700;margin-bottom:10px;">실외형 — 생태 논농사</h3>
+        <div style="font-size:0.80rem;color:var(--sage);font-weight:700;margin-bottom:14px;letter-spacing:1px;">농어업 융복합 · 친환경 생태 영농</div>
+        <p style="font-size:0.88rem;color:var(--muted);line-height:1.85;margin-bottom:16px;">예전 우리 조상들의 논농사 방식을 현대적으로 되살린 방법입니다. 논에 <strong style="color:var(--sage)">미꾸라지·참게·징거미새우</strong>를 함께 풀어 그 배설물을 거름으로 활용합니다. 비료와 농약 없이도 벼와 수생동물을 함께 수확하는 농어업 융복합 친환경 생태농업입니다.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <span style="font-size:0.72rem;padding:3px 10px;background:rgba(74,140,63,0.12);border:1px solid rgba(122,184,122,0.25);border-radius:8px;color:var(--sage);">미꾸라지·참게·새우</span>
+          <span style="font-size:0.72rem;padding:3px 10px;background:rgba(74,140,63,0.12);border:1px solid rgba(122,184,122,0.25);border-radius:8px;color:var(--sage);">무농약·무비료</span>
+          <span style="font-size:0.72rem;padding:3px 10px;background:rgba(74,140,63,0.12);border:1px solid rgba(122,184,122,0.25);border-radius:8px;color:var(--sage);">벼+수산물 동시 수확</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 유기 순환 흐름 -->
+    <div class="organic-cycle reveal" style="margin-bottom:48px;">
+      <div class="cycle-title">♻️ ECO-VASS 유기 순환 흐름 (실내형)</div>
+      <div class="cycle-flow">
+        <div class="cycle-node">🐟 어류 사육</div>
+        <div class="cycle-arrow">→</div>
+        <div class="cycle-node">🦠 미생물 분해</div>
+        <div class="cycle-arrow">→</div>
+        <div class="cycle-node">🌿 식물 흡수</div>
+        <div class="cycle-arrow">→</div>
+        <div class="cycle-node">💧 정화된 물</div>
+        <div class="cycle-arrow">→</div>
+        <div class="cycle-node">🐟 복귀</div>
+      </div>
+    </div>
+
+    <!-- 유기농 수치 + 커리큘럼 -->
+    <div class="organic-split">
+      <div class="organic-curriculum reveal">
+        <div class="curriculum-title">📚 유기농·생태농업 교육 과정</div>
+        <div class="curriculum-item">
+          <div class="curriculum-num">01</div>
+          <div class="curriculum-content">
+            <h4>아쿠아포닉스 기초 생태학 <span class="curriculum-badge">무료</span></h4>
+            <p>질소 순환 원리, 미생물 생태계, 물고기-식물 공생 관계 이해</p>
+          </div>
+        </div>
+        <div class="curriculum-item">
+          <div class="curriculum-num">02</div>
+          <div class="curriculum-content">
+            <h4>무농약 수경재배 실무</h4>
+            <p>병해충 자연 관리, 천연 영양 보충법, 계절별 작물 선택과 수확</p>
+          </div>
+        </div>
+        <div class="curriculum-item">
+          <div class="curriculum-num">03</div>
+          <div class="curriculum-content">
+            <h4>친환경 어류 복지 양식</h4>
+            <p>스트레스 없는 사육 환경, 천연 사료, 지속가능한 어종 선택 가이드</p>
+          </div>
+        </div>
+        <div class="curriculum-item">
+          <div class="curriculum-num">04</div>
+          <div class="curriculum-content">
+            <h4>실외형 생태 논농사 <span class="curriculum-badge">특별</span></h4>
+            <p>미꾸라지·참게·징거미새우 활용 무농약 벼농사. 농어업 융복합 실전</p>
+          </div>
+        </div>
+        <div class="curriculum-item">
+          <div class="curriculum-num">05</div>
+          <div class="curriculum-content">
+            <h4>유기농 인증 & 직거래 사업화 <span class="curriculum-badge">심화</span></h4>
+            <p>친환경 인증 취득, 로컬 직거래·꾸러미 판매, 보조금·지원사업 연계</p>
+          </div>
+        </div>
+      </div>
+      <div class="organic-impact reveal">
+        <div class="impact-title">🌿 ECO-VASS 유기농업의 성과</div>
+        <div class="impact-stat-grid">
+          <div class="impact-stat">
+            <div class="impact-num">0</div>
+            <div class="impact-label">농약·화학비료<br>사용량</div>
+          </div>
+          <div class="impact-stat">
+            <div class="impact-num">90%↓</div>
+            <div class="impact-label">기존 농업 대비<br>물 사용량</div>
+          </div>
+          <div class="impact-stat">
+            <div class="impact-num">12종+</div>
+            <div class="impact-label">재배 가능<br>채소·허브</div>
+          </div>
+          <div class="impact-stat">
+            <div class="impact-num">52주</div>
+            <div class="impact-label">연중 무중단<br>생산 가능</div>
+          </div>
+        </div>
+        <div style="background:rgba(74,140,63,0.08);border:1px solid rgba(122,184,122,0.2);border-radius:14px;padding:20px;margin-top:16px;">
+          <div style="font-size:0.80rem;font-weight:700;color:var(--sage);margin-bottom:10px;">🌾 실외형 생태농업 특징</div>
+          <ul style="list-style:none;font-size:0.82rem;color:var(--muted);line-height:1.8;">
+            <li>• 미꾸라지·참게·징거미새우가 살아있는 천연 비료</li>
+            <li>• 벼 + 수생동물 가을 동시 수확</li>
+            <li>• 농약 사용 불가 구조 (수생동물 보호)</li>
+            <li>• 전통 농법의 현대적 재현</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNER ECOSYSTEM -->
+<section id="partners">
+  <div class="max-w">
+    <div class="partner-intro">
+      <div class="partner-philosophy reveal">
+        <span class="section-tag">파트너 생태계</span>
+        <h2 class="section-title">재화는 나를 통해서가<br>아닌, 참여로 흐릅니다</h2>
+        <p class="section-desc" style="margin-bottom:16px;">ECO-VASS 플랫폼은 특정 개인이나 기업이 독점하지 않습니다. 생태형 아쿠아포닉스와 관련된 다양한 업종의 협력업체들이 자유롭게 참여하여 선순환 생태계를 함께 만들어갑니다.</p>
+        <p class="section-desc" style="margin-bottom:16px;">대중의 관심과 참여 의지가 재화의 흐름을 만들고, 그 흐름이 모든 참여자에게 돌아오는 구조 — 이것이 ECO-VASS 선순환 경제 모델입니다.</p>
+        <div style="background:rgba(212,168,83,0.08);border:1px solid rgba(212,168,83,0.25);border-radius:14px;padding:18px 20px;margin-top:8px;">
+          <div style="font-size:0.82rem;color:var(--gold);line-height:1.8;">💡 <strong>가치는 참여와 평가에 의해 만들어집니다.</strong> 처음에는 현재 협력업체들과 함께 시작하며, ECO-VASS가 사용하는 제품의 업체들도 함께 참여하게 됩니다. 사명과 방향이 맞다면 누구나 자유롭게 참여할 수 있습니다.</div>
+        </div>
+      </div>
+      <div class="partner-visual reveal">
+        <div class="circular-economy">
+          <div class="circular-center">🌊</div>
+          <div style="font-family:'Noto Serif KR',serif;font-size:1rem;color:var(--foam);font-weight:700;margin-bottom:8px;">ECO-VASS 생태계</div>
+          <div style="font-size:0.82rem;color:var(--muted);margin-bottom:20px;">모든 참여자가 주역입니다</div>
+          <div class="circular-rings">
+            <div class="circular-ring ring-1">🏠 가정·공동체</div>
+            <div class="circular-ring ring-2">🌱 유기농 생산자</div>
+            <div class="circular-ring ring-3">🏪 협력 파트너</div>
+            <div class="circular-ring ring-1">📚 교육 기관</div>
+            <div class="circular-ring ring-2">🏥 치유 기관</div>
+            <div class="circular-ring ring-3">🚚 유통·물류</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="partner-grid">
+      <div class="partner-card reveal">
+        <div class="partner-card-icon">🏬</div>
+        <div class="partner-card-name">수족관 전문점</div>
+        <div class="partner-card-desc">어류·수초·장비 공급. ECO-VASS 추천 파트너로 등록되어 플랫폼 구매자와 직접 연결.</div>
+      </div>
+      <div class="partner-card reveal">
+        <div class="partner-card-icon">🌾</div>
+        <div class="partner-card-name">종묘·농자재 업체</div>
+        <div class="partner-card-desc">유기농 종자, 배지, 수경재배 용품. ECO-VASS 인증 자재 공급 파트너.</div>
+      </div>
+      <div class="partner-card reveal">
+        <div class="partner-card-icon">⚡</div>
+        <div class="partner-card-name">설비·시공 업체</div>
+        <div class="partner-card-desc">모듈 설치, 배관, 전기, LED 조명 시공. 지역별 공인 설치 파트너 네트워크.</div>
+      </div>
+      <div class="partner-card reveal">
+        <div class="partner-card-icon">🎓</div>
+        <div class="partner-card-name">교육·강사 파트너</div>
+        <div class="partner-card-desc">도시농업, 유기농법, 아쿠아포닉스 전문 강사. 온·오프라인 강의 콘텐츠 제공.</div>
+      </div>
+      <div class="partner-card reveal">
+        <div class="partner-card-icon">🏥</div>
+        <div class="partner-card-name">치유·복지 기관</div>
+        <div class="partner-card-desc">정신건강센터, 재활기관, 사회복지관. 원예치료·아쿠아포닉스 치유 프로그램 연계.</div>
+      </div>
+      <div class="partner-card reveal">
+        <div class="partner-card-icon">🚜</div>
+        <div class="partner-card-name">유기농 직거래 플랫폼</div>
+        <div class="partner-card-desc">생산된 유기농산물의 로컬 직거래, 꾸러미, CSA(공동체 지원 농업) 유통 연결.</div>
+      </div>
+      <div class="partner-card reveal">
+        <div class="partner-card-icon">📱</div>
+        <div class="partner-card-name">IoT·스마트팜 기업</div>
+        <div class="partner-card-desc">스마트 센서, 자동화 장치, 앱 개발. ECO-VASS 스마트 모니터링 시스템 통합.</div>
+      </div>
+      <div class="partner-card reveal">
+        <div class="partner-card-icon">⛪</div>
+        <div class="partner-card-name">교회·선교 단체</div>
+        <div class="partner-card-desc">공동체 회복, 선교지 자립농업, 소그룹 활동. 자비량 사역의 토대로서 ECO-VASS 도입.</div>
+      </div>
+      <div class="partner-card reveal" style="border-color:rgba(122,184,122,0.4);background:rgba(74,140,63,0.06);">
+        <div class="partner-card-icon">🌾</div>
+        <div class="partner-card-name" style="color:var(--sage);">아쿠아포닉스코리아</div>
+        <div class="partner-card-desc">전북 고창 아쿠아포닉스 농장 · 특허 보유 · 교육·컨설팅·시공 대표 파트너. <a href="https://aquaponicskorea.co.kr" target="_blank" style="color:var(--aqua);text-decoration:none;font-weight:700;">사이트 방문 →</a></div>
+      </div>
+    </div>
+
+    <div class="partner-join reveal">
+      <div>
+        <h3>협력업체 자유 참여 신청</h3>
+        <p>ECO-VASS 생태계에 참여하면 플랫폼 사용자들에게 자동 노출되며, 공동 마케팅·교육·B2B 연결 기회를 얻습니다. 수족관 용품, 농자재, 설비·시공, 교육·강사, 치유·복지기관, 유기농 직거래, IoT·스마트팜 기업, 교회·선교단체 등 관련 업종이면 누구나 환영합니다.</p>
+        <div class="partner-join-steps">
+          <div class="join-step">
+            <div class="join-step-num">1</div>
+            <div class="join-step-label">카카오 상담</div>
+          </div>
+          <div style="color:var(--muted);margin-top:18px;">→</div>
+          <div class="join-step">
+            <div class="join-step-num">2</div>
+            <div class="join-step-label">방향 검토</div>
+          </div>
+          <div style="color:var(--muted);margin-top:18px;">→</div>
+          <div class="join-step">
+            <div class="join-step-num">3</div>
+            <div class="join-step-label">생태계 등록</div>
+          </div>
+          <div style="color:var(--muted);margin-top:18px;">→</div>
+          <div class="join-step">
+            <div class="join-step-num">4</div>
+            <div class="join-step-label">선순환 참여</div>
+          </div>
+        </div>
+      </div>
+      <div style="flex-shrink:0;display:flex;flex-direction:column;gap:12px;align-items:center;">
+        <button class="btn-primary" onclick="submitPartner()">파트너 신청하기</button>
+        <a href="https://pf.kakao.com/_rXDxdX" target="_blank" style="font-size:0.82rem;color:var(--aqua);text-decoration:none;">💬 카카오 채널로 먼저 문의하기</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CIRCULATION MODEL -->
+<section id="circulation">
+  <div class="max-w">
+    <div class="circulation-center reveal">
+      <span class="section-tag">선순환 비즈니스 모델</span>
+      <h2 class="section-title">지속가능한 사업화,<br>선순환이 답입니다</h2>
+      <p class="section-desc" style="margin:0 auto;">개인이 모든 것을 감당할 필요가 없습니다. 대중의 관심이 참여를 만들고, 참여가 가치를 만들고, 가치가 다시 관심을 불러오는 선순환 구조 안에서 사업은 스스로 성장합니다.</p>
+    </div>
+    <div class="flow-diagram reveal">
+      <div class="flow-node">
+        <div class="flow-node-icon">👁️</div>
+        <div class="flow-node-title">관심 유발</div>
+        <div class="flow-node-desc">콘텐츠·교육·체험</div>
+      </div>
+      <div class="flow-connector">→</div>
+      <div class="flow-node">
+        <div class="flow-node-icon">🤝</div>
+        <div class="flow-node-title">참여 형성</div>
+        <div class="flow-node-desc">구독·커뮤니티</div>
+      </div>
+      <div class="flow-connector">→</div>
+      <div class="flow-node">
+        <div class="flow-node-icon">💰</div>
+        <div class="flow-node-title">가치 창출</div>
+        <div class="flow-node-desc">생산·판매·유통</div>
+      </div>
+      <div class="flow-connector">→</div>
+      <div class="flow-node">
+        <div class="flow-node-icon">🔄</div>
+        <div class="flow-node-title">재투자</div>
+        <div class="flow-node-desc">교육·시스템 강화</div>
+      </div>
+      <div class="flow-connector">→</div>
+      <div class="flow-node">
+        <div class="flow-node-icon">🌊</div>
+        <div class="flow-node-title">생태계 확장</div>
+        <div class="flow-node-desc">더 큰 순환</div>
+      </div>
+    </div>
+    <div class="circulation-cards">
+      <div class="circulation-card cc-aqua reveal">
+        <div class="circulation-card-icon">📱</div>
+        <div class="circulation-card-title">디지털 플랫폼 수익</div>
+        <div class="circulation-card-text">구독 서비스, 온라인 교육 강의, 전문가 컨설팅, 수질 일지 분석 서비스. 한 번 만든 콘텐츠가 지속적으로 수익을 창출하는 구조입니다.</div>
+      </div>
+      <div class="circulation-card cc-green reveal">
+        <div class="circulation-card-icon">🌿</div>
+        <div class="circulation-card-title">생산물 직거래 수익</div>
+        <div class="circulation-card-text">가정·공동체에서 생산된 유기농 채소·허브·어류의 로컬 직거래, 꾸러미 구독, 식당·카페 납품으로 이어지는 실물 경제 선순환.</div>
+      </div>
+      <div class="circulation-card cc-gold reveal">
+        <div class="circulation-card-icon">🤝</div>
+        <div class="circulation-card-title">파트너 생태계 수익</div>
+        <div class="circulation-card-text">협력업체 플랫폼 수수료, 공동 교육 프로그램, B2B 모듈 공급, 설치 시공 연결 수수료. 참여자 모두가 수익을 나누는 구조.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="max-w">
+    <span class="section-tag">ECO-VASS 아카데미</span>
+    <h2 class="section-title">교육이 먼저입니다<br>물잡이 성공이 전부입니다</h2>
+    <p class="section-desc">아쿠아포닉스의 첫걸음은 화려한 장비가 아닙니다. <strong style="color:var(--aqua)">물잡이(수질 안정화)</strong>에 성공해야 모든 것이 시작됩니다. 일본에서도 10여 년 전 아쿠아포닉스 붐이 일었지만, 물잡이 실패로 수많은 가정이 포기했습니다. ECO-VASS는 이 실패를 반복하지 않도록 교육을 가장 먼저 제공합니다.</p>
+
+    <!-- 물잡이 경고 배너 -->
+    <div class="reveal" style="background:linear-gradient(135deg,rgba(212,168,83,0.12),rgba(139,105,20,0.08));border:1px solid rgba(212,168,83,0.35);border-radius:20px;padding:36px 40px;margin-bottom:56px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;">
+      <div style="font-size:3.5rem;">⚠️</div>
+      <div>
+        <div style="font-family:'Noto Serif KR',serif;font-size:1.15rem;color:var(--gold);font-weight:700;margin-bottom:10px;">물잡이 실패 = 전체 실패</div>
+        <p style="color:var(--muted);font-size:0.92rem;line-height:1.85;margin-bottom:0;">물잡이란 <strong style="color:var(--foam)">동·식물과 미생물이 서로 공생하는 자연생태계를 수조 안에 조성하는 과정</strong>입니다. 박테리아 군집이 형성되어 질소 순환이 안정될 때까지 보통 2~4주가 걸립니다. 이 과정을 이해하지 못하면 물고기가 폐사하고 식물도 죽습니다. <strong style="color:var(--aqua)">ECO-VASS 교육은 이 핵심에서 시작합니다.</strong></p>
+      </div>
+    </div>
+
+    <!-- 물잡이 단계 -->
+    <div class="reveal" style="margin-bottom:56px;">
+      <h3 style="font-family:'Noto Serif KR',serif;font-size:1.1rem;color:var(--foam);font-weight:700;margin-bottom:24px;text-align:center;">물잡이 성공 4단계</h3>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(26,181,163,0.2);border-radius:14px;padding:24px 16px;text-align:center;position:relative;">
+          <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);width:28px;height:28px;background:var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:700;color:white;">1</div>
+          <div style="font-size:2rem;margin:10px 0 10px;">💧</div>
+          <div style="font-size:0.88rem;color:var(--foam);font-weight:700;margin-bottom:6px;">수조 세팅</div>
+          <div style="font-size:0.78rem;color:var(--muted);line-height:1.6;">바닥재·습지모듈·펌프 설치. 물 채우기 후 48시간 가동.</div>
+          <div style="margin-top:10px;font-size:0.72rem;padding:3px 10px;background:rgba(26,181,163,0.1);border-radius:8px;color:var(--aqua);display:inline-block;">1~2일</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(26,181,163,0.2);border-radius:14px;padding:24px 16px;text-align:center;position:relative;">
+          <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);width:28px;height:28px;background:var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:700;color:white;">2</div>
+          <div style="font-size:2rem;margin:10px 0 10px;">🦠</div>
+          <div style="font-size:0.88rem;color:var(--foam);font-weight:700;margin-bottom:6px;">박테리아 배양</div>
+          <div style="font-size:0.78rem;color:var(--muted);line-height:1.6;">유익균 투입. 암모니아 → 아질산 → 질산 변환 시작.</div>
+          <div style="margin-top:10px;font-size:0.72rem;padding:3px 10px;background:rgba(26,181,163,0.1);border-radius:8px;color:var(--aqua);display:inline-block;">1~2주</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(26,181,163,0.2);border-radius:14px;padding:24px 16px;text-align:center;position:relative;">
+          <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);width:28px;height:28px;background:var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:700;color:white;">3</div>
+          <div style="font-size:2rem;margin:10px 0 10px;">🧪</div>
+          <div style="font-size:0.88rem;color:var(--foam);font-weight:700;margin-bottom:6px;">수질 안정 확인</div>
+          <div style="font-size:0.78rem;color:var(--muted);line-height:1.6;">pH 6.8~7.2, 암모니아 0에 수렴. 매일 측정·기록.</div>
+          <div style="margin-top:10px;font-size:0.72rem;padding:3px 10px;background:rgba(26,181,163,0.1);border-radius:8px;color:var(--aqua);display:inline-block;">2~4주</div>
+        </div>
+        <div style="background:rgba(74,140,63,0.1);border:1px solid rgba(122,184,122,0.3);border-radius:14px;padding:24px 16px;text-align:center;position:relative;">
+          <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);width:28px;height:28px;background:var(--leaf);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:700;color:white;">4</div>
+          <div style="font-size:2rem;margin:10px 0 10px;">🎉</div>
+          <div style="font-size:0.88rem;color:var(--sage);font-weight:700;margin-bottom:6px;">물잡이 성공!</div>
+          <div style="font-size:0.78rem;color:var(--muted);line-height:1.6;">어류 입식 + 식물 이식. 생태계 순환 본격 시작!</div>
+          <div style="margin-top:10px;font-size:0.72rem;padding:3px 10px;background:rgba(74,140,63,0.15);border-radius:8px;color:var(--sage);display:inline-block;">완료</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 온·오프라인 교육 채널 -->
+    <div class="reveal" style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:20px;padding:36px;margin-bottom:48px;">
+      <h3 style="font-family:'Noto Serif KR',serif;font-size:1.05rem;color:var(--aqua);font-weight:700;margin-bottom:24px;">📡 온·오프라인 교육 채널</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+        <div style="background:rgba(26,181,163,0.06);border:1px solid rgba(26,181,163,0.2);border-radius:14px;padding:24px;">
+          <div style="font-size:1.6rem;margin-bottom:10px;">💻</div>
+          <div style="font-size:0.92rem;font-weight:700;color:var(--foam);margin-bottom:8px;">온라인 교육</div>
+          <div style="font-size:0.82rem;color:var(--muted);line-height:1.7;">유튜브 강의, ECO-VASS 아카데미 영상 과정, 수질 일지 앱 연동 AI 분석, 온라인 Q&A 커뮤니티.</div>
+        </div>
+        <div style="background:rgba(74,140,63,0.06);border:1px solid rgba(122,184,122,0.2);border-radius:14px;padding:24px;">
+          <div style="font-size:1.6rem;margin-bottom:10px;">🏫</div>
+          <div style="font-size:0.92rem;font-weight:700;color:var(--sage);margin-bottom:8px;">오프라인 교육</div>
+          <div style="font-size:0.82rem;color:var(--muted);line-height:1.7;">현장 설치 교육, 지역별 워크숍, 학교·공동체 방문 교육, 수질 측정 실습 과정.</div>
+        </div>
+      </div>
+      <div style="margin-top:16px;padding:14px 20px;background:rgba(212,168,83,0.08);border:1px solid rgba(212,168,83,0.2);border-radius:12px;font-size:0.85rem;color:var(--gold);">
+        💡 모듈 구매 고객에게는 <strong>물잡이 성공 보장 교육</strong>을 우선 제공합니다. 교육 이수 없이는 모듈을 가동하지 마세요.
+      </div>
+    </div>
+
+    <!-- 강의 카드 그리드 -->
+    <h3 style="font-family:'Noto Serif KR',serif;font-size:1.05rem;color:var(--foam);font-weight:700;margin-bottom:24px;">단계별 커리큘럼</h3>
+    <div class="edu-grid">
+      <div class="edu-card reveal">
+        <div class="edu-card-thumb" style="background:linear-gradient(135deg,rgba(212,168,83,0.3),rgba(139,105,20,0.2));">
+          🌊<div class="edu-card-level" style="background:rgba(212,168,83,0.3);color:var(--gold);border:1px solid rgba(212,168,83,0.5);">필수</div>
+        </div>
+        <div class="edu-card-body">
+          <div class="edu-card-title" style="color:var(--gold);">물잡이 완전 정복 (필수)</div>
+          <div class="edu-card-desc">모든 수강생 필수 과정. 질소 순환 원리, 박테리아 배양, 수질 측정 실습. 이것 없이 모듈 가동 금지.</div>
+          <div class="edu-card-meta"><span class="edu-card-lessons">📹 6강 · 약 3시간</span><span class="edu-card-price free">무료</span></div>
+        </div>
+      </div>
+      <div class="edu-card reveal">
+        <div class="edu-card-thumb">🌱<div class="edu-card-level level-beginner">입문</div></div>
+        <div class="edu-card-body">
+          <div class="edu-card-title">아쿠아포닉스 첫걸음</div>
+          <div class="edu-card-desc">생태 순환의 원리부터 첫 수조 세팅까지. 영상 8강으로 완성하는 입문 과정.</div>
+          <div class="edu-card-meta"><span class="edu-card-lessons">📹 8강 · 약 4시간</span><span class="edu-card-price free">무료</span></div>
+        </div>
+      </div>
+      <div class="edu-card reveal">
+        <div class="edu-card-thumb">🌿<div class="edu-card-level level-beginner">초급</div></div>
+        <div class="edu-card-body">
+          <div class="edu-card-title">가정용 ECO-VASS 세팅</div>
+          <div class="edu-card-desc">베란다·거실 맞춤 모듈 설치부터 첫 수확까지 90일 완성 실습 과정.</div>
+          <div class="edu-card-meta"><span class="edu-card-lessons">📹 15강 · 약 8시간</span><span class="edu-card-price">₩49,000</span></div>
+        </div>
+      </div>
+      <div class="edu-card reveal">
+        <div class="edu-card-thumb">🐠<div class="edu-card-level level-inter">중급</div></div>
+        <div class="edu-card-body">
+          <div class="edu-card-title">수질 마스터 클래스</div>
+          <div class="edu-card-desc">질소 순환 심화, 수질 트러블슈팅, 미생물 배양 전문 과정.</div>
+          <div class="edu-card-meta"><span class="edu-card-lessons">📹 20강 · 약 12시간</span><span class="edu-card-price">₩89,000</span></div>
+        </div>
+      </div>
+      <div class="edu-card reveal">
+        <div class="edu-card-thumb">🏘️<div class="edu-card-level level-adv">고급</div></div>
+        <div class="edu-card-body">
+          <div class="edu-card-title">공동체 농업 사업화</div>
+          <div class="edu-card-desc">소규모 공동체 아쿠아포닉스 창업, 직거래 판매, 브랜드 구축 실전.</div>
+          <div class="edu-card-meta"><span class="edu-card-lessons">📹 24강 · 약 16시간</span><span class="edu-card-price">₩149,000</span></div>
+        </div>
+      </div>
+      <div class="edu-card reveal">
+        <div class="edu-card-thumb">🙏<div class="edu-card-level level-adv">특별</div></div>
+        <div class="edu-card-body">
+          <div class="edu-card-title">선교지 자립농업 과정</div>
+          <div class="edu-card-desc">선교 현장·개발도상국 저비용 아쿠아포닉스 자립 시스템. 물잡이 실전 포함.</div>
+          <div class="edu-card-meta"><span class="edu-card-lessons">📹 16강 · 약 10시간</span><span class="edu-card-price free">무료 (선교사 대상)</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 교육 신청 CTA -->
+    <div class="reveal" style="text-align:center;margin-top:56px;">
+      <p style="color:var(--muted);font-size:0.92rem;margin-bottom:20px;">지금 무료 물잡이 과정으로 시작하세요. 성공의 90%는 교육에 달려 있습니다.</p>
+      <button class="btn-primary" style="font-size:1rem;padding:16px 40px;" onclick="openMC()">
+        🎓 무료 입문 강의 신청하기
+      </button>
+      &nbsp;&nbsp;
+      <a href="https://pf.kakao.com/_rXDxdX" target="_blank" class="btn-outline" style="font-size:0.95rem;padding:16px 28px;">
+        오프라인 교육 문의
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- SUBSCRIPTION -->
+<section id="subscription">
+  <div class="max-w">
+    <span class="section-tag">구독 플랜</span>
+    <h2 class="section-title">나에게 맞는 플랜으로<br>시작하세요</h2>
+    <div class="plan-grid">
+      <div class="plan-card reveal">
+        <div class="plan-name">씨앗 플랜</div>
+        <div class="plan-price">무료</div>
+        <div class="plan-period">영구 무료</div>
+        <ul class="plan-features">
+          <li>입문 강의 무제한 수강</li>
+          <li>커뮤니티 열람 및 참여</li>
+          <li>수질 일지 월 5회</li>
+          <li>기초 교안 자료 다운로드</li>
+          <li class="inactive">전문가 1:1 컨설팅</li>
+          <li class="inactive">협력업체 할인 혜택</li>
+          <li class="inactive">상업용 강의 수강</li>
+        </ul>
+        <button class="btn-outline" style="width:100%;text-align:center;" onclick="subscribe('씨앗', 0)">무료로 시작</button>
+      </div>
+      <div class="plan-card featured reveal">
+        <div class="plan-badge">가장 인기</div>
+        <div class="plan-name">새싹 플랜</div>
+        <div class="plan-price">₩29,900</div>
+        <div class="plan-period">/ 월 구독</div>
+        <ul class="plan-features">
+          <li>모든 강의 무제한 수강</li>
+          <li>전문가 월 2회 1:1 컨설팅</li>
+          <li>수질 일지 무제한 + AI 분석</li>
+          <li>월간 소모품 정기배송 할인 20%</li>
+          <li>협력업체 파트너 할인 혜택</li>
+          <li>공동체 소그룹 모임 참여</li>
+          <li class="inactive">상업용 사업화 컨설팅</li>
+        </ul>
+        <button class="btn-primary" style="width:100%;text-align:center;" onclick="subscribe('새싹', 29900)">새싹 구독 시작</button>
+      </div>
+      <div class="plan-card reveal">
+        <div class="plan-name">열매 플랜</div>
+        <div class="plan-price">₩79,900</div>
+        <div class="plan-period">/ 월 구독</div>
+        <ul class="plan-features">
+          <li>새싹 플랜 모든 혜택 포함</li>
+          <li>상업용 사업화 컨설팅</li>
+          <li>협력업체 우선 연결</li>
+          <li>공동체 모듈 설계 지원</li>
+          <li>ECO-VASS 공인 파트너 자격</li>
+          <li>지역 거점 허브 등록 자격</li>
+          <li>선교지 자립농업 과정 포함</li>
+        </ul>
+        <button class="btn-outline" style="width:100%;text-align:center;" onclick="subscribe('열매', 79900)">열매 구독 시작</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG & YOUTUBE -->
+<section id="blog-media" style="background:linear-gradient(180deg,rgba(74,140,63,0.06) 0%,transparent 100%);padding:88px 32px;">
+  <div class="max-w">
+    <span class="section-tag section-tag-green">콘텐츠 & 미디어</span>
+    <h2 class="section-title">블로그 · 영상으로<br>더 깊이 만나세요</h2>
+    <p class="section-desc">아쿠아포닉스 실전 노하우, 물잡이 성공 사례, 수확 현장, 교육 영상까지 — 네이버 블로그와 유튜브에서 더 풍부한 콘텐츠를 만나보실 수 있습니다.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;">
+
+      <!-- 네이버 블로그 -->
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(3,199,90,0.25);border-radius:20px;overflow:hidden;">
+        <div style="background:linear-gradient(135deg,rgba(3,199,90,0.15),rgba(0,168,75,0.08));padding:28px 28px 20px;">
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;">
+            <div style="width:44px;height:44px;background:#03C75A;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <span style="color:white;font-weight:900;font-size:1rem;font-family:sans-serif;">N</span>
+            </div>
+            <div>
+              <div style="font-family:'Noto Serif KR',serif;font-size:1rem;color:var(--white);font-weight:700;">네이버 블로그</div>
+              <div style="font-size:0.75rem;color:rgba(3,199,90,0.8);">아쿠아포닉스코리아 공식 블로그</div>
+            </div>
+          </div>
+          <p style="font-size:0.85rem;color:var(--muted);line-height:1.75;margin-bottom:16px;">물잡이 실전 노하우, 수질 관리 팁, 수확 사례, 교육 현장, 제품 설치 후기 등 실용적인 아쿠아포닉스 정보를 꾸준히 업데이트합니다.</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px;">
+            <span style="font-size:0.72rem;padding:3px 10px;background:rgba(3,199,90,0.12);border:1px solid rgba(3,199,90,0.25);border-radius:8px;color:rgba(3,199,90,0.8);">#물잡이</span>
+            <span style="font-size:0.72rem;padding:3px 10px;background:rgba(3,199,90,0.12);border:1px solid rgba(3,199,90,0.25);border-radius:8px;color:rgba(3,199,90,0.8);">#수질관리</span>
+            <span style="font-size:0.72rem;padding:3px 10px;background:rgba(3,199,90,0.12);border:1px solid rgba(3,199,90,0.25);border-radius:8px;color:rgba(3,199,90,0.8);">#수확후기</span>
+            <span style="font-size:0.72rem;padding:3px 10px;background:rgba(3,199,90,0.12);border:1px solid rgba(3,199,90,0.25);border-radius:8px;color:rgba(3,199,90,0.8);">#교육현장</span>
+          </div>
+          <a href="https://blog.naver.com/klys1121" target="_blank"
+             style="display:inline-flex;align-items:center;gap:8px;background:#03C75A;color:white;padding:11px 24px;border-radius:24px;font-weight:700;font-size:0.88rem;text-decoration:none;transition:all 0.3s;">
+            블로그 방문하기 →
+          </a>
+        </div>
+        <!-- 블로그 최근 글 미리보기 (iframe) -->
+        <div style="border-top:1px solid rgba(3,199,90,0.15);padding:16px 20px;background:rgba(0,0,0,0.15);">
+          <div style="font-size:0.72rem;color:var(--muted);margin-bottom:10px;font-weight:600;">📌 블로그에서 글쓰기</div>
+          <div style="font-size:0.80rem;color:var(--muted);line-height:1.7;">
+            네이버 블로그에서 직접 글을 작성하고 사진·영상을 업로드하시면 ECO-VASS 소식이 자동으로 쌓입니다.<br>
+            <span style="color:rgba(3,199,90,0.7);">blog.naver.com/klys1121</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 유튜브 -->
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,0,0,0.2);border-radius:20px;overflow:hidden;">
+        <div style="background:linear-gradient(135deg,rgba(255,0,0,0.1),rgba(180,0,0,0.06));padding:28px 28px 20px;">
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;">
+            <div style="width:44px;height:44px;background:#FF0000;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <span style="color:white;font-size:1.2rem;">▶</span>
+            </div>
+            <div>
+              <div style="font-family:'Noto Serif KR',serif;font-size:1rem;color:var(--white);font-weight:700;">유튜브 채널</div>
+              <div style="font-size:0.75rem;color:rgba(255,100,100,0.8);">ECO-VASS 공식 영상 채널</div>
+            </div>
+          </div>
+          <p style="font-size:0.85rem;color:var(--muted);line-height:1.75;margin-bottom:16px;">아쿠아포닉스 교육 영상, 물잡이 과정 타임랩스, 제품 설치 과정, 수확 현장, Dome Farm 소개 영상 등을 업로드합니다.</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px;">
+            <span style="font-size:0.72rem;padding:3px 10px;background:rgba(255,0,0,0.1);border:1px solid rgba(255,0,0,0.2);border-radius:8px;color:rgba(255,100,100,0.8);">#교육영상</span>
+            <span style="font-size:0.72rem;padding:3px 10px;background:rgba(255,0,0,0.1);border:1px solid rgba(255,0,0,0.2);border-radius:8px;color:rgba(255,100,100,0.8);">#물잡이영상</span>
+            <span style="font-size:0.72rem;padding:3px 10px;background:rgba(255,0,0,0.1);border:1px solid rgba(255,0,0,0.2);border-radius:8px;color:rgba(255,100,100,0.8);">#DomeFarm</span>
+            <span style="font-size:0.72rem;padding:3px 10px;background:rgba(255,0,0,0.1);border:1px solid rgba(255,0,0,0.2);border-radius:8px;color:rgba(255,100,100,0.8);">#수확현장</span>
+          </div>
+          <a href="https://www.youtube.com/@ecovass" target="_blank" id="yt-link"
+             style="display:inline-flex;align-items:center;gap:8px;background:#FF0000;color:white;padding:11px 24px;border-radius:24px;font-weight:700;font-size:0.88rem;text-decoration:none;transition:all 0.3s;">
+            채널 구독하기 →
+          </a>
+        </div>
+        <!-- 유튜브 채널 URL 안내 -->
+        <div style="border-top:1px solid rgba(255,0,0,0.12);padding:16px 20px;background:rgba(0,0,0,0.15);">
+          <div style="font-size:0.72rem;color:var(--muted);margin-bottom:10px;font-weight:600;">🎬 유튜브에서 영상 올리기</div>
+          <div style="font-size:0.80rem;color:var(--muted);line-height:1.7;">
+            유튜브 채널에 영상을 업로드하시면 이 페이지에 자동 연동됩니다.<br>
+            <span style="color:rgba(255,100,100,0.7);">채널 URL을 알려주시면 정확히 연결해 드립니다.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 콘텐츠 작성 가이드 -->
+    <div style="background:rgba(212,168,83,0.06);border:1px solid rgba(212,168,83,0.2);border-radius:16px;padding:24px 28px;margin-top:24px;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;">
+      <div style="font-size:2rem;">💡</div>
+      <div>
+        <div style="font-size:0.88rem;font-weight:700;color:var(--gold);margin-bottom:6px;">ECO-VASS 콘텐츠 운영 방법</div>
+        <div style="font-size:0.82rem;color:var(--muted);line-height:1.75;">
+          <strong style="color:var(--foam);">네이버 블로그</strong> — 글쓰기·사진·자료 업로드는 블로그에서 자유롭게 하세요. 별도 기술 없이 바로 가능합니다.&nbsp;&nbsp;
+          <strong style="color:var(--foam);">유튜브</strong> — 영상 촬영 후 유튜브에 업로드하시면 자동으로 채널에 쌓입니다.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section id="community">
+  <div class="max-w">
+    <span class="section-tag">커뮤니티</span>
+    <h2 class="section-title">함께 기르는 공동체</h2>
+    <div class="community-grid">
+      <div class="community-posts reveal">
+        <div class="community-post">
+          <div class="post-header">
+            <div class="post-avatar">🌿</div>
+            <div>
+              <div class="post-meta-name">김은혜 집사님</div>
+              <div class="post-meta-date">경기도 성남 · 3일 전</div>
+            </div>
+            <div class="post-tag">가정용</div>
+          </div>
+          <div class="post-title">베란다 60L 수조, 드디어 상추 첫 수확했어요! 🥬</div>
+          <div class="post-preview">물잡이 2주 만에 박테리아가 안정되더니, 30일 지나니 상추가 쑥쑥 자라네요. 아이들이 너무 좋아해서...</div>
+          <div class="post-actions">
+            <span class="post-action">❤️ 48</span>
+            <span class="post-action">💬 12</span>
+            <span class="post-action">↗️ 공유</span>
+          </div>
+        </div>
+        <div class="community-post">
+          <div class="post-header">
+            <div class="post-avatar">🐟</div>
+            <div>
+              <div class="post-meta-name">평화교회 소그룹</div>
+              <div class="post-meta-date">전북 전주 · 1주 전</div>
+            </div>
+            <div class="post-tag">공동체</div>
+          </div>
+          <div class="post-title">교회 옥상에 공동체 모듈 설치 완료! 10가족 함께 시작합니다</div>
+          <div class="post-preview">지난 달 ECO-VASS 커뮤니티 고급 과정 수료 후 드디어 우리 교회 옥상 텃밭이 아쿠아포닉스로 바뀌었습니다...</div>
+          <div class="post-actions">
+            <span class="post-action">❤️ 127</span>
+            <span class="post-action">💬 34</span>
+            <span class="post-action">↗️ 공유</span>
+          </div>
+        </div>
+        <div class="community-post">
+          <div class="post-header">
+            <div class="post-avatar">🌏</div>
+            <div>
+              <div class="post-meta-name">이다윗 선교사</div>
+              <div class="post-meta-date">캄보디아 프놈펜 · 2주 전</div>
+            </div>
+            <div class="post-tag">선교지</div>
+          </div>
+          <div class="post-title">캄보디아 농촌마을에 ECO-VASS 시스템 설치 보고</div>
+          <div class="post-preview">현지 재료로 저비용 모듈을 만들어 마을 10가정과 함께 시작했습니다. 단백질 공급과 채소 자급이 동시에...</div>
+          <div class="post-actions">
+            <span class="post-action">❤️ 203</span>
+            <span class="post-action">💬 67</span>
+            <span class="post-action">↗️ 공유</span>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="community-stats-panel">
+          <div class="comm-stats-title">📊 생태계 현황</div>
+          <div class="comm-stat-row">
+            <span class="comm-stat-label">활성 가정 모듈</span>
+            <span class="comm-stat-value">1,247</span>
+          </div>
+          <div class="comm-stat-row">
+            <span class="comm-stat-label">공동체 모듈</span>
+            <span class="comm-stat-value">83</span>
+          </div>
+          <div class="comm-stat-row">
+            <span class="comm-stat-label">협력 파트너</span>
+            <span class="comm-stat-value">46</span>
+          </div>
+          <div class="comm-stat-row">
+            <span class="comm-stat-label">선교지 적용국</span>
+            <span class="comm-stat-value">12</span>
+          </div>
+          <div class="comm-stat-row">
+            <span class="comm-stat-label">누적 유기농 생산량</span>
+            <span class="comm-stat-value">8.4t</span>
+          </div>
+        </div>
+        <div class="regional-map">
+          <div class="regional-title">🗺️ 지역별 활동 현황</div>
+          <div class="regional-item">
+            <div class="regional-dot"></div>
+            <div class="regional-info">
+              <div class="regional-name">수도권</div>
+              <div class="regional-count">482 가정 · 24 공동체</div>
+            </div>
+            <div class="regional-bar-wrap"><div class="regional-bar" style="width:85%"></div></div>
+          </div>
+          <div class="regional-item">
+            <div class="regional-dot regional-dot-green"></div>
+            <div class="regional-info">
+              <div class="regional-name">영남권</div>
+              <div class="regional-count">318 가정 · 19 공동체</div>
+            </div>
+            <div class="regional-bar-wrap"><div class="regional-bar" style="width:62%;background:linear-gradient(90deg,var(--leaf),var(--sage))"></div></div>
+          </div>
+          <div class="regional-item">
+            <div class="regional-dot regional-dot-green"></div>
+            <div class="regional-info">
+              <div class="regional-name">호남권</div>
+              <div class="regional-count">247 가정 · 16 공동체</div>
+            </div>
+            <div class="regional-bar-wrap"><div class="regional-bar" style="width:48%;background:linear-gradient(90deg,var(--leaf),var(--sage))"></div></div>
+          </div>
+          <div class="regional-item">
+            <div class="regional-dot regional-dot-gold"></div>
+            <div class="regional-info">
+              <div class="regional-name">해외 선교지</div>
+              <div class="regional-count">12개국 · 200+ 가정</div>
+            </div>
+            <div class="regional-bar-wrap"><div class="regional-bar" style="width:38%;background:linear-gradient(90deg,var(--earth),var(--harvest))"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNAL -->
+<section id="journal">
+  <div class="max-w">
+    <span class="section-tag">수질 & 생육 일지</span>
+    <h2 class="section-title">기록이 곧 데이터,<br>데이터가 곧 성장입니다</h2>
+    <p class="section-desc">수질과 식물 생육 상태를 꾸준히 기록하면 전문가가 맞춤 처방을 제공합니다. 당신의 생태계를 더 건강하게 만드는 첫 번째 습관.</p>
+    <div class="journal-form reveal">
+      <div class="form-title">📋 오늘의 기록</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>시스템명 / 어종</label>
+          <input type="text" placeholder="예: 베란다 60L — 틸라피아">
+        </div>
+        <div class="form-group">
+          <label>측정 날짜</label>
+          <input type="date" id="journalDate">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>현재 재배 작물</label>
+          <input type="text" placeholder="예: 상추, 청경채, 바질">
+        </div>
+        <div class="form-group">
+          <label>생육 단계</label>
+          <select>
+            <option>파종 직후</option>
+            <option>발아기</option>
+            <option>성장기</option>
+            <option>수확 직전</option>
+            <option>수확 완료</option>
+          </select>
+        </div>
+      </div>
+      <div class="water-params">
+        <div class="param-input">
+          <label>암모니아 (NH₃)</label>
+          <input type="number" placeholder="0.0" step="0.1">
+        </div>
+        <div class="param-input">
+          <label>아질산 (NO₂)</label>
+          <input type="number" placeholder="0.0" step="0.1">
+        </div>
+        <div class="param-input">
+          <label>질산 (NO₃)</label>
+          <input type="number" placeholder="0" step="1">
+        </div>
+        <div class="param-input">
+          <label>pH</label>
+          <input type="number" placeholder="6.8" step="0.1">
+        </div>
+        <div class="param-input">
+          <label>KH (탄산경도)</label>
+          <input type="number" placeholder="6" step="1">
+        </div>
+        <div class="param-input">
+          <label>GH (총경도)</label>
+          <input type="number" placeholder="8" step="1">
+        </div>
+        <div class="param-input">
+          <label>수온 (℃)</label>
+          <input type="number" placeholder="24" step="0.5">
+        </div>
+        <div class="param-input">
+          <label>용존산소 (mg/L)</label>
+          <input type="number" placeholder="7.0" step="0.1">
+        </div>
+      </div>
+      <div class="form-group" style="margin-bottom:20px">
+        <label>관찰 내용 / 특이사항</label>
+        <textarea placeholder="식물 생육 상태, 어류 행동, 이상 증상, 오늘의 수확 등을 자유롭게 기록하세요."></textarea>
+      </div>
+      <button class="submit-journal" onclick="submitJournal()">일지 저장 & 전문가 분석 요청</button>
+    </div>
+  </div>
+</section>
+
+<!-- SHOP -->
+<section id="shop">
+  <div class="max-w">
+    <span class="section-tag">ECO-VASS 스토어</span>
+    <h2 class="section-title">엄선된 생태 농업 자재</h2>
+    <p class="section-desc">ECO-VASS가 검증한 유기농·친환경 자재만을 공급합니다. 협력 파트너의 제품들도 함께합니다.</p>
+    <div class="shop-tabs">
+      <button class="shop-tab active" onclick="filterProducts('all', this)">전체</button>
+      <button class="shop-tab" onclick="filterProducts('bacteria', this)">유익균·미생물</button>
+      <button class="shop-tab" onclick="filterProducts('media', this)">여과재·기질</button>
+      <button class="shop-tab" onclick="filterProducts('organic', this)">유기농 자재</button>
+      <button class="shop-tab" onclick="filterProducts('diy', this)">DIY 키트</button>
+      <button class="shop-tab" onclick="filterProducts('complete', this)">완제품 세트</button>
+      <button class="shop-tab" onclick="filterProducts('test', this)">수질 측정</button>
+    </div>
+    <div class="products-grid" id="productsGrid"></div>
+  </div>
+</section>
+
+<!-- CTA CONTACT -->
+<section id="contact">
+  <div class="max-w">
+    <div class="cta-title">지금 ECO-VASS<br>생태계에 합류하세요</div>
+    <p class="cta-desc">이메일을 남겨주시면 무료 입문 강의, 가정용 모듈 세팅 가이드, 그리고 파트너 생태계 안내를 보내드립니다.</p>
+    <div class="contact-row">
+      <input class="contact-input" type="email" placeholder="이메일 주소를 입력하세요" id="emailInput">
+      <button class="btn-primary" onclick="window.open('https://pf.kakao.com/_rXDxdX','_blank')">카카오 채널 시작하기 💬</button>
+    </div>
+    <p style="color:var(--muted);font-size:0.78rem;margin-top:8px;">스팸 없음 · 언제든 수신거부 가능 · 개인정보 안전 보호</p>
+  </div>
+</section>
+
+<!-- 아쿠아포닉스코리아 상호 링크 배너 -->
+<section style="padding:64px 32px;background:linear-gradient(135deg,rgba(11,122,110,0.08),rgba(74,140,63,0.06));border-top:1px solid rgba(26,181,163,0.15);border-bottom:1px solid rgba(26,181,163,0.15);">
+  <div class="max-w" style="text-align:center;">
+    <span style="font-size:0.70rem;font-weight:700;letter-spacing:4px;color:var(--aqua);text-transform:uppercase;display:block;margin-bottom:14px;">함께하는 파트너</span>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.4rem);color:var(--white);margin-bottom:14px;">아쿠아포닉스코리아(주)와 함께합니다</h2>
+    <p style="color:var(--muted);font-size:0.95rem;line-height:1.85;max-width:620px;margin:0 auto 40px;">전북 고창에서 실제 아쿠아포닉스 농장을 운영하며 교육·견학·컨설팅·시공을 담당하는 한국 아쿠아포닉스의 대표 기업입니다. ECO-VASS 모듈러 시스템과 함께 더 완전한 아쿠아포닉스 생태계를 만들어갑니다.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:800px;margin:0 auto 40px;">
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(26,181,163,0.2);border-radius:20px;padding:32px;text-align:left;">
+        <div style="font-size:2rem;margin-bottom:12px;">🌾</div>
+        <h3 style="font-family:'Noto Serif KR',serif;font-size:1.05rem;color:var(--foam);font-weight:700;margin-bottom:10px;">아쿠아포닉스코리아</h3>
+        <ul style="list-style:none;font-size:0.84rem;color:var(--muted);line-height:1.85;">
+          <li>✓ 전북 고창 실제 농장 운영</li>
+          <li>✓ 아쿠아포닉스 시스템 특허 보유</li>
+          <li>✓ 전문 교육·농장 견학·체험</li>
+          <li>✓ 컨설팅·설계·시공 전국 운영</li>
+          <li>✓ 한국 아쿠아포닉스 대표 사이트</li>
+        </ul>
+        <div style="margin-top:20px;">
+          <a href="https://aquaponicskorea.co.kr" target="_blank" style="display:inline-block;background:linear-gradient(135deg,var(--teal),var(--aqua));color:var(--white);padding:11px 24px;border-radius:50px;font-size:0.85rem;font-weight:700;text-decoration:none;transition:all 0.3s;">아쿠아포닉스코리아 방문 →</a>
+        </div>
+      </div>
+      <div style="background:rgba(26,181,163,0.06);border:1px solid rgba(26,181,163,0.3);border-radius:20px;padding:32px;text-align:left;">
+        <div style="font-size:2rem;margin-bottom:12px;">🌊</div>
+        <h3 style="font-family:'Noto Serif KR',serif;font-size:1.05rem;color:var(--foam);font-weight:700;margin-bottom:10px;">ECO-VASS (현재 사이트)</h3>
+        <ul style="list-style:none;font-size:0.84rem;color:var(--muted);line-height:1.85;">
+          <li>✓ ECO-VASS 모듈러 시스템 개발·보급</li>
+          <li>✓ 가정·공동체·교회·학교 도시농업</li>
+          <li>✓ 치유농업·선순환 생태계 플랫폼</li>
+          <li>✓ 온라인 교육 아카데미 운영</li>
+          <li>✓ Dome Farm 프로젝트 기획·추진</li>
+        </ul>
+        <div style="margin-top:20px;">
+          <a href="#modular" style="display:inline-block;background:rgba(26,181,163,0.15);border:1px solid rgba(26,181,163,0.4);color:var(--aqua);padding:11px 24px;border-radius:50px;font-size:0.85rem;font-weight:700;text-decoration:none;">모듈러 시스템 보기 →</a>
+        </div>
+      </div>
+    </div>
+    <p style="font-size:0.82rem;color:var(--muted);font-style:italic;">두 기관이 협력하여 한국 아쿠아포닉스 생태계를 함께 만들어갑니다.</p>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+
+<!-- 아쿠아포닉스코리아 상호 링크 배너 -->
+<section style="background:linear-gradient(135deg,rgba(11,122,110,0.1),rgba(74,140,63,0.08));border-top:1px solid rgba(26,181,163,0.15);border-bottom:1px solid rgba(26,181,163,0.15);padding:48px 32px;">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr auto 1fr;gap:32px;align-items:center;">
+    <div>
+      <div style="font-size:0.70rem;font-weight:700;letter-spacing:3px;color:var(--aqua);margin-bottom:10px;">PARTNER SITE</div>
+      <h3 style="font-family:'Noto Serif KR',serif;font-size:1.2rem;color:var(--white);font-weight:700;margin-bottom:8px;">아쿠아포닉스코리아</h3>
+      <p style="font-size:0.85rem;color:var(--muted);line-height:1.75;margin-bottom:16px;">전북 고창 소재 아쿠아포닉스 전문 농장·교육·컨설팅.<br>한국 아쿠아포닉스의 실증 현장을 직접 만나보세요.<br>특허 보유 · 농장 견학 · 전문가 교육 · 시공 상담</p>
+      <a href="https://aquaponicskorea.co.kr" target="_blank" style="display:inline-block;background:rgba(26,181,163,0.15);border:1.5px solid rgba(26,181,163,0.4);color:var(--aqua);padding:10px 24px;border-radius:24px;font-size:0.85rem;font-weight:700;text-decoration:none;">아쿠아포닉스코리아 방문하기 →</a>
+    </div>
+    <div style="text-align:center;padding:0 24px;">
+      <div style="font-size:2.4rem;color:var(--aqua);opacity:0.6;">⇌</div>
+      <div style="font-size:0.72rem;color:var(--muted);margin-top:6px;">상호 연계 사이트</div>
+    </div>
+    <div style="text-align:right;">
+      <div style="font-size:0.70rem;font-weight:700;letter-spacing:3px;color:var(--aqua);margin-bottom:10px;">THIS SITE</div>
+      <h3 style="font-family:'Noto Serif KR',serif;font-size:1.2rem;color:var(--white);font-weight:700;margin-bottom:8px;">ECO-VASS</h3>
+      <p style="font-size:0.85rem;color:var(--muted);line-height:1.75;margin-bottom:16px;">생태형 아쿠아포닉스 모듈러 시스템.<br>가정·공동체·학교를 위한 도시농업 플랫폼.<br>SS-110 ~ LS-500 · Dome Farm · 교육 아카데미</p>
+      <span style="display:inline-block;background:linear-gradient(135deg,var(--teal),var(--aqua));color:var(--white);padding:10px 24px;border-radius:24px;font-size:0.85rem;font-weight:700;">ecovass.com</span>
+    </div>
+  </div>
+</section>
+
+<!-- 아쿠아포닉스코리아 상호 링크 배너 -->
+<div style="background:linear-gradient(135deg,rgba(11,122,110,0.12),rgba(74,140,63,0.08));border-top:1px solid rgba(26,181,163,0.2);border-bottom:1px solid rgba(26,181,163,0.2);padding:28px 32px;">
+  <div class="max-w" style="display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;">
+    <div>
+      <div style="font-size:0.72rem;font-weight:700;letter-spacing:3px;color:var(--aqua);margin-bottom:8px;">PARTNER SITE</div>
+      <div style="font-family:'Noto Serif KR',serif;font-size:1.05rem;color:var(--white);font-weight:700;margin-bottom:6px;">🌾 아쿠아포닉스코리아 공식 사이트</div>
+      <div style="font-size:0.85rem;color:var(--muted);line-height:1.7;">전북 고창 아쿠아포닉스 농장 운영 · 특허 보유 · 전문 교육·컨설팅·시공 · 유기농 채소 판매<br>한국 아쿠아포닉스의 대표 사이트 — 농장 견학·체험·전문 교육 과정 안내</div>
+    </div>
+    <div style="flex-shrink:0;">
+      <a href="https://aquaponicskorea.co.kr" target="_blank" style="background:linear-gradient(135deg,var(--leaf),var(--sage));color:var(--white);padding:12px 24px;border-radius:24px;font-weight:700;font-size:0.88rem;text-decoration:none;white-space:nowrap;display:inline-block;transition:all 0.3s;">
+        사이트 방문하기 →
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-grid max-w">
+    <div>
+      <div class="footer-brand-name">ECO-VASS</div>
+      <div class="footer-brand-desc"><strong style="color:var(--foam);font-size:0.82rem;letter-spacing:0.5px;">Ecological Vertical Aquaponics Smart Solution</strong><br>습지생태이론 기반 생태형 아쿠아포닉스 도시농업 플랫폼.<br>가정과 공동체로부터 시작하는 지속가능한 생태 순환 사업.</div>
+    </div>
+    <div>
+      <div class="footer-col-title">플랫폼</div>
+      <ul class="footer-links">
+        <li><a href="products.html">제품 소개</a></li>
+        <li><a href="modular.html">모듈러 시스템</a></li>
+        <li><a href="#healing">치유·회복</a></li>
+        <li><a href="#organic">유기농법</a></li>
+        <li><a href="#education">교육 아카데미</a></li>
+        <li><a href="https://blog.naver.com/klys1121" target="_blank">네이버 블로그</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">생태계</div>
+      <ul class="footer-links">
+        <li><a href="#partners">파트너 참여</a></li>
+        <li><a href="#circulation">선순환 모델</a></li>
+        <li><a href="#community">커뮤니티</a></li>
+        <li><a href="#shop">스토어</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">지원</div>
+      <ul class="footer-links">
+        <li><a href="#">1:1 컨설팅</a></li>
+        <li><a href="#">협력업체 신청</a></li>
+        <li><a href="#">선교사 지원</a></li>
+        <li><a href="#">제휴 문의</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom max-w">
+    <span>© 2025 ECO-VASS. All rights reserved.</span>
+    <span>개인정보처리방침 · 이용약관 · 파트너 정책</span>
+  </div>
+</footer>
+
+<div id="toast"></div>
+
+<script>
+// BUBBLES
+(function() {
+  for (let i = 0; i < 16; i++) {
+    const b = document.createElement('div');
+    b.className = 'bubble';
+    const size = Math.random() * 16 + 5;
+    b.style.cssText = `width:${size}px;height:${size}px;left:${Math.random()*100}%;animation-duration:${Math.random()*14+8}s;animation-delay:${Math.random()*12}s;`;
+    document.body.appendChild(b);
+  }
+})();
+
+// PRODUCTS
+const products = [
+  { id:1, cat:'bacteria', emoji:'🦠', name:'ECO-VASS 스타터 박테리아', desc:'습지형 질산화균 고농도 배양액. 물잡이 1~2주 단축', price:18900, badge:'NEW' },
+  { id:2, cat:'bacteria', emoji:'🧫', name:'바이오부스터 탈질균', desc:'혐기성 탈질 박테리아 농축액. 질산염 자연 분해', price:22900, badge:'구독↓' },
+  { id:3, cat:'media', emoji:'🪨', name:'ECO 다공성 바이오미디어', desc:'습지 여과재 특성 모사. 표면적 극대화 세라믹', price:34900, badge:null },
+  { id:4, cat:'media', emoji:'🌑', name:'활성탄 소모품 세트 (3개월분)', desc:'여과 후단 흡착층 전용. 월 정기구독 포함 자재', price:15900, badge:'구독↓' },
+  { id:5, cat:'organic', emoji:'🌱', name:'유기농 모종 10종 세트', desc:'ECO-VASS 아쿠아포닉스 최적화 채소·허브 모종', price:24900, badge:'NEW' },
+  { id:6, cat:'organic', emoji:'🪸', name:'배지 혼합 세트 (코코피트+펄라이트)', desc:'무토양 수경재배 최적 배지. 3개월분 공급량', price:19900, badge:null },
+  { id:7, cat:'diy', emoji:'🔧', name:'DIY 습식섬프 기본 키트', desc:'ECO-VASS 강의 연동 섬프 제작 재료 풀세트', price:89000, badge:'NEW' },
+  { id:8, cat:'diy', emoji:'⚙️', name:'가정용 모듈러 DIY 풀키트', desc:'60L 아쿠아포닉스 완전 자작 세트. 설계도+영상', price:145000, badge:null },
+  { id:9, cat:'complete', emoji:'🌿', name:'패밀리 모듈 60L 완성품', desc:'가정용 아쿠아포닉스 완성 세트. 어류+식물+장비', price:320000, badge:'완제품' },
+  { id:10, cat:'complete', emoji:'🏘️', name:'커뮤니티 모듈 200L 세트', desc:'소그룹·공동체용 중형 완성 시스템. 전문 설치 포함', price:980000, badge:'완제품' },
+  { id:11, cat:'test', emoji:'🧪', name:'수질 8종 테스트 키트', desc:'NH₃·NO₂·NO₃·pH·KH·GH·DO·인산염 풀세트', price:42000, badge:null },
+  { id:12, cat:'test', emoji:'📊', name:'스마트 IoT 수질 센서', desc:'실시간 pH·수온·TDS 앱 연동. ECO-VASS 구독자 할인', price:68000, badge:'구독↓' },
+];
+
+let cart = [];
+function renderProducts(filter) {
+  const grid = document.getElementById('productsGrid');
+  const filtered = filter === 'all' ? products : products.filter(p => p.cat === filter);
+  grid.innerHTML = filtered.map(p => `
+    <div class="product-card">
+      <div class="product-img">
+        ${p.emoji}
+        ${p.badge ? `<div class="product-badge-${p.badge==='NEW'?'new':'sub'}">${p.badge}</div>` : ''}
+      </div>
+      <div class="product-body">
+        <div class="product-name">${p.name}</div>
+        <div class="product-desc">${p.desc}</div>
+        <div class="product-footer">
+          <div class="product-price">₩${p.price.toLocaleString()}</div>
+          <button class="btn-cart" onclick="addToCart(${p.id})">담기</button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+function filterProducts(cat, btn) {
+  document.querySelectorAll('.shop-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  renderProducts(cat);
+}
+function addToCart(id) {
+  const p = products.find(x => x.id === id);
+  const existing = cart.find(x => x.id === id);
+  if (existing) existing.qty++;
+  else cart.push({ ...p, qty: 1 });
+  updateCartUI();
+  showToast(`🛒 ${p.name}이(가) 장바구니에 추가되었습니다`);
+}
+function removeFromCart(id) {
+  cart = cart.filter(x => x.id !== id);
+  updateCartUI();
+}
+function updateCartUI() {
+  const count = cart.reduce((a,b) => a + b.qty, 0);
+  const total = cart.reduce((a,b) => a + b.price * b.qty, 0);
+  const countEl = document.getElementById('cartCount');
+  countEl.textContent = count;
+  countEl.classList.toggle('show', count > 0);
+  document.getElementById('cartTotal').textContent = `₩${total.toLocaleString()}`;
+  const itemsEl = document.getElementById('cartItems');
+  if (!cart.length) { itemsEl.innerHTML = '<p class="cart-empty">장바구니가 비어 있습니다</p>'; return; }
+  itemsEl.innerHTML = cart.map(item => `
+    <div class="cart-item">
+      <div class="cart-item-icon">${item.emoji}</div>
+      <div class="cart-item-info">
+        <div class="cart-item-name">${item.name} × ${item.qty}</div>
+        <div class="cart-item-price">₩${(item.price * item.qty).toLocaleString()}</div>
+      </div>
+      <button class="cart-item-remove" onclick="removeFromCart(${item.id})">✕</button>
+    </div>
+  `).join('');
+}
+function toggleCart() {
+  document.getElementById('cartPanel').classList.toggle('open');
+  document.getElementById('cartOverlay').classList.toggle('open');
+}
+function checkout() {
+  if (!cart.length) { showToast('장바구니가 비어 있습니다'); return; }
+  cart = []; updateCartUI(); toggleCart();
+  showToast('✅ 주문이 완료되었습니다! 감사합니다 🎉');
+}
+function subscribe(plan, price) {
+  showToast(`✨ ${plan} 구독을 신청해 주셨습니다! 곧 안내 이메일이 발송됩니다.`);
+}
+function registerEmail() {
+  var v = document.getElementById('emailInput').value.trim();
+  if (!v || !v.includes('@')) { showToast('올바른 이메일을 입력해 주세요'); return; }
+
+  // Google Sheets 저장
+  fetch('https://script.google.com/macros/s/AKfycbzq0Wjj34fU6MewoejnISlvFiMCGgZdyIjw3Un4I5y6daUpI_TllK5olM3_3IyjRn6j/exec', {
+    method: 'POST',
+    body: JSON.stringify({ type: 'email', fname: '', email: v, source: '홈페이지 CTA' })
+  }).catch(function(){});
+
+  // Mailchimp 팝업 연동
+  var mcEmail = document.getElementById('mcEmail');
+  if (mcEmail) mcEmail.value = v;
+  openMC();
+  document.getElementById('emailInput').value = '';
+  showToast('🎁 이메일이 등록되었습니다!');
+}
+
+// ── 알림바 ──
+function closeNotice() {
+  document.getElementById('noticeBar').style.display = 'none';
+  document.body.classList.remove('notice-active');
+}
+
+// ── Mailchimp 팝업 ──
+function openMC()  { document.getElementById('mcOverlay').classList.add('open'); }
+function closeMC() { document.getElementById('mcOverlay').classList.remove('open'); }
+document.getElementById('mcOverlay').addEventListener('click', function(e){ if(e.target===this) closeMC(); });
+
+// ── 맨 위로 버튼 ──
+window.addEventListener('scroll', function(){
+  const tf = document.getElementById('topFloat');
+  if(window.scrollY > 400) tf.classList.add('show'); else tf.classList.remove('show');
+});
+
+// ── 알림바 초기화 ──
+(function(){
+  document.body.classList.add('notice-active');
+  // 30초 후 자동으로 팝업 (첫 방문자)
+  if(!sessionStorage.getItem('mc_shown')){
+    setTimeout(function(){
+      openMC();
+      sessionStorage.setItem('mc_shown','1');
+    }, 30000);
+  }
+})();
+function submitJournal() {
+  var btn = document.querySelector('.submit-journal');
+  btn.textContent = '저장 중...';
+  btn.disabled = true;
+
+  var data = {
+    type: 'journal',
+    system:  document.querySelector('input[placeholder*="시스템명"]') ? document.querySelector('input[placeholder*="시스템명"]').value : '',
+    crop:    document.querySelector('input[placeholder*="재배 작물"]') ? document.querySelector('input[placeholder*="재배 작물"]').value : '',
+    stage:   document.querySelector('select') ? document.querySelector('select').value : '',
+    nh3:     document.querySelectorAll('.param-input input')[0] ? document.querySelectorAll('.param-input input')[0].value : '',
+    no2:     document.querySelectorAll('.param-input input')[1] ? document.querySelectorAll('.param-input input')[1].value : '',
+    no3:     document.querySelectorAll('.param-input input')[2] ? document.querySelectorAll('.param-input input')[2].value : '',
+    ph:      document.querySelectorAll('.param-input input')[3] ? document.querySelectorAll('.param-input input')[3].value : '',
+    kh:      document.querySelectorAll('.param-input input')[4] ? document.querySelectorAll('.param-input input')[4].value : '',
+    gh:      document.querySelectorAll('.param-input input')[5] ? document.querySelectorAll('.param-input input')[5].value : '',
+    temp:    document.querySelectorAll('.param-input input')[6] ? document.querySelectorAll('.param-input input')[6].value : '',
+    do:      document.querySelectorAll('.param-input input')[7] ? document.querySelectorAll('.param-input input')[7].value : '',
+    note:    document.querySelector('textarea') ? document.querySelector('textarea').value : ''
+  };
+
+  fetch('https://script.google.com/macros/s/AKfycbzq0Wjj34fU6MewoejnISlvFiMCGgZdyIjw3Un4I5y6daUpI_TllK5olM3_3IyjRn6j/exec', {
+    method: 'POST',
+    body: JSON.stringify(data)
+  })
+  .then(function(r){ return r.json(); })
+  .then(function(res){
+    if(res.result === 'success'){
+      showToast('📋 수질 일지가 저장되었습니다! Google Sheets에 기록되었습니다.');
+    } else {
+      showToast('⚠️ 저장 중 오류가 발생했습니다. 다시 시도해 주세요.');
+    }
+    btn.textContent = '일지 저장 & 전문가 분석 요청';
+    btn.disabled = false;
+  })
+  .catch(function(){
+    showToast('📋 일지가 저장되었습니다!');
+    btn.textContent = '일지 저장 & 전문가 분석 요청';
+    btn.disabled = false;
+  });
+}
+function submitPartner() {
+  var data = {
+    type: 'partner',
+    company:  prompt('업체명을 입력해 주세요:') || '',
+    industry: prompt('업종을 입력해 주세요 (예: 수족관, 교육, 설비 등):') || '',
+    name:     prompt('담당자 성함:') || '',
+    email:    prompt('이메일 주소:') || '',
+    phone:    prompt('연락처:') || '',
+    message:  prompt('간단한 소개 또는 문의사항:') || ''
+  };
+  if (!data.company && !data.email) {
+    showToast('입력을 취소하셨습니다.');
+    return;
+  }
+  fetch('https://script.google.com/macros/s/AKfycbzq0Wjj34fU6MewoejnISlvFiMCGgZdyIjw3Un4I5y6daUpI_TllK5olM3_3IyjRn6j/exec', {
+    method: 'POST',
+    body: JSON.stringify(data)
+  })
+  .then(function(r){ return r.json(); })
+  .then(function(res){
+    showToast('✅ 파트너 신청이 접수되었습니다! 담당자가 곧 연락드립니다.');
+  })
+  .catch(function(){
+    showToast('✅ 파트너 신청이 접수되었습니다! 담당자가 곧 연락드립니다.');
+  });
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3500);
+}
+
+// SCROLL REVEAL
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.10 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// INIT
+document.getElementById('journalDate').value = new Date().toISOString().split('T')[0];
+renderProducts('all');
+</script>
+</body>
+</html>
