@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ECO-VASS 치유농업 | 살아있는 것을 돌보는 회복의 여정</title>
+<meta name="description" content="ECO-VASS 치유농업 — 이탈리아 1990년대부터 시작된 치유농업의 역사, 2021년 한국 법제화. 아쿠아포닉스를 통한 심리·공동체·교육적 치유 프로그램.">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --deep:#0a1628;--ocean:#0e2a4a;--teal:#0b7a6e;--aqua:#1ab5a3;
+  --foam:#6ee8d8;--gold:#d4a853;--leaf:#4a8c3f;--sage:#7ab87a;
+  --text:#e4f0ee;--muted:#7ba8a0;--white:#ffffff;
+  --border:rgba(26,181,163,0.2);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--deep);color:var(--text);overflow-x:hidden;}
+
+nav{position:fixed;top:0;width:100%;z-index:100;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;background:rgba(10,22,40,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+.logo{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;color:var(--aqua);letter-spacing:2px;text-decoration:none;}
+.logo span{color:var(--foam);}
+.nl{display:flex;gap:20px;align-items:center;}
+.nl a{color:var(--muted);text-decoration:none;font-size:0.82rem;transition:color 0.2s;}
+.nl a:hover{color:var(--foam);}
+.ncta{background:linear-gradient(135deg,var(--teal),var(--aqua));color:var(--white)!important;padding:7px 18px;border-radius:20px;font-weight:700!important;}
+
+/* HERO */
+.hero{min-height:72vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 32px 80px;background:linear-gradient(180deg,rgba(74,140,63,0.15) 0%,rgba(11,122,110,0.06) 60%,transparent 100%);position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(122,184,122,0.12),transparent 70%);border-radius:50%;}
+.hero::after{content:'';position:absolute;bottom:-100px;left:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(26,181,163,0.12),transparent 70%);border-radius:50%;}
+.hero-inner{position:relative;z-index:1;}
+.hero-tag{display:inline-block;font-size:0.72rem;font-weight:700;letter-spacing:4px;color:var(--sage);text-transform:uppercase;padding:6px 20px;border:1px solid rgba(122,184,122,0.4);border-radius:20px;margin-bottom:24px;background:rgba(74,140,63,0.08);}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.8rem);color:var(--white);line-height:1.15;margin-bottom:20px;font-weight:700;}
+.hero h1 span.s1{color:var(--sage);font-style:italic;}
+.hero h1 span.s2{color:var(--aqua);}
+.hero-desc{max-width:720px;margin:0 auto 36px;color:var(--muted);font-size:1.02rem;line-height:1.95;}
+.hero-quote{font-family:'Noto Serif KR',serif;font-size:0.95rem;color:var(--foam);font-style:italic;max-width:620px;margin:0 auto;padding:18px 28px;background:rgba(26,181,163,0.05);border-radius:14px;border-left:3px solid var(--sage);border-right:3px solid var(--sage);}
+
+/* 섹션 */
+.sec{padding:92px 32px;max-width:1100px;margin:0 auto;}
+.stag{font-size:0.70rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;margin-bottom:12px;display:block;}
+.s-g{color:var(--sage);}
+.s-a{color:var(--aqua);}
+.s-gold{color:var(--gold);}
+.h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.7rem);color:var(--white);margin-bottom:18px;line-height:1.25;}
+.desc{color:var(--muted);font-size:0.97rem;line-height:1.95;max-width:720px;margin-bottom:48px;}
+.hr{border:none;border-top:1px solid var(--border);margin:0;}
+
+/* 치유농업이란 - 인트로 카드 */
+.intro-card{background:linear-gradient(135deg,rgba(74,140,63,0.08),rgba(122,184,122,0.04));border:1px solid rgba(122,184,122,0.25);border-radius:20px;padding:44px;margin-bottom:48px;}
+.intro-card h3{font-family:'Noto Serif KR',serif;font-size:1.3rem;color:var(--sage);font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:12px;}
+.intro-card p{color:var(--muted);font-size:0.95rem;line-height:1.95;margin-bottom:14px;}
+.intro-card strong{color:var(--foam);}
+
+/* 타임라인 - 역사 */
+.timeline{position:relative;margin-top:48px;padding-left:40px;border-left:2px solid rgba(122,184,122,0.3);}
+.tl-item{position:relative;margin-bottom:40px;padding-left:32px;}
+.tl-item::before{content:'';position:absolute;left:-47px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--sage);border:3px solid var(--deep);box-shadow:0 0 0 2px rgba(122,184,122,0.4);}
+.tl-item.now::before{background:var(--aqua);box-shadow:0 0 0 2px rgba(26,181,163,0.5);animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 2px rgba(26,181,163,0.5);}50%{box-shadow:0 0 0 6px rgba(26,181,163,0.2);}}
+.tl-year{font-family:'Playfair Display',serif;font-size:0.85rem;font-weight:700;color:var(--sage);letter-spacing:2px;margin-bottom:6px;}
+.tl-item.now .tl-year{color:var(--aqua);}
+.tl-title{font-family:'Noto Serif KR',serif;font-size:1.1rem;color:var(--white);font-weight:700;margin-bottom:10px;}
+.tl-desc{color:var(--muted);font-size:0.90rem;line-height:1.9;}
+.tl-desc strong{color:var(--foam);}
+
+/* 3가지 치유 영역 */
+.healing-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
+.hcard{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:all 0.3s;}
+.hcard:hover{transform:translateY(-6px);border-color:rgba(122,184,122,0.4);}
+.hcard-top{padding:36px 28px 22px;text-align:center;background:linear-gradient(180deg,rgba(74,140,63,0.08) 0%,transparent 100%);}
+.hcard-icon{font-size:3rem;margin-bottom:14px;}
+.hcard-name{font-family:'Noto Serif KR',serif;font-size:1.15rem;color:var(--white);font-weight:700;margin-bottom:4px;}
+.hcard-en{font-size:0.75rem;font-weight:700;letter-spacing:2px;color:var(--sage);}
+.hcard-body{padding:24px 28px 32px;}
+.hcard-body p{font-size:0.88rem;color:var(--muted);line-height:1.85;margin-bottom:16px;}
+.hcard-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;}
+.htag{font-size:0.72rem;padding:4px 12px;background:rgba(74,140,63,0.08);border:1px solid rgba(122,184,122,0.25);border-radius:10px;color:var(--sage);}
+
+/* 대상자 그리드 */
+.target-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px;margin-top:40px;}
+.tcard{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:16px;padding:24px 20px;text-align:center;transition:all 0.3s;}
+.tcard:hover{background:rgba(74,140,63,0.06);border-color:rgba(122,184,122,0.35);transform:translateY(-3px);}
+.tcard-icon{font-size:2.2rem;margin-bottom:10px;}
+.tcard h4{font-family:'Noto Serif KR',serif;font-size:0.95rem;color:var(--foam);font-weight:700;margin-bottom:6px;}
+.tcard p{font-size:0.78rem;color:var(--muted);line-height:1.7;}
+
+/* 프로그램 구성 (기획단계) */
+.program-section{background:rgba(255,255,255,0.02);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:80px 32px;}
+.program-inner{max-width:1100px;margin:0 auto;}
+.program-notice{background:rgba(212,168,83,0.08);border:1px solid rgba(212,168,83,0.3);border-radius:14px;padding:20px 24px;margin-bottom:40px;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;}
+.program-notice-icon{font-size:1.8rem;}
+.program-notice-text{font-size:0.88rem;color:var(--gold);line-height:1.8;}
+.program-notice-text strong{color:var(--foam);}
+
+.program-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:32px;}
+.pcard{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:18px;padding:28px;transition:all 0.3s;}
+.pcard:hover{border-color:rgba(26,181,163,0.35);transform:translateY(-3px);}
+.pcard-top{display:flex;align-items:flex-start;gap:14px;margin-bottom:14px;}
+.pcard-icon{width:44px;height:44px;background:linear-gradient(135deg,var(--leaf),var(--sage));border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.4rem;}
+.pcard h3{font-family:'Noto Serif KR',serif;font-size:1.05rem;color:var(--white);font-weight:700;margin-bottom:4px;}
+.pcard-dur{font-size:0.76rem;color:var(--sage);}
+.pcard p{font-size:0.85rem;color:var(--muted);line-height:1.85;margin-bottom:14px;}
+.pcard-feat{list-style:none;font-size:0.80rem;color:var(--muted);}
+.pcard-feat li{padding:3px 0;display:flex;gap:8px;}
+.pcard-feat li::before{content:'·';color:var(--sage);font-weight:700;flex-shrink:0;}
+
+/* 이용 대상 (기관) */
+.institution-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px;}
+.icard{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:16px;padding:28px;text-align:center;transition:all 0.3s;}
+.icard:hover{border-color:rgba(26,181,163,0.35);transform:translateY(-3px);}
+.icard-icon{font-size:2.4rem;margin-bottom:12px;}
+.icard h4{font-family:'Noto Serif KR',serif;font-size:1rem;color:var(--foam);font-weight:700;margin-bottom:8px;}
+.icard p{font-size:0.82rem;color:var(--muted);line-height:1.8;}
+
+/* 왜 아쿠아포닉스인가 */
+.why-section{background:linear-gradient(135deg,rgba(11,122,110,0.08),rgba(74,140,63,0.04));border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:84px 32px;}
+.why-inner{max-width:1100px;margin:0 auto;}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:40px;}
+.why-card{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:18px;padding:32px;}
+.why-card h3{font-family:'Noto Serif KR',serif;font-size:1.1rem;color:var(--sage);font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:12px;}
+.why-card h3 span{font-size:1.6rem;}
+.why-card p{color:var(--muted);font-size:0.90rem;line-height:1.9;margin-bottom:10px;}
+.why-card strong{color:var(--foam);}
+
+/* 기대 효과 */
+.effect-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px;}
+.ecard{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:14px;padding:24px 20px;text-align:center;transition:all 0.3s;}
+.ecard:hover{background:rgba(74,140,63,0.06);border-color:rgba(122,184,122,0.4);}
+.ecard-icon{font-size:2rem;margin-bottom:10px;}
+.ecard h4{font-size:0.90rem;color:var(--foam);font-weight:700;margin-bottom:6px;font-family:'Noto Serif KR',serif;}
+.ecard p{font-size:0.76rem;color:var(--muted);line-height:1.7;}
+
+/* 인용 박스 */
+.quote-box{background:linear-gradient(135deg,rgba(74,140,63,0.06),transparent);border:1px solid rgba(122,184,122,0.25);border-radius:20px;padding:44px;text-align:center;margin:64px 0;}
+.quote-text{font-family:'Noto Serif KR',serif;font-size:1.1rem;color:var(--foam);font-style:italic;line-height:1.95;margin-bottom:16px;}
+.quote-author{font-size:0.85rem;color:var(--sage);font-weight:700;letter-spacing:1px;}
+
+/* 도입 상담 CTA */
+.cta-band{background:linear-gradient(135deg,rgba(11,122,110,0.18),rgba(74,140,63,0.10));border:1px solid rgba(122,184,122,0.3);border-radius:24px;padding:56px 44px;text-align:center;margin:72px 32px;}
+.cta-inner{max-width:720px;margin:0 auto;}
+.cta-band h2{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3vw,2.4rem);color:var(--white);margin-bottom:18px;}
+.cta-band p{color:var(--muted);font-size:0.97rem;line-height:1.88;margin-bottom:32px;}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.bp{background:linear-gradient(135deg,var(--leaf),var(--sage));color:var(--white);padding:14px 36px;border-radius:50px;font-weight:700;font-size:0.95rem;text-decoration:none;transition:all 0.3s;}
+.bp:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(74,140,63,0.4);}
+.bo{color:var(--foam);padding:14px 32px;border-radius:50px;font-weight:500;font-size:0.95rem;text-decoration:none;border:1.5px solid rgba(110,232,216,0.4);transition:all 0.3s;}
+.bo:hover{background:rgba(110,232,216,0.08);}
+
+/* 법적 근거 인용 */
+.legal-box{background:rgba(21,101,192,0.06);border:1px solid rgba(21,101,192,0.2);border-radius:16px;padding:28px 32px;margin-top:40px;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:flex-start;}
+.legal-icon{font-size:2rem;margin-top:4px;}
+.legal-box h4{font-family:'Noto Serif KR',serif;font-size:1rem;color:#90CAF9;font-weight:700;margin-bottom:10px;}
+.legal-box p{font-size:0.88rem;color:var(--muted);line-height:1.88;margin-bottom:8px;}
+.legal-box strong{color:var(--foam);}
+
+/* 링크 배너 */
+.link-banner{background:rgba(74,140,63,0.06);border-top:1px solid rgba(122,184,122,0.15);border-bottom:1px solid rgba(122,184,122,0.15);padding:22px 32px;text-align:center;}
+.link-banner p{font-size:0.84rem;color:var(--muted);}
+.link-banner a{color:var(--sage);font-weight:700;text-decoration:none;}
+
+footer{background:rgba(8,18,32,0.95);border-top:1px solid var(--border);padding:40px 32px 24px;text-align:center;}
+.flogo{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;color:var(--aqua);letter-spacing:2px;margin-bottom:10px;}
+.flinks{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;}
+.flinks a{font-size:0.80rem;color:var(--muted);text-decoration:none;}
+.flinks a:hover{color:var(--foam);}
+.fcopy{font-size:0.75rem;color:rgba(123,168,160,0.5);}
+
+@media(max-width:900px){
+  .healing-3,.program-grid,.institution-grid,.why-grid{grid-template-columns:1fr;}
+  .effect-grid{grid-template-columns:1fr 1fr;}
+  .legal-box{grid-template-columns:1fr;}
+  .sec{padding:60px 20px;}
+  .nl{display:none;}
+  .timeline{padding-left:28px;}
+  .tl-item{padding-left:20px;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">ECO-<span>VASS</span></a>
+  <div class="nl">
+    <a href="index.html">홈</a>
+    <a href="education.html">교육</a>
+    <a href="healing.html" style="color:var(--sage);font-weight:700;">치유·회복</a>
+    <a href="modular.html">모듈러</a>
+    <a href="products.html">제품소개</a>
+    <a href="https://pf.kakao.com/_rXDxdX" target="_blank" class="ncta">상담하기</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">Therapeutic Agriculture · 치유농업</div>
+    <h1><span class="s1">살아있는 것</span>을 돌보는<br>행위가 <span class="s2">치유</span>입니다</h1>
+    <p class="hero-desc">ECO-VASS 치유농업은 자연생태계의 공생 원리 안에서 현대인의 고독·단절·상처를 회복시키는 새로운 돌봄 모델입니다. 물고기를 돌보고, 식물을 기르고, 수확의 기쁨을 함께 나누는 일상의 루틴이 — 몸과 마음, 그리고 공동체를 되살립니다.</p>
+    <div class="hero-quote">"물고기를 돌보는 손길 안에, 식물이 자라는 시간 안에, 생명의 순환 안에 — 우리의 치유가 있습니다."</div>
+  </div>
+</div>
+
+<!-- 치유농업이란 -->
+<div class="sec">
+  <span class="stag s-g">What is Therapeutic Agriculture</span>
+  <h2 class="h2">치유농업이란 무엇인가</h2>
+  <p class="desc">치유농업은 단순히 농사를 치료 수단으로 활용하는 것이 아닙니다. 식물·동물·미생물이 이루는 자연생태계 안에서 사람이 함께 호흡하며, 매일의 돌봄과 수확을 통해 심리적 안정과 공동체 회복을 경험하는 총체적 건강 증진 활동입니다.</p>
+
+  <div class="intro-card">
+    <h3>🌿 왜 지금 치유농업인가</h3>
+    <p>도시화와 각박한 경쟁 사회가 심화되면서, 청년부터 노년까지 세대 전반이 <strong>고독·단절·번아웃</strong>으로 고통받고 있습니다. 정신건강 문제는 개인 차원을 넘어 가족과 공동체 전체의 위기가 되었습니다.</p>
+    <p>치유농업은 이 문제에 대한 새로운 해답입니다. 약물이나 단기 상담이 아닌, <strong>매일의 자연스러운 돌봄 루틴</strong>을 통해 삶의 리듬을 회복시킵니다. 살아있는 생명에 대한 책임감이 자존감을 세우고, 수확의 기쁨이 공동체를 이어줍니다.</p>
+    <p>ECO-VASS 치유농업은 특히 <strong>아쿠아포닉스(자연습지형 수족관)</strong>를 핵심 매개로 활용합니다. 물고기와 식물과 미생물이 서로를 살리는 공생 생태계를 눈앞에서 경험하는 것만으로도 깊은 치유가 일어납니다.</p>
+  </div>
+</div>
+<hr class="hr">
+
+<!-- 역사 타임라인 -->
+<div class="sec">
+  <span class="stag s-g">Historical Background</span>
+  <h2 class="h2">치유농업의 역사<br>세계에서 한국으로</h2>
+  <p class="desc">치유농업은 이미 30년 넘게 검증된 돌봄 모델입니다. 이탈리아에서 시작해 일본을 거쳐, 2021년 대한민국에서 법제화되었습니다. ECO-VASS는 이 흐름 위에서 실내형 아쿠아포닉스를 활용한 새로운 치유농업 모델을 제시합니다.</p>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-year">1990년대 · 이탈리아</div>
+      <div class="tl-title">🇮🇹 정신병동 폐기와 치유농업의 탄생</div>
+      <div class="tl-desc">이탈리아 정부가 전통적인 정신병동 시스템을 폐기하면서, 대안으로 <strong>수목원·농장 기반 치유 프로그램</strong>을 시작했습니다. 농축산부와 복지부가 협력하고 지자체가 함께하여, 환우들이 농장에 7일 무료 체류하며 자연과 공생하는 돌봄 방식을 제공했습니다. 이 모델이 크게 성공하면서 유럽 전역으로 확산되었습니다.</div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-year">2000년대 · 일본</div>
+      <div class="tl-title">🇯🇵 아시아로 확산 · 공동체 회복 모델</div>
+      <div class="tl-desc">일본이 이탈리아 치유농업 모델을 도입하여 아시아권에 맞게 재구성했습니다. <strong>은퇴자·장애인·정신건강 취약계층</strong>을 대상으로 한 농업 치유 프로그램이 전국으로 확산되었으며, 지역사회 공동체 회복의 핵심 수단으로 자리잡았습니다. 특히 고령화 사회에서 노인 돌봄과 연계한 성공 사례가 많이 나왔습니다.</div>
+    </div>
+
+    <div class="tl-item now">
+      <div class="tl-year">2021년 · 대한민국</div>
+      <div class="tl-title">🇰🇷 치유농업 법제화 시행</div>
+      <div class="tl-desc"><strong>「치유농업 연구개발 및 육성에 관한 법률(치유농업법)」</strong>이 2021년 3월 25일 시행되면서 한국에서도 치유농업이 공식 제도권에 들어왔습니다. 농업·농촌 자원을 활용해 국민 건강을 증진하고 농업의 지속가능성을 높이는 것이 목적이며, <strong>농촌진흥청 주관</strong>으로 치유농업사 양성·인증제도·연구개발이 추진됩니다. 2024년 1월에는 일부 개정법률이 공포되어 정책적 지원이 한층 강화되었습니다. ECO-VASS는 이 법적 기반 위에서 <strong>실내형 아쿠아포닉스를 활용한 도시 치유농업</strong>의 새로운 모델을 제시합니다.</div>
+    </div>
+  </div>
+
+  <!-- 법적 근거 -->
+  <div class="legal-box">
+    <div class="legal-icon">⚖️</div>
+    <div>
+      <h4>법적 근거 · 치유농업법</h4>
+      <p><strong>법령명:</strong> 치유농업 연구개발 및 육성에 관한 법률 (약칭: 치유농업법)</p>
+      <p><strong>시행일:</strong> 2021년 3월 25일</p>
+      <p><strong>개정:</strong> 2024년 1월 일부 개정법률 공포 — 정책적 지원 강화</p>
+      <p><strong>주관 부처:</strong> 농촌진흥청</p>
+      <p><strong>입법 목적:</strong> 농업·농촌 자원을 활용해 국민 건강 증진 및 농업의 지속가능성 제고</p>
+      <p><strong>핵심 내용:</strong> 치유농업사 양성·인증제도·연구개발·시설 보급을 국가가 지원하는 제도</p>
+    </div>
+  </div>
+</div>
+<hr class="hr">
+
+<!-- 3가지 치유 영역 -->
+<div class="sec">
+  <span class="stag s-g">Three Healing Domains</span>
+  <h2 class="h2">세 가지 치유 영역</h2>
+  <p class="desc">ECO-VASS 치유농업은 심리·공동체·교육의 세 가지 영역에서 복합적인 회복을 돕습니다. 아쿠아포닉스 생태계를 돌보는 단순한 행위가, 세 영역 모두에 동시에 작용하는 것이 특징입니다.</p>
+
+  <div class="healing-3">
+    <div class="hcard">
+      <div class="hcard-top">
+        <div class="hcard-icon">🧠</div>
+        <div class="hcard-name">심리적 회복</div>
+        <div class="hcard-en">Mental Wellness</div>
+      </div>
+      <div class="hcard-body">
+        <p>매일 수조를 돌보는 루틴이 마음의 안정을 가져옵니다. 살아있는 생명에 대한 책임감은 자존감과 생활 리듬을 회복시키고, 물 흐르는 소리와 식물이 자라는 모습이 주의 집중력을 길러줍니다.</p>
+        <div class="hcard-tags">
+          <span class="htag">루틴 형성</span>
+          <span class="htag">주의 집중</span>
+          <span class="htag">자존감 회복</span>
+          <span class="htag">번아웃 완화</span>
+          <span class="htag">우울감 개선</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hcard">
+      <div class="hcard-top">
+        <div class="hcard-icon">🤝</div>
+        <div class="hcard-name">공동체 회복</div>
+        <div class="hcard-en">Community Healing</div>
+      </div>
+      <div class="hcard-body">
+        <p>함께 기르고 함께 수확하는 과정에서 자연스럽게 관계가 이어집니다. 세대 간 대화의 소재가 되고, 수확물을 나누는 즐거움이 공동체를 하나로 묶어줍니다. 소그룹·가족·복지기관에서 검증된 효과입니다.</p>
+        <div class="hcard-tags">
+          <span class="htag">세대 통합</span>
+          <span class="htag">사회적 연결</span>
+          <span class="htag">소통 증진</span>
+          <span class="htag">고립 극복</span>
+          <span class="htag">나눔 문화</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hcard">
+      <div class="hcard-top">
+        <div class="hcard-icon">🌻</div>
+        <div class="hcard-name">교육·성장 치유</div>
+        <div class="hcard-en">Educational Healing</div>
+      </div>
+      <div class="hcard-body">
+        <p>아이들이 생명의 탄생과 순환을 눈으로 보고 손으로 만지며 배웁니다. 자연생태계의 공생 원리를 체험하는 것 자체가 인성 교육이자 정서 치유입니다. 학교·홈스쿨·특수교육 현장에서 폭넓게 활용됩니다.</p>
+        <div class="hcard-tags">
+          <span class="htag">생명 교육</span>
+          <span class="htag">정서 발달</span>
+          <span class="htag">자연 체험</span>
+          <span class="htag">인성 함양</span>
+          <span class="htag">과학 학습</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr class="hr">
+
+<!-- 치유 대상자 -->
+<div class="sec">
+  <span class="stag s-g">Target Participants</span>
+  <h2 class="h2">누구를 위한<br>치유농업인가</h2>
+  <p class="desc">치유농업은 특정 계층만을 위한 것이 아닙니다. 일상의 스트레스를 덜고 싶은 직장인부터, 회복이 필요한 환우, 고립된 노년까지 — 돌봄이 필요한 모든 사람에게 열려 있습니다.</p>
+
+  <div class="target-grid">
+    <div class="tcard">
+      <div class="tcard-icon">👶</div>
+      <h4>아이·청소년</h4>
+      <p>생명 교육<br>정서 발달</p>
+    </div>
+    <div class="tcard">
+      <div class="tcard-icon">🧑‍💼</div>
+      <h4>청년·직장인</h4>
+      <p>번아웃 회복<br>스트레스 완화</p>
+    </div>
+    <div class="tcard">
+      <div class="tcard-icon">👨‍👩‍👧</div>
+      <h4>가족</h4>
+      <p>관계 회복<br>세대 소통</p>
+    </div>
+    <div class="tcard">
+      <div class="tcard-icon">👴</div>
+      <h4>노년·은퇴자</h4>
+      <p>고독 극복<br>삶의 활력</p>
+    </div>
+    <div class="tcard">
+      <div class="tcard-icon">🏥</div>
+      <h4>정신건강</h4>
+      <p>치유 프로그램<br>재활 보조</p>
+    </div>
+    <div class="tcard">
+      <div class="tcard-icon">♿</div>
+      <h4>장애인</h4>
+      <p>직업 체험<br>일상 적응</p>
+    </div>
+    <div class="tcard">
+      <div class="tcard-icon">⛪</div>
+      <h4>공동체</h4>
+      <p>소그룹 활동<br>나눔 사역</p>
+    </div>
+    <div class="tcard">
+      <div class="tcard-icon">🎓</div>
+      <h4>학교·기관</h4>
+      <p>체험 교육<br>진로 탐색</p>
+    </div>
+  </div>
+</div>
+<hr class="hr">
+
+<!-- 프로그램 구성 (기획단계) -->
+<div id="programs">
+<div class="program-section">
+  <div class="program-inner">
+    <span class="stag s-a">Program Structure</span>
+    <h2 class="h2">치유농업<br>프로그램 구성 (기획)</h2>
+    <p class="desc">ECO-VASS는 치유농업법의 기준에 따라 대상자별·목적별 맞춤형 프로그램을 설계하고 있습니다. 아래는 향후 운영될 프로그램의 기획안으로, 도입 기관과 협의하여 맞춤 구성이 가능합니다.</p>
+
+    <div class="program-notice">
+      <div class="program-notice-icon">📌</div>
+      <div class="program-notice-text"><strong>프로그램 준비 안내</strong><br>현재 프로그램은 기획 단계이며, 2025년 하반기 시범 운영을 목표로 준비 중입니다. 기관·단체와의 협력을 통해 대상자 특성에 맞춰 세부 프로그램을 설계해 드립니다.</div>
+    </div>
+
+    <div class="program-grid">
+      <div class="pcard">
+        <div class="pcard-top">
+          <div class="pcard-icon">🌱</div>
+          <div>
+            <h3>기초 체험 프로그램</h3>
+            <div class="pcard-dur">1회 · 1~2시간</div>
+          </div>
+        </div>
+        <p>아쿠아포닉스 생태계를 처음 만나는 분들을 위한 체험 과정. 수조 관찰, 물고기 먹이주기, 식물 관찰, 미니 수확 체험으로 구성됩니다.</p>
+        <ul class="pcard-feat">
+          <li>자연생태계 원리 소개</li>
+          <li>물고기·식물·미생물 관찰</li>
+          <li>수확물 시식 체험</li>
+          <li>참가자 소감 나누기</li>
+        </ul>
+      </div>
+
+      <div class="pcard">
+        <div class="pcard-top">
+          <div class="pcard-icon">🌿</div>
+          <div>
+            <h3>정기 돌봄 프로그램</h3>
+            <div class="pcard-dur">주 1~2회 · 3개월 과정</div>
+          </div>
+        </div>
+        <p>정기적인 참여를 통해 실질적인 치유 효과를 경험하는 중기 프로그램. 돌봄 루틴 형성과 공동체 경험이 핵심입니다.</p>
+        <ul class="pcard-feat">
+          <li>수질 측정·관리 실습</li>
+          <li>물고기 건강 관찰 일지</li>
+          <li>식물 재배·수확 사이클</li>
+          <li>그룹 성찰 모임</li>
+        </ul>
+      </div>
+
+      <div class="pcard">
+        <div class="pcard-top">
+          <div class="pcard-icon">🌻</div>
+          <div>
+            <h3>세대 통합 프로그램</h3>
+            <div class="pcard-dur">월 2회 · 6개월 과정</div>
+          </div>
+        </div>
+        <p>조부모-손자녀, 노인-청소년 등 세대가 함께 참여하는 프로그램. 수확물 요리 체험, 세대별 이야기 나눔으로 소통을 이어줍니다.</p>
+        <ul class="pcard-feat">
+          <li>세대별 역할 분담</li>
+          <li>공동 돌봄 활동</li>
+          <li>수확물 요리 체험</li>
+          <li>세대 이야기 기록</li>
+        </ul>
+      </div>
+
+      <div class="pcard">
+        <div class="pcard-top">
+          <div class="pcard-icon">💚</div>
+          <div>
+            <h3>심층 치유 프로그램</h3>
+            <div class="pcard-dur">주 1회 · 12개월 과정</div>
+          </div>
+        </div>
+        <p>정신건강 회복·번아웃·우울감이 있는 참여자를 위한 장기 프로그램. 치유농업사·상담사와 협력하여 운영됩니다.</p>
+        <ul class="pcard-feat">
+          <li>개별 돌봄 구역 배정</li>
+          <li>1:1 치유 상담 연계</li>
+          <li>치유 일지·감정 기록</li>
+          <li>성장 과정 사진 아카이브</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- 왜 아쿠아포닉스인가 -->
+<div class="why-section">
+  <div class="why-inner">
+    <span class="stag s-g">Why Aquaponics</span>
+    <h2 class="h2">왜 치유농업에<br>아쿠아포닉스인가</h2>
+    <p class="desc">일반 텃밭·원예치료와 비교했을 때, 아쿠아포닉스는 치유농업에 특별히 적합한 5가지 이점을 제공합니다.</p>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <h3><span>🏠</span>실내에서 사계절 운영</h3>
+        <p>날씨나 계절에 상관없이 언제나 참여 가능합니다. <strong>노약자·장애인·환우도 안전한 실내 환경</strong>에서 활동할 수 있어, 참여 장벽이 낮습니다.</p>
+      </div>
+      <div class="why-card">
+        <h3><span>🐟</span>동물과 식물을 함께</h3>
+        <p>원예치료가 식물만 다룬다면, 아쿠아포닉스는 <strong>살아 움직이는 물고기</strong>까지 함께합니다. 감정적 교감과 생명 존중의 경험이 훨씬 풍부합니다.</p>
+      </div>
+      <div class="why-card">
+        <h3><span>💧</span>물소리의 치유 효과</h3>
+        <p>흐르는 물소리는 부교감 신경을 활성화하여 <strong>심박수와 혈압을 낮추는 효과</strong>가 과학적으로 입증되었습니다. 배경 소리만으로도 불안을 완화합니다.</p>
+      </div>
+      <div class="why-card">
+        <h3><span>🌱</span>눈에 보이는 성장</h3>
+        <p>식물이 하루가 다르게 자라는 모습, 수확의 기쁨이 자주 반복됩니다. <strong>성취감의 선순환</strong>이 자존감 회복에 직접적으로 기여합니다.</p>
+      </div>
+      <div class="why-card">
+        <h3><span>🦠</span>생태계 원리 체감</h3>
+        <p>물고기·식물·미생물이 서로 살리는 모습을 실시간으로 관찰합니다. <strong>공생·상호 의존의 원리</strong>를 삶의 지혜로 내면화할 수 있습니다.</p>
+      </div>
+      <div class="why-card">
+        <h3><span>🥬</span>먹거리로 완성</h3>
+        <p>수확물이 실제 식탁에 오릅니다. <strong>"내가 키운 것을 먹는 경험"</strong>이 자기효능감을 크게 높이며, 수확물 나눔이 공동체를 엮어줍니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 기대 효과 -->
+<div class="sec">
+  <span class="stag s-gold">Expected Outcomes</span>
+  <h2 class="h2">기대되는 치유 효과</h2>
+  <p class="desc">국내외 치유농업 연구에서 검증된 효과들입니다. 아쿠아포닉스 기반 치유농업은 이 효과들을 통합적으로 제공합니다.</p>
+
+  <div class="effect-grid">
+    <div class="ecard">
+      <div class="ecard-icon">😌</div>
+      <h4>스트레스 완화</h4>
+      <p>코르티솔<br>감소 효과</p>
+    </div>
+    <div class="ecard">
+      <div class="ecard-icon">💤</div>
+      <h4>수면 개선</h4>
+      <p>불면증<br>완화 보고</p>
+    </div>
+    <div class="ecard">
+      <div class="ecard-icon">💪</div>
+      <h4>자존감 향상</h4>
+      <p>성취감의<br>반복 경험</p>
+    </div>
+    <div class="ecard">
+      <div class="ecard-icon">🗣️</div>
+      <h4>소통 능력</h4>
+      <p>대화 소재<br>자연 형성</p>
+    </div>
+    <div class="ecard">
+      <div class="ecard-icon">🧘</div>
+      <h4>집중력 향상</h4>
+      <p>주의력<br>회복 효과</p>
+    </div>
+    <div class="ecard">
+      <div class="ecard-icon">❤️</div>
+      <h4>정서 안정</h4>
+      <p>우울감<br>개선 보고</p>
+    </div>
+    <div class="ecard">
+      <div class="ecard-icon">🏃</div>
+      <h4>신체 활동</h4>
+      <p>적정 운동<br>자연스럽게</p>
+    </div>
+    <div class="ecard">
+      <div class="ecard-icon">👥</div>
+      <h4>사회적 유대</h4>
+      <p>공동체<br>소속감</p>
+    </div>
+  </div>
+</div>
+<hr class="hr">
+
+<!-- 도입 가능 기관 -->
+<div class="sec">
+  <span class="stag s-a">Target Institutions</span>
+  <h2 class="h2">도입 가능 기관</h2>
+  <p class="desc">치유농업 프로그램은 다양한 기관에서 도입하여 운영할 수 있습니다. 기관의 특성과 대상자에 맞춰 프로그램을 맞춤 설계해 드립니다.</p>
+
+  <div class="institution-grid">
+    <div class="icard">
+      <div class="icard-icon">🏥</div>
+      <h4>의료기관</h4>
+      <p>병원·정신건강센터<br>재활의학과<br>환자 보조 치료</p>
+    </div>
+    <div class="icard">
+      <div class="icard-icon">🏢</div>
+      <h4>복지시설</h4>
+      <p>복지관·실버타운<br>장애인복지관<br>주간보호센터</p>
+    </div>
+    <div class="icard">
+      <div class="icard-icon">🏫</div>
+      <h4>교육기관</h4>
+      <p>학교·특수학교<br>대안학교·홈스쿨<br>평생교육원</p>
+    </div>
+    <div class="icard">
+      <div class="icard-icon">⛪</div>
+      <h4>종교·공동체</h4>
+      <p>교회·성당·사찰<br>소그룹·동호회<br>신앙 공동체</p>
+    </div>
+    <div class="icard">
+      <div class="icard-icon">🏛️</div>
+      <h4>지자체·공공</h4>
+      <p>시민센터·도서관<br>청소년센터<br>지역 보건소</p>
+    </div>
+    <div class="icard">
+      <div class="icard-icon">🏡</div>
+      <h4>가정·개인</h4>
+      <p>가정 도입<br>세대 통합<br>홈 치유 공간</p>
+    </div>
+  </div>
+</div>
+
+<!-- 인용 박스 -->
+<div class="sec" style="padding-top:0;">
+  <div class="quote-box">
+    <div class="quote-text">
+      "씨앗이 모종으로 자라고, 물고기가 건강하게 헤엄치는 것을 보며,<br>
+      수확의 기쁨을 함께 나누는 그 과정 안에서 —<br>
+      자연이 가진 공생의 원리가 우리를 치유합니다.<br>
+      ECO-VASS는 그 조용한 기적이 가정마다, 공동체마다 흐르기를 바랍니다."
+    </div>
+    <div class="quote-author">— ECO-VASS 치유농업 철학</div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-band">
+  <div class="cta-inner">
+    <h2>치유농업 도입을<br>고민하고 계신가요?</h2>
+    <p>기관의 특성, 대상자의 필요, 운영 예산에 맞춰 최적의 치유농업 프로그램을 함께 설계해 드립니다. 초기 상담부터 공간 조성, 프로그램 운영, 지속 관리까지 단계별로 지원합니다.</p>
+    <div class="cta-btns">
+      <a href="https://pf.kakao.com/_rXDxdX" target="_blank" class="bp">💬 치유농업 도입 상담</a>
+      <a href="modular.html" class="bo">모듈러 시스템 보기</a>
+    </div>
+  </div>
+</div>
+
+<!-- 링크 배너 -->
+<div class="link-banner">
+  <p>🌾 <a href="https://aquaponicskorea.co.kr" target="_blank">아쿠아포닉스코리아</a> — 전북 고창 농장에서 치유농업 체험·교육 프로그램이 운영됩니다</p>
+</div>
+
+<footer>
+  <div class="flogo">ECO-VASS</div>
+  <div class="flinks">
+    <a href="index.html">홈</a>
+    <a href="education.html">교육</a>
+    <a href="healing.html">치유·회복</a>
+    <a href="modular.html">모듈러</a>
+    <a href="dome.html">Dome Farm</a>
+    <a href="products.html">제품소개</a>
+    <a href="https://blog.naver.com/klys1121" target="_blank">블로그</a>
+    <a href="https://aquaponicskorea.co.kr" target="_blank">아쿠아포닉스코리아</a>
+  </div>
+  <div class="fcopy">© 2025 ECO-VASS · Aquaponics Korea Co., Ltd. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
