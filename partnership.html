@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>함께 걷는 길 | ECO-VASS Partnership</title>
+<meta name="description" content="ECO-VASS와 함께하는 방식 — 자발적 참여와 공감의 동행. 아쿠아포닉스의 순환 원리처럼 서로 돌보고 나누는 생태 공동체로의 초대.">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --deep:#0a1628;--ocean:#0e2a4a;--teal:#0b7a6e;--aqua:#1ab5a3;
+  --foam:#6ee8d8;--gold:#d4a853;--leaf:#4a8c3f;--sage:#7ab87a;
+  --text:#e4f0ee;--muted:#7ba8a0;--white:#ffffff;
+  --border:rgba(26,181,163,0.2);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--deep);color:var(--text);overflow-x:hidden;}
+
+nav{position:fixed;top:0;width:100%;z-index:100;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;background:rgba(10,22,40,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+.logo{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;color:var(--aqua);letter-spacing:2px;text-decoration:none;}
+.logo span{color:var(--foam);}
+.nl{display:flex;gap:20px;align-items:center;}
+.nl a{color:var(--muted);text-decoration:none;font-size:0.82rem;transition:color 0.2s;}
+.nl a:hover{color:var(--foam);}
+.ncta{background:linear-gradient(135deg,var(--teal),var(--aqua));color:var(--white)!important;padding:7px 18px;border-radius:20px;font-weight:700!important;}
+
+/* HERO - 초대하는 톤 */
+.hero{min-height:70vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 32px 80px;background:linear-gradient(180deg,rgba(74,140,63,0.12) 0%,rgba(11,122,110,0.06) 60%,transparent 100%);position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(122,184,122,0.1),transparent 70%);border-radius:50%;}
+.hero::after{content:'';position:absolute;bottom:-100px;left:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(26,181,163,0.08),transparent 70%);border-radius:50%;}
+.hero-inner{position:relative;z-index:1;}
+.hero-tag{display:inline-block;font-size:0.72rem;font-weight:700;letter-spacing:4px;color:var(--sage);text-transform:uppercase;padding:6px 20px;border:1px solid rgba(122,184,122,0.4);border-radius:20px;margin-bottom:24px;background:rgba(74,140,63,0.08);}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.8rem);color:var(--white);line-height:1.15;margin-bottom:22px;font-weight:700;}
+.hero h1 span.s1{color:var(--sage);font-style:italic;}
+.hero h1 span.s2{color:var(--aqua);}
+.hero-desc{max-width:720px;margin:0 auto 36px;color:var(--muted);font-size:1.02rem;line-height:2;}
+.hero-quote{font-family:'Noto Serif KR',serif;font-size:0.95rem;color:var(--foam);font-style:italic;max-width:620px;margin:0 auto;padding:20px 28px;background:rgba(26,181,163,0.05);border-radius:14px;border-left:3px solid var(--sage);border-right:3px solid var(--sage);}
+
+/* 섹션 */
+.sec{padding:92px 32px;max-width:1100px;margin:0 auto;}
+.stag{font-size:0.70rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;margin-bottom:12px;display:block;}
+.s-g{color:var(--sage);}
+.s-a{color:var(--aqua);}
+.s-gold{color:var(--gold);}
+.h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.7rem);color:var(--white);margin-bottom:18px;line-height:1.25;}
+.desc{color:var(--muted);font-size:0.97rem;line-height:2;max-width:720px;margin-bottom:48px;}
+.hr{border:none;border-top:1px solid var(--border);margin:0;}
+
+/* 4가지 가치 카드 */
+.values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px;}
+.vcard{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:18px;padding:32px 24px;text-align:center;transition:all 0.3s;}
+.vcard:hover{border-color:rgba(122,184,122,0.4);transform:translateY(-4px);}
+.vcard-icon{font-size:2.6rem;margin-bottom:14px;}
+.vcard h3{font-family:'Noto Serif KR',serif;font-size:1.05rem;color:var(--foam);font-weight:700;margin-bottom:10px;}
+.vcard p{font-size:0.85rem;color:var(--muted);line-height:1.85;}
+
+/* 세 가지 동행 방식 */
+.ways-section{background:linear-gradient(135deg,rgba(11,122,110,0.06),rgba(74,140,63,0.04));border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:88px 32px;}
+.ways-inner{max-width:1100px;margin:0 auto;}
+.ways-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
+.wcard{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:all 0.3s;}
+.wcard:hover{transform:translateY(-6px);border-color:rgba(122,184,122,0.4);}
+.wcard-top{padding:36px 28px 22px;text-align:center;background:linear-gradient(180deg,rgba(74,140,63,0.08) 0%,transparent 100%);}
+.wcard-icon{font-size:2.8rem;margin-bottom:14px;}
+.wcard-name{font-family:'Noto Serif KR',serif;font-size:1.15rem;color:var(--white);font-weight:700;margin-bottom:4px;}
+.wcard-en{font-size:0.75rem;font-weight:700;letter-spacing:2px;color:var(--sage);}
+.wcard-body{padding:24px 28px 32px;}
+.wcard-body p{font-size:0.88rem;color:var(--muted);line-height:1.9;margin-bottom:16px;}
+.wcard-feat{list-style:none;font-size:0.82rem;color:var(--muted);}
+.wcard-feat li{padding:4px 0;padding-left:18px;position:relative;line-height:1.7;}
+.wcard-feat li::before{content:'·';position:absolute;left:6px;color:var(--sage);font-weight:700;}
+
+/* 우리가 나누는 것 */
+.sharing-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:40px;}
+.scard{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:18px;padding:32px;}
+.scard h3{font-family:'Noto Serif KR',serif;font-size:1.1rem;color:var(--sage);font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:12px;}
+.scard h3 span{font-size:1.6rem;}
+.scard p{color:var(--muted);font-size:0.90rem;line-height:1.95;margin-bottom:10px;}
+.scard strong{color:var(--foam);}
+
+/* 한 걸음씩 가는 길 (과정) */
+.journey{margin-top:48px;position:relative;padding-left:40px;border-left:2px solid rgba(122,184,122,0.3);}
+.j-item{position:relative;margin-bottom:36px;padding-left:28px;}
+.j-item::before{content:'';position:absolute;left:-47px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--sage);border:3px solid var(--deep);box-shadow:0 0 0 2px rgba(122,184,122,0.4);}
+.j-step{font-family:'Playfair Display',serif;font-size:0.8rem;font-weight:700;color:var(--sage);letter-spacing:2px;margin-bottom:6px;}
+.j-title{font-family:'Noto Serif KR',serif;font-size:1.08rem;color:var(--white);font-weight:700;margin-bottom:8px;}
+.j-desc{color:var(--muted);font-size:0.90rem;line-height:1.9;}
+
+/* 함께하는 자리 (초대) */
+.invite-card{background:linear-gradient(135deg,rgba(74,140,63,0.08),rgba(26,181,163,0.05));border:1px solid rgba(122,184,122,0.3);border-radius:24px;padding:48px 44px;margin:56px 0;position:relative;overflow:hidden;}
+.invite-card::before{content:'';position:absolute;top:-30px;right:-30px;font-size:10rem;opacity:0.05;}
+.invite-tag{font-size:0.70rem;font-weight:700;letter-spacing:4px;color:var(--sage);text-transform:uppercase;margin-bottom:14px;}
+.invite-card h2{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.3rem);color:var(--white);margin-bottom:20px;line-height:1.35;font-weight:700;}
+.invite-card p{color:var(--muted);font-size:0.97rem;line-height:2;margin-bottom:16px;}
+.invite-card strong{color:var(--foam);}
+
+/* 서로의 약속 */
+.promise-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px;}
+.pcard{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:18px;padding:32px;}
+.pcard-title{font-family:'Noto Serif KR',serif;font-size:1.05rem;color:var(--sage);font-weight:700;margin-bottom:18px;display:flex;align-items:center;gap:12px;}
+.pcard-title span{font-size:1.6rem;}
+.pcard ul{list-style:none;}
+.pcard ul li{padding:8px 0;padding-left:22px;position:relative;color:var(--muted);font-size:0.88rem;line-height:1.8;border-bottom:1px solid rgba(255,255,255,0.04);}
+.pcard ul li:last-child{border-bottom:none;}
+.pcard ul li::before{content:'✓';position:absolute;left:0;top:10px;color:var(--sage);font-weight:700;}
+.pcard ul li strong{color:var(--foam);}
+
+/* FAQ */
+.faq-list{margin-top:32px;}
+.faq-item{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:14px;padding:22px 28px;margin-bottom:12px;transition:all 0.3s;}
+.faq-item:hover{border-color:rgba(122,184,122,0.3);}
+.faq-q{font-family:'Noto Serif KR',serif;font-size:0.95rem;color:var(--foam);font-weight:700;margin-bottom:10px;display:flex;gap:10px;align-items:flex-start;}
+.faq-q::before{content:'Q.';color:var(--sage);flex-shrink:0;}
+.faq-a{font-size:0.86rem;color:var(--muted);line-height:1.9;padding-left:24px;}
+.faq-a strong{color:var(--foam);}
+
+/* CTA */
+.cta-band{background:linear-gradient(135deg,rgba(11,122,110,0.18),rgba(74,140,63,0.10));border:1px solid rgba(122,184,122,0.3);border-radius:24px;padding:56px 44px;text-align:center;margin:72px 32px;}
+.cta-inner{max-width:720px;margin:0 auto;}
+.cta-band h2{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3vw,2.4rem);color:var(--white);margin-bottom:18px;}
+.cta-band p{color:var(--muted);font-size:0.97rem;line-height:2;margin-bottom:32px;}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.bp{background:linear-gradient(135deg,var(--leaf),var(--sage));color:var(--white);padding:14px 36px;border-radius:50px;font-weight:700;font-size:0.95rem;text-decoration:none;transition:all 0.3s;}
+.bp:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(74,140,63,0.4);}
+.bo{color:var(--foam);padding:14px 32px;border-radius:50px;font-weight:500;font-size:0.95rem;text-decoration:none;border:1.5px solid rgba(110,232,216,0.4);transition:all 0.3s;}
+.bo:hover{background:rgba(110,232,216,0.08);}
+
+/* 인용 박스 */
+.quote-box{background:linear-gradient(135deg,rgba(74,140,63,0.06),transparent);border:1px solid rgba(122,184,122,0.25);border-radius:20px;padding:44px;text-align:center;margin:48px 0;}
+.quote-text{font-family:'Noto Serif KR',serif;font-size:1.08rem;color:var(--foam);font-style:italic;line-height:2;margin-bottom:16px;}
+.quote-author{font-size:0.82rem;color:var(--sage);font-weight:700;letter-spacing:1px;}
+
+/* 링크 배너 */
+.link-banner{background:rgba(74,140,63,0.06);border-top:1px solid rgba(122,184,122,0.15);border-bottom:1px solid rgba(122,184,122,0.15);padding:22px 32px;text-align:center;}
+.link-banner p{font-size:0.84rem;color:var(--muted);}
+.link-banner a{color:var(--sage);font-weight:700;text-decoration:none;}
+
+footer{background:rgba(8,18,32,0.95);border-top:1px solid var(--border);padding:40px 32px 24px;text-align:center;}
+.flogo{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;color:var(--aqua);letter-spacing:2px;margin-bottom:10px;}
+.flinks{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;}
+.flinks a{font-size:0.80rem;color:var(--muted);text-decoration:none;}
+.flinks a:hover{color:var(--foam);}
+.fcopy{font-size:0.75rem;color:rgba(123,168,160,0.5);}
+
+@media(max-width:900px){
+  .values-grid{grid-template-columns:1fr 1fr;}
+  .ways-grid,.sharing-grid,.promise-grid{grid-template-columns:1fr;}
+  .sec{padding:60px 20px;}
+  .nl{display:none;}
+  .journey{padding-left:28px;}
+  .j-item{padding-left:20px;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">ECO-<span>VASS</span></a>
+  <div class="nl">
+    <a href="index.html">홈</a>
+    <a href="education.html">교육</a>
+    <a href="healing.html">치유·회복</a>
+    <a href="modular.html">모듈러</a>
+    <a href="products.html">제품소개</a>
+    <a href="partnership.html" style="color:var(--sage);font-weight:700;">함께하기</a>
+    <a href="business.html">사업협력</a>
+    <a href="https://pf.kakao.com/_rXDxdX" target="_blank" class="ncta">상담하기</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">Walking Together · 함께 걷는 길</div>
+    <h1><span class="s1">함께 걷는</span> 길<br>받은 것을 <span class="s2">흘려보내는</span> 자리</h1>
+    <p class="hero-desc">ECO-VASS는 심사하고 선별하는 곳이 아닙니다. 아쿠아포닉스의 순환 원리처럼 — 서로를 살리는 생태 공동체입니다. 공감하시는 분은 자연스럽게 흘러들어오시고, 함께 걷다 보면 우리가 됩니다.</p>
+    <div class="hero-quote">"우리는 자격을 심사하지 않습니다. 다만, 같은 가치를 바라보는 분들이 자연스럽게 모여 작은 공동체를 이루어가는 자리입니다."</div>
+  </div>
+</div>
+
+<!-- 페이지 구분 안내 -->
+<div style="max-width:1100px;margin:0 auto;padding:0 32px;">
+  <div style="background:rgba(26,181,163,0.05);border:1px solid rgba(26,181,163,0.2);border-radius:14px;padding:18px 24px;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;">
+    <div style="font-size:1.6rem;">💼</div>
+    <div>
+      <div style="font-size:0.82rem;color:var(--muted);line-height:1.8;">전문 사업자 · 기술자 · 공급자로 참여를 원하시면 <a href="business.html" style="color:var(--aqua);font-weight:700;text-decoration:none;">사업협력 페이지</a>를 확인해 주세요.</div>
+    </div>
+  </div>
+</div>
+
+<!-- 우리가 바라보는 네 가지 가치 -->
+<div class="sec">
+  <span class="stag s-g">Our Shared Values</span>
+  <h2 class="h2">우리가 함께 바라보는<br>네 가지 가치</h2>
+  <p class="desc">ECO-VASS와 함께하신다는 것은 이 네 가지 가치에 공감한다는 뜻입니다. 거창한 약속이 아닙니다. 매일의 작은 선택 속에서 이 가치들이 자연스럽게 드러나기를 소망합니다.</p>
+
+  <div class="values-grid">
+    <div class="vcard">
+      <div class="vcard-icon">🌀</div>
+      <h3>순환</h3>
+      <p>받은 것을 쌓아두지 않고 다시 흘려보내는 마음</p>
+    </div>
+    <div class="vcard">
+      <div class="vcard-icon">🌱</div>
+      <h3>돌봄</h3>
+      <p>작은 공간에서<br>생명을 길러내는 일상의 성실함</p>
+    </div>
+    <div class="vcard">
+      <div class="vcard-icon">🤲</div>
+      <h3>나눔</h3>
+      <p>치유와 회복을 필요한 이웃에게 조용히 건네는 손길</p>
+    </div>
+    <div class="vcard">
+      <div class="vcard-icon">🌳</div>
+      <h3>공생</h3>
+      <p>서로 다른 생명이 서로를 살리는 자연의 지혜</p>
+    </div>
+  </div>
+</div>
+<hr class="hr">
+
+<!-- 세 가지 동행 방식 -->
+<div id="ways">
+<div class="ways-section">
+  <div class="ways-inner">
+    <span class="stag s-g">Three Ways to Walk Together</span>
+    <h2 class="h2">함께하는<br>세 가지 방식</h2>
+    <p class="desc">어떤 분이든, 어떤 역할이든 환영합니다. ECO-VASS와 함께하시는 방식은 한 가지가 아닙니다. 지금 서 계신 자리에서 편한 방식으로 시작하세요.</p>
+
+    <div class="ways-grid">
+      <div class="wcard">
+        <div class="wcard-top">
+          <div class="wcard-icon">🏡</div>
+          <div class="wcard-name">생활인의 자리</div>
+          <div class="wcard-en">Individual · Family</div>
+        </div>
+        <div class="wcard-body">
+          <p>가정이나 작은 공간에서 ECO-VASS 아쿠아포닉스를 도입하여 일상의 치유와 가족의 나눔을 실천하시는 분들.</p>
+          <ul class="wcard-feat">
+            <li>가정용 모듈러 도입</li>
+            <li>교육 과정 수강</li>
+            <li>자녀·가족과 함께 돌봄</li>
+            <li>블로그·SNS로 경험 공유</li>
+            <li>이웃과 수확물 나눔</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="wcard">
+        <div class="wcard-top">
+          <div class="wcard-icon">🏫</div>
+          <div class="wcard-name">기관의 자리</div>
+          <div class="wcard-en">Institution</div>
+        </div>
+        <div class="wcard-body">
+          <p>학교·복지관·교회·병원 등에서 ECO-VASS를 도입하여 더 많은 이들에게 치유와 교육의 기회를 여시는 분들.</p>
+          <ul class="wcard-feat">
+            <li>기관형 모듈러 설치</li>
+            <li>치유·교육 프로그램 운영</li>
+            <li>구성원 대상 체험 활동</li>
+            <li>사례 공유 및 상호 학습</li>
+            <li>지역 공동체와 연계</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="wcard">
+        <div class="wcard-top">
+          <div class="wcard-icon">🤝</div>
+          <div class="wcard-name">동역자의 자리</div>
+          <div class="wcard-en">Collaborator</div>
+        </div>
+        <div class="wcard-body">
+          <p>전문 지식이나 현장 경험을 나누며 ECO-VASS의 철학을 확산시키는 데 함께 기여하시는 분들.</p>
+          <ul class="wcard-feat">
+            <li>농업·치유·교육 전문가</li>
+            <li>지역 보급 활동</li>
+            <li>콘텐츠·연구 기여</li>
+            <li>지자체·사업 연계</li>
+            <li>파트너십 협력</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- 우리가 나누는 것 -->
+<div class="sec">
+  <span class="stag s-g">What We Share</span>
+  <h2 class="h2">우리가<br>나누어드리는 것들</h2>
+  <p class="desc">함께하시는 분들께 ECO-VASS가 먼저 흘려보내는 것들입니다. 대가 없이, 조건 없이, 필요에 따라 자연스럽게 이어집니다.</p>
+
+  <div class="sharing-grid">
+    <div class="scard">
+      <h3><span>📚</span>검증된 지식과 교재</h3>
+      <p>수년간의 현장 경험으로 축적된 아쿠아포닉스 노하우를 체계적인 교재와 영상으로 나누어드립니다. FAO 국제 기준에 근거한 물잡이 교안부터 실전 팁까지, <strong>무료 입문 과정</strong>부터 누구나 시작하실 수 있습니다.</p>
+    </div>
+    <div class="scard">
+      <h3><span>💬</span>지속적인 기술 지원</h3>
+      <p>제품 도입이 끝이 아닙니다. 물잡이 과정의 어려움, 운영 중 문제 해결까지 <strong>카카오 채널과 현장 컨설팅</strong>으로 함께합니다. 혼자 해결하려 애쓰지 마세요.</p>
+    </div>
+    <div class="scard">
+      <h3><span>🌐</span>공동체와의 연결</h3>
+      <p>ECO-VASS를 매개로 만나는 분들이 서로 연결되어 경험을 나눕니다. <strong>블로그·유튜브·오프라인 모임</strong>을 통해 혼자가 아닌, 함께 걷는 길이 됩니다.</p>
+    </div>
+    <div class="scard">
+      <h3><span>🌱</span>성장의 기회</h3>
+      <p>아쿠아포닉스코리아 농장 방문, 전문 교육, 치유농업 프로그램 등 <strong>깊이를 더할 수 있는 기회</strong>를 꾸준히 열어드립니다. 관심 있는 만큼, 원하시는 만큼 함께하세요.</p>
+    </div>
+  </div>
+</div>
+<hr class="hr">
+
+<!-- 한 걸음씩 가는 길 -->
+<div class="sec">
+  <span class="stag s-g">Your Journey</span>
+  <h2 class="h2">한 걸음씩<br>가는 길</h2>
+  <p class="desc">처음부터 큰 결심이 필요하지 않습니다. 관심이 생기셨다면 이 작은 걸음부터 시작하세요. 서두르지 않고, 부담 없이, 자연스럽게.</p>
+
+  <div class="journey">
+    <div class="j-item">
+      <div class="j-step">STEP 01</div>
+      <div class="j-title">가볍게 둘러보시기</div>
+      <div class="j-desc">ecovass.com에서 우리의 이야기와 제품을 천천히 살펴보세요. 유튜브 무료 강의를 들어보시는 것도 좋습니다. <strong style="color:var(--foam);">아무런 약속도 부담도 없습니다.</strong></div>
+    </div>
+    <div class="j-item">
+      <div class="j-step">STEP 02</div>
+      <div class="j-title">편하게 문의하시기</div>
+      <div class="j-desc">궁금한 것이 생기시면 카카오 채널로 편하게 물어보세요. 간단한 질문도, 깊이 있는 상담도 모두 환영합니다. 답변에 대한 대가는 없습니다.</div>
+    </div>
+    <div class="j-item">
+      <div class="j-step">STEP 03</div>
+      <div class="j-title">첫 경험 만들기</div>
+      <div class="j-desc">관심이 이어지시면 가정용 소형 제품이나 교육 과정으로 첫 경험을 만들어보세요. <strong style="color:var(--foam);">실패해도 괜찮습니다.</strong> 함께 배우는 과정입니다.</div>
+    </div>
+    <div class="j-item">
+      <div class="j-step">STEP 04</div>
+      <div class="j-title">이야기 나누기</div>
+      <div class="j-desc">경험이 쌓이면 자연스럽게 나누게 됩니다. 블로그에 후기를 올리시거나, 이웃에게 수확물을 나누시거나, 카카오톡으로 사진을 보내주시거나. 방식은 자유입니다.</div>
+    </div>
+    <div class="j-item">
+      <div class="j-step">STEP 05</div>
+      <div class="j-title">함께 흘려보내기</div>
+      <div class="j-desc">시간이 지나면, 받은 것을 누군가에게 흘려보내는 자리에 서 계실 것입니다. <strong style="color:var(--foam);">그때 비로소 우리는 한 공동체가 됩니다.</strong></div>
+    </div>
+  </div>
+</div>
+<hr class="hr">
+
+<!-- 서로의 약속 -->
+<div class="sec">
+  <span class="stag s-g">Mutual Commitments</span>
+  <h2 class="h2">서로의 약속</h2>
+  <p class="desc">함께하는 길에서 우리가 서로에게 드리는 작은 약속들입니다. 엄격한 계약이 아닌, 신뢰의 토대가 되는 말씀입니다.</p>
+
+  <div class="promise-grid">
+    <div class="pcard">
+      <div class="pcard-title"><span>🌊</span>ECO-VASS가 드리는 약속</div>
+      <ul>
+        <li>검증된 정보만을 <strong>정직하게</strong> 전해드립니다</li>
+        <li>질문에 대해 <strong>성실히</strong> 답변드립니다</li>
+        <li>제품의 한계도 <strong>솔직하게</strong> 말씀드립니다</li>
+        <li>경험과 지식을 <strong>아낌없이</strong> 나눕니다</li>
+        <li>광고·홍보보다 <strong>진심의 소통</strong>을 우선합니다</li>
+        <li>작은 피드백도 <strong>귀 기울여</strong> 듣습니다</li>
+      </ul>
+    </div>
+    <div class="pcard">
+      <div class="pcard-title"><span>🌱</span>함께하시는 분께 부탁드리는 마음</div>
+      <ul>
+        <li>경험을 <strong>있는 그대로</strong> 나누어 주세요</li>
+        <li>성공도 실패도 <strong>솔직하게</strong> 공유해 주세요</li>
+        <li>배운 것을 <strong>이웃과 나누어</strong> 주세요</li>
+        <li>생명을 <strong>귀하게 여기며</strong> 돌봐 주세요</li>
+        <li>상업적 이용보다 <strong>진정성 있는 실천</strong>을 부탁드립니다</li>
+        <li>작은 선의로 <strong>공동체에 기여</strong>해 주세요</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 함께하는 자리로의 초대 -->
+<div class="sec" style="padding-top:0;">
+  <div class="invite-card">
+    <div class="invite-tag">Our Invitation · 초대</div>
+    <h2>복잡한 절차는 없습니다<br><span style="color:var(--sage);font-style:italic;">마음이 닿는 분은 </span><span style="color:var(--aqua);">이미 우리입니다</span></h2>
+    <p>ECO-VASS는 회원가입이나 인증을 요구하지 않습니다. 자격을 심사하는 곳이 아니기 때문입니다. 이 페이지를 끝까지 읽어주신 것만으로 이미 충분합니다.</p>
+    <p>우리가 바라보는 가치에 <strong>작은 공명이라도 느끼셨다면</strong>, 그것이 시작입니다. 궁금한 것이 있으시면 카카오 채널로 편하게 문의하시고, 제품이나 교육이 필요하시면 상담받으시면 됩니다.</p>
+    <p>받은 것을 다시 흘려보내는 삶. 자연의 순환이 우리 안에서 이어지는 그 흐름에 함께해 주세요. <strong>서두르지 않아도, 완벽하지 않아도 괜찮습니다.</strong> 우리 모두가 함께 배우며 자라갑니다.</p>
+  </div>
+</div>
+<hr class="hr">
+
+<!-- FAQ -->
+<div class="sec">
+  <span class="stag s-g">Frequently Asked</span>
+  <h2 class="h2">자주 묻는 질문</h2>
+  <p class="desc">참여를 고민하시는 분들이 자주 주시는 질문들입니다. 여기에 없는 질문도 언제든 카카오 채널로 문의해 주세요.</p>
+
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q">아쿠아포닉스를 전혀 모르는데 시작해도 될까요?</div>
+      <div class="faq-a">네, 그런 분들이 가장 많이 오십니다. ECO-VASS의 교육 과정은 <strong>완전 초보자</strong>를 기준으로 만들어졌습니다. 무료 입문 영상부터 시작하시면 부담 없이 전체 흐름을 파악하실 수 있습니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">꼭 제품을 구매해야 함께할 수 있나요?</div>
+      <div class="faq-a">아닙니다. 제품 구매는 필요한 분들을 위한 선택지 중 하나일 뿐입니다. 관심을 가지고 <strong>콘텐츠를 나누어 주시거나, 블로그·SNS로 소통해 주시는 것</strong>만으로도 충분히 함께하시는 것입니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">교회나 복지기관 등 단체로 함께할 수 있나요?</div>
+      <div class="faq-a">물론입니다. 오히려 공동체 단위의 참여가 ECO-VASS의 지향점과 잘 맞습니다. 단체의 규모·예산·목적에 맞춰 <strong>맞춤형 프로그램</strong>을 함께 설계해 드립니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">실패하면 어떻게 해야 하나요?</div>
+      <div class="faq-a">실패는 학습의 자연스러운 일부입니다. 물잡이에 실패하셨더라도 <strong>포기하지 말고 카카오 채널로 연락</strong>주세요. 원인을 함께 진단하고 다시 시작하실 수 있도록 도와드립니다. 경험이 쌓이면 오히려 더 좋은 멘토가 되십니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">ECO-VASS의 경험을 사업으로 연결해도 될까요?</div>
+      <div class="faq-a">자연스러운 흐름입니다. 다만 <strong>처음부터 영리 목적을 앞세우기보다는</strong>, 먼저 경험을 쌓고 진정성 있게 실천하시는 것을 권합니다. 일정 단계에 이르시면 파트너십 형태로 함께 사업을 펼쳐나갈 길도 열려 있습니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">저는 전문가도 아닌데 참여할 자격이 있나요?</div>
+      <div class="faq-a">ECO-VASS는 <strong>자격을 심사하지 않습니다.</strong> 이 질문을 하고 계시다는 것 자체가 이미 충분한 준비가 되셨다는 증거입니다. 작은 관심과 꾸준한 마음, 그것이 가장 큰 자격입니다.</div>
+    </div>
+  </div>
+</div>
+
+<!-- 인용 -->
+<div class="sec" style="padding-top:0;">
+  <div class="quote-box">
+    <div class="quote-text">
+      "도시 한가운데 작은 공간에서 시작되는 이 돌봄이,<br>
+      공명하시는 분들에게 자연스럽게 흘러가,<br>
+      언젠가 서로를 돌보는 공동체로 이어지기를.<br><br>
+      그것이 ECO-VASS가 걷고자 하는 길입니다."
+    </div>
+    <div class="quote-author">— ECO-VASS 동행의 철학</div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-band">
+  <div class="cta-inner">
+    <h2>마음이 닿으셨다면<br>가볍게 인사해 주세요</h2>
+    <p>복잡한 절차도, 엄격한 심사도 없습니다. 그저 관심과 공감을 갖고 카카오 채널로 한 마디 건네주시면 — 우리의 만남이 시작됩니다.</p>
+    <div class="cta-btns">
+      <a href="https://pf.kakao.com/_rXDxdX" target="_blank" class="bp">💬 카카오 채널로 인사하기</a>
+      <a href="https://blog.naver.com/klys1121" target="_blank" class="bo">📝 블로그 둘러보기</a>
+    </div>
+  </div>
+</div>
+
+<!-- 링크 배너 -->
+<div class="link-banner">
+  <p>🌾 <a href="https://aquaponicskorea.co.kr" target="_blank">아쿠아포닉스코리아</a> — 전북 고창 농장에서 직접 만나는 체험·견학·교육이 운영됩니다</p>
+</div>
+
+<footer>
+  <div class="flogo">ECO-VASS</div>
+  <div class="flinks">
+    <a href="index.html">홈</a>
+    <a href="education.html">교육</a>
+    <a href="healing.html">치유·회복</a>
+    <a href="modular.html">모듈러</a>
+    <a href="products.html">제품소개</a>
+    <a href="partnership.html">함께하기</a>
+    <a href="business.html">사업협력</a>
+    <a href="https://blog.naver.com/klys1121" target="_blank">블로그</a>
+    <a href="https://aquaponicskorea.co.kr" target="_blank">아쿠아포닉스코리아</a>
+  </div>
+  <div class="fcopy">© 2025 ECO-VASS · Aquaponics Korea Co., Ltd. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
