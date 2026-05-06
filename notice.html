@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOTICE — 공지사항·자료실 | ECO-VASS</title>
+  <meta name="description" content="ECO-VASS 공지사항 및 자료실 — 카탈로그·치유 가이드·일반인 핸드북 무료 다운로드." />
+  <link rel="canonical" href="https://ecovass.com/notice.html" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    .notice-hero { padding: 12rem 0 4rem; background: var(--color-cream); }
+
+    .tabs-row {
+      display: flex;
+      gap: 1rem;
+      border-bottom: 2px solid var(--color-line);
+      margin-bottom: 3rem;
+    }
+    .tab {
+      padding: 1rem 1.5rem;
+      background: transparent;
+      color: var(--color-ink-faint);
+      border: none;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+      cursor: pointer;
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      transition: all var(--d-fast) var(--ease-out);
+    }
+    .tab.active {
+      color: var(--color-deep);
+      border-bottom-color: var(--color-honey);
+    }
+    .tab:hover:not(.active) { color: var(--color-water); }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    /* 공지사항 리스트 */
+    .notice-list { list-style: none; }
+    .notice-item {
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--color-line);
+      display: grid;
+      grid-template-columns: 100px 100px 1fr 100px;
+      gap: 1.5rem;
+      align-items: center;
+      transition: background var(--d-fast) var(--ease-out);
+    }
+    .notice-item:hover { background: var(--color-cream); }
+    @media (max-width: 768px) {
+      .notice-item { grid-template-columns: 80px 1fr; gap: 0.5rem; }
+      .notice-item .date { display: none; }
+    }
+    .notice-tag {
+      display: inline-block;
+      padding: 0.2rem 0.7rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-align: center;
+    }
+    .notice-tag.new { background: var(--color-honey); color: var(--color-cream); }
+    .notice-tag.update { background: var(--color-water); color: var(--color-cream); }
+    .notice-tag.policy { background: var(--color-clay); color: var(--color-cream); }
+    .notice-tag.event { background: var(--color-leaf); color: var(--color-cream); }
+    .notice-title {
+      font-family: var(--font-display);
+      color: var(--color-deep);
+      font-size: 1rem;
+    }
+    .notice-date {
+      font-family: var(--font-en);
+      font-style: italic;
+      color: var(--color-ink-faint);
+      font-size: 0.9rem;
+      text-align: right;
+    }
+
+    /* 자료실 그리드 */
+    .docs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .doc-card {
+      padding: 2rem;
+      background: var(--color-paper);
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-lg);
+      transition: all var(--d-mid) var(--ease-out);
+    }
+    .doc-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--color-water);
+    }
+    .doc-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .doc-card h3 {
+      font-size: 1.1rem;
+      color: var(--color-deep);
+      margin-bottom: 0.5rem;
+    }
+    .doc-card .doc-meta {
+      font-size: 0.85rem;
+      color: var(--color-ink-faint);
+      margin-bottom: 1rem;
+    }
+    .doc-card p {
+      font-size: 0.9rem;
+      color: var(--color-ink-soft);
+      margin-bottom: 1.5rem;
+    }
+    .doc-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+    }
+    .doc-status.public { color: var(--color-leaf); }
+    .doc-status.member { color: var(--color-honey); }
+    .doc-status.locked { color: var(--color-clay); }
+
+    .empty-state {
+      text-align: center;
+      padding: 4rem 2rem;
+      color: var(--color-ink-faint);
+      background: var(--color-cream);
+      border-radius: var(--radius-lg);
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-row">
+      <a href="/" class="brand">
+        <svg class="brand-mark" viewBox="0 0 32 32" fill="none">
+          <path d="M16 4 C 8 12, 8 20, 16 28 C 24 20, 24 12, 16 4 Z" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="16" cy="18" r="2" fill="currentColor"/>
+        </svg>
+        <span>ECO-VASS</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="modular.html">모듈러</a></li>
+          <li><a href="products.html">제품</a></li>
+          <li><a href="education.html">교육</a></li>
+          <li><a href="healing.html">치유·회복</a></li>
+          <li><a href="dome.html">Dome Farm</a></li>
+          <li><a href="schools.html">학교 도입</a></li>
+          <li><a href="partnership.html">함께하기</a></li>
+          <li><a href="business.html">사업협력</a></li>
+          <li><a href="notice.html" class="active">NOTICE</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="notice-hero">
+    <div class="container">
+      <div data-reveal>
+        <div class="eyebrow">NOTICE</div>
+        <h1 class="serif" style="margin: 1.5rem 0;">공지사항 · 자료실</h1>
+        <p class="lead" style="max-width: 720px;">
+          ECO-VASS의 최신 공지·자료를 모은 자리입니다. 자료실은 카탈로그·치유 가이드·일반인 핸드북 등을
+          무료로 제공합니다.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="tabs-row" data-reveal>
+        <button class="tab active" data-tab="notice">📢 공지사항</button>
+        <button class="tab" data-tab="docs">📁 자료실</button>
+      </div>
+
+      <!-- 공지사항 탭 -->
+      <div class="tab-content active" id="tab-notice">
+        <ul class="notice-list">
+          <li class="notice-item" data-reveal>
+            <span class="notice-tag new">NEW</span>
+            <span class="date" style="font-family: var(--font-en); font-style: italic; color: var(--color-honey); font-size: 0.85rem;">— 2026.05</span>
+            <a href="#" class="notice-title">ECO-VASS 새 홈페이지 개편 안내 — 12개 PART 정정 지시서 반영</a>
+            <span class="notice-date">2026.05.06</span>
+          </li>
+          <li class="notice-item" data-reveal>
+            <span class="notice-tag update">UPDATE</span>
+            <span class="date" style="font-family: var(--font-en); font-style: italic; color: var(--color-honey); font-size: 0.85rem;">— 2026.05</span>
+            <a href="#" class="notice-title">제품 라인업 — MS-300 표준 대표 모델 추가 안내</a>
+            <span class="notice-date">2026.05.06</span>
+          </li>
+          <li class="notice-item" data-reveal>
+            <span class="notice-tag update">UPDATE</span>
+            <span class="date" style="font-family: var(--font-en); font-style: italic; color: var(--color-honey); font-size: 0.85rem;">— 2026.05</span>
+            <a href="#" class="notice-title">쇼핑 섹션 4분류 재편 — DIY 부품 27품목 가격표 공개</a>
+            <span class="notice-date">2026.05.06</span>
+          </li>
+          <li class="notice-item" data-reveal>
+            <span class="notice-tag policy">POLICY</span>
+            <span class="date" style="font-family: var(--font-en); font-style: italic; color: var(--color-honey); font-size: 0.85rem;">— 2026.05</span>
+            <a href="#" class="notice-title">교육 강좌 가격 정책 안내 — 입문 무료 + 8장 단계별 + 패키지 할인</a>
+            <span class="notice-date">2026.05.06</span>
+          </li>
+          <li class="notice-item" data-reveal>
+            <span class="notice-tag event">EVENT</span>
+            <span class="date" style="font-family: var(--font-en); font-style: italic; color: var(--color-honey); font-size: 0.85rem;">— 2026.04</span>
+            <a href="#" class="notice-title">치유농업 프로그램 시범 운영 안내 — 2026년 하반기 시작 예정</a>
+            <span class="notice-date">2026.04.30</span>
+          </li>
+          <li class="notice-item" data-reveal>
+            <span class="notice-tag new">NEW</span>
+            <span class="date" style="font-family: var(--font-en); font-style: italic; color: var(--color-honey); font-size: 0.85rem;">— 2026.04</span>
+            <a href="#" class="notice-title">학교 동아리 솔루션 출시 — 4종 통합 패키지</a>
+            <span class="notice-date">2026.04.26</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 자료실 탭 -->
+      <div class="tab-content" id="tab-docs">
+        <div class="docs-grid">
+          <div class="doc-card" data-reveal>
+            <span class="doc-icon">📘</span>
+            <h3>제품 마스터 카탈로그 v2026</h3>
+            <div class="doc-meta">35p · 10종 라인업 · 부품 가격표</div>
+            <p>독립형 6종 + DIY 4종 전체 라인업 사양·구성·운영 가이드.</p>
+            <span class="doc-status public">🟢 무료 다운로드 (이메일 입력)</span>
+          </div>
+
+          <div class="doc-card" data-reveal>
+            <span class="doc-icon">💚</span>
+            <h3>치유농업 프로그램 가이드 v2026</h3>
+            <div class="doc-meta">41p · 5감 메커니즘 · 4대 트랙</div>
+            <p>도시 일상 속 작은 치유 — 한국형 도시 치유농업의 통합 가이드.</p>
+            <span class="doc-status public">🟢 무료 다운로드 (이메일 입력)</span>
+          </div>
+
+          <div class="doc-card" data-reveal>
+            <span class="doc-icon">🌱</span>
+            <h3>일반인 핸드북 v2026</h3>
+            <div class="doc-meta">44p · 입문자용 요약</div>
+            <p>아쿠아포닉스를 처음 만나시는 분을 위한 친절한 안내서.</p>
+            <span class="doc-status public">🟢 무료 다운로드</span>
+          </div>
+
+          <div class="doc-card" data-reveal>
+            <span class="doc-icon">🏫</span>
+            <h3>학교 도입 안내서</h3>
+            <div class="doc-meta">학생용·교사용·운영방안·연간계획 발췌</div>
+            <p>학교 동아리 통합 솔루션 안내. 인천 K고등학교 사례 포함.</p>
+            <span class="doc-status member">🟡 학교 신청 시 무료 제공</span>
+          </div>
+
+          <div class="doc-card" data-reveal>
+            <span class="doc-icon">📕</span>
+            <h3>8장 강좌 교재 (전체)</h3>
+            <div class="doc-meta">강좌 결제 후 자동 제공</div>
+            <p>물잡이부터 보급 전략까지 — 8장 통합 교재 PDF.</p>
+            <span class="doc-status locked">🔒 강좌 수강생 전용</span>
+          </div>
+
+          <div class="doc-card" data-reveal>
+            <span class="doc-icon">🛠️</span>
+            <h3>DIY 조립 매뉴얼 v1</h3>
+            <div class="doc-meta">23p · DIY 키트 구매자용</div>
+            <p>S-11·S-12·M-21·M-22 직접 조립을 위한 단계별 매뉴얼.</p>
+            <span class="doc-status locked">🔒 DIY 키트 구매자 전용</span>
+          </div>
+        </div>
+
+        <div style="margin-top: 3rem; text-align: center;" data-reveal>
+          <p style="color: var(--color-ink-soft); font-size: 0.95rem;">
+            자료 다운로드 또는 신청은 카카오 채널로 문의해 주세요 →
+          </p>
+          <div style="margin-top: 1rem;">
+            <a href="https://pf.kakao.com/_rXDxdX" class="btn btn-primary" target="_blank" rel="noopener">자료 신청 (카카오)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="color: var(--color-cream); margin-bottom: 1rem;">
+            <svg class="brand-mark" viewBox="0 0 32 32" fill="none">
+              <path d="M16 4 C 8 12, 8 20, 16 28 C 24 20, 24 12, 16 4 Z" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="16" cy="18" r="2" fill="currentColor"/>
+            </svg>
+            <span>ECO-VASS</span>
+          </div>
+        </div>
+        <div>
+          <h4>플랫폼</h4>
+          <a href="modular.html">모듈러</a><a href="products.html">제품</a>
+          <a href="education.html">교육</a><a href="healing.html">치유·회복</a>
+        </div>
+        <div>
+          <h4>참여</h4>
+          <a href="schools.html">학교 도입</a><a href="partnership.html">함께하기</a>
+          <a href="business.html">사업협력</a><a href="notice.html">NOTICE</a>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <a href="tel:01053400662">📞 010-5340-0662</a>
+          <a href="https://pf.kakao.com/_rXDxdX" target="_blank" rel="noopener">💬 카카오 채널</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 ECO-VASS · Aquaponics Korea Co., Ltd.</div>
+        <div>본 사이트의 모든 콘텐츠는 저작권 보호를 받습니다</div>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // 탭 전환
+    document.querySelectorAll('.tab').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        this.classList.add('active');
+        document.getElementById('tab-' + this.getAttribute('data-tab')).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>학교 도입 — 동아리 솔루션 | ECO-VASS</title>
+  <meta name="description" content="ECO-VASS 학교 동아리 통합 솔루션 — 학생용 교재·교사 지도안·운영방안·연간 계획표 4종 패키지. 인천 K고등학교 적용 사례." />
+  <link rel="canonical" href="https://ecovass.com/schools.html" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    .schools-hero { padding: 12rem 0 4rem; background: var(--color-cream); }
+    .package-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    @media (max-width: 768px) { .package-grid { grid-template-columns: 1fr; } }
+    .pkg-card {
+      padding: 2.5rem;
+      background: var(--color-paper);
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-lg);
+    }
+    .pkg-card h3 { margin-bottom: 1rem; color: var(--color-deep); }
+    .pkg-card .icon { font-size: 2rem; margin-bottom: 1rem; }
+
+    .why-section { background: var(--color-cream); }
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 1rem 3rem;
+      margin-top: 3rem;
+    }
+    @media (max-width: 768px) { .why-grid { grid-template-columns: 1fr; } }
+    .why-q {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      color: var(--color-deep);
+      font-style: italic;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--color-line);
+    }
+    .why-a {
+      padding: 1rem 0;
+      color: var(--color-ink-soft);
+      border-bottom: 1px solid var(--color-line);
+    }
+
+    .models-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    @media (max-width: 980px) { .models-grid { grid-template-columns: 1fr; } }
+    .model-card {
+      padding: 2.5rem;
+      background: var(--color-sand);
+      border-radius: var(--radius-lg);
+      position: relative;
+    }
+    .model-tag {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      background: var(--color-water);
+      color: var(--color-cream);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-en);
+      font-style: italic;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+    }
+    .model-card h3 { color: var(--color-deep); margin-bottom: 1rem; font-size: 1.25rem; }
+    .model-card ul { list-style: none; margin: 1rem 0; }
+    .model-card li { padding: 0.3rem 0; font-size: 0.9rem; color: var(--color-ink-soft); }
+    .model-card li::before { content: '· '; color: var(--color-honey); }
+    .model-card .price-tag {
+      padding-top: 1rem;
+      margin-top: 1rem;
+      border-top: 1px solid var(--color-line);
+      font-size: 0.9rem;
+      color: var(--color-deep);
+      font-weight: 500;
+    }
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+      margin-top: 3rem;
+    }
+    @media (max-width: 768px) { .process { grid-template-columns: repeat(2, 1fr); } }
+    .step {
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: var(--color-deep);
+      color: var(--color-cream);
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .step h4 { color: var(--color-deep); font-size: 1rem; margin-bottom: 0.5rem; }
+    .step p { font-size: 0.85rem; color: var(--color-ink-faint); margin: 0; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-row">
+      <a href="/" class="brand">
+        <svg class="brand-mark" viewBox="0 0 32 32" fill="none">
+          <path d="M16 4 C 8 12, 8 20, 16 28 C 24 20, 24 12, 16 4 Z" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="16" cy="18" r="2" fill="currentColor"/>
+        </svg>
+        <span>ECO-VASS</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="modular.html">모듈러</a></li>
+          <li><a href="products.html">제품</a></li>
+          <li><a href="education.html">교육</a></li>
+          <li><a href="healing.html">치유·회복</a></li>
+          <li><a href="dome.html">Dome Farm</a></li>
+          <li><a href="schools.html" class="active">학교 도입</a></li>
+          <li><a href="partnership.html">함께하기</a></li>
+          <li><a href="https://pf.kakao.com/_rXDxdX" class="nav-cta" target="_blank" rel="noopener">상담</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="schools-hero">
+    <div class="container">
+      <div data-reveal>
+        <div class="eyebrow">School Adoption Solution</div>
+        <h1 class="serif" style="margin: 1.5rem 0;">교실 안 작은 생태계</h1>
+        <p class="lead" style="max-width: 720px;">
+          ECO-VASS 학교 동아리 솔루션 — 학생용 교재·교사 지도안·운영방안·연간 계획표 4종이
+          한 세트로 묶인 완성형 패키지. 인천 K고등학교 적용 사례 기반.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 왜 학교에 ECO-VASS인가 -->
+  <section class="why-section">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="eyebrow">Why ECO-VASS for Schools</div>
+        <h2>학교 운영진의 우려, ECO-VASS의 답</h2>
+        <p class="lead">
+          학교 도입 시 가장 자주 듣는 6가지 우려 — 본 패키지가 정면 해소합니다.
+        </p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-q" data-reveal>\"교사가 가르칠 수 있을까?\"</div>
+        <div class="why-a" data-reveal>04 교사용 지도안 + Unit별 차시 구성 + 트러블슈팅 가이드 + 반일 사전 교육</div>
+
+        <div class="why-q" data-reveal>\"학생들이 따라올 수 있을까?\"</div>
+        <div class="why-a" data-reveal>02 학생용 교재 (이론+실습 통합, 5 Unit 구성)</div>
+
+        <div class="why-q" data-reveal>\"동아리 조직을 어떻게 짜지?\"</div>
+        <div class="why-a" data-reveal>01 운영방안 — 7개 직책·역할 명시 (수질·재배·IoT·홍보)</div>
+
+        <div class="why-q" data-reveal>\"1년 동안 무엇을 하지?\"</div>
+        <div class="why-a" data-reveal>03 연간 계획표 — 월별 활동 (운영·교육·행사·수확)</div>
+
+        <div class="why-q" data-reveal>\"안전 문제는?\"</div>
+        <div class="why-a" data-reveal>01 운영방안 5장 — 안전·위생 관리 규정</div>
+
+        <div class="why-q" data-reveal>\"평가는 어떻게?\"</div>
+        <div class="why-a" data-reveal>04 지도안 4장 — 평가 영역 5가지 (각 20점) 표준</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4종 통합 패키지 -->
+  <section>
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="eyebrow">4-Document Package</div>
+        <h2>4 종 통합 패키지</h2>
+        <p class="lead">학교 한 곳을 통째로 운영할 수 있는 솔루션 — 각 자료가 서로를 받쳐 줍니다.</p>
+      </div>
+
+      <div class="package-grid">
+        <div class="pkg-card" data-reveal>
+          <div class="icon">📚</div>
+          <h3>02 학생용 교재 (Unit 1~5)</h3>
+          <p style="color: var(--color-ink-soft);">아쿠아포닉스 이론 + 수질 측정 + 식물 재배 + 데이터 관리 + 탐구 발표</p>
+          <p style="font-size: 0.85rem; color: var(--color-ink-faint); margin-top: 1rem;">학생 한 명당 1권 — 동아리 회원 수만큼 제공</p>
+        </div>
+
+        <div class="pkg-card" data-reveal>
+          <div class="icon">🍎</div>
+          <h3>04 교사용 지도안</h3>
+          <p style="color: var(--color-ink-soft);">교사가 알아야 할 핵심 5 + Unit별 차시 + 트러블슈팅 + 평가 기준</p>
+          <p style="font-size: 0.85rem; color: var(--color-ink-faint); margin-top: 1rem;">지도교사 1인용 매뉴얼</p>
+        </div>
+
+        <div class="pkg-card" data-reveal>
+          <div class="icon">🏫</div>
+          <h3>01 동아리 운영방안</h3>
+          <p style="color: var(--color-ink-soft);">목적·시스템·조직(7직책)·스케줄·안전 규정 — 학교 도입 제안서 기반</p>
+          <p style="font-size: 0.85rem; color: var(--color-ink-faint); margin-top: 1rem;">운영자 1인용</p>
+        </div>
+
+        <div class="pkg-card" data-reveal>
+          <div class="icon">📅</div>
+          <h3>03 연간 활동 계획표</h3>
+          <p style="color: var(--color-ink-soft);">3월~2월 (1년 전체) — 12강 + 4회 행사 + 수확 일정</p>
+          <p style="font-size: 0.85rem; color: var(--color-ink-faint); margin-top: 1rem;">학교 연간 계획 수립용</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 도입 모델 3가지 -->
+  <section style="background: var(--color-cream);">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="eyebrow">Adoption Models</div>
+        <h2>3 가지 도입 모델</h2>
+        <p class="lead">학교 환경·예산·일정에 맞춰 선택 가능합니다.</p>
+      </div>
+
+      <div class="models-grid">
+        <div class="model-card" data-reveal>
+          <div class="model-tag">M1 · 통합 도입</div>
+          <h3>시스템 + 교재 + 자문</h3>
+          <ul>
+            <li>LS300 모듈러 시스템 1대</li>
+            <li>학생용 교재 20부</li>
+            <li>교사용 지도안 1부</li>
+            <li>운영방안 + 연간계획표</li>
+            <li>교사 사전 교육 (반일)</li>
+            <li>첫해 분기별 자문 (4회)</li>
+          </ul>
+          <div class="price-tag">🔒 별도 견적 (보조금·예산 형태에 따라)</div>
+        </div>
+
+        <div class="model-card" data-reveal>
+          <div class="model-tag">M2 · 교재 단독</div>
+          <h3>가벼운 진입로</h3>
+          <ul>
+            <li>4종 교재 패키지</li>
+            <li>이미 시스템 운영 중인 학교</li>
+            <li>도입 검토 단계 학교</li>
+            <li>추후 시스템 도입 시 차감</li>
+          </ul>
+          <div class="price-tag">🟡 ₩150,000 ~ ₩200,000 (가안)</div>
+        </div>
+
+        <div class="model-card" data-reveal>
+          <div class="model-tag">M3 · 시·도 교육청</div>
+          <h3>대규모 보급</h3>
+          <ul>
+            <li>교육청 협력 — 시범 학교 5~10곳</li>
+            <li>보조금 + 학교 예산 결합</li>
+            <li>시스템 + 교재 + 연수 + 자문</li>
+            <li>1년 시범 후 확대 보급 추진</li>
+          </ul>
+          <div class="price-tag">🔒 별도 협의 — 학교당 견적</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- K고등학교 사례 -->
+  <section>
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="eyebrow">Case Study</div>
+        <h2>인천 K고등학교 — 적용 사례</h2>
+        <p class="lead">
+          ECO-VASS 학교 솔루션의 첫 적용 사례. LS300 모듈러 + 동아리 운영 +
+          학생용 교재 + 교사 지도 + 연간 계획표가 통합 운영되고 있습니다.
+        </p>
+      </div>
+
+      <div class="card" data-reveal style="background: var(--color-sand); padding: 3rem;">
+        <p style="font-style: italic; color: var(--color-ink-soft); margin-bottom: 1rem;">
+          \"학생들이 매주 수질을 측정하고 Google Sheets에 기록하면서, 데이터를 보는 눈이 길러집니다.
+          물고기를 키우는 일이 단순한 사육이 아니라 — 살아 있는 생태계를 관리하는 일이라는 걸
+          체험으로 깨닫고 있습니다.\"
+        </p>
+        <p style="color: var(--color-ink-faint); font-size: 0.9rem; margin-bottom: 0;">— 인천 K고등학교 동아리 지도교사 (사례 인터뷰 발췌)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 도입 절차 -->
+  <section style="background: var(--color-deep); color: var(--color-cream);">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="eyebrow" style="color: var(--color-honey);">5-Step Process</div>
+        <h2 style="color: var(--color-cream);">학교 도입 절차</h2>
+      </div>
+
+      <div class="process">
+        <div class="step" data-reveal>
+          <div class="step-num">1</div>
+          <h4 style="color: var(--color-cream);">상담 신청</h4>
+          <p style="color: rgba(247,242,231,0.7);">카카오 채널 또는 이메일</p>
+        </div>
+        <div class="step" data-reveal>
+          <div class="step-num">2</div>
+          <h4 style="color: var(--color-cream);">사전 인터뷰</h4>
+          <p style="color: rgba(247,242,231,0.7);">환경·예산·일정 협의</p>
+        </div>
+        <div class="step" data-reveal>
+          <div class="step-num">3</div>
+          <h4 style="color: var(--color-cream);">맞춤 견적</h4>
+          <p style="color: rgba(247,242,231,0.7);">M1·M2·M3 중 선택</p>
+        </div>
+        <div class="step" data-reveal>
+          <div class="step-num">4</div>
+          <h4 style="color: var(--color-cream);">계약·설치</h4>
+          <p style="color: rgba(247,242,231,0.7);">시스템 설치 + 교재 납품</p>
+        </div>
+        <div class="step" data-reveal>
+          <div class="step-num">5</div>
+          <h4 style="color: var(--color-cream);">운영 시작</h4>
+          <p style="color: rgba(247,242,231,0.7);">동아리 발족 + 1년 자문</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 4rem;" data-reveal>
+        <a href="https://pf.kakao.com/_rXDxdX" class="btn" style="background: var(--color-honey); color: var(--color-deep);" target="_blank" rel="noopener">
+          우리 학교 도입 상담 →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="color: var(--color-cream); margin-bottom: 1rem;">
+            <svg class="brand-mark" viewBox="0 0 32 32" fill="none">
+              <path d="M16 4 C 8 12, 8 20, 16 28 C 24 20, 24 12, 16 4 Z" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="16" cy="18" r="2" fill="currentColor"/>
+            </svg>
+            <span>ECO-VASS</span>
+          </div>
+        </div>
+        <div>
+          <h4>플랫폼</h4>
+          <a href="modular.html">모듈러</a><a href="products.html">제품</a>
+          <a href="education.html">교육</a><a href="healing.html">치유·회복</a>
+        </div>
+        <div>
+          <h4>참여</h4>
+          <a href="schools.html">학교 도입</a><a href="partnership.html">함께하기</a>
+          <a href="business.html">사업협력</a><a href="shop.html">쇼핑</a>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <a href="tel:01053400662">📞 010-5340-0662</a>
+          <a href="https://pf.kakao.com/_rXDxdX" target="_blank" rel="noopener">💬 카카오 채널</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 ECO-VASS · Aquaponics Korea Co., Ltd.</div>
+        <div>본 사이트의 모든 콘텐츠는 저작권 보호를 받습니다</div>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
