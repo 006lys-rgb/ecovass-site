@@ -1,69 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+# ECO-VASS | 아쿠아포닉스코리아 주식회사
+# https://ecovass.com/robots.txt
 
-  <!-- 메인 홈페이지 -->
-  <url>
-    <loc>https://ecovass.com/</loc>
-    <lastmod>2025-03-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+# 모든 검색엔진 크롤러 허용
+User-agent: *
+Allow: /
 
-  <!-- 섹션 앵커 페이지들 -->
-  <url>
-    <loc>https://ecovass.com/#modular</loc>
-    <lastmod>2025-03-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
+# 사이트맵 위치 (구글·네이버에 알림)
+Sitemap: https://ecovass.com/sitemap.xml
 
-  <url>
-    <loc>https://ecovass.com/#healing</loc>
-    <lastmod>2025-03-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://ecovass.com/#organic</loc>
-    <lastmod>2025-03-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://ecovass.com/#partners</loc>
-    <lastmod>2025-03-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://ecovass.com/#education</loc>
-    <lastmod>2025-03-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://ecovass.com/#community</loc>
-    <lastmod>2025-03-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://ecovass.com/#shop</loc>
-    <lastmod>2025-03-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://ecovass.com/#contact</loc>
-    <lastmod>2025-03-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-</urlset>
+# 불필요한 경로 차단 (현재는 단일 파일이므로 기본 설정)
+Disallow: /admin/
+Disallow: /private/

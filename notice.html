@@ -1,338 +1,203 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NOTICE — 공지사항·자료실 | ECO-VASS</title>
-  <meta name="description" content="ECO-VASS 공지사항 및 자료실 — 카탈로그·치유 가이드·일반인 핸드북 무료 다운로드." />
-  <link rel="canonical" href="https://ecovass.com/notice.html" />
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <style>
-    .notice-hero { padding: 12rem 0 4rem; background: var(--color-cream); }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOTICE — 공지사항·자료실 | ECO-VASS</title>
+<meta name="description" content="ECO-VASS 공지사항 및 자료실 — 카탈로그·치유 가이드·일반인 핸드북 무료 다운로드.">
+<meta name="author" content="아쿠아포닉스코리아 주식회사">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root { --deep:#0a1628; --ocean:#0e2a4a; --teal:#0b7a6e; --aqua:#1ab5a3; --foam:#6ee8d8; --gold:#d4a853; --leaf:#4a8c3f; --sage:#7ab87a; --text:#e4f0ee; --muted:#7ba8a0; --white:#ffffff; --border:rgba(26,181,163,0.2); }
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--deep);color:var(--text);overflow-x:hidden;}
+.max-w{max-width:1280px;margin:0 auto;padding:0 32px;}
 
-    .tabs-row {
-      display: flex;
-      gap: 1rem;
-      border-bottom: 2px solid var(--color-line);
-      margin-bottom: 3rem;
-    }
-    .tab {
-      padding: 1rem 1.5rem;
-      background: transparent;
-      color: var(--color-ink-faint);
-      border: none;
-      border-bottom: 2px solid transparent;
-      margin-bottom: -2px;
-      cursor: pointer;
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      transition: all var(--d-fast) var(--ease-out);
-    }
-    .tab.active {
-      color: var(--color-deep);
-      border-bottom-color: var(--color-honey);
-    }
-    .tab:hover:not(.active) { color: var(--color-water); }
+.water-bg{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+.water-bg::before{content:'';position:absolute;width:200%;height:200%;top:-50%;left:-50%;background:radial-gradient(ellipse 80% 50% at 20% 30%,rgba(11,122,110,0.15) 0%,transparent 60%),radial-gradient(ellipse 60% 40% at 80% 70%,rgba(26,181,163,0.10) 0%,transparent 55%);animation:waterDrift 20s ease-in-out infinite alternate;}
+@keyframes waterDrift{0%{transform:translate(0,0) rotate(0deg);}100%{transform:translate(3%,2%) rotate(1deg);}}
 
-    .tab-content { display: none; }
-    .tab-content.active { display: block; }
+nav{position:fixed;top:0;width:100%;z-index:100;padding:16px 48px;display:flex;align-items:center;justify-content:space-between;background:rgba(10,22,40,0.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;color:var(--aqua);letter-spacing:2px;text-decoration:none;}
+.nav-logo span{color:var(--foam);}
+.nav-links{list-style:none;display:flex;gap:28px;align-items:center;flex-wrap:wrap;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.85rem;transition:color 0.2s;}
+.nav-links a:hover, .nav-links a.active{color:var(--foam);}
+.nav-cta{background:linear-gradient(135deg,var(--teal),var(--aqua));color:var(--white) !important;padding:8px 20px;border-radius:24px;font-weight:700 !important;}
 
-    /* 공지사항 리스트 */
-    .notice-list { list-style: none; }
-    .notice-item {
-      padding: 1.5rem 0;
-      border-bottom: 1px solid var(--color-line);
-      display: grid;
-      grid-template-columns: 100px 100px 1fr 100px;
-      gap: 1.5rem;
-      align-items: center;
-      transition: background var(--d-fast) var(--ease-out);
-    }
-    .notice-item:hover { background: var(--color-cream); }
-    @media (max-width: 768px) {
-      .notice-item { grid-template-columns: 80px 1fr; gap: 0.5rem; }
-      .notice-item .date { display: none; }
-    }
-    .notice-tag {
-      display: inline-block;
-      padding: 0.2rem 0.7rem;
-      border-radius: var(--radius-sm);
-      font-size: 0.75rem;
-      font-weight: 500;
-      text-align: center;
-    }
-    .notice-tag.new { background: var(--color-honey); color: var(--color-cream); }
-    .notice-tag.update { background: var(--color-water); color: var(--color-cream); }
-    .notice-tag.policy { background: var(--color-clay); color: var(--color-cream); }
-    .notice-tag.event { background: var(--color-leaf); color: var(--color-cream); }
-    .notice-title {
-      font-family: var(--font-display);
-      color: var(--color-deep);
-      font-size: 1rem;
-    }
-    .notice-date {
-      font-family: var(--font-en);
-      font-style: italic;
-      color: var(--color-ink-faint);
-      font-size: 0.9rem;
-      text-align: right;
-    }
+.hero{padding:140px 40px 60px;text-align:center;position:relative;z-index:1;}
+.eyebrow{display:inline-block;font-size:0.76rem;font-weight:700;letter-spacing:4px;color:var(--aqua);text-transform:uppercase;margin-bottom:24px;padding:6px 20px;border:1px solid rgba(26,181,163,0.4);border-radius:20px;background:rgba(26,181,163,0.08);}
+h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:900;color:var(--white);line-height:1.1;margin-bottom:16px;}
+h1 .accent{color:var(--aqua);}
+.hero p{font-family:'Noto Serif KR',serif;font-size:1.1rem;color:var(--foam);max-width:720px;margin:0 auto;}
 
-    /* 자료실 그리드 */
-    .docs-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-    .doc-card {
-      padding: 2rem;
-      background: var(--color-paper);
-      border: 1px solid var(--color-line);
-      border-radius: var(--radius-lg);
-      transition: all var(--d-mid) var(--ease-out);
-    }
-    .doc-card:hover {
-      transform: translateY(-2px);
-      border-color: var(--color-water);
-    }
-    .doc-icon {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      display: block;
-    }
-    .doc-card h3 {
-      font-size: 1.1rem;
-      color: var(--color-deep);
-      margin-bottom: 0.5rem;
-    }
-    .doc-card .doc-meta {
-      font-size: 0.85rem;
-      color: var(--color-ink-faint);
-      margin-bottom: 1rem;
-    }
-    .doc-card p {
-      font-size: 0.9rem;
-      color: var(--color-ink-soft);
-      margin-bottom: 1.5rem;
-    }
-    .doc-status {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.85rem;
-    }
-    .doc-status.public { color: var(--color-leaf); }
-    .doc-status.member { color: var(--color-honey); }
-    .doc-status.locked { color: var(--color-clay); }
+section{padding:60px 0;position:relative;z-index:1;}
 
-    .empty-state {
-      text-align: center;
-      padding: 4rem 2rem;
-      color: var(--color-ink-faint);
-      background: var(--color-cream);
-      border-radius: var(--radius-lg);
-      font-style: italic;
-    }
-  </style>
+.tabs{display:flex;gap:0;border-bottom:2px solid var(--border);margin-bottom:36px;}
+.tab{padding:14px 24px;background:transparent;color:var(--muted);border:none;border-bottom:2px solid transparent;margin-bottom:-2px;cursor:pointer;font-family:'Noto Serif KR',serif;font-size:1.05rem;font-weight:700;transition:all 0.3s;}
+.tab.active{color:var(--aqua);border-bottom-color:var(--aqua);}
+.tab:hover:not(.active){color:var(--foam);}
+
+.tab-content{display:none;}
+.tab-content.active{display:block;}
+
+/* 공지사항 */
+.notice-list{list-style:none;}
+.notice-item{padding:18px 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:90px 80px 1fr 100px;gap:18px;align-items:center;transition:background 0.3s;}
+.notice-item:hover{background:rgba(26,181,163,0.04);}
+@media (max-width:768px){.notice-item{grid-template-columns:80px 1fr;gap:8px;}.notice-item .date{display:none;}}
+.tag{display:inline-block;padding:3px 10px;border-radius:14px;font-size:0.7rem;font-weight:700;text-align:center;}
+.tag.new{background:rgba(212,168,83,0.18);color:var(--gold);border:1px solid rgba(212,168,83,0.3);}
+.tag.update{background:rgba(26,181,163,0.15);color:var(--aqua);border:1px solid rgba(26,181,163,0.3);}
+.tag.policy{background:rgba(122,184,122,0.15);color:var(--sage);border:1px solid rgba(122,184,122,0.3);}
+.tag.event{background:rgba(110,232,216,0.15);color:var(--foam);border:1px solid rgba(110,232,216,0.3);}
+.year{font-family:'Playfair Display',serif;font-style:italic;color:var(--gold);font-size:0.85rem;letter-spacing:1px;}
+.notice-title{font-family:'Noto Serif KR',serif;color:var(--text);font-size:0.98rem;}
+.date{font-family:'Playfair Display',serif;font-style:italic;color:var(--muted);font-size:0.85rem;text-align:right;}
+
+/* 자료실 */
+.docs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;}
+.doc{padding:24px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:16px;transition:all 0.3s;}
+.doc:hover{border-color:var(--aqua);transform:translateY(-2px);}
+.doc-icon{font-size:2rem;margin-bottom:14px;display:block;}
+.doc h3{font-family:'Noto Serif KR',serif;color:var(--foam);font-size:1.05rem;margin-bottom:6px;font-weight:700;}
+.doc-meta{font-size:0.8rem;color:var(--muted);margin-bottom:12px;}
+.doc p{font-size:0.88rem;color:var(--text);line-height:1.6;margin-bottom:14px;}
+.doc-status{font-size:0.82rem;font-weight:700;}
+.doc-status.public{color:var(--sage);}
+.doc-status.member{color:var(--gold);}
+.doc-status.locked{color:var(--muted);}
+
+.cta-block{text-align:center;margin-top:32px;padding:30px;background:linear-gradient(135deg,rgba(11,122,110,0.10),rgba(26,181,163,0.05));border:1px solid var(--border);border-radius:16px;}
+.btn-primary{display:inline-block;background:linear-gradient(135deg,var(--teal),var(--aqua));color:var(--white);padding:14px 32px;border-radius:50px;font-weight:700;text-decoration:none;box-shadow:0 8px 24px rgba(26,181,163,0.25);}
+
+footer{background:rgba(10,22,40,0.6);border-top:1px solid var(--border);padding:60px 48px 24px;position:relative;z-index:1;margin-top:60px;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;}
+@media (max-width:768px){.footer-grid{grid-template-columns:1fr 1fr;}.nav-links{gap:14px;font-size:0.78rem;}}
+.footer-brand-name{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;color:var(--aqua);margin-bottom:12px;}
+.footer-brand-desc{color:var(--muted);font-size:0.85rem;line-height:1.7;}
+.footer-col-title{font-family:'Noto Serif KR',serif;color:var(--foam);font-size:0.9rem;margin-bottom:14px;font-weight:700;}
+.footer-links{list-style:none;}
+.footer-links li{margin-bottom:8px;}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:0.85rem;}
+.footer-links a:hover{color:var(--foam);}
+.footer-bottom{margin-top:40px;padding-top:24px;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:0.8rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-row">
-      <a href="/" class="brand">
-        <svg class="brand-mark" viewBox="0 0 32 32" fill="none">
-          <path d="M16 4 C 8 12, 8 20, 16 28 C 24 20, 24 12, 16 4 Z" stroke="currentColor" stroke-width="1.5"/>
-          <circle cx="16" cy="18" r="2" fill="currentColor"/>
-        </svg>
-        <span>ECO-VASS</span>
-      </a>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="modular.html">모듈러</a></li>
-          <li><a href="products.html">제품</a></li>
-          <li><a href="education.html">교육</a></li>
-          <li><a href="healing.html">치유·회복</a></li>
-          <li><a href="dome.html">Dome Farm</a></li>
-          <li><a href="schools.html">학교 도입</a></li>
-          <li><a href="partnership.html">함께하기</a></li>
-          <li><a href="business.html">사업협력</a></li>
-          <li><a href="notice.html" class="active">NOTICE</a></li>
-        </ul>
-      </nav>
-      <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+<div class="water-bg"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">ECO-<span>VASS</span></a>
+  <ul class="nav-links">
+    <li><a href="education.html">교육</a></li>
+    <li><a href="healing.html">치유·회복</a></li>
+    <li><a href="modular.html">모듈러</a></li>
+    <li><a href="dome.html" style="color:#90CAF9;">Dome Farm</a></li>
+    <li><a href="products.html">제품소개</a></li>
+    <li><a href="schools.html">학교 도입</a></li>
+    <li><a href="shop.html">쇼핑</a></li>
+    <li><a href="partnership.html">함께하기</a></li>
+    <li><a href="business.html">사업협력</a></li>
+    <li><a href="notice.html" class="active" style="color:var(--aqua);font-weight:700;">NOTICE</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="max-w">
+    <span class="eyebrow">NOTICE</span>
+    <h1>공지사항 · <span class="accent">자료실</span></h1>
+    <p>ECO-VASS의 최신 공지·자료를 모은 자리입니다. 자료실은 카탈로그·치유 가이드·일반인 핸드북을 무료로 제공합니다.</p>
+  </div>
+</section>
+
+<section>
+  <div class="max-w">
+    <div class="tabs">
+      <button class="tab active" data-tab="notice">📢 공지사항</button>
+      <button class="tab" data-tab="docs">📁 자료실</button>
     </div>
-  </header>
 
-  <section class="notice-hero">
-    <div class="container">
-      <div data-reveal>
-        <div class="eyebrow">NOTICE</div>
-        <h1 class="serif" style="margin: 1.5rem 0;">공지사항 · 자료실</h1>
-        <p class="lead" style="max-width: 720px;">
-          ECO-VASS의 최신 공지·자료를 모은 자리입니다. 자료실은 카탈로그·치유 가이드·일반인 핸드북 등을
-          무료로 제공합니다.
-        </p>
-      </div>
+    <div class="tab-content active" id="tab-notice">
+      <ul class="notice-list">
+        <li class="notice-item"><span class="tag new">NEW</span><span class="year">— 2026.05</span><span class="notice-title">ECO-VASS 새 홈페이지 개편 안내 — 정정 지시서 12개 PART 반영</span><span class="date">2026.05.06</span></li>
+        <li class="notice-item"><span class="tag update">UPDATE</span><span class="year">— 2026.05</span><span class="notice-title">제품 라인업 — MS-300 표준 대표 모델 추가 안내</span><span class="date">2026.05.06</span></li>
+        <li class="notice-item"><span class="tag update">UPDATE</span><span class="year">— 2026.05</span><span class="notice-title">쇼핑 섹션 4분류 재편 — DIY 부품 27품목 가격표 공개</span><span class="date">2026.05.06</span></li>
+        <li class="notice-item"><span class="tag policy">POLICY</span><span class="year">— 2026.05</span><span class="notice-title">교육 강좌 가격 정책 안내 — 입문 무료 + 8장 단계별 + 패키지 할인</span><span class="date">2026.05.06</span></li>
+        <li class="notice-item"><span class="tag event">EVENT</span><span class="year">— 2026.04</span><span class="notice-title">치유농업 프로그램 시범 운영 안내 — 2026년 하반기 시작 예정</span><span class="date">2026.04.30</span></li>
+        <li class="notice-item"><span class="tag new">NEW</span><span class="year">— 2026.04</span><span class="notice-title">학교 동아리 솔루션 출시 — 4종 통합 패키지</span><span class="date">2026.04.26</span></li>
+      </ul>
     </div>
-  </section>
 
-  <section>
-    <div class="container">
-      <div class="tabs-row" data-reveal>
-        <button class="tab active" data-tab="notice">📢 공지사항</button>
-        <button class="tab" data-tab="docs">📁 자료실</button>
+    <div class="tab-content" id="tab-docs">
+      <div class="docs-grid">
+        <div class="doc"><span class="doc-icon">📘</span><h3>제품 마스터 카탈로그 v2026</h3><div class="doc-meta">35p · 10종 라인업 · 부품 가격표</div><p>독립형 6종 + DIY 4종 전체 라인업 사양·구성·운영 가이드.</p><span class="doc-status public">🟢 무료 다운로드 (이메일 입력)</span></div>
+        <div class="doc"><span class="doc-icon">💚</span><h3>치유농업 프로그램 가이드 v2026</h3><div class="doc-meta">41p · 5감 메커니즘 · 4대 트랙</div><p>도시 일상 속 작은 치유 — 한국형 도시 치유농업의 통합 가이드.</p><span class="doc-status public">🟢 무료 다운로드 (이메일 입력)</span></div>
+        <div class="doc"><span class="doc-icon">🌱</span><h3>일반인 핸드북 v2026</h3><div class="doc-meta">44p · 입문자용 요약</div><p>아쿠아포닉스를 처음 만나시는 분을 위한 친절한 안내서.</p><span class="doc-status public">🟢 무료 다운로드</span></div>
+        <div class="doc"><span class="doc-icon">🏫</span><h3>학교 도입 안내서</h3><div class="doc-meta">학생용·교사용·운영방안·연간계획 발췌</div><p>학교 동아리 통합 솔루션 안내. 인천 K고등학교 사례 포함.</p><span class="doc-status member">🟡 학교 신청 시 무료 제공</span></div>
+        <div class="doc"><span class="doc-icon">📕</span><h3>8장 강좌 교재</h3><div class="doc-meta">강좌 결제 후 자동 제공</div><p>물잡이부터 보급 전략까지 — 8장 통합 교재 PDF.</p><span class="doc-status locked">🔒 강좌 수강생 전용</span></div>
+        <div class="doc"><span class="doc-icon">🛠️</span><h3>DIY 조립 매뉴얼 v1</h3><div class="doc-meta">23p · DIY 키트 구매자용</div><p>S-11·S-12·M-21·M-22 직접 조립을 위한 단계별 매뉴얼.</p><span class="doc-status locked">🔒 DIY 키트 구매자 전용</span></div>
       </div>
-
-      <!-- 공지사항 탭 -->
-      <div class="tab-content active" id="tab-notice">
-        <ul class="notice-list">
-          <li class="notice-item" data-reveal>
-            <span class="notice-tag new">NEW</span>
-            <span class="date" style="font-family: var(--font-en); font-style: italic; color: var(--color-honey); font-size: 0.85rem;">— 2026.05</span>
-            <a href="#" class="notice-title">ECO-VASS 새 홈페이지 개편 안내 — 12개 PART 정정 지시서 반영</a>
-            <span class="notice-date">2026.05.06</span>
-          </li>
-          <li class="notice-item" data-reveal>
-            <span class="notice-tag update">UPDATE</span>
-            <span class="date" style="font-family: var(--font-en); font-style: italic; color: var(--color-honey); font-size: 0.85rem;">— 2026.05</span>
-            <a href="#" class="notice-title">제품 라인업 — MS-300 표준 대표 모델 추가 안내</a>
-            <span class="notice-date">2026.05.06</span>
-          </li>
-          <li class="notice-item" data-reveal>
-            <span class="notice-tag update">UPDATE</span>
-            <span class="date" style="font-family: var(--font-en); font-style: italic; color: var(--color-honey); font-size: 0.85rem;">— 2026.05</span>
-            <a href="#" class="notice-title">쇼핑 섹션 4분류 재편 — DIY 부품 27품목 가격표 공개</a>
-            <span class="notice-date">2026.05.06</span>
-          </li>
-          <li class="notice-item" data-reveal>
-            <span class="notice-tag policy">POLICY</span>
-            <span class="date" style="font-family: var(--font-en); font-style: italic; color: var(--color-honey); font-size: 0.85rem;">— 2026.05</span>
-            <a href="#" class="notice-title">교육 강좌 가격 정책 안내 — 입문 무료 + 8장 단계별 + 패키지 할인</a>
-            <span class="notice-date">2026.05.06</span>
-          </li>
-          <li class="notice-item" data-reveal>
-            <span class="notice-tag event">EVENT</span>
-            <span class="date" style="font-family: var(--font-en); font-style: italic; color: var(--color-honey); font-size: 0.85rem;">— 2026.04</span>
-            <a href="#" class="notice-title">치유농업 프로그램 시범 운영 안내 — 2026년 하반기 시작 예정</a>
-            <span class="notice-date">2026.04.30</span>
-          </li>
-          <li class="notice-item" data-reveal>
-            <span class="notice-tag new">NEW</span>
-            <span class="date" style="font-family: var(--font-en); font-style: italic; color: var(--color-honey); font-size: 0.85rem;">— 2026.04</span>
-            <a href="#" class="notice-title">학교 동아리 솔루션 출시 — 4종 통합 패키지</a>
-            <span class="notice-date">2026.04.26</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- 자료실 탭 -->
-      <div class="tab-content" id="tab-docs">
-        <div class="docs-grid">
-          <div class="doc-card" data-reveal>
-            <span class="doc-icon">📘</span>
-            <h3>제품 마스터 카탈로그 v2026</h3>
-            <div class="doc-meta">35p · 10종 라인업 · 부품 가격표</div>
-            <p>독립형 6종 + DIY 4종 전체 라인업 사양·구성·운영 가이드.</p>
-            <span class="doc-status public">🟢 무료 다운로드 (이메일 입력)</span>
-          </div>
-
-          <div class="doc-card" data-reveal>
-            <span class="doc-icon">💚</span>
-            <h3>치유농업 프로그램 가이드 v2026</h3>
-            <div class="doc-meta">41p · 5감 메커니즘 · 4대 트랙</div>
-            <p>도시 일상 속 작은 치유 — 한국형 도시 치유농업의 통합 가이드.</p>
-            <span class="doc-status public">🟢 무료 다운로드 (이메일 입력)</span>
-          </div>
-
-          <div class="doc-card" data-reveal>
-            <span class="doc-icon">🌱</span>
-            <h3>일반인 핸드북 v2026</h3>
-            <div class="doc-meta">44p · 입문자용 요약</div>
-            <p>아쿠아포닉스를 처음 만나시는 분을 위한 친절한 안내서.</p>
-            <span class="doc-status public">🟢 무료 다운로드</span>
-          </div>
-
-          <div class="doc-card" data-reveal>
-            <span class="doc-icon">🏫</span>
-            <h3>학교 도입 안내서</h3>
-            <div class="doc-meta">학생용·교사용·운영방안·연간계획 발췌</div>
-            <p>학교 동아리 통합 솔루션 안내. 인천 K고등학교 사례 포함.</p>
-            <span class="doc-status member">🟡 학교 신청 시 무료 제공</span>
-          </div>
-
-          <div class="doc-card" data-reveal>
-            <span class="doc-icon">📕</span>
-            <h3>8장 강좌 교재 (전체)</h3>
-            <div class="doc-meta">강좌 결제 후 자동 제공</div>
-            <p>물잡이부터 보급 전략까지 — 8장 통합 교재 PDF.</p>
-            <span class="doc-status locked">🔒 강좌 수강생 전용</span>
-          </div>
-
-          <div class="doc-card" data-reveal>
-            <span class="doc-icon">🛠️</span>
-            <h3>DIY 조립 매뉴얼 v1</h3>
-            <div class="doc-meta">23p · DIY 키트 구매자용</div>
-            <p>S-11·S-12·M-21·M-22 직접 조립을 위한 단계별 매뉴얼.</p>
-            <span class="doc-status locked">🔒 DIY 키트 구매자 전용</span>
-          </div>
-        </div>
-
-        <div style="margin-top: 3rem; text-align: center;" data-reveal>
-          <p style="color: var(--color-ink-soft); font-size: 0.95rem;">
-            자료 다운로드 또는 신청은 카카오 채널로 문의해 주세요 →
-          </p>
-          <div style="margin-top: 1rem;">
-            <a href="https://pf.kakao.com/_rXDxdX" class="btn btn-primary" target="_blank" rel="noopener">자료 신청 (카카오)</a>
-          </div>
-        </div>
+      <div class="cta-block">
+        <p style="color:var(--text);margin-bottom:16px;">자료 다운로드 또는 신청은 카카오 채널로 문의해 주세요</p>
+        <a href="https://pf.kakao.com/_rXDxdX" class="btn-primary" target="_blank" rel="noopener">자료 신청 (카카오) →</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="brand" style="color: var(--color-cream); margin-bottom: 1rem;">
-            <svg class="brand-mark" viewBox="0 0 32 32" fill="none">
-              <path d="M16 4 C 8 12, 8 20, 16 28 C 24 20, 24 12, 16 4 Z" stroke="currentColor" stroke-width="1.5"/>
-              <circle cx="16" cy="18" r="2" fill="currentColor"/>
-            </svg>
-            <span>ECO-VASS</span>
-          </div>
-        </div>
-        <div>
-          <h4>플랫폼</h4>
-          <a href="modular.html">모듈러</a><a href="products.html">제품</a>
-          <a href="education.html">교육</a><a href="healing.html">치유·회복</a>
-        </div>
-        <div>
-          <h4>참여</h4>
-          <a href="schools.html">학교 도입</a><a href="partnership.html">함께하기</a>
-          <a href="business.html">사업협력</a><a href="notice.html">NOTICE</a>
-        </div>
-        <div>
-          <h4>Contact</h4>
-          <a href="tel:01053400662">📞 010-5340-0662</a>
-          <a href="https://pf.kakao.com/_rXDxdX" target="_blank" rel="noopener">💬 카카오 채널</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div>© 2026 ECO-VASS · Aquaponics Korea Co., Ltd.</div>
-        <div>본 사이트의 모든 콘텐츠는 저작권 보호를 받습니다</div>
-      </div>
+<footer>
+  <div class="footer-grid max-w">
+    <div>
+      <div class="footer-brand-name">ECO-VASS</div>
+      <div class="footer-brand-desc"><strong style="color:var(--foam);font-size:0.82rem;letter-spacing:0.5px;">Ecological Vertical Aquaponics Smart Solution</strong><br>습지생태이론 기반 생태형 아쿠아포닉스 도시농업 플랫폼.</div>
     </div>
-  </footer>
-  <script src="assets/js/main.js"></script>
-  <script>
-    // 탭 전환
-    document.querySelectorAll('.tab').forEach(btn => {
-      btn.addEventListener('click', function() {
-        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-        this.classList.add('active');
-        document.getElementById('tab-' + this.getAttribute('data-tab')).classList.add('active');
-      });
-    });
-  </script>
+    <div>
+      <div class="footer-col-title">플랫폼</div>
+      <ul class="footer-links">
+        <li><a href="products.html">제품 소개</a></li>
+        <li><a href="modular.html">모듈러</a></li>
+        <li><a href="healing.html">치유·회복</a></li>
+        <li><a href="education.html">교육</a></li>
+        <li><a href="schools.html">학교 도입</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">참여</div>
+      <ul class="footer-links">
+        <li><a href="partnership.html">함께하기</a></li>
+        <li><a href="business.html">사업협력</a></li>
+        <li><a href="shop.html">쇼핑</a></li>
+        <li><a href="notice.html">NOTICE</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <ul class="footer-links">
+        <li><a href="https://aquaponicskorea.co.kr" target="_blank" rel="noopener">아쿠아포닉스코리아 ↗</a></li>
+        <li><a href="https://blog.naver.com/klys1121" target="_blank" rel="noopener">네이버 블로그 ↗</a></li>
+        <li><a href="tel:01053400662">📞 010-5340-0662</a></li>
+        <li><a href="https://pf.kakao.com/_rXDxdX" target="_blank" rel="noopener">💬 카카오 채널</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom max-w">
+    <span>© 2026 ECO-VASS · Aquaponics Korea Co., Ltd. All rights reserved.</span>
+    <span>본 사이트의 모든 콘텐츠는 저작권 보호를 받습니다 · 개인정보처리방침 · 이용약관</span>
+  </div>
+</footer>
+
+<script src="assets/js/protect.js"></script>
+<script>
+document.querySelectorAll('.tab').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    this.classList.add('active');
+    document.getElementById('tab-' + this.getAttribute('data-tab')).classList.add('active');
+  });
+});
+</script>
 </body>
 </html>
