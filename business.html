@@ -1,24 +1,633 @@
-/* ECO-VASS 저작권 보호 5단계 */
-(function(){
-  'use strict';
-  document.addEventListener('contextmenu', function(e){
-    if(e.target.tagName!=='INPUT' && e.target.tagName!=='TEXTAREA'){e.preventDefault();return false;}
-  });
-  document.addEventListener('selectstart', function(e){
-    if(e.target.tagName!=='INPUT' && e.target.tagName!=='TEXTAREA' && !e.target.classList.contains('selectable')){e.preventDefault();return false;}
-  });
-  document.addEventListener('dragstart', function(e){if(e.target.tagName==='IMG'){e.preventDefault();return false;}});
-  document.addEventListener('keydown', function(e){
-    if((e.ctrlKey||e.metaKey)&&['c','s','u','p','a'].includes(e.key.toLowerCase())){
-      if(e.target.tagName!=='INPUT'&&e.target.tagName!=='TEXTAREA'){e.preventDefault();return false;}
-    }
-    if(e.key==='F12'){e.preventDefault();return false;}
-    if((e.ctrlKey||e.metaKey)&&e.shiftKey&&['i','j','c'].includes(e.key.toLowerCase())){e.preventDefault();return false;}
-  });
-  document.querySelectorAll('img').forEach(function(img){
-    img.addEventListener('touchstart',function(e){e.preventDefault();},{passive:false});
-    img.style.webkitTouchCallout='none';img.style.userSelect='none';
-  });
-  console.log('%cECO-VASS','font-family:Playfair Display,serif;font-size:28px;color:#1ab5a3;');
-  console.log('%c자연의 순환, 도시의 일상으로\n%c© Aquaponics Korea Co., Ltd. · ecovass.com','color:#6ee8d8;font-style:italic;font-size:14px;','color:#7ba8a0;font-size:12px;');
-})();
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>사업 협력 | ECO-VASS Business Partnership</title>
+<meta name="description" content="ECO-VASS 사업 협력 — 제조·부품·소모품·시공·ICT 기술·지역 보급·전문 용역 등 전문 사업자를 위한 공식 협력 안내. 제안서 접수부터 정식 협력까지 5단계 프로세스.">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --deep:#0a1628;--ocean:#0e2a4a;--teal:#0b7a6e;--aqua:#1ab5a3;
+  --foam:#6ee8d8;--gold:#d4a853;--leaf:#4a8c3f;--sage:#7ab87a;
+  --text:#e4f0ee;--muted:#7ba8a0;--white:#ffffff;
+  --border:rgba(26,181,163,0.2);--blue:#1565C0;--bluel:#90CAF9;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--deep);color:var(--text);overflow-x:hidden;}
+
+nav{position:fixed;top:0;width:100%;z-index:100;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;background:rgba(10,22,40,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+.logo{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;color:var(--aqua);letter-spacing:2px;text-decoration:none;}
+.logo span{color:var(--foam);}
+.nl{display:flex;gap:20px;align-items:center;}
+.nl a{color:var(--muted);text-decoration:none;font-size:0.82rem;transition:color 0.2s;}
+.nl a:hover{color:var(--foam);}
+.ncta{background:linear-gradient(135deg,var(--teal),var(--aqua));color:var(--white)!important;padding:7px 18px;border-radius:20px;font-weight:700!important;}
+
+/* HERO - 전문적·명확한 톤 */
+.hero{min-height:64vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 32px 80px;background:linear-gradient(180deg,rgba(11,122,110,0.15) 0%,rgba(21,101,192,0.06) 60%,transparent 100%);position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(26,181,163,0.08),transparent 70%);border-radius:50%;}
+.hero-inner{position:relative;z-index:1;}
+.hero-tag{display:inline-block;font-size:0.72rem;font-weight:700;letter-spacing:4px;color:var(--aqua);text-transform:uppercase;padding:6px 20px;border:1px solid rgba(26,181,163,0.4);border-radius:20px;margin-bottom:24px;background:rgba(11,122,110,0.1);}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.8rem);color:var(--white);line-height:1.15;margin-bottom:20px;font-weight:700;}
+.hero h1 span{color:var(--aqua);}
+.hero-desc{max-width:760px;margin:0 auto 36px;color:var(--muted);font-size:1rem;line-height:1.95;}
+.hero-stats{display:flex;gap:40px;justify-content:center;flex-wrap:wrap;margin-top:32px;}
+.hstat{text-align:center;}
+.hstat-num{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;color:var(--aqua);}
+.hstat-label{font-size:0.72rem;color:var(--muted);letter-spacing:1px;margin-top:4px;}
+
+/* 섹션 */
+.sec{padding:88px 32px;max-width:1100px;margin:0 auto;}
+.stag{font-size:0.70rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;margin-bottom:12px;display:block;}
+.s-a{color:var(--aqua);}
+.s-g{color:var(--sage);}
+.s-b{color:var(--bluel);}
+.s-gold{color:var(--gold);}
+.h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.7rem);color:var(--white);margin-bottom:16px;line-height:1.25;}
+.desc{color:var(--muted);font-size:0.96rem;line-height:1.9;max-width:720px;margin-bottom:48px;}
+.hr{border:none;border-top:1px solid var(--border);margin:0;}
+
+/* 6개 협력 카테고리 */
+.cat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:40px;}
+.ccard{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:all 0.3s;}
+.ccard:hover{transform:translateY(-4px);border-color:rgba(26,181,163,0.35);}
+.ccard-top{padding:28px 28px 18px;display:flex;align-items:flex-start;gap:16px;border-bottom:1px solid var(--border);}
+.ccard-num{width:44px;height:44px;background:linear-gradient(135deg,var(--teal),var(--aqua));border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:900;font-size:1.15rem;color:var(--white);flex-shrink:0;}
+.ccard-title-wrap{flex:1;}
+.ccard-name{font-family:'Noto Serif KR',serif;font-size:1.08rem;color:var(--white);font-weight:700;margin-bottom:2px;}
+.ccard-en{font-size:0.72rem;font-weight:700;letter-spacing:2px;color:var(--aqua);}
+.ccard-body{padding:22px 28px 28px;}
+.ccard-body p{font-size:0.88rem;color:var(--muted);line-height:1.85;margin-bottom:14px;}
+.ccard-items{list-style:none;margin-top:10px;}
+.ccard-items li{font-size:0.82rem;color:var(--muted);padding:4px 0;padding-left:18px;position:relative;line-height:1.7;}
+.ccard-items li::before{content:'▸';position:absolute;left:4px;color:var(--aqua);font-size:0.68rem;top:7px;}
+.ccard-items li strong{color:var(--foam);}
+
+/* 참여 조건 섹션 */
+.conditions-section{background:linear-gradient(135deg,rgba(13,71,161,0.06),rgba(11,122,110,0.04));border-top:1px solid rgba(21,101,192,0.15);border-bottom:1px solid rgba(21,101,192,0.15);padding:84px 32px;}
+.cond-inner{max-width:1100px;margin:0 auto;}
+.cond-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:40px;}
+.cond-card{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:16px;padding:28px;}
+.cond-card h3{font-family:'Noto Serif KR',serif;font-size:1rem;color:var(--bluel);font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;}
+.cond-card h3 span{font-size:1.4rem;}
+.cond-card ul{list-style:none;}
+.cond-card ul li{font-size:0.85rem;color:var(--muted);padding:6px 0;padding-left:22px;position:relative;line-height:1.8;border-bottom:1px solid rgba(255,255,255,0.04);}
+.cond-card ul li:last-child{border-bottom:none;}
+.cond-card ul li::before{content:'✓';position:absolute;left:0;top:7px;color:var(--bluel);font-weight:700;}
+.cond-card ul li strong{color:var(--foam);}
+
+/* 5단계 프로세스 */
+.process-section{background:var(--deep);padding:88px 32px;}
+.process-inner{max-width:1100px;margin:0 auto;}
+.process-flow{display:flex;align-items:stretch;margin-top:44px;gap:0;}
+.pstep{flex:1;background:rgba(255,255,255,0.03);border:1px solid var(--border);padding:28px 20px;text-align:center;transition:all 0.3s;position:relative;}
+.pstep:hover{background:rgba(26,181,163,0.06);border-color:rgba(26,181,163,0.35);}
+.pstep:first-child{border-radius:16px 0 0 16px;}
+.pstep:last-child{border-radius:0 16px 16px 0;}
+.parrow{width:24px;background:transparent;display:flex;align-items:center;justify-content:center;color:var(--aqua);font-size:1.4rem;flex-shrink:0;}
+.pnum{width:38px;height:38px;background:linear-gradient(135deg,var(--teal),var(--aqua));border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.95rem;color:var(--white);margin:0 auto 12px;}
+.pstep h4{font-family:'Noto Serif KR',serif;font-size:0.95rem;color:var(--foam);font-weight:700;margin-bottom:8px;}
+.pstep p{font-size:0.78rem;color:var(--muted);line-height:1.7;margin-bottom:8px;}
+.pstep .pdur{font-size:0.72rem;color:var(--aqua);font-weight:700;margin-top:8px;}
+
+/* 제공 & 기대 상호 */
+.mutual-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:44px;}
+.mcard{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:20px;padding:36px 32px;}
+.mcard-label{font-size:0.68rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px;}
+.mcard-offer .mcard-label{color:var(--aqua);}
+.mcard-expect .mcard-label{color:var(--gold);}
+.mcard h3{font-family:'Noto Serif KR',serif;font-size:1.15rem;color:var(--white);font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:12px;}
+.mcard h3 span{font-size:1.6rem;}
+.mcard ul{list-style:none;}
+.mcard ul li{font-size:0.88rem;color:var(--muted);padding:10px 0;padding-left:26px;position:relative;line-height:1.8;border-bottom:1px solid rgba(255,255,255,0.04);}
+.mcard ul li:last-child{border-bottom:none;}
+.mcard-offer ul li::before{content:'◆';position:absolute;left:2px;top:11px;color:var(--aqua);font-size:0.72rem;}
+.mcard-expect ul li::before{content:'◆';position:absolute;left:2px;top:11px;color:var(--gold);font-size:0.72rem;}
+.mcard ul li strong{color:var(--foam);}
+
+/* 제안서 접수 */
+.submission-card{background:linear-gradient(135deg,rgba(13,71,161,0.12),rgba(11,122,110,0.08));border:1px solid rgba(21,101,192,0.3);border-radius:24px;padding:48px;margin:56px 0;}
+.submission-card h2{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.2rem);color:var(--white);margin-bottom:16px;}
+.submission-card p{color:var(--muted);font-size:0.95rem;line-height:1.9;margin-bottom:20px;}
+.submission-card strong{color:var(--foam);}
+.sub-box{background:rgba(0,0,0,0.25);border:1px solid rgba(26,181,163,0.2);border-radius:14px;padding:28px;margin-top:24px;}
+.sub-label{font-size:0.72rem;font-weight:700;letter-spacing:2px;color:var(--aqua);margin-bottom:10px;}
+.sub-value{font-family:monospace;font-size:1.05rem;color:var(--foam);font-weight:700;letter-spacing:1px;margin-bottom:16px;word-break:break-all;}
+.sub-docs{margin-top:20px;}
+.sub-docs h4{font-size:0.88rem;color:var(--foam);font-weight:700;margin-bottom:10px;}
+.sub-docs ul{list-style:none;}
+.sub-docs ul li{font-size:0.84rem;color:var(--muted);padding:4px 0;padding-left:20px;position:relative;line-height:1.7;}
+.sub-docs ul li::before{content:'📄';position:absolute;left:0;top:4px;font-size:0.78rem;}
+
+/* FAQ */
+.faq-list{margin-top:32px;}
+.faq-item{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:14px;padding:22px 28px;margin-bottom:12px;transition:all 0.3s;}
+.faq-item:hover{border-color:rgba(26,181,163,0.3);}
+.faq-q{font-family:'Noto Serif KR',serif;font-size:0.95rem;color:var(--foam);font-weight:700;margin-bottom:10px;display:flex;gap:10px;align-items:flex-start;}
+.faq-q::before{content:'Q.';color:var(--aqua);flex-shrink:0;}
+.faq-a{font-size:0.86rem;color:var(--muted);line-height:1.9;padding-left:24px;}
+.faq-a strong{color:var(--foam);}
+
+/* CTA */
+.cta-band{background:linear-gradient(135deg,rgba(11,122,110,0.15),rgba(21,101,192,0.08));border:1px solid rgba(26,181,163,0.3);border-radius:24px;padding:56px 44px;text-align:center;margin:72px 32px;}
+.cta-inner{max-width:720px;margin:0 auto;}
+.cta-band h2{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3vw,2.4rem);color:var(--white);margin-bottom:18px;}
+.cta-band p{color:var(--muted);font-size:0.97rem;line-height:1.9;margin-bottom:32px;}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.bp{background:linear-gradient(135deg,var(--teal),var(--aqua));color:var(--white);padding:14px 36px;border-radius:50px;font-weight:700;font-size:0.95rem;text-decoration:none;transition:all 0.3s;}
+.bp:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,181,163,0.4);}
+.bo{color:var(--foam);padding:14px 32px;border-radius:50px;font-weight:500;font-size:0.95rem;text-decoration:none;border:1.5px solid rgba(110,232,216,0.4);transition:all 0.3s;}
+.bo:hover{background:rgba(110,232,216,0.08);}
+
+/* 차이점 안내 배너 */
+.distinction-banner{background:rgba(212,168,83,0.06);border:1px solid rgba(212,168,83,0.3);border-radius:16px;padding:24px 28px;margin-top:40px;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;}
+.db-icon{font-size:2rem;}
+.db-text h4{font-family:'Noto Serif KR',serif;font-size:0.95rem;color:var(--gold);font-weight:700;margin-bottom:6px;}
+.db-text p{font-size:0.85rem;color:var(--muted);line-height:1.8;}
+.db-text a{color:var(--sage);font-weight:700;text-decoration:none;}
+
+/* 링크 배너 */
+.link-banner{background:rgba(11,122,110,0.06);border-top:1px solid rgba(26,181,163,0.15);border-bottom:1px solid rgba(26,181,163,0.15);padding:22px 32px;text-align:center;}
+.link-banner p{font-size:0.84rem;color:var(--muted);}
+.link-banner a{color:var(--aqua);font-weight:700;text-decoration:none;}
+
+footer{background:rgba(8,18,32,0.95);border-top:1px solid var(--border);padding:40px 32px 24px;text-align:center;}
+.flogo{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;color:var(--aqua);letter-spacing:2px;margin-bottom:10px;}
+.flinks{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;}
+.flinks a{font-size:0.80rem;color:var(--muted);text-decoration:none;}
+.flinks a:hover{color:var(--foam);}
+.fcopy{font-size:0.75rem;color:rgba(123,168,160,0.5);}
+
+@media(max-width:900px){
+  .cat-grid,.cond-grid,.mutual-grid{grid-template-columns:1fr;}
+  .process-flow{flex-direction:column;}
+  .pstep:first-child{border-radius:16px 16px 0 0;}
+  .pstep:last-child{border-radius:0 0 16px 16px;}
+  .parrow{transform:rotate(90deg);}
+  .distinction-banner{grid-template-columns:1fr;text-align:center;}
+  .sec{padding:60px 20px;}
+  .nl{display:none;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">ECO-<span>VASS</span></a>
+  <div class="nl">
+    <a href="index.html">홈</a>
+    <a href="education.html">교육</a>
+    <a href="healing.html">치유·회복</a>
+    <a href="modular.html">모듈러</a>
+    <a href="dome.html" style="color:#90CAF9;">Dome Farm</a>
+    <a href="products.html">제품소개</a>
+    <a href="schools.html">학교 도입</a>
+    <a href="shop.html">쇼핑</a>
+    <a href="notice.html">NOTICE</a>
+    <a href="partnership.html">함께하기</a>
+    <a href="business.html" style="color:var(--aqua);font-weight:700;">사업협력</a>
+    <a href="https://blog.naver.com/klys1121" target="_blank" style="color:var(--sage);">📝 블로그</a>
+    <a href="https://pf.kakao.com/_rXDxdX" target="_blank" class="ncta">상담하기</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">Business Partnership · 사업 협력</div>
+    <h1>전문성으로<br>함께 걷는 <span>사업 협력</span></h1>
+    <p class="hero-desc">ECO-VASS는 아쿠아포닉스 생태계의 저변 확장을 위해 다양한 분야의 전문 사업자와 체계적인 협력 관계를 구축하고 있습니다. 제조·부품 공급, 소모품·기자재, 시공·설치, ICT 자동화, 지역 보급, 전문 용역까지 — 각 분야의 전문성이 모여 ECO-VASS의 완성도를 높입니다.</p>
+    <div class="hero-stats">
+      <div class="hstat">
+        <div class="hstat-num">6</div>
+        <div class="hstat-label">협력 분야</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-num">5단계</div>
+        <div class="hstat-label">협력 프로세스</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-num">공식</div>
+        <div class="hstat-label">제안서 접수</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 차이점 안내 -->
+<div style="max-width:1100px;margin:0 auto;padding:0 32px;">
+  <div class="distinction-banner">
+    <div class="db-icon">💡</div>
+    <div class="db-text">
+      <h4>어느 페이지를 찾으셨나요?</h4>
+      <p>이 페이지는 <strong style="color:var(--foam);">전문 사업자 · 기술자 · 공급자</strong>를 위한 공식 협력 안내입니다. 가치 공감과 공동체 참여가 목적이시면 <a href="partnership.html">함께하기 페이지</a>로 이동해 주세요.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 6개 협력 카테고리 -->
+<div id="categories">
+<div class="sec">
+  <span class="stag s-a">Business Categories</span>
+  <h2 class="h2">6개 협력 분야</h2>
+  <p class="desc">ECO-VASS 사업 영역은 다양한 전문 분야의 협력으로 이루어집니다. 귀사의 기술·제품·서비스가 아래 어느 카테고리에 해당하는지 확인하시고 제안해 주십시오.</p>
+
+  <div class="cat-grid">
+
+    <!-- ① 제조·부품 공급 -->
+    <div class="ccard">
+      <div class="ccard-top">
+        <div class="ccard-num">1</div>
+        <div class="ccard-title-wrap">
+          <div class="ccard-name">제조·부품 공급</div>
+          <div class="ccard-en">Manufacturing &amp; Components</div>
+        </div>
+      </div>
+      <div class="ccard-body">
+        <p>ECO-VASS 모듈러 시스템의 핵심 구조물 및 주요 부품을 제조·공급하시는 전문 사업자.</p>
+        <ul class="ccard-items">
+          <li><strong>모듈러 프레임</strong> — Steel / PVC 프레임 제작</li>
+          <li><strong>DWC 재배구</strong> — 수경재배 베드 (제작·공산품)</li>
+          <li><strong>여과 장비</strong> — 외부여과기·스펀지여과기</li>
+          <li><strong>LED 식물등</strong> — 1,200mm · 600mm 식물 성장등</li>
+          <li><strong>수족관</strong> — 유리 수족관·공산품 PVC 수조</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ② 소모품·기자재 -->
+    <div class="ccard">
+      <div class="ccard-top">
+        <div class="ccard-num">2</div>
+        <div class="ccard-title-wrap">
+          <div class="ccard-name">소모품·기자재</div>
+          <div class="ccard-en">Supplies &amp; Equipment</div>
+        </div>
+      </div>
+      <div class="ccard-body">
+        <p>아쿠아포닉스 운영에 필요한 소모품·기자재를 안정적으로 공급하시는 사업자.</p>
+        <ul class="ccard-items">
+          <li><strong>바닥재</strong> — 마사·화산석·맥반석·자갈류</li>
+          <li><strong>여과재</strong> — 바이오링·세라믹 미디어</li>
+          <li><strong>모터·펌프</strong> — 10W/20W/30W 수중모터</li>
+          <li><strong>산소발생기</strong> — 에어펌프 A형·B형</li>
+          <li><strong>테스트 킷트</strong> — API사 수질 측정 제품</li>
+          <li><strong>박테리아 스타터</strong> — 물잡이 촉진 제품</li>
+          <li><strong>수생식물·어류</strong> — 정기 납품 가능 업체</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ③ 시공·설치 -->
+    <div class="ccard">
+      <div class="ccard-top">
+        <div class="ccard-num">3</div>
+        <div class="ccard-title-wrap">
+          <div class="ccard-name">시공·설치</div>
+          <div class="ccard-en">Construction &amp; Installation</div>
+        </div>
+      </div>
+      <div class="ccard-body">
+        <p>현장 설치·배관·전기 공사 및 대형 시설 시공 전문 사업자. A/S·유지보수도 포함됩니다.</p>
+        <ul class="ccard-items">
+          <li><strong>현장 시공·배관</strong> — 모듈러 설치·배관 연결</li>
+          <li><strong>전기 공사</strong> — LED·모터·제어 시스템 배선</li>
+          <li><strong>Dome 시공</strong> — 대형 Dome Farm 구조물</li>
+          <li><strong>지류·토목</strong> — 부지 조성·기반 공사</li>
+          <li><strong>A/S·유지보수</strong> — 정기 점검·수리 대응</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ④ ICT·자동화 기술 -->
+    <div class="ccard">
+      <div class="ccard-top">
+        <div class="ccard-num">4</div>
+        <div class="ccard-title-wrap">
+          <div class="ccard-name">ICT·자동화 기술</div>
+          <div class="ccard-en">ICT &amp; Automation</div>
+        </div>
+      </div>
+      <div class="ccard-body">
+        <p>Dome Farm 및 스마트 아쿠아포닉스의 ICT·IoT·AI 제어 시스템 개발 사업자.</p>
+        <ul class="ccard-items">
+          <li><strong>ICT 통합 제어</strong> — 중앙 관리 서버·대시보드</li>
+          <li><strong>IoT 센서·자동화</strong> — 환경·수질 자동 측정</li>
+          <li><strong>AI 재배 시스템</strong> — 작물별 광량 자동 조절</li>
+          <li><strong>CCTV·보안</strong> — 통합 보안 시스템</li>
+          <li><strong>태양광·에너지</strong> — 자립 에너지 시스템</li>
+          <li><strong>모바일 앱·소프트웨어</strong> — 원격 모니터링</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ⑤ 지역 보급·대리점 -->
+    <div class="ccard">
+      <div class="ccard-top">
+        <div class="ccard-num">5</div>
+        <div class="ccard-title-wrap">
+          <div class="ccard-name">지역 보급·대리점</div>
+          <div class="ccard-en">Regional Distribution</div>
+        </div>
+      </div>
+      <div class="ccard-body">
+        <p>지역 거점에서 ECO-VASS 제품을 보급하고 영업·설치·교육 서비스를 제공하는 총판·대리점.</p>
+        <ul class="ccard-items">
+          <li><strong>지역 총판</strong> — 시·도 단위 독점 유통</li>
+          <li><strong>설치·교육 서비스</strong> — 제품 설치 + 운영 교육</li>
+          <li><strong>기관 영업</strong> — 학교·복지관·병원 영업 대행</li>
+          <li><strong>고객 관리</strong> — 지역 고객 사후관리</li>
+          <li><strong>체험장 운영</strong> — 지역 체험·전시 공간</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ⑥ 전문 용역·자문 -->
+    <div class="ccard">
+      <div class="ccard-top">
+        <div class="ccard-num">6</div>
+        <div class="ccard-title-wrap">
+          <div class="ccard-name">전문 용역·자문</div>
+          <div class="ccard-en">Professional Services</div>
+        </div>
+      </div>
+      <div class="ccard-body">
+        <p>교육·치유·디자인·연구 등 전문 지식과 자격을 바탕으로 ECO-VASS 운영에 기여하시는 전문가.</p>
+        <ul class="ccard-items">
+          <li><strong>치유농업사·원예치료사</strong> — 치유 프로그램 운영</li>
+          <li><strong>치유상담사</strong> — 심층 치유 상담 연계</li>
+          <li><strong>농업 교육 강사</strong> — 교육 과정 강의·컨설팅</li>
+          <li><strong>디자인·콘텐츠 제작</strong> — 영상·디자인·마케팅</li>
+          <li><strong>연구·컨설팅</strong> — 학술 연구·기술 자문</li>
+          <li><strong>번역·해외 협력</strong> — 국제 사업·수출 지원</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<!-- 참여 조건 -->
+<div id="conditions">
+<div class="conditions-section">
+  <div class="cond-inner">
+    <span class="stag s-b">Participation Requirements</span>
+    <h2 class="h2">참여 조건</h2>
+    <p class="desc">공정하고 투명한 협력 관계를 위해 기본 요건과 품질 기준을 제시합니다. 모든 조건을 완벽히 충족하지 않으셔도 먼저 제안하시면 함께 조율해 나갑니다.</p>
+
+    <div class="cond-grid">
+      <div class="cond-card">
+        <h3><span>📋</span>기본 요건</h3>
+        <ul>
+          <li><strong>사업자 등록증</strong> — 법인·개인사업자 모두 가능</li>
+          <li>해당 분야 <strong>2년 이상의 실적</strong> (예외 협의)</li>
+          <li><strong>기술·제품 포트폴리오</strong> 제출 가능</li>
+          <li>정식 납품·시공 <strong>레퍼런스</strong> 보유</li>
+          <li>세금계산서 발행 및 <strong>공식 거래</strong> 가능</li>
+          <li>계약 이행을 위한 <strong>재무 안정성</strong></li>
+        </ul>
+      </div>
+      <div class="cond-card">
+        <h3><span>⭐</span>품질 기준</h3>
+        <ul>
+          <li>ECO-VASS <strong>품질 관리 표준</strong> 준수 약속</li>
+          <li>친환경·유기농 원칙에 <strong>부합하는 제품</strong></li>
+          <li><strong>납기일 준수</strong> 및 안정적 공급 능력</li>
+          <li>문제 발생 시 <strong>신속한 대응</strong> 체계</li>
+          <li>필요시 제품·시공 <strong>인증·시험 성적서</strong></li>
+          <li>아쿠아포닉스 <strong>기본 이해도</strong> (우대)</li>
+        </ul>
+      </div>
+      <div class="cond-card">
+        <h3><span>🤝</span>관계의 원칙</h3>
+        <ul>
+          <li>상호 존중 기반의 <strong>공식 협력</strong> 관계</li>
+          <li>기술 정보 <strong>비밀유지(NDA)</strong> 계약 체결</li>
+          <li>이중 계약·편법 거래 <strong>금지</strong></li>
+          <li>ECO-VASS 브랜드·상표 <strong>정직한 사용</strong></li>
+          <li>고객 정보 <strong>보호 의무</strong> 준수</li>
+          <li>분쟁 시 <strong>대화를 통한 해결</strong> 우선</li>
+        </ul>
+      </div>
+      <div class="cond-card">
+        <h3><span>💎</span>가치의 공감</h3>
+        <ul>
+          <li>ECO-VASS의 <strong>생태·치유·나눔</strong> 철학 이해</li>
+          <li>단기 수익보다 <strong>장기 동반 성장</strong> 지향</li>
+          <li>제품 품질과 <strong>고객 만족</strong>에 진심</li>
+          <li>공동 브랜드 자산의 <strong>공동 책임감</strong></li>
+          <li>경쟁사가 아닌 <strong>동역자</strong>의 자세</li>
+          <li>사회적 기여·공익적 활동 <strong>관심</strong> (우대)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- 5단계 협력 프로세스 -->
+<div id="process">
+<div class="process-section">
+  <div class="process-inner">
+    <span class="stag s-a">Collaboration Process</span>
+    <h2 class="h2">5단계<br>협력 프로세스</h2>
+    <p class="desc">제안서 접수부터 정식 협력 체결까지 체계적인 5단계로 진행됩니다. 전체 과정은 약 1~3개월이 소요되며, 사안에 따라 조정 가능합니다.</p>
+
+    <div class="process-flow">
+      <div class="pstep">
+        <div class="pnum">1</div>
+        <h4>제안서 접수</h4>
+        <p>회사 소개·기술 포트폴리오·협력 제안서 제출</p>
+        <div class="pdur">1~2주</div>
+      </div>
+      <div class="parrow">→</div>
+      <div class="pstep">
+        <div class="pnum">2</div>
+        <h4>내부 검토</h4>
+        <p>기술·품질·가격·적합성 다각도 검토</p>
+        <div class="pdur">2~3주</div>
+      </div>
+      <div class="parrow">→</div>
+      <div class="pstep">
+        <div class="pnum">3</div>
+        <h4>미팅·실사</h4>
+        <p>대면 미팅 진행 및 현장·실물 확인</p>
+        <div class="pdur">1~2주</div>
+      </div>
+      <div class="parrow">→</div>
+      <div class="pstep">
+        <div class="pnum">4</div>
+        <h4>파일럿 협력</h4>
+        <p>소규모 시범 프로젝트로 상호 검증</p>
+        <div class="pdur">1~3개월</div>
+      </div>
+      <div class="parrow">→</div>
+      <div class="pstep">
+        <div class="pnum">5</div>
+        <h4>정식 협력</h4>
+        <p>정식 계약 체결 및 공식 협력사 등재</p>
+        <div class="pdur">지속</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- 상호 약속 (제공·기대) -->
+<div id="mutual">
+<div class="sec">
+  <span class="stag s-gold">Mutual Commitments</span>
+  <h2 class="h2">서로의 약속</h2>
+  <p class="desc">ECO-VASS가 협력사에게 제공하는 것과 협력사로부터 기대하는 것입니다. 단방향이 아닌, 상호 존중에 기반한 동반 성장 관계를 지향합니다.</p>
+
+  <div class="mutual-grid">
+    <div class="mcard mcard-offer">
+      <div class="mcard-label">ECO-VASS가 제공하는 것</div>
+      <h3><span>🎁</span>협력사에게 드립니다</h3>
+      <ul>
+        <li><strong>공식 협력사 등재</strong> — 홈페이지·공식 문서에 공개 표기</li>
+        <li><strong>홈페이지 노출</strong> — 전용 카테고리에 업체 소개 게시</li>
+        <li><strong>고객 소개 연계</strong> — 관련 문의 건 우선 소개</li>
+        <li><strong>공동 마케팅</strong> — 전시회·세미나·콘텐츠 공동 참여</li>
+        <li><strong>장기 거래 기회</strong> — 지속 수요 기반 안정적 공급처</li>
+        <li><strong>기술 교류</strong> — 신제품 개발·기술 정보 공유</li>
+        <li><strong>공정 경쟁 환경</strong> — 투명한 평가 기준 적용</li>
+        <li><strong>신속한 대금 지급</strong> — 정해진 결제 조건 엄수</li>
+      </ul>
+    </div>
+    <div class="mcard mcard-expect">
+      <div class="mcard-label">ECO-VASS가 기대하는 것</div>
+      <h3><span>🌟</span>협력사께 부탁드립니다</h3>
+      <ul>
+        <li><strong>품질 준수</strong> — 약속된 사양·품질 수준 유지</li>
+        <li><strong>납기 엄수</strong> — 일정 관리와 커뮤니케이션</li>
+        <li><strong>정직한 거래</strong> — 가격·물량·품질의 투명성</li>
+        <li><strong>기술 비밀유지</strong> — 공유된 정보의 보호</li>
+        <li><strong>브랜드 가치 존중</strong> — ECO-VASS 철학의 이해·반영</li>
+        <li><strong>공동 책임감</strong> — 고객 만족에 대한 파트너 의식</li>
+        <li><strong>지속적 개선</strong> — 피드백 수용과 발전 노력</li>
+        <li><strong>윤리적 경영</strong> — 법규 준수와 건전한 사업 활동</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+<hr class="hr">
+
+<!-- 제안서 접수 방법 -->
+<div id="submit">
+<div class="sec">
+  <span class="stag s-a">How to Submit</span>
+  <h2 class="h2">제안서 접수 방법</h2>
+  <p class="desc">제안은 연중 상시 접수하며, 검토 후 순차적으로 답변드립니다. 모든 제안은 기밀 유지되며 검토 후 결과와 무관하게 확인 답변을 드립니다.</p>
+
+  <div class="submission-card">
+    <h2>공식 제안서 제출</h2>
+    <p>아래 이메일로 필요 서류와 함께 제안서를 보내주십시오. 제안 내용에 따라 <strong>2주 이내 1차 답변</strong>을 드리며, 심도 있는 검토가 필요한 경우 <strong>최대 4주까지</strong> 소요될 수 있습니다.</p>
+
+    <div class="sub-box">
+      <div class="sub-label">📧 공식 접수 이메일</div>
+      <div class="sub-value">ecovass.business@gmail.com</div>
+      <div style="font-size:0.78rem;color:var(--muted);margin-top:8px;">※ 긴급 문의는 카카오 채널로도 접수 가능합니다</div>
+
+      <div class="sub-docs">
+        <h4>📋 필수 제출 서류</h4>
+        <ul>
+          <li>사업자 등록증 사본</li>
+          <li>회사 소개서 (PDF 권장)</li>
+          <li>주요 제품·기술·서비스 포트폴리오</li>
+          <li>최근 3년 납품·시공 실적 (가능한 범위)</li>
+          <li>제안하시는 협력 카테고리 (6개 중 해당 분야)</li>
+          <li>희망 협력 방식 및 기대 효과</li>
+          <li>담당자 연락처 (이메일·전화)</li>
+        </ul>
+      </div>
+
+      <div style="margin-top:24px;padding:16px 20px;background:rgba(212,168,83,0.08);border-left:3px solid var(--gold);border-radius:8px;">
+        <div style="font-size:0.85rem;color:var(--gold);font-weight:700;margin-bottom:6px;">💡 제안 작성 팁</div>
+        <div style="font-size:0.82rem;color:var(--muted);line-height:1.8;">ECO-VASS의 제품·사업 영역을 충분히 숙지하신 후, 귀사의 전문성이 <strong style="color:var(--foam);">어느 지점에서 가치를 더할 수 있는지</strong> 구체적으로 제안해 주시면 검토가 원활합니다. 단순 판매가 아닌 <strong style="color:var(--foam);">장기 협력 관점</strong>의 제안을 선호합니다.</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<hr class="hr">
+
+<!-- FAQ -->
+<div id="faq">
+<div class="sec">
+  <span class="stag s-g">Frequently Asked</span>
+  <h2 class="h2">자주 묻는 질문</h2>
+  <p class="desc">사업 협력을 고민하시는 분들이 자주 주시는 질문입니다.</p>
+
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q">한 분야에서 복수 협력사와 계약하시나요?</div>
+      <div class="faq-a">분야의 특성에 따라 다릅니다. 대량 공급이 필요한 분야(바닥재·소모품 등)는 복수 협력사가 가능하지만, <strong>전문성·독점성이 중요한 분야는 단수 협력</strong>을 원칙으로 합니다. 지역 대리점도 원칙적으로 지역별 독점 체계입니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">저희는 소규모 사업자인데 참여 가능한가요?</div>
+      <div class="faq-a">네, 가능합니다. 사업 규모보다 <strong>기술력·품질·신뢰성</strong>을 더 중요하게 봅니다. 특히 전문 용역·자문 분야나 지역 소규모 대리점은 1인 기업도 환영합니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">제가 속한 분야가 6개 카테고리에 정확히 맞지 않습니다.</div>
+      <div class="faq-a">6개 카테고리는 주요 분류일 뿐 전부를 포괄하지는 못합니다. <strong>ECO-VASS와 시너지가 있다고 판단되시면 제안서를 먼저 주십시오.</strong> 새로운 카테고리로 협력 관계가 정립될 수도 있습니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">해외 사업자도 제안 가능한가요?</div>
+      <div class="faq-a">가능합니다. 특히 <strong>특수 부품·ICT 기술·연구 협력</strong> 분야는 해외 파트너가 필요한 경우가 많습니다. 다만 의사소통의 편의를 위해 한국어 또는 영어로 제안서를 제출해 주십시오.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">제안이 거절되면 재제안 가능한가요?</div>
+      <div class="faq-a">언제든 가능합니다. 거절 사유를 구체적으로 설명드리며, <strong>보완 후 재제안</strong>을 환영합니다. 최초 거절 후 6개월 이내 재제안 시 이전 검토 내용을 참고해 신속히 검토해 드립니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">협력사 간 이해관계 충돌이 생기면 어떻게 하시나요?</div>
+      <div class="faq-a">사전에 <strong>경쟁 관계·배타적 조건</strong>을 명확히 하여 계약합니다. 운영 중 충돌이 발생하면 ECO-VASS가 중재하며, <strong>공정성·투명성</strong>을 최우선 원칙으로 합니다. 협력사의 정당한 이익은 적극적으로 보호합니다.</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- CTA -->
+<div class="cta-band">
+  <div class="cta-inner">
+    <h2>전문성으로<br>ECO-VASS와 함께하세요</h2>
+    <p>귀사의 기술과 경험이 ECO-VASS의 생태계 확장에 귀한 자산이 됩니다. 정성 어린 제안서를 보내주시면 꼼꼼히 검토하고 정중히 답변드리겠습니다.</p>
+    <div class="cta-btns">
+      <a href="mailto:ecovass.business@gmail.com?subject=[ECO-VASS 사업협력 제안]" class="bp">📧 제안서 이메일 접수</a>
+      <a href="https://pf.kakao.com/_rXDxdX" target="_blank" class="bo">💬 카카오 채널 사전 문의</a>
+    </div>
+  </div>
+</div>
+
+<!-- 링크 배너 -->
+<div class="link-banner">
+  <p>🌊 가치 공감 기반의 참여를 원하시면 <a href="partnership.html">함께하기 페이지</a>로 이동해 주세요</p>
+</div>
+
+<footer>
+  <div class="flogo">ECO-VASS</div>
+  <div class="flinks">
+    <a href="index.html">홈</a>
+    <a href="education.html">교육</a>
+    <a href="healing.html">치유·회복</a>
+    <a href="modular.html">모듈러</a>
+    <a href="products.html">제품소개</a>
+    <a href="schools.html">학교 도입</a>
+    <a href="shop.html">쇼핑</a>
+    <a href="notice.html">NOTICE</a>
+    <a href="partnership.html">함께하기</a>
+    <a href="business.html">사업협력</a>
+    <a href="https://blog.naver.com/klys1121" target="_blank">블로그</a>
+    <a href="https://aquaponicskorea.co.kr" target="_blank">아쿠아포닉스코리아</a>
+  </div>
+  <div class="fcopy">© 2026 ECO-VASS · Aquaponics Korea Co., Ltd. All rights reserved.</div>
+</footer>
+
+<script src="assets/js/protect.js"></script>
+</body>
+</html>
