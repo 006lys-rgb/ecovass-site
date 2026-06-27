@@ -1,698 +1,1064 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ECO-VASS 교육 아카데미 | 물잡이 완전정복</title>
-<meta name="description" content="ECO-VASS 교육 아카데미 — 아쿠아포닉스 물잡이 완전정복 커리큘럼. 입문 과정 무료, 전문 과정은 장별 유료로 제공. FAO 기준 소규모 아쿠아포닉스 교육.">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-<style>
-:root{
-  --deep:#0a1628;--ocean:#0e2a4a;--teal:#0b7a6e;--aqua:#1ab5a3;
-  --foam:#6ee8d8;--gold:#d4a853;--leaf:#4a8c3f;--sage:#7ab87a;
-  --text:#e4f0ee;--muted:#7ba8a0;--white:#ffffff;
-  --border:rgba(26,181,163,0.2);--blue:#1565C0;--bluel:#90CAF9;
-}
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{font-family:'Noto Sans KR',sans-serif;background:var(--deep);color:var(--text);overflow-x:hidden;}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ECO-VASS 교육 아카데미 — 아쿠아포닉스 물잡이 완전정복 커리큘럼. 입문 과정 무료, 전문 과정은 장별 유료로 제공. FAO 기준 소규모 아쿠아포닉스 교육.">
+  <title>ECO-VASS 교육 아카데미 | 물잡이 완전정복</title>
 
-nav{position:fixed;top:0;width:100%;z-index:100;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;background:rgba(10,22,40,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
-.logo{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;color:var(--aqua);letter-spacing:2px;text-decoration:none;}
-.logo span{color:var(--foam);}
-.nl{display:flex;gap:20px;align-items:center;}
-.nl a{color:var(--muted);text-decoration:none;font-size:0.82rem;transition:color 0.2s;}
-.nl a:hover{color:var(--foam);}
-.ncta{background:linear-gradient(135deg,var(--teal),var(--aqua));color:var(--white)!important;padding:7px 18px;border-radius:20px;font-weight:700!important;}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
-/* HERO */
-.hero{min-height:65vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 32px 80px;background:linear-gradient(180deg,rgba(11,122,110,0.15) 0%,rgba(212,168,83,0.05) 50%,transparent 100%);}
-.hero-tag{display:inline-block;font-size:0.72rem;font-weight:700;letter-spacing:4px;color:var(--gold);text-transform:uppercase;padding:6px 20px;border:1px solid rgba(212,168,83,0.4);border-radius:20px;margin-bottom:22px;background:rgba(212,168,83,0.08);}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,4rem);color:var(--white);line-height:1.1;margin-bottom:16px;}
-.hero h1 span{color:var(--aqua);}
-.hero h1 .g{color:var(--gold);}
-.hero-desc{max-width:720px;margin:0 auto 32px;color:var(--muted);font-size:1rem;line-height:1.95;}
-.hero-quote{font-family:'Noto Serif KR',serif;font-size:0.95rem;color:var(--foam);font-style:italic;max-width:600px;margin:0 auto;padding:16px 24px;border-left:2px solid var(--aqua);border-right:2px solid var(--aqua);}
+  <style>
+    :root {
+      --bg:         #0a1628;
+      --bg-card:    #0f1f3d;
+      --bg-section: #071220;
+      --aqua:       #1ab5a3;
+      --aqua-light: #22d4bf;
+      --aqua-dim:   rgba(26,181,163,0.12);
+      --gold:       #d4a853;
+      --gold-light: #e8c070;
+      --gold-dim:   rgba(212,168,83,0.12);
+      --text:       #e8f4f8;
+      --text-sub:   #b8d4e0;
+      --text-muted: #7a9aaa;
+      --border:     rgba(26,181,163,0.15);
+      --border-gold:rgba(212,168,83,0.2);
+      --radius:     2px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
 
-/* 섹션 */
-.sec{padding:88px 32px;max-width:1100px;margin:0 auto;}
-.stag{font-size:0.70rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;margin-bottom:12px;display:block;}
-.s-a{color:var(--aqua);}
-.s-g{color:var(--gold);}
-.s-s{color:var(--sage);}
-.s-b{color:var(--bluel);}
-.h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--white);margin-bottom:16px;line-height:1.2;}
-.desc{color:var(--muted);font-size:0.96rem;line-height:1.9;max-width:720px;margin-bottom:44px;}
-.hr{border:none;border-top:1px solid var(--border);margin:0;}
+    /* ── 네비게이션 ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,22,40,0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+    }
+    .nav-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; align-items: center;
+      justify-content: space-between; height: 56px;
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem; color: var(--aqua);
+      text-decoration: none; letter-spacing: 0.05em;
+    }
+    .nav-links { display: flex; gap: 0; list-style: none; flex-wrap: wrap; }
+    .nav-links a {
+      display: block; padding: 0 0.8rem;
+      font-size: 0.78rem; color: var(--text-sub);
+      text-decoration: none; letter-spacing: 0.03em;
+      line-height: 56px; transition: color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--aqua); }
+    .nav-cta {
+      background: var(--aqua); color: var(--bg) !important;
+      padding: 0 1rem !important; font-weight: 700 !important;
+      border-radius: var(--radius); line-height: 34px !important; margin: auto 0;
+    }
 
-/* 핵심 원리 배너 */
-.principle{background:linear-gradient(135deg,rgba(212,168,83,0.08),rgba(139,105,20,0.04));border:1px solid rgba(212,168,83,0.3);border-radius:20px;padding:40px 44px;margin-bottom:48px;}
-.principle-title{font-family:'Noto Serif KR',serif;font-size:1.2rem;color:var(--gold);font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;}
-.principle p{color:var(--muted);font-size:0.92rem;line-height:1.88;margin-bottom:12px;}
-.principle strong{color:var(--foam);}
+    /* ── 공통 레이아웃 ── */
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
+    .section { padding: 5rem 0; }
+    .section-alt { background: var(--bg-section); }
+    .eyebrow {
+      display: block; font-size: 0.7rem;
+      letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--aqua); margin-bottom: 1rem;
+    }
+    h1 { font-family: 'Noto Serif KR', serif; font-size: 2.1rem; font-weight: 600; line-height: 1.4; }
+    h2 { font-family: 'Noto Serif KR', serif; font-size: 1.55rem; font-weight: 600; line-height: 1.45; }
+    h3 { font-size: 1.05rem; font-weight: 700; }
+    .lead { font-size: 1rem; color: var(--text-sub); line-height: 1.85; margin-top: 1rem; }
+    blockquote {
+      border-left: 2px solid var(--aqua);
+      padding: 0.4rem 0 0.4rem 1.2rem;
+      color: var(--text-sub); font-style: italic;
+      margin: 1.2rem 0; font-size: 0.95rem; line-height: 1.8;
+    }
 
-/* 질소순환 플로우 */
-.n-cycle{background:rgba(26,181,163,0.05);border:1px solid rgba(26,181,163,0.2);border-radius:16px;padding:32px;margin-top:24px;}
-.n-cycle-title{font-size:0.80rem;font-weight:700;color:var(--aqua);letter-spacing:2px;margin-bottom:20px;text-align:center;}
-.n-flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:12px;align-items:center;}
-.n-step{background:rgba(26,181,163,0.08);border:1px solid rgba(26,181,163,0.25);border-radius:12px;padding:18px 14px;text-align:center;}
-.n-step-top{font-size:1.3rem;margin-bottom:6px;}
-.n-step-name{font-size:0.90rem;font-weight:700;color:var(--foam);margin-bottom:4px;}
-.n-step-formula{font-size:0.75rem;color:var(--muted);font-family:monospace;}
-.n-arrow{color:var(--aqua);font-size:1.4rem;text-align:center;}
+    /* ── 히어로 ── */
+    .hero { padding: 5rem 0 4rem; border-bottom: 1px solid var(--border); }
+    .hero-badge {
+      display: inline-block; font-size: 0.68rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--aqua); border: 1px solid var(--aqua);
+      padding: 0.3rem 0.8rem; border-radius: 1px; margin-bottom: 1.5rem;
+    }
+    .hero h1 { margin-bottom: 1.2rem; }
 
-/* 과정 선택 */
-.course-select{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:40px;}
-.course-card{background:rgba(255,255,255,0.04);border:1px solid;border-radius:20px;padding:36px;transition:all 0.3s;position:relative;overflow:hidden;}
-.course-card:hover{transform:translateY(-4px);}
-.course-free{border-color:rgba(122,184,122,0.4);}
-.course-free:hover{background:rgba(74,140,63,0.06);}
-.course-pro{border-color:rgba(212,168,83,0.4);background:linear-gradient(180deg,rgba(212,168,83,0.06) 0%,transparent 100%);}
-.course-pro:hover{background:rgba(212,168,83,0.1);}
-.course-badge{position:absolute;top:20px;right:20px;font-size:0.68rem;font-weight:700;letter-spacing:2px;padding:4px 12px;border-radius:10px;}
-.badge-free{background:rgba(122,184,122,0.2);color:var(--sage);border:1px solid rgba(122,184,122,0.4);}
-.badge-pro{background:rgba(212,168,83,0.2);color:var(--gold);border:1px solid rgba(212,168,83,0.4);}
-.course-icon{font-size:2.4rem;margin-bottom:14px;}
-.course-card h3{font-family:'Noto Serif KR',serif;font-size:1.3rem;color:var(--white);font-weight:700;margin-bottom:8px;}
-.course-sub{font-size:0.84rem;margin-bottom:16px;}
-.course-free .course-sub{color:var(--sage);}
-.course-pro .course-sub{color:var(--gold);}
-.course-card p{font-size:0.88rem;color:var(--muted);line-height:1.85;margin-bottom:16px;}
-.course-feat{list-style:none;margin-bottom:20px;}
-.course-feat li{font-size:0.85rem;color:var(--muted);padding:4px 0;display:flex;gap:10px;}
-.course-feat li::before{content:'✓';font-weight:700;flex-shrink:0;}
-.course-free .course-feat li::before{color:var(--sage);}
-.course-pro .course-feat li::before{color:var(--gold);}
-.course-price{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;margin:16px 0 8px;}
-.course-free .course-price{color:var(--sage);}
-.course-pro .course-price{color:var(--gold);}
-.course-price-sub{font-size:0.78rem;color:var(--muted);margin-bottom:20px;}
-.course-btn{display:inline-block;padding:12px 28px;border-radius:24px;font-weight:700;font-size:0.88rem;text-decoration:none;transition:all 0.3s;font-family:'Noto Sans KR',sans-serif;border:none;cursor:pointer;}
-.btn-free{background:linear-gradient(135deg,var(--leaf),var(--sage));color:var(--white);}
-.btn-free:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(74,140,63,0.4);}
-.btn-pro{background:linear-gradient(135deg,#8B6914,var(--gold));color:var(--white);}
-.btn-pro:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(212,168,83,0.4);}
+    /* ── FAO 배너 ── */
+    .fao-banner {
+      margin-top: 2rem; padding: 1.5rem 2rem;
+      border: 1px solid var(--border); border-left: 3px solid var(--aqua);
+      background: var(--bg-card); border-radius: var(--radius);
+    }
+    .fao-banner h4 { font-size: 0.82rem; color: var(--aqua); margin-bottom: 0.5rem; letter-spacing: 0.05em; }
+    .fao-banner p { font-size: 0.88rem; color: var(--text-sub); line-height: 1.7; }
 
-/* 커리큘럼 8장 */
-.chapter-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:36px;}
-.chapter{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:16px;padding:26px;transition:all 0.3s;position:relative;overflow:hidden;}
-.chapter:hover{border-color:rgba(26,181,163,0.4);transform:translateY(-3px);}
-.ch-top{display:flex;align-items:center;gap:14px;margin-bottom:14px;}
-.ch-num{width:42px;height:42px;background:linear-gradient(135deg,var(--teal),var(--aqua));border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:900;font-size:1.1rem;color:var(--white);flex-shrink:0;}
-.ch-title{font-family:'Noto Serif KR',serif;font-size:1rem;color:var(--white);font-weight:700;flex:1;}
-.chapter p{font-size:0.85rem;color:var(--muted);line-height:1.8;margin-bottom:14px;}
-.ch-feat{list-style:none;margin-bottom:14px;}
-.ch-feat li{font-size:0.78rem;color:var(--muted);padding:2px 0;padding-left:14px;position:relative;}
-.ch-feat li::before{content:'·';position:absolute;left:4px;color:var(--aqua);font-weight:700;}
-.ch-meta{display:flex;justify-content:space-between;align-items:center;padding-top:14px;border-top:1px solid rgba(255,255,255,0.05);}
-.ch-duration{font-size:0.74rem;color:var(--muted);}
-.ch-price{font-size:0.82rem;font-weight:700;color:var(--gold);}
-.ch-price.free{color:var(--sage);}
-.ch-highlight{position:absolute;top:10px;right:10px;font-size:0.65rem;font-weight:700;padding:3px 10px;border-radius:8px;background:rgba(212,168,83,0.15);color:var(--gold);border:1px solid rgba(212,168,83,0.3);}
+    /* ── 질소 순환 ── */
+    .cycle-row {
+      display: flex; align-items: center; gap: 0.5rem;
+      margin-top: 2rem; flex-wrap: wrap;
+    }
+    .cycle-node {
+      display: flex; flex-direction: column; align-items: center;
+      background: var(--bg-card); border: 1px solid var(--border);
+      padding: 1.2rem 1.5rem; border-radius: var(--radius);
+      min-width: 110px; text-align: center;
+    }
+    .cycle-node .icon { font-size: 1.5rem; margin-bottom: 0.4rem; }
+    .cycle-node h4 { font-size: 0.82rem; font-weight: 700; margin-bottom: 0.2rem; }
+    .cycle-node p { font-size: 0.72rem; color: var(--text-muted); }
+    .cycle-arrow { font-size: 1.4rem; color: var(--aqua); }
 
-/* 5단계 실습 프로세스 */
-.p5{background:linear-gradient(135deg,rgba(11,122,110,0.08),rgba(26,181,163,0.04));border:1px solid rgba(26,181,163,0.2);border-radius:20px;padding:40px;margin-top:40px;}
-.p5-head{text-align:center;margin-bottom:32px;}
-.p5-head h3{font-family:'Noto Serif KR',serif;font-size:1.4rem;color:var(--white);font-weight:700;margin-bottom:10px;}
-.p5-head p{color:var(--muted);font-size:0.90rem;}
-.p5-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;}
-.p5-step{background:rgba(255,255,255,0.04);border:1px solid rgba(26,181,163,0.25);border-radius:14px;padding:20px 14px;text-align:center;position:relative;transition:all 0.3s;}
-.p5-step:hover{background:rgba(26,181,163,0.08);border-color:rgba(26,181,163,0.5);transform:translateY(-3px);}
-.p5-num{width:32px;height:32px;background:linear-gradient(135deg,var(--teal),var(--aqua));border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.88rem;color:var(--white);margin:0 auto 10px;}
-.p5-day{font-size:0.68rem;color:var(--aqua);font-weight:700;letter-spacing:1px;margin-bottom:6px;}
-.p5-title{font-size:0.82rem;font-weight:700;color:var(--foam);margin-bottom:6px;line-height:1.4;}
-.p5-desc{font-size:0.72rem;color:var(--muted);line-height:1.6;}
+    /* ── 과정 선택 카드 ── */
+    .course-cards {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem;
+    }
+    .course-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 2rem; position: relative;
+    }
+    .course-card.featured { border-color: var(--aqua); }
+    .course-badge {
+      position: absolute; top: -1px; left: 1.5rem;
+      font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+      font-weight: 700; padding: 0.25rem 0.7rem;
+      background: var(--aqua); color: var(--bg); border-radius: 0 0 2px 2px;
+    }
+    .course-badge.free { background: var(--text-muted); }
+    .course-icon { font-size: 2rem; margin-bottom: 0.8rem; }
+    .course-card h3 { font-size: 1.05rem; margin-bottom: 0.4rem; }
+    .course-card .course-sub {
+      font-size: 0.78rem; color: var(--aqua); margin-bottom: 0.8rem;
+      letter-spacing: 0.05em;
+    }
+    .course-card p { font-size: 0.88rem; color: var(--text-sub); line-height: 1.7; margin-bottom: 1rem; }
+    .course-list { list-style: none; margin-bottom: 1.2rem; }
+    .course-list li {
+      font-size: 0.82rem; color: var(--text-muted); padding: 0.2rem 0;
+      padding-left: 1rem; position: relative;
+    }
+    .course-list li::before { content: '·'; position: absolute; left: 0; color: var(--aqua); }
+    .course-meta {
+      font-size: 0.75rem; color: var(--text-muted);
+      border-top: 1px solid var(--border); padding-top: 0.8rem; margin-top: 0.5rem;
+    }
+    .price-note {
+      display: inline-block; margin-top: 0.5rem;
+      font-size: 0.72rem; color: var(--gold);
+      background: var(--gold-dim); padding: 0.2rem 0.6rem; border-radius: 1px;
+    }
 
-/* 수조 규모별 */
-.size-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px;}
-.size-card{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:16px;padding:26px;transition:all 0.3s;}
-.size-card:hover{border-color:rgba(26,181,163,0.4);transform:translateY(-3px);}
-.size-tag{display:inline-block;font-size:0.68rem;font-weight:700;letter-spacing:2px;padding:3px 10px;border-radius:8px;margin-bottom:12px;}
-.tag-sm{background:rgba(26,181,163,0.15);color:var(--aqua);}
-.tag-md{background:rgba(212,168,83,0.15);color:var(--gold);}
-.tag-lg{background:rgba(21,101,192,0.2);color:var(--bluel);}
-.size-card h3{font-family:'Noto Serif KR',serif;font-size:1.05rem;color:var(--white);font-weight:700;margin-bottom:4px;}
-.size-vol{font-size:1.3rem;font-weight:700;margin-bottom:12px;}
-.size-sm .size-vol{color:var(--aqua);}
-.size-md .size-vol{color:var(--gold);}
-.size-lg .size-vol{color:var(--bluel);}
-.size-table{width:100%;margin-top:12px;}
-.size-table tr td{padding:6px 0;font-size:0.80rem;}
-.size-table tr td:first-child{color:var(--muted);width:50%;}
-.size-table tr td:last-child{color:var(--foam);font-weight:500;}
+    /* ── 8개 장 커리큘럼 ── */
+    .curriculum-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+      background: var(--border); border: 1px solid var(--border);
+      border-radius: var(--radius); overflow: hidden; margin-top: 2.5rem;
+    }
+    .chap-card { background: var(--bg-card); padding: 1.8rem; }
+    .chap-header { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 0.8rem; }
+    .chap-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem; color: var(--border); line-height: 1; flex-shrink: 0;
+    }
+    .chap-tag {
+      display: inline-block; font-size: 0.62rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.2rem 0.5rem; border-radius: 1px; margin-bottom: 0.3rem;
+    }
+    .chap-tag.core { background: var(--aqua-dim); color: var(--aqua); }
+    .chap-tag.basic { background: rgba(122,154,170,0.15); color: var(--text-muted); }
+    .chap-tag.popular { background: var(--gold-dim); color: var(--gold); }
+    .chap-card h3 { font-size: 0.95rem; margin-bottom: 0.5rem; }
+    .chap-card p { font-size: 0.82rem; color: var(--text-sub); line-height: 1.65; margin-bottom: 0.8rem; }
+    .chap-list { list-style: none; }
+    .chap-list li {
+      font-size: 0.78rem; color: var(--text-muted); padding: 0.18rem 0;
+      padding-left: 0.9rem; position: relative;
+    }
+    .chap-list li::before { content: '—'; position: absolute; left: 0; color: var(--border); font-size: 0.7rem; }
+    .chap-footer {
+      margin-top: 0.8rem; padding-top: 0.8rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.72rem; color: var(--text-muted);
+    }
 
-/* FAQ */
-.faq-list{margin-top:32px;}
-.faq-item{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:14px;padding:22px 28px;margin-bottom:12px;transition:all 0.3s;}
-.faq-item:hover{border-color:rgba(26,181,163,0.3);}
-.faq-q{font-family:'Noto Serif KR',serif;font-size:0.97rem;color:var(--foam);font-weight:700;margin-bottom:10px;display:flex;gap:10px;align-items:flex-start;}
-.faq-q::before{content:'Q.';color:var(--aqua);flex-shrink:0;}
-.faq-a{font-size:0.86rem;color:var(--muted);line-height:1.85;padding-left:24px;}
+    /* ── 5단계 실습 ── */
+    .steps-row {
+      display: grid; grid-template-columns: repeat(5, 1fr);
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      overflow: hidden; margin-top: 2.5rem;
+    }
+    .step-card { background: var(--bg-card); padding: 1.5rem 1rem; text-align: center; }
+    .step-num {
+      width: 2rem; height: 2rem; border-radius: 50%;
+      background: var(--aqua-dim); border: 1px solid var(--aqua);
+      color: var(--aqua); font-size: 0.82rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 0.8rem;
+    }
+    .step-period { font-size: 0.68rem; color: var(--aqua); letter-spacing: 0.08em; margin-bottom: 0.4rem; }
+    .step-card h4 { font-size: 0.85rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .step-card p { font-size: 0.75rem; color: var(--text-muted); line-height: 1.55; }
 
-/* 로드맵 */
-.roadmap{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px;}
-.rm-step{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:14px;padding:22px;text-align:center;transition:all 0.3s;}
-.rm-step:hover{border-color:rgba(26,181,163,0.3);}
-.rm-stage{font-size:0.70rem;font-weight:700;color:var(--aqua);letter-spacing:2px;margin-bottom:8px;}
-.rm-step h4{font-family:'Noto Serif KR',serif;font-size:0.95rem;color:var(--white);font-weight:700;margin-bottom:8px;}
-.rm-step p{font-size:0.78rem;color:var(--muted);line-height:1.7;}
+    /* ── 수조 규모 ── */
+    .scale-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem; margin-top: 2.5rem;
+    }
+    .scale-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.8rem; overflow: hidden;
+    }
+    .scale-label {
+      font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--text-muted); margin-bottom: 0.3rem;
+    }
+    .scale-vol {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem; color: var(--aqua); line-height: 1; margin-bottom: 0.5rem;
+    }
+    .scale-card h3 { font-size: 0.95rem; margin-bottom: 1rem; }
+    .scale-table { width: 100%; border-collapse: collapse; }
+    .scale-table td { font-size: 0.78rem; padding: 0.3rem 0; vertical-align: top; }
+    .scale-table td:first-child { color: var(--text-muted); width: 40%; }
+    .scale-table td:last-child { color: var(--text-sub); }
 
-/* CTA */
-.cta-band{background:linear-gradient(135deg,rgba(11,122,110,0.15),rgba(26,181,163,0.08));border:1px solid rgba(26,181,163,0.25);border-radius:24px;padding:52px 40px;text-align:center;margin:56px 32px;}
-.cta-inner{max-width:720px;margin:0 auto;}
-.cta-band h2{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3vw,2.4rem);color:var(--white);margin-bottom:16px;}
-.cta-band p{color:var(--muted);font-size:0.97rem;line-height:1.85;margin-bottom:30px;}
-.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-.bp{background:linear-gradient(135deg,var(--teal),var(--aqua));color:var(--white);padding:14px 34px;border-radius:50px;font-weight:700;font-size:0.93rem;text-decoration:none;transition:all 0.3s;border:none;cursor:pointer;font-family:'Noto Sans KR',sans-serif;}
-.bp:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,181,163,0.4);}
-.bo{color:var(--foam);padding:14px 30px;border-radius:50px;font-weight:500;font-size:0.93rem;text-decoration:none;border:1.5px solid rgba(110,232,216,0.4);transition:all 0.3s;}
-.bo:hover{background:rgba(110,232,216,0.08);}
+    /* ── FAQ ── */
+    .faq-list { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1px; }
+    .faq-item {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius); overflow: hidden;
+    }
+    .faq-q {
+      padding: 1.2rem 1.5rem; font-size: 0.9rem; font-weight: 500;
+      cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+    }
+    .faq-q::after { content: '+'; color: var(--aqua); font-size: 1.2rem; flex-shrink: 0; }
+    .faq-a {
+      padding: 0 1.5rem 1.2rem;
+      font-size: 0.85rem; color: var(--text-sub); line-height: 1.8;
+      border-top: 1px solid var(--border);
+    }
+    .faq-a strong { color: var(--text); }
 
-/* FAO 인용 */
-.fao-box{background:rgba(21,101,192,0.06);border:1px solid rgba(21,101,192,0.25);border-radius:16px;padding:28px 32px;margin:32px 0;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;}
-.fao-icon{font-size:2.4rem;}
-.fao-box h4{font-family:'Noto Serif KR',serif;font-size:1rem;color:var(--bluel);font-weight:700;margin-bottom:8px;}
-.fao-box p{font-size:0.88rem;color:var(--muted);line-height:1.85;}
-.fao-box strong{color:var(--foam);}
+    /* ── 확산 로드맵 ── */
+    .roadmap-row {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      overflow: hidden; margin-top: 2.5rem;
+    }
+    .roadmap-card { background: var(--bg-card); padding: 1.8rem 1.2rem; }
+    .roadmap-card .stage-label {
+      font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--text-muted); margin-bottom: 0.5rem;
+    }
+    .roadmap-card h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 0.6rem; }
+    .roadmap-card p { font-size: 0.78rem; color: var(--text-muted); line-height: 1.6; }
 
-/* 링크 배너 */
-.link-banner{background:rgba(74,140,63,0.06);border-top:1px solid rgba(122,184,122,0.15);border-bottom:1px solid rgba(122,184,122,0.15);padding:20px 32px;text-align:center;}
-.link-banner p{font-size:0.84rem;color:var(--muted);}
-.link-banner a{color:var(--sage);font-weight:700;text-decoration:none;}
+    /* ════════════════════════════════════════════
+       ★ 신규 CTA 섹션 1: 배움에서 실천으로
+    ════════════════════════════════════════════ */
+    .cta-next {
+      padding: 5rem 0;
+      background: linear-gradient(180deg, var(--bg-section) 0%, var(--bg) 100%);
+      border-top: 1px solid var(--border);
+    }
+    .cta-next-inner { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; }
+    .cta-next-top {
+      background: var(--bg-card);
+      border: 1px solid var(--border); border-top: 3px solid var(--aqua);
+      padding: 3rem 3rem 0; border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .cta-next-top .eyebrow { margin-bottom: 1.2rem; }
+    .cta-next-top h2 { font-size: 1.5rem; margin-bottom: 0.8rem; }
+    .cta-next-top h2 em { font-style: normal; color: var(--aqua); }
+    .cta-next-top .sub {
+      font-size: 0.93rem; color: var(--text-sub);
+      line-height: 1.85; max-width: 560px; margin-bottom: 2.5rem;
+    }
+    .cta-next-cards {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 0; border-top: 1px solid var(--border);
+      margin: 0 -3rem;
+    }
+    .cta-next-card {
+      padding: 2.2rem 3rem;
+      border-right: 1px solid var(--border);
+    }
+    .cta-next-card:last-child { border-right: none; }
+    .cta-card-icon { font-size: 1.8rem; margin-bottom: 0.8rem; }
+    .cta-next-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-next-card p { font-size: 0.85rem; color: var(--text-sub); line-height: 1.7; margin-bottom: 1.2rem; }
+    .btn-aqua {
+      display: inline-block; background: var(--aqua); color: var(--bg);
+      font-size: 0.88rem; font-weight: 700; padding: 0.75rem 1.6rem;
+      border-radius: var(--radius); text-decoration: none;
+      letter-spacing: 0.04em; transition: background 0.2s;
+    }
+    .btn-aqua:hover { background: var(--aqua-light); }
+    .btn-outline-gold {
+      display: inline-block; border: 1px solid var(--gold);
+      color: var(--gold); background: transparent;
+      font-size: 0.88rem; font-weight: 500; padding: 0.75rem 1.6rem;
+      border-radius: var(--radius); text-decoration: none;
+      letter-spacing: 0.04em; transition: background 0.2s;
+    }
+    .btn-outline-gold:hover { background: var(--gold-dim); }
 
-footer{background:rgba(8,18,32,0.95);border-top:1px solid var(--border);padding:40px 32px 24px;text-align:center;}
-.flogo{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;color:var(--aqua);letter-spacing:2px;margin-bottom:10px;}
-.flinks{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;}
-.flinks a{font-size:0.80rem;color:var(--muted);text-decoration:none;}
-.flinks a:hover{color:var(--foam);}
-.fcopy{font-size:0.75rem;color:rgba(123,168,160,0.5);}
+    /* ════════════════════════════════════════════
+       ★ 신규 CTA 섹션 2: 치유농업 지도사 양성
+    ════════════════════════════════════════════ */
+    .cta-instructor {
+      padding: 0 0 5rem;
+    }
+    .cta-instructor-inner { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; }
+    .cta-instructor-box {
+      border: 1px solid var(--border-gold);
+      border-left: 3px solid var(--gold);
+      background: linear-gradient(135deg, rgba(212,168,83,0.05) 0%, transparent 60%);
+      padding: 2.8rem 3rem; border-radius: var(--radius);
+    }
+    .cta-instructor-box .eyebrow-gold {
+      display: block; font-size: 0.7rem; letter-spacing: 0.25em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 1rem;
+    }
+    .cta-instructor-box h2 { font-size: 1.4rem; margin-bottom: 0.8rem; }
+    .cta-instructor-box h2 em { font-style: normal; color: var(--gold); }
+    .cta-instructor-box .sub {
+      font-size: 0.9rem; color: var(--text-sub);
+      line-height: 1.85; max-width: 560px; margin-bottom: 1.8rem;
+    }
+    .instructor-points {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 0.8rem; margin-bottom: 2rem;
+    }
+    .instructor-point {
+      display: flex; gap: 0.7rem; align-items: flex-start;
+      font-size: 0.83rem; color: var(--text-sub); line-height: 1.6;
+    }
+    .instructor-point::before {
+      content: '✦'; color: var(--gold); font-size: 0.7rem;
+      flex-shrink: 0; margin-top: 0.25rem;
+    }
 
-@media(max-width:900px){
-  .course-select,.chapter-grid,.size-grid{grid-template-columns:1fr;}
-  .p5-grid{grid-template-columns:1fr 1fr;}
-  .roadmap{grid-template-columns:1fr 1fr;}
-  .n-flow{grid-template-columns:1fr;gap:8px;}
-  .n-arrow{transform:rotate(90deg);}
-  .sec{padding:60px 20px;}
-  .nl{display:none;}
-  .fao-box{grid-template-columns:1fr;text-align:center;}
-}
-</style>
+    /* ── 기존 하단 CTA (무료 강의) ── */
+    .cta-free {
+      padding: 4rem 0;
+      background: var(--bg-card);
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+    .cta-free h2 { font-size: 1.35rem; margin-bottom: 0.8rem; }
+    .cta-free p { font-size: 0.9rem; color: var(--text-sub); line-height: 1.8; margin-bottom: 2rem; max-width: 520px; margin-left: auto; margin-right: auto; }
+    .cta-free-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-youtube {
+      display: inline-block; background: transparent;
+      border: 1px solid var(--aqua); color: var(--aqua);
+      font-size: 0.9rem; font-weight: 600; padding: 0.85rem 2rem;
+      border-radius: var(--radius); text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-youtube:hover { background: var(--aqua-dim); }
+    .btn-kakao {
+      display: inline-block; background: var(--aqua); color: var(--bg);
+      font-size: 0.9rem; font-weight: 700; padding: 0.85rem 2rem;
+      border-radius: var(--radius); text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-kakao:hover { background: var(--aqua-light); }
+    .offline-note {
+      margin-top: 1.5rem; font-size: 0.8rem; color: var(--text-muted);
+    }
+    .offline-note a { color: var(--aqua); text-decoration: none; }
+
+    /* ── 푸터 ── */
+    footer {
+      background: var(--bg-section); border-top: 1px solid var(--border); padding: 3.5rem 0 2rem;
+    }
+    .footer-inner {
+      max-width: 1000px; margin: 0 auto; padding: 0 1.5rem;
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem;
+    }
+    .footer-brand h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--aqua); margin-bottom: 0.5rem; }
+    .footer-brand p { font-size: 0.78rem; color: var(--text-muted); line-height: 1.7; max-width: 240px; }
+    .footer-col h4 { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.8rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 0.4rem; }
+    .footer-col a { font-size: 0.82rem; color: var(--text-sub); text-decoration: none; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--aqua); }
+    .footer-bottom {
+      max-width: 1000px; margin: 2rem auto 0; padding: 1.5rem 1.5rem 0;
+      border-top: 1px solid var(--border);
+      font-size: 0.75rem; color: var(--text-muted);
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 768px) {
+      h1 { font-size: 1.55rem; } h2 { font-size: 1.2rem; }
+      .course-cards { grid-template-columns: 1fr; }
+      .curriculum-grid { grid-template-columns: 1fr; }
+      .steps-row { grid-template-columns: 1fr 1fr; }
+      .scale-grid { grid-template-columns: 1fr; }
+      .roadmap-row { grid-template-columns: 1fr 1fr; }
+      .cta-next-cards { grid-template-columns: 1fr; }
+      .cta-next-card { border-right: none; border-bottom: 1px solid var(--border); }
+      .cta-next-card:last-child { border-bottom: none; }
+      .cta-next-top { padding: 2rem 1.4rem 0; }
+      .cta-next-cards { margin: 0 -1.4rem; }
+      .cta-next-card { padding: 2rem 1.4rem; }
+      .instructor-points { grid-template-columns: 1fr; }
+      .cta-instructor-box { padding: 2rem 1.4rem; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .steps-row { grid-template-columns: 1fr; }
+      .roadmap-row { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .footer-inner { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
+<!-- ── 네비게이션 ── -->
 <nav>
-  <a href="index.html" class="logo">ECO-<span>VASS</span></a>
-  <div class="nl">
-    <a href="index.html">홈</a>
-    <a href="education.html" style="color:var(--aqua);font-weight:700;">교육</a>
-    <a href="healing.html">치유·회복</a>
-    <a href="modular.html">모듈러</a>
-    <a href="dome.html" style="color:#90CAF9;">Dome Farm</a>
-    <a href="products.html">제품소개</a>
-    <a href="partnership.html">함께하기</a>
-    <a href="business.html">사업협력</a>
-    <a href="https://blog.naver.com/klys1121" target="_blank" style="color:var(--sage);">📝 블로그</a>
-    <a href="https://pf.kakao.com/_rXDxdX" target="_blank" class="ncta">상담하기</a>
+  <div class="nav-inner">
+    <a href="/index.html" class="nav-logo">ECO-VASS</a>
+    <ul class="nav-links">
+      <li><a href="/index.html">홈</a></li>
+      <li><a href="/education.html" class="active">교육</a></li>
+      <li><a href="/healing.html">치유·회복</a></li>
+      <li><a href="/modular.html">모듈러</a></li>
+      <li><a href="/dome.html">Dome Farm</a></li>
+      <li><a href="/products.html">제품소개</a></li>
+      <li><a href="/partnership.html">함께하기</a></li>
+      <li><a href="/business.html">사업협력</a></li>
+      <li><a href="https://blog.naver.com/klys1121" target="_blank">📝 블로그</a></li>
+      <li><a href="https://pf.kakao.com/_rXDxdX" class="nav-cta" target="_blank">상담하기</a></li>
+    </ul>
   </div>
 </nav>
 
-<!-- HERO -->
-<div class="hero">
-  <div>
-    <div class="hero-tag">ECO-VASS Academy</div>
-    <h1><span>물잡이</span>에 성공해야<br>아쿠아포닉스가 <span class="g">시작</span>됩니다</h1>
-    <p class="hero-desc">ECO-VASS 교육 아카데미는 FAO(국제식량농업기구) 기준 <strong style="color:var(--foam);">Small-Scale Aquaponics 교재</strong>를 기반으로, 국내 보급 경험에서 얻은 노하우를 담아 만든 체계적인 교육 과정입니다. 물잡이(사이클링) 완전정복을 목표로 입문부터 전문 과정까지 단계별로 제공합니다.</p>
-    <div class="hero-quote">"동식물과 미생물이 공존하는 생태계를 가정으로,<br>가정에서 커뮤니티로, 커뮤니티에서 사회로."</div>
-  </div>
-</div>
+<main>
 
-<!-- FAO 배경 안내 -->
-<div class="sec" style="padding-top:56px;padding-bottom:0;">
-  <div class="fao-box">
-    <div class="fao-icon">🌍</div>
-    <div>
-      <h4>FAO 국제 권고 기반 교재</h4>
-      <p>유엔식량농업기구(FAO)는 전 세계 물 부족 국가를 대상으로 <strong>Small-Scale Aquaponics</strong>를 공식 권장하며 전용 교재까지 발간했습니다. 아쿠아포닉스는 일반 토양농업 대비 <strong>물 사용량 90% 절감</strong>이 가능하여 식량 안보와 물 위기 대응의 핵심 대안입니다. ECO-VASS 교육은 이 FAO 기준을 국내 현실에 맞게 체계화한 과정입니다.</p>
+  <!-- ── 히어로 ── -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero-badge">ECO-VASS Academy</span>
+      <h1>물잡이에 성공해야<br>아쿠아포닉스가 시작됩니다</h1>
+      <p class="lead">
+        ECO-VASS 교육 아카데미는 FAO(국제식량농업기구) 기준 <strong>Small-Scale Aquaponics 교재</strong>를 기반으로,
+        국내 보급 경험에서 얻은 노하우를 담아 만든 체계적인 교육 과정입니다.
+        물잡이(사이클링) 완전정복을 목표로 입문부터 전문 과정까지 단계별로 제공합니다.
+      </p>
+      <blockquote>
+        "동식물과 미생물이 공존하는 생태계를 가정으로,<br>
+        가정에서 커뮤니티로, 커뮤니티에서 사회로."
+      </blockquote>
     </div>
-  </div>
-</div>
+  </section>
 
-<!-- 핵심 원리 -->
-<div class="sec">
-  <span class="stag s-g">Core Principle</span>
-  <h2 class="h2">왜 물잡이가<br>가장 중요한가?</h2>
-  <p class="desc">국내에서 아쿠아포닉스 보급이 위축된 가장 큰 이유는 <strong style="color:var(--foam);">물잡이(사이클링) 실패</strong>입니다. 수질 관리의 원리를 모르면 물고기가 죽고 식물이 시들어, 결국 중단하게 됩니다. 물잡이는 단순한 물 채우기가 아닌, 어류·미생물·식물이 공존하는 <strong style="color:var(--aqua);">살아있는 생태계</strong>를 조성하는 과정입니다.</p>
-
-  <div class="principle">
-    <div class="principle-title">🔄 질소 순환 (Nitrogen Cycle) — 생태계의 핵심</div>
-    <p>어류가 배설하는 <strong>암모니아(NH₃)</strong>는 독성이 강한 물질이지만, 유익한 세균이 이를 단계적으로 분해하여 식물의 비료가 되는 <strong>질산염(NO₃⁻)</strong>으로 전환합니다. 이 순환이 자리잡는 과정이 '물잡이'입니다.</p>
-
-    <div class="n-cycle">
-      <div class="n-cycle-title">질소 순환 3단계</div>
-      <div class="n-flow">
-        <div class="n-step">
-          <div class="n-step-top">🐟</div>
-          <div class="n-step-name">암모니아</div>
-          <div class="n-step-formula">NH₃ (독성)</div>
+  <!-- ── FAO 기반 ── -->
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Core Principle</span>
+      <h2>왜 물잡이가 가장 중요한가?</h2>
+      <p class="lead" style="max-width:600px;">
+        국내에서 아쿠아포닉스 보급이 위축된 가장 큰 이유는 <strong>물잡이(사이클링) 실패</strong>입니다.
+        수질 관리의 원리를 모르면 물고기가 죽고 식물이 시들어, 결국 중단하게 됩니다.
+        물잡이는 단순한 물 채우기가 아닌, 어류·미생물·식물이 공존하는 <strong>살아있는 생태계</strong>를 조성하는 과정입니다.
+      </p>
+      <div class="fao-banner">
+        <h4>🌍 FAO 국제 권고 기반 교재</h4>
+        <p>유엔식량농업기구(FAO)는 전 세계 물 부족 국가를 대상으로 <strong>Small-Scale Aquaponics</strong>를
+        공식 권장하며 전용 교재까지 발간했습니다. 아쿠아포닉스는 일반 토양농업 대비 <strong>물 사용량 90% 절감</strong>이
+        가능하여 식량 안보와 물 위기 대응의 핵심 대안입니다.</p>
+      </div>
+      <p style="font-size:0.9rem;color:var(--text-sub);margin-top:2rem;margin-bottom:0.8rem;font-weight:500;">
+        🔄 질소 순환 (Nitrogen Cycle) — 생태계의 핵심
+      </p>
+      <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.7;max-width:620px;margin-bottom:1rem;">
+        어류가 배설하는 <strong>암모니아(NH₃)</strong>는 독성이 강한 물질이지만,
+        유익한 세균이 이를 단계적으로 분해하여 식물의 비료가 되는 <strong>질산염(NO₃⁻)</strong>으로 전환합니다.
+        이 순환이 자리잡는 과정이 '물잡이'입니다.
+      </p>
+      <div class="cycle-row">
+        <div class="cycle-node">
+          <div class="icon">🐟</div>
+          <h4>암모니아</h4>
+          <p>NH₃ (독성)</p>
         </div>
-        <div class="n-arrow">→</div>
-        <div class="n-step">
-          <div class="n-step-top">🦠</div>
-          <div class="n-step-name">아질산염</div>
-          <div class="n-step-formula">NO₂⁻ (중간)</div>
+        <span class="cycle-arrow">→</span>
+        <div class="cycle-node">
+          <div class="icon">🦠</div>
+          <h4>아질산염</h4>
+          <p>NO₂⁻ (중간)</p>
         </div>
-        <div class="n-arrow">→</div>
-        <div class="n-step">
-          <div class="n-step-top">🌱</div>
-          <div class="n-step-name">질산염</div>
-          <div class="n-step-formula">NO₃⁻ (비료)</div>
-        </div>
-      </div>
-      <div style="margin-top:18px;padding:14px 18px;background:rgba(26,181,163,0.06);border-radius:10px;">
-        <div style="font-size:0.78rem;color:var(--foam);font-weight:700;margin-bottom:4px;">🦠 관여 세균</div>
-        <div style="font-size:0.82rem;color:var(--muted);line-height:1.75;">
-          <strong>Nitrosomonas</strong>: 암모니아 → 아질산염 전환<br>
-          <strong>Nitrobacter</strong>: 아질산염 → 질산염 전환<br>
-          이 두 세균이 여과재·자갈층·식물 뿌리에 정착하면 물잡이가 완성됩니다.
+        <span class="cycle-arrow">→</span>
+        <div class="cycle-node">
+          <div class="icon">🌱</div>
+          <h4>질산염</h4>
+          <p>NO₃⁻ (비료)</p>
         </div>
       </div>
+      <p style="font-size:0.8rem;color:var(--text-muted);margin-top:1rem;line-height:1.65;">
+        🦠 <strong>Nitrosomonas</strong>: 암모니아 → 아질산염 전환 &nbsp;|&nbsp;
+        <strong>Nitrobacter</strong>: 아질산염 → 질산염 전환<br>
+        이 두 세균이 여과재·자갈층·식물 뿌리에 정착하면 물잡이가 완성됩니다.
+      </p>
     </div>
-  </div>
-</div>
-<hr class="hr">
+  </section>
 
-<!-- 입문 vs 전문 과정 선택 -->
-<div class="sec">
-  <span class="stag s-a">Course Selection</span>
-  <h2 class="h2">나에게 맞는<br>교육 과정을 선택하세요</h2>
-  <p class="desc">처음 아쿠아포닉스를 접하시는 분은 무료 입문 과정으로 전체 흐름을 먼저 파악하시고, 실제 시스템을 운영하실 분은 전문 과정의 필요한 장(Chapter)을 선택해 학습하실 수 있습니다.</p>
-
-  <div class="course-select">
-    <!-- 무료 입문 과정 -->
-    <div class="course-card course-free">
-      <span class="course-badge badge-free">무료</span>
-      <div class="course-icon">🌱</div>
-      <h3>입문 요약 과정</h3>
-      <div class="course-sub">Getting Started · 전체 흐름 파악</div>
-      <p>아쿠아포닉스가 무엇이고 물잡이가 왜 중요한지, 전체 시스템이 어떻게 작동하는지 핵심만 간략히 배울 수 있습니다. 부담 없이 시작하세요.</p>
-      <ul class="course-feat">
-        <li>아쿠아포닉스 기본 원리 이해</li>
-        <li>자연습지형수족관이란 무엇인가</li>
-        <li>질소 순환 개념 맛보기</li>
-        <li>물잡이 5단계 요약</li>
-        <li>수조 규모별 간략 가이드</li>
-      </ul>
-      <div class="course-price">무료</div>
-      <div class="course-price-sub">영상 약 30분 · 언제나 다시보기 가능</div>
-      <button class="course-btn btn-free" onclick="alert('무료 입문 강의가 곧 공개됩니다!\\n\\n유튜브 채널에서 먼저 만나보실 수 있습니다.\\n\\n유튜브 채널로 이동합니다.');window.open('https://www.youtube.com/channel/UCrzleggCA75nOuSK9wGwpuQ','_blank');">▶ 무료 강의 시작하기</button>
-    </div>
-
-    <!-- 전문 유료 과정 -->
-    <div class="course-card course-pro">
-      <span class="course-badge badge-pro">전문 과정</span>
-      <div class="course-icon">🎓</div>
-      <h3>물잡이 완전정복 전문 과정</h3>
-      <div class="course-sub">Complete Mastery · 8개 장(Chapter) 구성</div>
-      <p>실제로 자신의 아쿠아포닉스 시스템을 성공적으로 운영하기 위한 체계적인 전문 과정. 8개 장을 단계별로 학습하거나, 필요한 장만 선택해 수강할 수 있습니다.</p>
-      <ul class="course-feat">
-        <li>8개 장별 심화 동영상 강의</li>
-        <li>5단계 실습 가이드 + 체크리스트</li>
-        <li>수질 측정·관리 노하우</li>
-        <li>문제 해결 FAQ 심화</li>
-        <li>1:1 카카오 채널 질문 지원</li>
-        <li>수강증·교안 PDF 제공</li>
-      </ul>
-      <div class="course-price">장별 수강 · 패키지 할인</div>
-      <div class="course-price-sub">개별 장: 준비중 · 전체 패키지: 준비중</div>
-      <button class="course-btn btn-pro" onclick="document.getElementById('curriculum').scrollIntoView({behavior:'smooth'});">📚 커리큘럼 자세히 보기</button>
-    </div>
-  </div>
-</div>
-<hr class="hr">
-
-<!-- 커리큘럼 8개 장 -->
-<div id="curriculum">
-<div class="sec">
-  <span class="stag s-g">Professional Curriculum</span>
-  <h2 class="h2">8개 장 전문 커리큘럼<br><span style="color:var(--gold);font-size:0.6em;">— 물잡이 교안 기반</span></h2>
-  <p class="desc">각 장은 독립적으로 수강 가능하며, 장별 동영상 강의와 실습 가이드가 제공됩니다. 원하는 장만 선택하거나 전체 패키지로 묶어 할인된 가격에 수강하실 수 있습니다.</p>
-
-  <div class="chapter-grid">
-    <!-- 1장 -->
-    <div class="chapter">
-      <span class="ch-highlight">기초</span>
-      <div class="ch-top">
-        <div class="ch-num">1</div>
-        <div class="ch-title">아쿠아포닉스와 ECO-VASS</div>
-      </div>
-      <p>아쿠아포닉스가 무엇인지, FAO 국제 기준은 어떤지, 왜 ECO-VASS 자연습지형이 국내 보급 실패를 해결할 수 있는지 체계적으로 배웁니다.</p>
-      <ul class="ch-feat">
-        <li>아쿠아포닉스 정의와 원리</li>
-        <li>FAO 국제 기준 및 권고</li>
-        <li>일본 보급 성공 사례</li>
-        <li>국내 현황과 ECO-VASS의 역할</li>
-      </ul>
-      <div class="ch-meta">
-        <span class="ch-duration">📹 영상 약 40분</span>
-        <span class="ch-price free">입문 무료 포함</span>
+  <!-- ── 과정 선택 ── -->
+  <section class="section section-alt">
+    <div class="container">
+      <span class="eyebrow">Course Selection</span>
+      <h2>나에게 맞는 교육 과정을 선택하세요</h2>
+      <p class="lead" style="max-width:600px;">
+        처음 아쿠아포닉스를 접하시는 분은 무료 입문 과정으로 전체 흐름을 먼저 파악하시고,
+        실제 시스템을 운영하실 분은 전문 과정의 필요한 장(Chapter)을 선택해 학습하실 수 있습니다.
+      </p>
+      <div class="course-cards">
+        <div class="course-card">
+          <div class="course-badge free">무료</div>
+          <div class="course-icon">🌱</div>
+          <h3>입문 요약 과정</h3>
+          <div class="course-sub">Getting Started · 전체 흐름 파악</div>
+          <p>아쿠아포닉스가 무엇이고 물잡이가 왜 중요한지,
+          전체 시스템이 어떻게 작동하는지 핵심만 간략히 배울 수 있습니다. 부담 없이 시작하세요.</p>
+          <ul class="course-list">
+            <li>아쿠아포닉스 기본 원리 이해</li>
+            <li>자연습지형수족관이란 무엇인가</li>
+            <li>질소 순환 개념 맛보기</li>
+            <li>물잡이 5단계 요약</li>
+            <li>수조 규모별 간략 가이드</li>
+          </ul>
+          <div class="course-meta">무료 · 영상 약 30분 · 언제나 다시보기 가능</div>
+          <a href="https://www.youtube.com/channel/UCrzleggCA75nOuSK9wGwpuQ"
+             target="_blank" class="btn-aqua" style="display:inline-block;margin-top:1rem;font-size:0.85rem;padding:0.7rem 1.5rem;">
+            ▶ 무료 강의 시작하기
+          </a>
+        </div>
+        <div class="course-card featured">
+          <div class="course-badge">전문 과정</div>
+          <div class="course-icon">🎓</div>
+          <h3>물잡이 완전정복 전문 과정</h3>
+          <div class="course-sub">Complete Mastery · 8개 장(Chapter) 구성</div>
+          <p>실제로 자신의 아쿠아포닉스 시스템을 성공적으로 운영하기 위한 체계적인 전문 과정.
+          8개 장을 단계별로 학습하거나, 필요한 장만 선택해 수강할 수 있습니다.</p>
+          <ul class="course-list">
+            <li>8개 장별 심화 동영상 강의</li>
+            <li>5단계 실습 가이드 + 체크리스트</li>
+            <li>수질 측정·관리 노하우</li>
+            <li>문제 해결 FAQ 심화</li>
+            <li>1:1 카카오 채널 질문 지원</li>
+            <li>수강증·교안 PDF 제공</li>
+          </ul>
+          <div class="course-meta">장별 수강 · 패키지 할인</div>
+          <span class="price-note">개별 장: 준비중 · 전체 패키지: 준비중</span><br>
+          <a href="https://pf.kakao.com/_rXDxdX" target="_blank"
+             style="display:inline-block;margin-top:1rem;font-size:0.82rem;color:var(--aqua);text-decoration:none;border-bottom:1px solid rgba(26,181,163,0.3);">
+            📚 커리큘럼 자세히 문의 →
+          </a>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- 2장 -->
-    <div class="chapter">
-      <div class="ch-top">
-        <div class="ch-num">2</div>
-        <div class="ch-title">자연습지형수족관 원리</div>
-      </div>
-      <p>자연 습지가 왜 지구상 가장 강력한 수질 정화 생태계인지, 이 원리를 어떻게 실내 수조로 가져올 수 있는지 배웁니다.</p>
-      <ul class="ch-feat">
-        <li>자연 습지(Wetland)의 정화 원리</li>
-        <li>일반 수족관 vs 자연습지형 비교</li>
-        <li>습지 생태계 실내 재현 구조</li>
-        <li>ECO-VASS의 차별화 포인트</li>
-      </ul>
-      <div class="ch-meta">
-        <span class="ch-duration">📹 영상 약 45분</span>
-        <span class="ch-price">장별 수강 가능</span>
+  <!-- ── 8개 장 커리큘럼 ── -->
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Professional Curriculum</span>
+      <h2>8개 장 전문 커리큘럼 — 물잡이 교안 기반</h2>
+      <p class="lead" style="max-width:600px;">
+        각 장은 독립적으로 수강 가능하며, 장별 동영상 강의와 실습 가이드가 제공됩니다.
+        원하는 장만 선택하거나 전체 패키지로 묶어 할인된 가격에 수강하실 수 있습니다.
+      </p>
+      <div class="curriculum-grid">
+        <div class="chap-card">
+          <div class="chap-header">
+            <div class="chap-num">1</div>
+            <div>
+              <span class="chap-tag basic">기초</span>
+              <h3>아쿠아포닉스와 ECO-VASS</h3>
+            </div>
+          </div>
+          <p>아쿠아포닉스가 무엇인지, FAO 국제 기준은 어떤지, 왜 ECO-VASS 자연습지형이 국내 보급 실패를 해결할 수 있는지 체계적으로 배웁니다.</p>
+          <ul class="chap-list">
+            <li>아쿠아포닉스 정의와 원리</li>
+            <li>FAO 국제 기준 및 권고</li>
+            <li>일본 보급 성공 사례</li>
+            <li>국내 현황과 ECO-VASS의 역할</li>
+          </ul>
+          <div class="chap-footer">📹 영상 약 40분 · 입문 무료 포함</div>
+        </div>
+        <div class="chap-card">
+          <div class="chap-header">
+            <div class="chap-num">2</div>
+            <div>
+              <span class="chap-tag basic">기초</span>
+              <h3>자연습지형수족관 원리</h3>
+            </div>
+          </div>
+          <p>자연 습지가 왜 지구상 가장 강력한 수질 정화 생태계인지, 이 원리를 어떻게 실내 수조로 가져올 수 있는지 배웁니다.</p>
+          <ul class="chap-list">
+            <li>자연 습지(Wetland)의 정화 원리</li>
+            <li>일반 수족관 vs 자연습지형 비교</li>
+            <li>습지 생태계 실내 재현 구조</li>
+            <li>ECO-VASS의 차별화 포인트</li>
+          </ul>
+          <div class="chap-footer">📹 영상 약 45분 · 장별 수강 가능</div>
+        </div>
+        <div class="chap-card">
+          <div class="chap-header">
+            <div class="chap-num">3</div>
+            <div>
+              <span class="chap-tag core">⭐ 핵심</span>
+              <h3>물잡이 핵심 원리</h3>
+            </div>
+          </div>
+          <p>물잡이(사이클링)가 정확히 무엇이며, 질소 순환이 어떻게 이루어지는지, 어떤 세균이 어떤 역할을 하는지 원리를 완벽하게 이해합니다.</p>
+          <ul class="chap-list">
+            <li>물잡이(Cycling)의 정확한 정의</li>
+            <li>질소 순환 3단계 상세 해설</li>
+            <li>Nitrosomonas와 Nitrobacter의 역할</li>
+            <li>물잡이 성공/실패의 결정 요인</li>
+          </ul>
+          <div class="chap-footer">📹 영상 약 50분 · 장별 수강 가능</div>
+        </div>
+        <div class="chap-card">
+          <div class="chap-header">
+            <div class="chap-num">4</div>
+            <div>
+              <span class="chap-tag popular">🔥 최고 인기</span>
+              <h3>물잡이 5단계 실습 가이드</h3>
+            </div>
+          </div>
+          <p>D-1부터 D35까지 35일간의 물잡이 전 과정을 단계별 상세 실습으로 배웁니다. 이 장 하나만 제대로 학습해도 실패하지 않습니다.</p>
+          <ul class="chap-list">
+            <li>1단계: 수조·여과 시스템 설치</li>
+            <li>2단계: 암모니아 공급·세균 배양</li>
+            <li>3단계: 질산화 세균 증식 확인</li>
+            <li>4단계: 물잡이 완성·사이클 안정화</li>
+            <li>5단계: 아쿠아포닉스 본격 운영</li>
+          </ul>
+          <div class="chap-footer">📹 영상 약 90분 · 최고 인기 예정</div>
+        </div>
+        <div class="chap-card">
+          <div class="chap-header">
+            <div class="chap-num">5</div>
+            <div>
+              <span class="chap-tag basic">응용</span>
+              <h3>생태계 3요소 구성</h3>
+            </div>
+          </div>
+          <p>어류(생산자)·식물(정화자)·미생물(분해자) 각각의 역할과 조합 방법. 어떤 어류·어떤 식물이 우리 시스템에 맞는지 알려드립니다.</p>
+          <ul class="chap-list">
+            <li>입문자용 권장 어종 4가지</li>
+            <li>성장 빠른 식물·허브 선택법</li>
+            <li>미생물 서식 환경 조성</li>
+            <li>수생식물 활용법 (부레옥잠 등)</li>
+          </ul>
+          <div class="chap-footer">📹 영상 약 60분 · 장별 수강 가능</div>
+        </div>
+        <div class="chap-card">
+          <div class="chap-header">
+            <div class="chap-num">6</div>
+            <div>
+              <span class="chap-tag basic">응용</span>
+              <h3>수조 규모별 세팅 가이드</h3>
+            </div>
+          </div>
+          <p>30L 가정용부터 200L 이상 커뮤니티용까지, 규모별로 어떤 장비를 어떻게 준비해야 하는지 구체적으로 배웁니다.</p>
+          <ul class="chap-list">
+            <li>소형 30L: 가정·입문용 세팅</li>
+            <li>중형 100L: 교육·소그룹용</li>
+            <li>대형 200L+: 커뮤니티 시범용</li>
+            <li>규모별 어종·식물·여과 구성</li>
+          </ul>
+          <div class="chap-footer">📹 영상 약 55분 · 장별 수강 가능</div>
+        </div>
+        <div class="chap-card">
+          <div class="chap-header">
+            <div class="chap-num">7</div>
+            <div>
+              <span class="chap-tag core">실전 필수</span>
+              <h3>문제 해결 FAQ 심화</h3>
+            </div>
+          </div>
+          <p>실제 운영 중 발생하는 모든 문제 상황의 원인과 해결책. 백탁·pH 저하·물고기 폐사·식물 황변 등 현장 노하우를 집대성했습니다.</p>
+          <ul class="chap-list">
+            <li>백탁 현상 원인과 대처</li>
+            <li>pH 관리 노하우</li>
+            <li>물고기 건강 관리</li>
+            <li>식물 황변·성장부진 해결</li>
+            <li>여과기 관리의 원칙</li>
+          </ul>
+          <div class="chap-footer">📹 영상 약 70분 · 실전 필수</div>
+        </div>
+        <div class="chap-card">
+          <div class="chap-header">
+            <div class="chap-num">8</div>
+            <div>
+              <span class="chap-tag basic">심화</span>
+              <h3>ECO-VASS 보급 전략</h3>
+            </div>
+          </div>
+          <p>성공한 시스템을 어떻게 이웃·공동체에 확산시킬 것인지, 교육자·운영자 관점의 보급 전략과 사업화 가능성을 제시합니다.</p>
+          <ul class="chap-list">
+            <li>4단계 교육 로드맵</li>
+            <li>커뮤니티 운영 노하우</li>
+            <li>교회·학교 보급 사례</li>
+            <li>정책 연계 방안</li>
+          </ul>
+          <div class="chap-footer">📹 영상 약 45분 · 심화 과정</div>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- 3장 -->
-    <div class="chapter">
-      <span class="ch-highlight">⭐ 핵심</span>
-      <div class="ch-top">
-        <div class="ch-num">3</div>
-        <div class="ch-title">물잡이 핵심 원리</div>
-      </div>
-      <p>물잡이(사이클링)가 정확히 무엇이며, 질소 순환이 어떻게 이루어지는지, 어떤 세균이 어떤 역할을 하는지 원리를 완벽하게 이해합니다.</p>
-      <ul class="ch-feat">
-        <li>물잡이(Cycling)의 정확한 정의</li>
-        <li>질소 순환 3단계 상세 해설</li>
-        <li>Nitrosomonas와 Nitrobacter의 역할</li>
-        <li>물잡이 성공/실패의 결정 요인</li>
-      </ul>
-      <div class="ch-meta">
-        <span class="ch-duration">📹 영상 약 50분</span>
-        <span class="ch-price">장별 수강 가능</span>
+  <!-- ── 5단계 실습 ── -->
+  <section class="section section-alt">
+    <div class="container">
+      <span class="eyebrow">5-Step Practice</span>
+      <h2>물잡이 5단계 실습 프로세스</h2>
+      <p class="lead" style="max-width:600px;">
+        D-1부터 D35 이후까지, 약 5주에 걸친 물잡이 실습 과정입니다.
+        4장 전문 강의에서 각 단계별 상세 실습을 배우실 수 있습니다.
+      </p>
+      <div class="steps-row">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-period">D-1 ~ D0</div>
+          <h4>수조·여과 시스템 설치</h4>
+          <p>다층 바닥재 구성, 여과 시스템 장착, 수생식물 배치</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-period">D1 ~ D7</div>
+          <h4>암모니아 세균 배양 시작</h4>
+          <p>먹이 소량 투입, 박테리아 스타터 활용, 환수 절대 금지</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-period">D7 ~ D21</div>
+          <h4>질산화 세균 증식 확인</h4>
+          <p>아질산염 상승, 백탁 현상 정상, 여과기 청소 금지</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">4</div>
+          <div class="step-period">D21 ~ D35</div>
+          <h4>물잡이 완성 사이클 안정화</h4>
+          <p>암모니아·아질산염 0ppm 확인, 어류 25%만 먼저 투입</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">5</div>
+          <div class="step-period">D35 이후</div>
+          <h4>본격 운영 수확 시작</h4>
+          <p>상추·허브 3~4주 간격 수확, 월 10~20% 소량 환수</p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- 4장 -->
-    <div class="chapter">
-      <span class="ch-highlight">⭐ 핵심</span>
-      <div class="ch-top">
-        <div class="ch-num">4</div>
-        <div class="ch-title">물잡이 5단계 실습 가이드</div>
-      </div>
-      <p>D-1부터 D35까지 35일간의 물잡이 전 과정을 단계별 상세 실습으로 배웁니다. 이 장 하나만 제대로 학습해도 실패하지 않습니다.</p>
-      <ul class="ch-feat">
-        <li>1단계: 수조·여과 시스템 설치</li>
-        <li>2단계: 암모니아 공급·세균 배양</li>
-        <li>3단계: 질산화 세균 증식 확인</li>
-        <li>4단계: 물잡이 완성·사이클 안정화</li>
-        <li>5단계: 아쿠아포닉스 본격 운영</li>
-      </ul>
-      <div class="ch-meta">
-        <span class="ch-duration">📹 영상 약 90분</span>
-        <span class="ch-price">최고 인기 예정</span>
-      </div>
-    </div>
-
-    <!-- 5장 -->
-    <div class="chapter">
-      <div class="ch-top">
-        <div class="ch-num">5</div>
-        <div class="ch-title">생태계 3요소 구성</div>
-      </div>
-      <p>어류(생산자)·식물(정화자)·미생물(분해자) 각각의 역할과 조합 방법. 어떤 어류·어떤 식물이 우리 시스템에 맞는지 알려드립니다.</p>
-      <ul class="ch-feat">
-        <li>입문자용 권장 어종 4가지</li>
-        <li>성장 빠른 식물·허브 선택법</li>
-        <li>미생물 서식 환경 조성</li>
-        <li>수생식물 활용법 (부레옥잠 등)</li>
-      </ul>
-      <div class="ch-meta">
-        <span class="ch-duration">📹 영상 약 60분</span>
-        <span class="ch-price">장별 수강 가능</span>
-      </div>
-    </div>
-
-    <!-- 6장 -->
-    <div class="chapter">
-      <div class="ch-top">
-        <div class="ch-num">6</div>
-        <div class="ch-title">수조 규모별 세팅 가이드</div>
-      </div>
-      <p>30L 가정용부터 200L 이상 커뮤니티용까지, 규모별로 어떤 장비를 어떻게 준비해야 하는지 구체적으로 배웁니다.</p>
-      <ul class="ch-feat">
-        <li>소형 30L: 가정·입문용 세팅</li>
-        <li>중형 100L: 교육·소그룹용</li>
-        <li>대형 200L+: 커뮤니티 시범용</li>
-        <li>규모별 어종·식물·여과 구성</li>
-      </ul>
-      <div class="ch-meta">
-        <span class="ch-duration">📹 영상 약 55분</span>
-        <span class="ch-price">장별 수강 가능</span>
+  <!-- ── 수조 규모별 ── -->
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">System Scale</span>
+      <h2>수조 규모별 세팅 가이드</h2>
+      <p class="lead" style="max-width:600px;">
+        입문용 소형부터 커뮤니티 시범용 대형까지, 목적에 맞는 규모를 선택하세요.
+        전문 과정 제6장에서 규모별 상세 가이드를 제공합니다.
+      </p>
+      <div class="scale-grid">
+        <div class="scale-card">
+          <div class="scale-label">소형 · 입문</div>
+          <div class="scale-vol">30L</div>
+          <h3>가정·입문용</h3>
+          <table class="scale-table">
+            <tr><td>수조 크기</td><td>30×30×40cm</td></tr>
+            <tr><td>어류</td><td>구피·송사리 10~15마리</td></tr>
+            <tr><td>식물</td><td>상추·허브 4~6포트</td></tr>
+            <tr><td>물잡이</td><td>약 4~5주</td></tr>
+            <tr><td>적용 공간</td><td>거실·베란다</td></tr>
+          </table>
+        </div>
+        <div class="scale-card">
+          <div class="scale-label">중형 · 교육</div>
+          <div class="scale-vol">100L</div>
+          <h3>교육·소그룹용</h3>
+          <table class="scale-table">
+            <tr><td>수조 크기</td><td>60×40×50cm</td></tr>
+            <tr><td>어류</td><td>구피·미꾸라지 30~40마리</td></tr>
+            <tr><td>식물</td><td>상추·청경채 12~16포트</td></tr>
+            <tr><td>물잡이</td><td>약 4~6주</td></tr>
+            <tr><td>적용 공간</td><td>교실·소규모 단체</td></tr>
+          </table>
+        </div>
+        <div class="scale-card">
+          <div class="scale-label">대형 · 시범</div>
+          <div class="scale-vol">200L+</div>
+          <h3>커뮤니티용</h3>
+          <table class="scale-table">
+            <tr><td>수조 크기</td><td>100×50×60cm 이상</td></tr>
+            <tr><td>어류</td><td>틸라피아·미꾸라지 50마리+</td></tr>
+            <tr><td>식물</td><td>채소·허브 20포트 이상</td></tr>
+            <tr><td>물잡이</td><td>약 5~7주</td></tr>
+            <tr><td>적용 공간</td><td>지역 공동체 시범 운영</td></tr>
+          </table>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- 7장 -->
-    <div class="chapter">
-      <div class="ch-top">
-        <div class="ch-num">7</div>
-        <div class="ch-title">문제 해결 FAQ 심화</div>
-      </div>
-      <p>실제 운영 중 발생하는 모든 문제 상황의 원인과 해결책. 백탁·pH 저하·물고기 폐사·식물 황변 등 현장 노하우를 집대성했습니다.</p>
-      <ul class="ch-feat">
-        <li>백탁 현상 원인과 대처</li>
-        <li>pH 관리 노하우</li>
-        <li>물고기 건강 관리</li>
-        <li>식물 황변·성장부진 해결</li>
-        <li>여과기 관리의 원칙</li>
-      </ul>
-      <div class="ch-meta">
-        <span class="ch-duration">📹 영상 약 70분</span>
-        <span class="ch-price">실전 필수</span>
-      </div>
-    </div>
-
-    <!-- 8장 -->
-    <div class="chapter">
-      <div class="ch-top">
-        <div class="ch-num">8</div>
-        <div class="ch-title">ECO-VASS 보급 전략</div>
-      </div>
-      <p>성공한 시스템을 어떻게 이웃·공동체에 확산시킬 것인지, 교육자·운영자 관점의 보급 전략과 사업화 가능성을 제시합니다.</p>
-      <ul class="ch-feat">
-        <li>4단계 교육 로드맵</li>
-        <li>커뮤니티 운영 노하우</li>
-        <li>학교·기관·공동체 보급 사례</li>
-        <li>정책 연계 방안</li>
-      </ul>
-      <div class="ch-meta">
-        <span class="ch-duration">📹 영상 약 45분</span>
-        <span class="ch-price">심화 과정</span>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-<hr class="hr">
-
-<!-- 물잡이 5단계 실습 (요약 시각화) -->
-<div id="process">
-<div class="sec">
-  <span class="stag s-a">5-Step Practice</span>
-  <h2 class="h2">물잡이 5단계<br>실습 프로세스</h2>
-  <p class="desc">D-1부터 D35 이후까지, 약 5주에 걸친 물잡이 실습 과정입니다. 4장 전문 강의에서 각 단계별 상세 실습을 배우실 수 있습니다.</p>
-
-  <div class="p5">
-    <div class="p5-grid">
-      <div class="p5-step">
-        <div class="p5-num">1</div>
-        <div class="p5-day">D-1 ~ D0</div>
-        <div class="p5-title">수조·여과<br>시스템 설치</div>
-        <div class="p5-desc">다층 바닥재 구성, 여과 시스템 장착, 수생식물 배치</div>
-      </div>
-      <div class="p5-step">
-        <div class="p5-num">2</div>
-        <div class="p5-day">D1 ~ D7</div>
-        <div class="p5-title">암모니아<br>세균 배양 시작</div>
-        <div class="p5-desc">먹이 소량 투입, 박테리아 스타터 활용, 환수 절대 금지</div>
-      </div>
-      <div class="p5-step">
-        <div class="p5-num">3</div>
-        <div class="p5-day">D7 ~ D21</div>
-        <div class="p5-title">질산화 세균<br>증식 확인</div>
-        <div class="p5-desc">아질산염 상승, 백탁 현상 정상, 여과기 청소 금지</div>
-      </div>
-      <div class="p5-step">
-        <div class="p5-num">4</div>
-        <div class="p5-day">D21 ~ D35</div>
-        <div class="p5-title">물잡이 완성<br>사이클 안정화</div>
-        <div class="p5-desc">암모니아·아질산염 0ppm 확인, 어류 25%만 먼저 투입</div>
-      </div>
-      <div class="p5-step">
-        <div class="p5-num">5</div>
-        <div class="p5-day">D35 이후</div>
-        <div class="p5-title">본격 운영<br>수확 시작</div>
-        <div class="p5-desc">상추·허브 3~4주 간격 수확, 월 10~20% 소량 환수</div>
+  <!-- ── FAQ ── -->
+  <section class="section section-alt">
+    <div class="container">
+      <span class="eyebrow">Troubleshooting FAQ</span>
+      <h2>자주 묻는 질문 — 문제 해결 가이드</h2>
+      <p class="lead" style="max-width:600px;">
+        실제 운영 중 가장 흔히 겪는 문제들입니다.
+        전문 과정 제7장에서 더 많은 문제 상황과 심화 해결책을 다룹니다.
+      </p>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">물이 뿌옇게 탁해졌어요. 어떻게 해야 하나요?</div>
+          <div class="faq-a">
+            백탁 현상은 질산화 세균이 급격히 증식하는 과정에서 나타나는 완전히 정상적인 현상입니다.
+            <strong>절대 환수하거나 여과기를 청소하지 마세요.</strong> 보통 3~5일 내에 저절로 맑아집니다.
+            ECO-VASS 습지형은 식물과 다층 여과 구조 덕분에 이 기간이 더 짧습니다.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">암모니아 수치가 3주가 지났는데 여전히 높아요.</div>
+          <div class="faq-a">
+            세균 스타터 제품을 추가 투입하거나, 완성된 다른 수조의 여과재 일부를 이식해 보세요.
+            아직 세균이 충분히 정착하지 못한 상태입니다.
+            ECO-VASS 습지형에서는 식물 뿌리와 기질층이 자연 스타터 역할을 하여 이 기간이 단축됩니다.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">아질산염이 오랫동안 내려오지 않아요.</div>
+          <div class="faq-a">
+            pH가 6.5 이하로 낮아진 경우가 많습니다.
+            굴 껍데기나 산호사를 소량 추가하여 pH를 7 근처로 올려주세요.
+            Nitrobacter 세균은 산성 환경에서 활동이 저하됩니다.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">물잡이 완성 후 물고기가 갑자기 죽었어요.</div>
+          <div class="faq-a">
+            가장 흔한 원인은 <strong>한 번에 너무 많은 어류를 투입한 것</strong>입니다.
+            물잡이 완성 후에도 처음에는 적정 개체수의 25%만 넣고 1~2주 간격으로 점진적으로 늘려야 합니다.
+            미생물 집락이 새로운 암모니아 부하에 적응할 시간이 필요합니다.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">식물이 노랗게 변하고 잘 자라지 않아요.</div>
+          <div class="faq-a">
+            세 가지 원인을 순서대로 확인하세요. ① 질산염 부족 (어류 수가 너무 적거나 물잡이가 덜 된 경우)
+            ② 조명 부족 (하루 최소 8시간 이상 빛이 필요) ③ 뿌리 위치 (뿌리의 절반만 물에 닿도록 조정).
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">여과기를 청소해도 되나요?</div>
+          <div class="faq-a">
+            물잡이 기간 중에는 <strong>절대 청소하지 마세요.</strong> 여과재는 미생물의 집이며,
+            세척하면 처음부터 다시 시작해야 합니다. 물잡이 완성 후에도 월 1회 이하로 유지하고,
+            반드시 수조 물로만 가볍게 헹구세요. 수돗물에는 염소가 포함되어 미생물을 사멸시킵니다.
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-</div>
-<hr class="hr">
+  </section>
 
-<!-- 수조 규모별 -->
-<div id="scale">
-<div class="sec">
-  <span class="stag s-b">System Scale</span>
-  <h2 class="h2">수조 규모별<br>세팅 가이드</h2>
-  <p class="desc">입문용 소형부터 커뮤니티 시범용 대형까지, 목적에 맞는 규모를 선택하세요. 전문 과정 제6장에서 규모별 상세 가이드를 제공합니다.</p>
+  <!-- ── 확산 로드맵 ── -->
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Dissemination Roadmap</span>
+      <h2>ECO-VASS 교육 확산 로드맵</h2>
+      <p class="lead" style="max-width:600px;">
+        개인의 성공에서 시작하여 커뮤니티·기관·국가 정책 연계까지, 단계별 확산 전략입니다.
+      </p>
+      <div class="roadmap-row">
+        <div class="roadmap-card">
+          <div class="stage-label">STAGE 1</div>
+          <h4>🏠 입문 단계</h4>
+          <p>가정·개인 대상<br>물잡이 교안 실습<br>30L 소형 시스템</p>
+        </div>
+        <div class="roadmap-card">
+          <div class="stage-label">STAGE 2</div>
+          <h4>👥 확산 단계</h4>
+          <p>소그룹·동호회<br>100L 중형 시스템<br>지역 네트워크 형성</p>
+        </div>
+        <div class="roadmap-card">
+          <div class="stage-label">STAGE 3</div>
+          <h4>🏫 시범 단계</h4>
+          <p>학교·기관 대상<br>200L 대형 시스템<br>도시농업 거점 구축</p>
+        </div>
+        <div class="roadmap-card">
+          <div class="stage-label">STAGE 4</div>
+          <h4>🏛️ 정책 단계</h4>
+          <p>지자체·정부 연계<br>FAO 기준 국내 적용<br>식량·물 정책 연계</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <div class="size-grid">
-    <div class="size-card size-sm">
-      <span class="size-tag tag-sm">소형 · 입문</span>
-      <h3>가정·입문용</h3>
-      <div class="size-vol">30L</div>
-      <table class="size-table">
-        <tr><td>수조 크기</td><td>30×30×40cm</td></tr>
-        <tr><td>어류</td><td>구피·송사리 10~15마리</td></tr>
-        <tr><td>식물</td><td>상추·허브 4~6포트</td></tr>
-        <tr><td>물잡이 기간</td><td>약 4~5주</td></tr>
-        <tr><td>적용 공간</td><td>거실·베란다</td></tr>
-      </table>
+  <!-- ════════════════════════════════════════════
+       ★ 신규 CTA 섹션 1: 배움에서 실천으로
+  ════════════════════════════════════════════ -->
+  <section class="cta-next">
+    <div class="cta-next-inner">
+      <div class="cta-next-top">
+        <span class="eyebrow">Next Step · 다음 걸음</span>
+        <h2>배움을 넘어<br><em>실천으로 걸어가는 자리가 있습니다</em></h2>
+        <p class="sub">
+          물잡이를 배웠다면, 이제 그 생태계를 통해 누군가를 돌보는 일을 시작할 수 있습니다.
+          ECO-VASS는 기술을 넘어 사람과 공동체를 잇는 플랫폼입니다.
+          다음 두 가지 길이 열려 있습니다.
+        </p>
+        <div class="cta-next-cards">
+          <div class="cta-next-card">
+            <div class="cta-card-icon">🌱</div>
+            <h3>치유농업 지도사 양성 과정</h3>
+            <p>
+              ECO-VASS 시스템으로 치유 프로그램을 직접 운영하고 싶으신 분을 위한 심화 과정입니다.
+              복지관·교회·학교에서 활동할 수 있습니다.
+            </p>
+            <a href="https://pf.kakao.com/_rXDxdX" class="btn-aqua" target="_blank"
+               style="font-size:0.85rem;padding:0.7rem 1.5rem;">
+              과정 문의하기 →
+            </a>
+          </div>
+          <div class="cta-next-card">
+            <div class="cta-card-icon">🤝</div>
+            <h3>치유농업 프로그램 참여</h3>
+            <p>
+              기관·단체로서 ECO-VASS 치유농업 프로그램을 도입하거나,
+              개인으로 직접 프로그램에 참여하고 싶으신 분을 초대합니다.
+            </p>
+            <a href="/healing.html" class="btn-aqua"
+               style="font-size:0.85rem;padding:0.7rem 1.5rem;background:transparent;border:1px solid var(--aqua);color:var(--aqua);">
+              치유·회복 페이지 보기 →
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="size-card size-md">
-      <span class="size-tag tag-md">중형 · 교육</span>
-      <h3>교육·소그룹용</h3>
-      <div class="size-vol">100L</div>
-      <table class="size-table">
-        <tr><td>수조 크기</td><td>60×40×50cm</td></tr>
-        <tr><td>어류</td><td>구피·미꾸라지 30~40마리</td></tr>
-        <tr><td>식물</td><td>상추·청경채 12~16포트</td></tr>
-        <tr><td>물잡이 기간</td><td>약 4~6주</td></tr>
-        <tr><td>적용 공간</td><td>교실·소규모 단체</td></tr>
-      </table>
-    </div>
-    <div class="size-card size-lg">
-      <span class="size-tag tag-lg">대형 · 시범</span>
-      <h3>커뮤니티용</h3>
-      <div class="size-vol">200L+</div>
-      <table class="size-table">
-        <tr><td>수조 크기</td><td>100×50×60cm 이상</td></tr>
-        <tr><td>어류</td><td>틸라피아·미꾸라지 50마리+</td></tr>
-        <tr><td>식물</td><td>채소·허브 20포트 이상</td></tr>
-        <tr><td>물잡이 기간</td><td>약 5~7주</td></tr>
-        <tr><td>적용 공간</td><td>지역 공동체 시범 운영</td></tr>
-      </table>
-    </div>
-  </div>
-</div>
-</div>
-<hr class="hr">
+  </section>
 
-<!-- FAQ -->
-<div id="faq">
-<div class="sec">
-  <span class="stag s-a">Troubleshooting FAQ</span>
-  <h2 class="h2">자주 묻는 질문<br>문제 해결 가이드</h2>
-  <p class="desc">실제 운영 중 가장 흔히 겪는 문제들입니다. 전문 과정 제7장에서 더 많은 문제 상황과 심화 해결책을 다룹니다.</p>
+  <!-- ════════════════════════════════════════════
+       ★ 신규 CTA 섹션 2: 치유농업 지도사 / 시니어 동행자
+  ════════════════════════════════════════════ -->
+  <section class="cta-instructor">
+    <div class="cta-instructor-inner">
+      <div class="cta-instructor-box">
+        <span class="eyebrow-gold">Senior Partner · 시니어 동행자</span>
+        <h2>이 배움을 가지고<br><em>삶의 2막을 시작하실 분이 계십니까</em></h2>
+        <p class="sub">
+          ECO-VASS는 50~70대 은퇴자가 지역 공동체를 돌보는
+          <strong style="color:var(--gold);">"시니어 동행자"</strong>를 모십니다.
+          물잡이를 배운 지식이 — 이웃을 돌보는 도구가 됩니다.
+          은퇴 후 재능을 나누고, 함께 소득을 만들어가는 자리입니다.
+        </p>
+        <div class="instructor-points">
+          <div class="instructor-point">ECO-VASS 교육 이수 후 지역 활동 자격 부여</div>
+          <div class="instructor-point">복지관·교회·아파트 단지 방문 시연 활동</div>
+          <div class="instructor-point">치유 프로그램 운영 보조 및 참여자 돌봄</div>
+          <div class="instructor-point">활동 수당 지급 — 건강한 이모작 소득</div>
+        </div>
+        <a href="/partnership.html" class="btn-outline-gold">
+          시니어 동행자 자세히 알아보기 →
+        </a>
+      </div>
+    </div>
+  </section>
 
-  <div class="faq-list">
-    <div class="faq-item">
-      <div class="faq-q">물이 뿌옇게 탁해졌어요. 어떻게 해야 하나요?</div>
-      <div class="faq-a">백탁 현상은 질산화 세균이 급격히 증식하는 과정에서 나타나는 완전히 정상적인 현상입니다. <strong style="color:var(--foam);">절대 환수하거나 여과기를 청소하지 마세요.</strong> 보통 3~5일 내에 저절로 맑아집니다. ECO-VASS 습지형은 식물과 다층 여과 구조 덕분에 이 기간이 더 짧습니다.</div>
+  <!-- ── 기존 하단 CTA (무료 강의) ── -->
+  <section class="cta-free">
+    <div class="container">
+      <h2>지금 무료 입문 강의로 첫걸음을 시작하세요</h2>
+      <p>
+        물잡이의 원리와 아쿠아포닉스의 전체 흐름을 먼저 이해하고,
+        필요에 따라 전문 과정의 관심 있는 장을 선택해 수강할 수 있습니다.
+        궁금한 점은 카카오 채널로 언제든 문의하세요.
+      </p>
+      <div class="cta-free-btns">
+        <a href="https://www.youtube.com/channel/UCrzleggCA75nOuSK9wGwpuQ"
+           target="_blank" class="btn-youtube">▶ 무료 입문 강의 (유튜브)</a>
+        <a href="https://pf.kakao.com/_rXDxdX" target="_blank" class="btn-kakao">💬 카카오 채널 문의</a>
+      </div>
+      <p class="offline-note">
+        🌾 <a href="https://aquaponicskorea.co.kr" target="_blank">아쿠아포닉스코리아</a>에서는
+        오프라인 전문 교육·농장 견학·체험학습을 운영합니다
+      </p>
     </div>
-    <div class="faq-item">
-      <div class="faq-q">암모니아 수치가 3주가 지났는데 여전히 높아요.</div>
-      <div class="faq-a">세균 스타터 제품을 추가 투입하거나, 완성된 다른 수조의 여과재 일부를 이식해 보세요. 아직 세균이 충분히 정착하지 못한 상태입니다. ECO-VASS 습지형에서는 식물 뿌리와 기질층이 자연 스타터 역할을 하여 이 기간이 단축됩니다.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">아질산염이 오랫동안 내려오지 않아요.</div>
-      <div class="faq-a">pH가 6.5 이하로 낮아진 경우가 많습니다. 굴 껍데기나 산호사를 소량 추가하여 pH를 7 근처로 올려주세요. Nitrobacter 세균은 산성 환경에서 활동이 저하됩니다.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">물잡이 완성 후 물고기가 갑자기 죽었어요.</div>
-      <div class="faq-a">가장 흔한 원인은 <strong style="color:var(--foam);">한 번에 너무 많은 어류를 투입한 것</strong>입니다. 물잡이 완성 후에도 처음에는 적정 개체수의 25%만 넣고 1~2주 간격으로 점진적으로 늘려야 합니다. 미생물 집락이 새로운 암모니아 부하에 적응할 시간이 필요합니다.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">식물이 노랗게 변하고 잘 자라지 않아요.</div>
-      <div class="faq-a">세 가지 원인을 순서대로 확인하세요. ① 질산염 부족 (어류 수가 너무 적거나 물잡이가 덜 된 경우) ② 조명 부족 (하루 최소 8시간 이상 빛이 필요) ③ 뿌리 위치 (뿌리의 절반만 물에 닿도록 조정).</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">여과기를 청소해도 되나요?</div>
-      <div class="faq-a">물잡이 기간 중에는 <strong style="color:var(--foam);">절대 청소하지 마세요.</strong> 여과재는 미생물의 집이며, 세척하면 처음부터 다시 시작해야 합니다. 물잡이 완성 후에도 월 1회 이하로 유지하고, 반드시 수조 물로만 가볍게 헹구세요. 수돗물에는 염소가 포함되어 미생물을 사멸시킵니다.</div>
-    </div>
-  </div>
-</div>
-</div>
-<hr class="hr">
+  </section>
 
-<!-- 보급 로드맵 -->
-<div class="sec">
-  <span class="stag s-s">Dissemination Roadmap</span>
-  <h2 class="h2">ECO-VASS<br>교육 확산 로드맵</h2>
-  <p class="desc">개인의 성공에서 시작하여 커뮤니티·기관·국가 정책 연계까지, 단계별 확산 전략입니다.</p>
+</main>
 
-  <div class="roadmap">
-    <div class="rm-step">
-      <div class="rm-stage">STAGE 1</div>
-      <h4>🏠 입문 단계</h4>
-      <p>가정·개인 대상<br>물잡이 교안 실습<br>30L 소형 시스템</p>
-    </div>
-    <div class="rm-step">
-      <div class="rm-stage">STAGE 2</div>
-      <h4>👥 확산 단계</h4>
-      <p>소그룹·동호회<br>100L 중형 시스템<br>지역 네트워크 형성</p>
-    </div>
-    <div class="rm-step">
-      <div class="rm-stage">STAGE 3</div>
-      <h4>🏫 시범 단계</h4>
-      <p>학교·기관 대상<br>200L 대형 시스템<br>도시농업 거점 구축</p>
-    </div>
-    <div class="rm-step">
-      <div class="rm-stage">STAGE 4</div>
-      <h4>🏛️ 정책 단계</h4>
-      <p>지자체·정부 연계<br>FAO 기준 국내 적용<br>식량·물 정책 연계</p>
-    </div>
-  </div>
-</div>
-
-<!-- CTA -->
-<div class="cta-band">
-  <div class="cta-inner">
-    <h2>지금 무료 입문 강의로<br>첫걸음을 시작하세요</h2>
-    <p>물잡이의 원리와 아쿠아포닉스의 전체 흐름을 먼저 이해하고, 필요에 따라 전문 과정의 관심 있는 장을 선택해 수강할 수 있습니다. 궁금한 점은 카카오 채널로 언제든 문의하세요.</p>
-    <div class="cta-btns">
-      <a href="https://www.youtube.com/channel/UCrzleggCA75nOuSK9wGwpuQ" target="_blank" class="bp">▶ 무료 입문 강의 (유튜브)</a>
-      <a href="https://pf.kakao.com/_rXDxdX" target="_blank" class="bo">💬 카카오 채널 문의</a>
-    </div>
-  </div>
-</div>
-
-<!-- 링크 배너 -->
-<div class="link-banner">
-  <p>🌾 <a href="https://aquaponicskorea.co.kr" target="_blank">아쿠아포닉스코리아</a> 에서는 오프라인 전문 교육·농장 견학·체험학습을 운영합니다</p>
-</div>
-
+<!-- ── 푸터 ── -->
 <footer>
-  <div class="flogo">ECO-VASS</div>
-  <div class="flinks">
-    <a href="index.html">홈</a>
-    <a href="education.html">교육</a>
-    <a href="modular.html">모듈러</a>
-    <a href="dome.html">Dome Farm</a>
-    <a href="products.html">제품소개</a>
-    <a href="index.html#healing">치유·회복</a>
-    <a href="https://blog.naver.com/klys1121" target="_blank">블로그</a>
-    <a href="https://aquaponicskorea.co.kr" target="_blank">아쿠아포닉스코리아</a>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>ECO-VASS</h3>
+      <p>Ecological Vertical Aquaponics Smart Solution<br>
+      습지생태이론 기반 생태형 아쿠아포닉스 도시농업 플랫폼.</p>
+    </div>
+    <div class="footer-col">
+      <h4>플랫폼</h4>
+      <ul>
+        <li><a href="/products.html">제품 소개</a></li>
+        <li><a href="/modular.html">모듈러</a></li>
+        <li><a href="/healing.html">치유·회복</a></li>
+        <li><a href="/education.html">교육</a></li>
+        <li><a href="/schools.html">학교 도입</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>참여</h4>
+      <ul>
+        <li><a href="/partnership.html">함께하기</a></li>
+        <li><a href="/business.html">사업협력</a></li>
+        <li><a href="/shop.html">쇼핑</a></li>
+        <li><a href="/notice.html">NOTICE</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="https://aquaponicskorea.co.kr" target="_blank">아쿠아포닉스코리아 ↗</a></li>
+        <li><a href="https://blog.naver.com/klys1121" target="_blank">네이버 블로그 ↗</a></li>
+        <li><a href="tel:01053400662">📞 010-5340-0662</a></li>
+        <li><a href="https://pf.kakao.com/_rXDxdX" target="_blank">💬 카카오 채널</a></li>
+      </ul>
+    </div>
   </div>
-  <div class="fcopy">© 2026 ECO-VASS · Aquaponics Korea Co., Ltd. All rights reserved.</div>
+  <div class="footer-bottom">
+    <span>© 2026 ECO-VASS · Aquaponics Korea Co., Ltd. All rights reserved.</span>
+    <span>본 사이트의 모든 콘텐츠는 저작권 보호를 받습니다</span>
+  </div>
 </footer>
 
-<script src="assets/js/protect.js"></script>
 </body>
 </html>
